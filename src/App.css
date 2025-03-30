@@ -1,0 +1,60 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.header__nav--open {
+  /* Aqui você pode adicionar animação ou algum efeito visual quando o menu abrir */
+}
+
+.header__link {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.header__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__dropdown button {
+  margin: 0.5rem 0;
+  background: none;
+  border: none;
+  color: #007bff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.header__dropdown button:hover {
+  text-decoration: underline;
+}

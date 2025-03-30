@@ -1,0 +1,50 @@
+:root {
+  --container-xl: 57.625rem; /*922px*/
+  --container-lg: 52.75rem; /*844px*/
+  --container-md: 47.875rem; /*766px*/
+  --container-sm: 45rem; /*720px*/
+}
+
+.container-xl {
+  max-width: var(--container-xl);
+  margin: auto;
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+  margin: auto;
+}
+
+.container-md {
+  max-width: var(--container-md);
+  margin: auto;
+}
+
+.container-sm {
+  max-width: var(--container-sm);
+  margin: auto;
+}
+
+/* Dispositivos médios (telefones, de 375px a 280px) */
+@media (max-width: 375px) {
+}
+
+/* Dispositivos médios (tablets na horizontal, de 768px a 375px) */
+@media (max-width: 768px) {
+}
+
+/* Dispositivos grandes (laptops/desktops, de 1024px a 768px) */
+@media (max-width: 1024px) {
+}
+
+/* Dispositivos extra grandes (laptops grandes e desktops, a partir de 1440px) */
+@media (max-width: 1440px) {
+}
+
+/* Especifico do DS */
+.card-layout {
+  height: 2.4375rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 74, 255, 0.2);
+  margin-bottom: 1.75rem;
+}

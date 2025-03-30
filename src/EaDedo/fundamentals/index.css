@@ -1,0 +1,15 @@
+@import url(./Tipografia/Tipografia.css);
+@import url(./Cores/Cores.css);
+
+.btn {
+  background-color: var(--Turquoise-600);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--Blue-900);
+}
