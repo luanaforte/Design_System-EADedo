@@ -1,6 +1,6 @@
 {
 	"name": "design_system2",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "dist/eadedo_style.css",
 	"scripts": {
 		"dev": "vite",
