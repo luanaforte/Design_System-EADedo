@@ -1,14 +1,18 @@
 {
 	"name": "design_system2",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"main": "dist/eadedo_style.css",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "vite build && cp src/Style_moodle.js dist/",
 		"lint": "eslint .",
 		"preview": "vite preview",
 		"prepublishOnly": "npm run build"
 	},
+	"files": [
+		"dist/eadedo_style.css",
+		"dist/Style_moodle.js"
+	],
 	"dependencies": {
 		"@phosphor-icons/react": "^2.1.7",
 		"phosphor-react": "^1.4.1",
