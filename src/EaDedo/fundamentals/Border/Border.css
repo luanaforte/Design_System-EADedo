@@ -15,14 +15,3 @@
   border-color: var(--color-blue-600) !important;
 }
 
-/* Especifico do DS */
-.card--radius {
-  width: 4.625rem;
-  height: 4.625rem;
-  border: 1px solid var(--Anil);
-  position: relative;
-}
-
-.card--radius:hover .copied-icon__hover {
-  display: block;
-}

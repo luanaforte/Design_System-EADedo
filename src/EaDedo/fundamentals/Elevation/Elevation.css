@@ -22,16 +22,4 @@
   box-shadow: var(--elevation-inset-low);
 }
 
-/* Especifico do DS */
-.card--elevation {
-  width: 7.5rem;
-  height: 7.5rem;
-  border-radius: 1rem;
-  background: var(--Branco);
-  margin-bottom: 1.785rem;
-  position: relative;
-}
 
-.card--elevation:hover .copied-icon__hover {
-  display: block;
-}

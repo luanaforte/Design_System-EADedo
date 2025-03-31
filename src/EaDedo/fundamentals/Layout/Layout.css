@@ -58,10 +58,3 @@
 @media (max-width: 1440px) {
 }
 
-/* Especifico do DS */
-.card-layout {
-  height: 2.4375rem;
-  border-radius: 0.5rem;
-  background: rgba(0, 74, 255, 0.2);
-  margin-bottom: 1.75rem;
-}

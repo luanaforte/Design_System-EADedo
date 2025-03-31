@@ -1,60 +1,592 @@
-*{
+@import "./EaDedo/fundamentals/index.css";
+
+body{
+  margin: 0;
+  font-family: var(--font-family-Poppins);
+}
+
+/* ********************** */
+/* NAVBAR */
+.navbar {
+  background-color: #edeff5;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+  width: 99%;
+  top: 0;
+}
+
+.navbar__title {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar__nav-link {
+  margin: 0 1rem;
+  background: transparent;
+  border: none;
+  list-style: none;
+}
+
+.navbar__nav-link {
+  margin: 0 1rem;
+  background: transparent;
+  border: none;
+  list-style: none;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 150px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-neutral-100);
+  z-index: -1;
+}
+
+.sidebar__menu {
+  margin-top: 80px;
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar__button {
+  display: block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.sidebar__button:hover {
+  background-color: #e2e8f0;
+}
+
+/* Estilos para o switch modo dark-light */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked+.slider {
+  background-color: #183153;
+}
+
+.input:focus+.slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked+.slider:before {
+  transform: translateX(30px);
+}
+
+.main-content {
+  margin-top: 4%;
+  padding: 2%;
+}
+
+/* ********************* */
+/* dropdown */
+.menu {
+  display: flex;
+  width: fit-content;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-button {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  color: var(--color-neutral-950);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+}
+
+.submenu.open {
+  display: block;
+}
+
+.submenu-link {
+  display: block;
+  padding: 8px 12px;
+  color: var(--color-neutral-950);
+  text-decoration: none;
+}
+
+.submenu-link:hover {
+  background: #555;
+}
+
+
+/* ********************** */
+.main-area {
+  margin: 130px 170px;
+  padding-right: 170px;
+}
+
+.anchor-navigation {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  width: 250px;
+  z-index: 10;
+  padding: 10px;
+}
+
+.anchor-navigation ul {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f8f8f8;
-  border-bottom: 2px solid #ddd;
+.anchor-link {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+  border: none;
+  border-left: 2px solid black;
+  background-color: transparent;
 }
 
-.header__nav {
-  display: flex;
-  gap: 1rem;
+.anchor-link.active {
+  border: none;
+  background-color: transparent;
+  border-left: 2px solid #ff6347;
+}
+
+/* ************************ */
+.code-snippet {
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-050);
+  border-radius: var(--space-050);
+  padding: var(--space-100);
+  overflow-x: auto;
+  margin: var(--space-100) 0;
+  box-shadow: var(--elevation-low);
   position: relative;
 }
 
-.header__nav--open {
-  /* Aqui você pode adicionar animação ou algum efeito visual quando o menu abrir */
-}
-
-.header__link {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  color: #007bff;
-}
-
-.header__link:hover {
-  text-decoration: underline;
-}
-
-.header__dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  width: 200px;
+.code-snippet .code-header {
   display: flex;
-  flex-direction: column;
+  justify-content: end;
 }
 
-.header__dropdown button {
-  margin: 0.5rem 0;
-  background: none;
+.copy-button_code {
+  background-color: var(--color-neutral-600);
+  color: var(--color-neutral-050);
   border: none;
-  color: #007bff;
-  text-align: left;
+  border-radius: var(--space-025);
+  padding: var(--space-025) var(--space-050);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button_code:hover {
+  background-color: var(--color-turquoise-800);
+}
+
+.copy-button_code:active {
+  background-color: var(--color-turquoise-600);
+}
+
+/* ********************** */
+/* card placeholder */
+.card {
+  max-width: 250px;
+  width: 100%;
+  background: var(--color-neutral-100);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  margin-bottom: 1.75rem;
+}
+
+.card .header {
+  display: flex;
+  align-items: center;
+}
+
+.header .img {
+  height: 45px;
+  width: 45px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.header .details {
+  margin-left: 20px;
+}
+
+.details span {
+  display: block;
+  background: #d9d9d9;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.details .name {
+  height: 12px;
+  width: 70px;
+}
+
+.details .about {
+  height: 13px;
+  width: 120px;
+  margin-top: 10px;
+}
+
+.card .description {
+  margin: 25px 0;
+}
+
+.description .line {
+  background: #d9d9d9;
+  border-radius: 10px;
+  height: 11px;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.description .line-1 {
+  width: calc(100% - 15%);
+}
+
+.description .line-3 {
+  width: calc(100% - 40%);
+}
+
+.card .btns {
+  display: flex;
+}
+
+.card .btns .btn {
+  height: 25px;
+  width: 100%;
+  background: #d9d9d9;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btns .btn-1 {
+  margin-right: 8px;
+}
+
+.btns .btn-2 {
+  margin-left: 8px;
+}
+
+.header .img::before,
+.details span::before,
+.description .line::before,
+.btns .btn::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right,
+      #d9d9d9 0%,
+      rgba(0, 0, 0, 0.05) 20%,
+      #d9d9d9 40%,
+      #d9d9d9 100%);
+  background-repeat: no-repeat;
+  background-size: 450px 400px;
+  animation: shimmer 1s linear infinite;
+}
+
+.header .img::before {
+  background-size: 650px 600px;
+}
+
+.details span::before {
+  animation-delay: 0.2s;
+}
+
+.btns .btn-2::before {
+  animation-delay: 0.22s;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+
+  100% {
+    background-position: 450px 0;
+  }
+}
+
+/* ********************** */
+.content--visible {
+  display: block;
+}
+
+.content--hidden {
+  display: none;
+}
+
+/* ********************** */
+/* especificos do DS  */
+/* tipografia */
+.tab-menu {
+  display: flex;
+  gap: 1.45rem;
+  margin-bottom: 1.75rem;
+}
+
+.tab_button {
+  font-size: var(--font-size-p);
+  font-family: var(--font-family-Poppins);
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.tab_button.active {
+  border-bottom: 1px solid #004af7;
+  font-weight: var(--font-weight-semibold);
+}
+/* border */
+.card--radius {
+  width: 4.625rem;
+  height: 4.625rem;
+  border: 1px solid var(--Anil);
+  position: relative;
+}
+
+.card--radius:hover .copied-icon__hover {
+  display: block;
+}
+
+/* color */
+.color-card {
+  max-width: 24rem;
+  margin: 0 1.5rem 0.8rem 0;
   cursor: pointer;
 }
 
-.header__dropdown button:hover {
-  text-decoration: underline;
+.colors-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
+
+.color-card:first-child,
+.color-card:last-child {
+  margin-left: 0;
+}
+
+.color-card__box {
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.copied-icon {
+  position: absolute;
+  right: 40%;
+  bottom: 40%;
+}
+
+.copied-icon__texto {
+  margin: 0 0.5rem;
+}
+
+.copied-icon__hover {
+  display: none;
+}
+
+.color-card__box:hover .copied-icon__hover {
+  display: block;
+}
+
+/* elevation */
+.card--elevation {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 1rem;
+  background: var(--Branco);
+  margin-bottom: 1.785rem;
+  position: relative;
+}
+
+.card--elevation:hover .copied-icon__hover {
+  display: block;
+}
+
+/* iconografia */
+.icon-container {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.icon-item {
+  display: flex;
+  width: 8.125rem;
+  height: 8.125rem;
+  padding: 2.5rem 1.625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  background: var(--color-neutral-050);
+}
+
+/* layout */
+.card-layout {
+  height: 2.4375rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 74, 255, 0.2);
+  margin-bottom: 1.75rem;
+}
+
+/* ********************** */
+
+/* BREAKPOINTS */
+/* Dispositivos médios (telefones, de 375px a 280px) */
+@media (max-width: 375px) {}
+
+/* Dispositivos médios (tablets na horizontal, de 768px a 375px) */
+@media (max-width: 768px) {
+  .content--visible {
+    display: none;
+  }
+
+  .content--hidden {
+    display: block;
+  }
+}
+
+/* Dispositivos grandes (laptops/desktops, de 1024px a 768px) */
+@media (max-width: 1024px) {}
+
+/* Dispositivos extra grandes (laptops grandes e desktops, a partir de 1440px) */
+@media (max-width: 1440px) {}
+
+
+
