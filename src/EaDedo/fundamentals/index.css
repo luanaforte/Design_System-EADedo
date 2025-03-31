@@ -1,9 +1,15 @@
+/* Fundamentes */
 @import "./Tipografia/Tipografia.css";
 @import "./Layout/Layout.css";
 @import "./Iconografia/Iconografia.css";
 @import "./Elevation/Elevation.css";
 @import "./Cores/Cores.css";
 @import "./Border/Border.css";
+
+/* Componentes */
+@import "../components/Carousel_indicators/carousel_indicators.css";
+@import "../components/Tag/Tag.css";
+@import "../components/Tag_course/Tag_course.css";
 
 /* FLEX */
 .flexbox {

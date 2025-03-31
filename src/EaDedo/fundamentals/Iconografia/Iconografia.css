@@ -14,7 +14,7 @@
   height: var(--icon-size-md);
 }
 
-.icon--lg {
+.icon-size-lg {
   width: var(--icon--lg);
   height: var(--icon--lg);
 }

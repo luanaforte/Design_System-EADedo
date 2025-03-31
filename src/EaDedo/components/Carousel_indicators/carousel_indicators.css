@@ -1,0 +1,19 @@
+.carousel-indicators {
+  display: flex;
+  gap: var(--space-050);
+}
+
+.indicator {
+  width: 24px;
+  height: 4px;
+  border-radius: var(--radius-025);
+  background: var(--color-neutral-300);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.indicator.active {
+  width: 52.125px;
+  background: var(--color-blue-600);
+}

@@ -1,0 +1,11 @@
+.tag_course {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: fit-content;
+  padding: var(--space-075) var(--space-100);
+  gap: 0px var(--space-100);
+  flex-wrap: wrap;
+  border-radius: var(--radius-050);
+  background: #FFF;
+}

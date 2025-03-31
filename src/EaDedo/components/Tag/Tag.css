@@ -1,0 +1,9 @@
+.tag {
+  display: inline-flex;
+  padding: var(--space-025) 6px;
+  align-items: center;
+  gap: var(--space-025);
+  border-radius: 6px;
+  width: fit-content;
+  background-color: var(--color-neutral-100);
+}

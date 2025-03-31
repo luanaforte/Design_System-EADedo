@@ -10,6 +10,13 @@ import Iconografia from "./EaDedo/fundamentals/Iconografia/Iconografia.jsx";
 import Layout from "./EaDedo/fundamentals/Layout/Layout.jsx";
 import Tipografia from "./EaDedo/fundamentals/Tipografia/Tipografia.jsx";
 
+// Componentes
+import Icon from "./EaDedo/components/Icon/Icon.jsx";
+import Tag from "./EaDedo/components/Tag/Tag.jsx";
+import Tag_course from "./EaDedo/components/Tag_course/Tag_course.jsx";
+import Carousel_indicators from "./EaDedo/components/Carousel_indicators/carousel_indicators.jsx";
+import Alerts from "./EaDedo/components/Alerts/Alerts.jsx";
+
 const App = () => {
 	return (
 		<Routes>
@@ -21,6 +28,14 @@ const App = () => {
 				<Route path="Fundamentos/Iconografia" element={<Iconografia />} />
 				<Route path="Fundamentos/Layout" element={<Layout />} />
 				<Route path="Fundamentos/Tipografia" element={<Tipografia />} />
+				<Route path="Componentes/Icon" element={<Icon />} />
+				<Route path="Componentes/Tag" element={<Tag />} />
+				<Route path="Componentes/Tag_course" element={<Tag_course />} />
+				<Route
+					path="Componentes/Carousel_indicators"
+					element={<Carousel_indicators />}
+				/>
+				<Route path="Componentes/Alerts" element={<Alerts />} />
 			</Route>
 		</Routes>
 	);

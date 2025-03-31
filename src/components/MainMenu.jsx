@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { caret_down } from "../EaDedo/assets/icons/icon-caret-down.svg";
+import caret_down from "../EaDedo/assets/icons/icon-caret-down.svg";
 import "../App.css";
 
 const Rotes = {
@@ -12,16 +12,11 @@ const Rotes = {
 		{ label: "Iconografia", route: "/Fundamentos/Iconografia" },
 	],
 	"/Componentes": [
-		{ label: "Alerts", route: "/Componentes/Alerts" },
-		{ label: "Avatar", route: "/Componentes/Avatar" },
-		{ label: "Accordions", route: "/Componentes/Accordions" },
-		{ label: "ColapseSection", route: "/Componentes/ColapseSection" },
-		{ label: "Badge", route: "/Componentes/Badge" },
-		{ label: "Button", route: "/Componentes/Button" },
-		{ label: "HeroImage", route: "/Componentes/HeroImage" },
-		{ label: "Cards", route: "/Componentes/Cards" },
-		{ label: "IframeVideo", route: "/Componentes/IframeVideo" },
+		{ label: "Icon", route: "/Componentes/Icon" },
 		{ label: "Tag", route: "/Componentes/Tag" },
+		{ label: "Tag Course", route: "/Componentes/Tag_course" },
+		{ label: "Carousel Indicators", route: "/Componentes/Carousel_indicators" },
+		{ label: "Alerts", route: "/Componentes/Alerts" },
 	],
 };
 
