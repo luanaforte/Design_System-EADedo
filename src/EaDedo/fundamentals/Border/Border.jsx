@@ -32,7 +32,7 @@ const CardBorderRadius = ({ name, radius }) => {
   return (
     <main className="flexbox__center--column-center">
       <div
-        className="card--border-radius"
+        className="card--radius"
         onClick={() => copyToClipboard(radius, setCopiedRadius)}
         style={{
           borderRadius: radius,
@@ -45,9 +45,9 @@ const CardBorderRadius = ({ name, radius }) => {
         )}
       </div>
       <div className="flexbox__center">
-        <p className="font-size-p margim_0">{name}</p>
+        <p className="paragraph margin-0">{name}</p>
         <p
-          className="font-size-sm margim_0 "
+          className="font-size-sm margin-0 "
           onClick={() => copyToClipboard(radius, setCopiedRadius)}
         >
           {copiedRadius ? <Check size={18} /> : <Copy size={18} />}
@@ -60,7 +60,7 @@ const CardBorderRadius = ({ name, radius }) => {
 export default function Border() {
   return (
     <div className="container-xl">
-      <h2 className="font-size-xl">Border Radius</h2>
+      <h2 className="heading2">Border Radius</h2>
       <div className="flexbox__wrap">
         {borderRadiusValues.map((borderRadiusObject, index) => (
           <CardBorderRadius

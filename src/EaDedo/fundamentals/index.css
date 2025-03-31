@@ -1,15 +1,97 @@
-@import url(./Tipografia/Tipografia.css);
-@import url(./Cores/Cores.css);
+@import "./Tipografia/Tipografia.css";
+@import "./Layout/Layout.css";
+@import "./Iconografia/Iconografia.css";
+@import "./Elevation/Elevation.css";
+@import "./Cores/Cores.css";
+@import "./Border/Border.css";
 
-.btn {
-  background-color: var(--Turquoise-600);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
+/* FLEX */
+.flexbox {
+  display: flex;
 }
 
-.btn:hover {
-  background-color: var(--Blue-900);
+.flexbox__center {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.flexbox__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.flexbox__column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.flexbox__between--center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexbox__around--center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexbox__center--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox__center--column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* MARGINS */
+.margin-0 {
+  margin: 0 !important;
+}
+
+.margin__bottom--default {
+  margin-bottom: var(--space-150);
+}
+
+/* IMAGENS */
+.image-fluid {
+  width: 100%;
+  height: auto;
+}
+
+/* BACKGROUNDS */
+.background-blue-100 {
+  background: var(--color-blue-100);
+}
+
+.background-blue-300 {
+  background: var(--color-blue-300);
+}
+
+.background-blue-600 {
+  background: var(--color-blue-600);
+}
+
+.background-blue-900 {
+  background: var(--color-blue-900);
+}
+
+.background-neutral-100 {
+  background: var(--color-neutral-100);
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,3 +1,25 @@
+:root {
+  --icon-size-sm: 1rem;
+  --icon-size-md: 1.5rem;
+  --icon--lg: 2rem;
+}
+
+.icon-size-sm {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+.icon-size-md {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+.icon--lg {
+  width: var(--icon--lg);
+  height: var(--icon--lg);
+}
+
+/* especifico DS */
 .icon-container {
   display: flex;
   align-items: flex-start;
@@ -17,5 +39,5 @@
   gap: 0.625rem;
   flex-shrink: 0;
   border-radius: 0.25rem;
-  background: var(--neutral-050);
+  background: var(--color-neutral-050);
 }

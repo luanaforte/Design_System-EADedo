@@ -144,12 +144,12 @@ const iconsNavegacao = [
 export default function Iconografia() {
 	return (
 		<main className="container_xl">
-			<h2 className="font-size-xl">Ícones</h2>
+			<h2 className="heading2">Ícones</h2>
 			<div className="icon-container">
 				{iconsNavegacao.map((icon, index) => (
 					<div key={index} className="icon-item">
 						<img src={icon.src} alt={icon.name} />
-						<p className="font-size-p">{icon.name}</p>
+						<p className="paragraph">{icon.name}</p>
 					</div>
 				))}
 			</div>

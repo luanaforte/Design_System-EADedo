@@ -139,9 +139,9 @@ const ColorCard = ({ name, color }) => {
           <Copy className="copied-icon copied-icon__hover" size={16} />
         )}
       </div>
-      <p className="font-size-p margim_0">{name}</p>
+      <p className="paragraph margin-0">{name}</p>
       <p
-        className="font-size-sm margim_0 flexbox__center"
+        className="font-size-sm margin-0 flexbox__center"
         onClick={() => copyToClipboard(colorValues, setCopiedColor)}
       >
         {colorValues}
@@ -154,10 +154,10 @@ const ColorCard = ({ name, color }) => {
 export default function Cores() {
   return (
     <main className="container-xl">
-      <h2 className="font-size-xl">Cores</h2>
+      <h2 className="heading2">Cores</h2>
       {Object.keys(groupedColors).map((group) => (
         <div key={group}>
-          <h3 className="font-family-Manrope font-size-lg">{group}</h3>
+          <h3 className="font-family-Manrope heading3">{group}</h3>
           <div className="colors-container">
             {groupedColors[group].map((colorObject, index) => (
               <ColorCard

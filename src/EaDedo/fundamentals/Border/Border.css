@@ -1,22 +1,28 @@
 :root {
   /* Bordas Padões */
-  --border-radius-full: 100%;
-  --border-radius-025: 0.25rem;
-  --border-radius-050: 0.5rem;
-  --border-radius-075: 0.75rem;
-  --border-radius-100: 1rem;
-  --border-radius-125: 1.25rem;
-  --border-radius-150: 1.5rem;
+  --radius-full: 100%;
+  --radius-025: 0.25rem;
+  --radius-050: 0.5rem;
+  --radius-075: 0.75rem;
+  --radius-100: 1rem;
+  --radius-125: 1.25rem;
+  --radius-150: 1.5rem;
+}
+
+/* border color */
+/* tem important pq se não a cor não pega */
+.border-color-blue-600 {
+  border-color: var(--color-blue-600) !important;
 }
 
 /* Especifico do DS */
-.card--border-radius {
+.card--radius {
   width: 4.625rem;
   height: 4.625rem;
   border: 1px solid var(--Anil);
   position: relative;
 }
 
-.card--border-radius:hover .copied-icon__hover {
+.card--radius:hover .copied-icon__hover {
   display: block;
 }
