@@ -10,6 +10,7 @@
 @import "../components/Carousel_indicators/carousel_indicators.css";
 @import "../components/Tag/Tag.css";
 @import "../components/Tag_course/Tag_course.css";
+@import "../components/Alerts/Alerts.css";
 
 /* FLEX */
 .flexbox {

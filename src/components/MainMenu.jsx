@@ -17,6 +17,7 @@ const Rotes = {
 		{ label: "Tag Course", route: "/Componentes/Tag_course" },
 		{ label: "Carousel Indicators", route: "/Componentes/Carousel_indicators" },
 		{ label: "Alerts", route: "/Componentes/Alerts" },
+		{ label: "Avatar", route: "/Componentes/Avatar" },
 	],
 };
 

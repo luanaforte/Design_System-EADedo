@@ -1,6 +1,6 @@
 {
 	"name": "design_system2",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"main": "dist/eadedo_style.css",
 	"module": "dist/Style_moodle.js",
 	"scripts": {
