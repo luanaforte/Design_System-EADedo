@@ -1,0 +1,62 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-150);
+  margin-bottom: var(--space-150);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--space-100);
+  border-radius: var(--radius-050);
+  color: var(--accordion-text);
+  background-color: var(--accordion-bg);
+  cursor: pointer;
+}
+
+.accordion-header .paragraph {
+  margin: 0;
+}
+
+.accordion-header:hover {
+  color: var(--accordion-hover-text);
+}
+
+.accordion-header:hover .icons svg path {
+  fill: var(--accordion-hover-fill-icon);
+}
+
+.accordion-header .icons svg path {
+  transition: fill 0.3s ease;
+}
+
+.accordion-header:active .icons svg path {
+  fill: var(--accordion-active-fill-icon);
+}
+
+.accordion-content {
+  padding: var(--space-100);
+  display: none;
+}
+
+.icon-active {
+  display: inline-block;
+}
+
+.icon-inactive {
+  display: none;
+}
+
+/* Accordions grupos */
+.EadGraduacao {
+  --accordion-bg: var(--color-neutral-100);
+  --accordion-text: var(--color-blue-600);
+  --accordion-hover-text: var(--color-blue-900);
+  --accordion-hover-fill-icon: var(--color-blue-900);
+  --accordion-active-bg: var(--color-blue-100);
+  --accordion-active-text: var(--color-blue-600);
+  --accordion-active-fill-icon: var(--color-blue-800);
+}

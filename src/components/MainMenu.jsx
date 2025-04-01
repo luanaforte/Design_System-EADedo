@@ -18,6 +18,8 @@ const Rotes = {
 		{ label: "Carousel Indicators", route: "/Componentes/Carousel_indicators" },
 		{ label: "Alerts", route: "/Componentes/Alerts" },
 		{ label: "Avatar", route: "/Componentes/Avatar" },
+		{ label: "Badge", route: "/Componentes/Badge" },
+		{ label: "Accordions", route: "/Componentes/Accordions" },
 	],
 };
 

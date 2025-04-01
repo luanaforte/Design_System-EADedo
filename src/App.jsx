@@ -17,6 +17,8 @@ import Tag_course from "./EaDedo/components/Tag_course/Tag_course.jsx";
 import Carousel_indicators from "./EaDedo/components/Carousel_indicators/carousel_indicators.jsx";
 import Alerts from "./EaDedo/components/Alerts/Alerts.jsx";
 import Avatar from "./EaDedo/components/Avatar/Avatar.jsx";
+import Badge from "./EaDedo/components/Badge/Badge.jsx";
+import Accordions from "./EaDedo/components/Accordions/Accordions.jsx";
 
 const App = () => {
 	return (
@@ -38,6 +40,8 @@ const App = () => {
 				/>
 				<Route path="Componentes/Alerts" element={<Alerts />} />
 				<Route path="Componentes/Avatar" element={<Avatar />} />
+				<Route path="Componentes/Badge" element={<Badge />} />
+				<Route path="Componentes/Accordions" element={<Accordions />} />
 			</Route>
 		</Routes>
 	);

@@ -11,6 +11,9 @@
 @import "../components/Tag/Tag.css";
 @import "../components/Tag_course/Tag_course.css";
 @import "../components/Alerts/Alerts.css";
+@import "../components/Avatar/Avatar.css";
+@import "../components/Badge/Badge.css";
+@import "../components/Accordions/Accordions.css";
 
 /* FLEX */
 .flexbox {
