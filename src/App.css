@@ -1,6 +1,6 @@
 @import "./EaDedo/fundamentals/index.css";
 
-body{
+body {
   margin: 0;
   font-family: var(--font-family-Poppins);
 }
@@ -464,6 +464,7 @@ body{
   border-bottom: 1px solid #004af7;
   font-weight: var(--font-weight-semibold);
 }
+
 /* border */
 .card--radius {
   width: 4.625rem;
@@ -565,6 +566,35 @@ body{
   margin-bottom: 1.75rem;
 }
 
+/* buttons */
+.button-pill--hover,
+.button-minimal--hover {
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+}
+
+.button-rounded--hover {
+  color: var(--button-hover-color);
+  background: rgba(240, 241, 245, 0.7);
+  border-color: var(--button-hover-color);
+}
+
+.button-pill--focus,
+.button-minimal--focus,
+.button-minimal--active {
+  outline: none;
+  color: var(--button-color);
+  border-color: var(--button-border);
+}
+
+.button-pill--active,
+.button-rounded--focus,
+.button-rounded--active {
+  color: #ffffff;
+  background: var(--button-active-bg);
+  border-color: var(--button-active-border);
+}
+
 /* ********************** */
 
 /* BREAKPOINTS */
@@ -587,6 +617,3 @@ body{
 
 /* Dispositivos extra grandes (laptops grandes e desktops, a partir de 1440px) */
 @media (max-width: 1440px) {}
-
-
-

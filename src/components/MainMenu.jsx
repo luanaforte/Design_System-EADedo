@@ -20,6 +20,7 @@ const Rotes = {
 		{ label: "Avatar", route: "/Componentes/Avatar" },
 		{ label: "Badge", route: "/Componentes/Badge" },
 		{ label: "Accordions", route: "/Componentes/Accordions" },
+		{ label: "Button", route: "/Componentes/Button" },
 	],
 };
 

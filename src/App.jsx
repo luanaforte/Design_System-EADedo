@@ -19,6 +19,7 @@ import Alerts from "./EaDedo/components/Alerts/Alerts.jsx";
 import Avatar from "./EaDedo/components/Avatar/Avatar.jsx";
 import Badge from "./EaDedo/components/Badge/Badge.jsx";
 import Accordions from "./EaDedo/components/Accordions/Accordions.jsx";
+import Button from "./EaDedo/components/Buttons/Button.jsx";
 
 const App = () => {
 	return (
@@ -42,6 +43,7 @@ const App = () => {
 				<Route path="Componentes/Avatar" element={<Avatar />} />
 				<Route path="Componentes/Badge" element={<Badge />} />
 				<Route path="Componentes/Accordions" element={<Accordions />} />
+				<Route path="Componentes/Button" element={<Button />} />
 			</Route>
 		</Routes>
 	);

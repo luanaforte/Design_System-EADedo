@@ -1,0 +1,248 @@
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-150);
+  margin-bottom: var(--space-150);
+}
+
+.button-pill {
+  height: 2.5rem;
+  min-width: 11.5625rem;
+  max-width: fit-content;
+  padding: 0rem var(--space-100);
+  border-radius: var(--radius-150);
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  background: transparent;
+
+  /* texto */
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-medium);
+  flex: 1;
+}
+
+.button-rounded {
+  height: 2.5rem;
+  min-width: 11.5625rem;
+  max-width: fit-content;
+  padding: 0rem var(--space-100);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-075);
+  border-radius: var(--radius-050);
+  border: 1px solid;
+  color: var(--color-neutral-950);
+  background: transparent;
+
+  /* texto */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-medium);
+  flex: 1;
+}
+
+.button-minimal {
+  display: inline-flex;
+  height: 1.125rem;
+  padding: 0rem var(--space-0);
+  align-items: center;
+  gap: var(--space-025);
+  text-decoration: none;
+  border: none !important;
+  background: transparent;
+
+  /* texto */
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-medium);
+}
+
+.button--icon-right {
+  gap: var(--space-075);
+}
+
+.button--icon-left {
+  justify-content: space-between;
+}
+
+.button-media-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 52.75rem;
+  min-height: 2.5rem;
+  padding: var(--space-050) var(--space-100);
+  border-radius: var(--radius-050);
+  border: 1px solid;
+  margin-bottom: var(--space-150);
+  text-decoration: none;
+}
+
+.button-media-link .paragraph {
+  color: var(--button-color);
+  margin: 0;
+}
+
+.button-pill svg path,
+.button-rounded svg path,
+.button-minimal svg path,
+.button-media-link svg path {
+  fill: var(--svg-fill, currentColor);
+}
+
+.button-notification {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  width: 100%;
+  max-width: 43.5625rem;
+  padding: var(--space-050);
+  border-radius: var(--radius-050);
+  position: relative;
+  text-decoration: none;
+  margin-bottom: var(--space-150);
+  background: var(--color-neutral-100);
+}
+
+.button-notification__text {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-medium);
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  color: var(--color-blue-600);
+  margin: 0;
+}
+
+.button-notification__badge {
+  position: absolute;
+  right: -5px;
+  top: -8px;
+}
+
+.button-notification:hover .button-notification__text {
+  color: var(--color-blue-900);
+}
+
+.button-notification:hover svg path {
+  fill: var(--color-blue-900);
+}
+
+/* Buttons colors */
+.button--neutral {
+  --button-color: var(--color-neutral-950);
+  --button-border: var(--color-neutral-950);
+  --button-hover-color: var(--color-neutral-950);
+  --button-active-bg: var(--color-neutral-950);
+  --button-active-border: var(--color-neutral-950);
+}
+
+.button--blue {
+  --button-color: var(--color-blue-600);
+  --button-border: var(--color-blue-600);
+  --button-hover-color: var(--color-blue-900);
+  --button-active-bg: var(--color-blue-600);
+  --button-active-border: var(--color-blue-900);
+}
+
+.button--turquoise {
+  --button-color: var(--color-turquoise-600);
+  --button-border: var(--color-turquoise-600);
+  --button-hover-color: var(--color-turquoise-900);
+  --button-active-bg: var(--color-turquoise-600);
+  --button-active-border: var(--color-turquoise-900);
+}
+
+.button--red {
+  --button-color: var(--color-red-600);
+  --button-border: var(--color-red-600);
+  --button-hover-color: var(--color-red-900);
+  --button-active-bg: var(--color-red-600);
+  --button-active-border: var(--color-red-900);
+}
+
+.button--yellow {
+  --button-color: var(--color-yellow-600);
+  --button-border: var(--color-yellow-600);
+  --button-hover-color: var(--color-yellow-900);
+  --button-active-bg: var(--color-yellow-600);
+  --button-active-border: var(--color-yellow-900);
+}
+
+.button--purple {
+  --button-color: var(--color-purple-600);
+  --button-border: var(--color-purple-600);
+  --button-hover-color: var(--color-purple-900);
+  --button-active-bg: var(--color-purple-600);
+  --button-active-border: var(--color-purple-900);
+}
+
+.button-pill,
+.button-rounded,
+.button-minimal {
+  color: var(--button-color);
+  border-color: var(--button-border);
+}
+
+.button-pill:hover,
+.button-minimal:hover,
+.button-media-link:hover,
+.button-media-link:hover .paragraph {
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+}
+
+.button-rounded:hover {
+  color: var(--button-hover-color);
+  background: rgba(240, 241, 245, 0.7);
+  border-color: var(--button-hover-color);
+}
+
+.button-pill:focus,
+.button-minimal:focus,
+.button-minimal:active,
+.button-pill.active,
+.button-minimal.active {
+  outline: none;
+  color: var(--button-color);
+  border-color: var(--button-border);
+}
+
+.button-pill:active,
+.button-rounded:active,
+.button-rounded:focus,
+.button-pill.active,
+.button-rounded.active {
+  color: #ffffff;
+  background: var(--button-active-bg);
+  border-color: var(--button-active-border);
+}
+
+.disabled {
+  pointer-events: none;
+  color: var(--color-neutral-300);
+  border: 1px solid var(--color-neutral-300);
+}
+
+
+/* Dispositivos médios (tablets na horizontal, de 768px a 375px) */
+@media (max-width: 768px) {
+  .button-pill {
+    max-width: 100%;
+  }
+
+  .button-notification__text-part {
+    display: none;
+  }
+
+  .button-notification__text::first-letter {
+    text-transform: uppercase;
+  }
+}
