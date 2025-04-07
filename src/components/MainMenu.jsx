@@ -21,6 +21,11 @@ const Rotes = {
 		{ label: "Badge", route: "/Componentes/Badge" },
 		{ label: "Accordions", route: "/Componentes/Accordions" },
 		{ label: "Button", route: "/Componentes/Button" },
+		{ label: "IframeVideo", route: "/Componentes/IframeVideo" },
+		{ label: "HeroImage", route: "/Componentes/HeroImage" },
+		{ label: "HeadersIcon", route: "/Componentes/HeadersIcon" },
+		{ label: "Cards", route: "/Componentes/Cards" },
+		{ label: "Button_section_menu", route: "/Componentes/Button_section_menu" },
 	],
 };
 

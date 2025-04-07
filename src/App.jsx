@@ -1,5 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import "./EaDedo/fundamentals/index.css";
+
 import Home from "./EaDedo/Home.jsx"; // Alterado para importação padrão
 
 import Fundamentos from "./EaDedo/fundamentals/Fundamentals.jsx";
@@ -20,6 +22,11 @@ import Avatar from "./EaDedo/components/Avatar/Avatar.jsx";
 import Badge from "./EaDedo/components/Badge/Badge.jsx";
 import Accordions from "./EaDedo/components/Accordions/Accordions.jsx";
 import Button from "./EaDedo/components/Buttons/Button.jsx";
+import IframeVideo from "./EaDedo/components/IframeVideo/IframeVideo.jsx";
+import HeroImage from "./EaDedo/components/HeroImage/HeroImage.jsx";
+import HeadersIcon from "./EaDedo/components/HeadersIcon/headersIcon.jsx";
+import Cards from "./EaDedo/components/Cards/Cards.jsx";
+import Button_section_menu from "./EaDedo/components/Button_section_menu/Button_section_menu.jsx";
 
 const App = () => {
 	return (
@@ -44,6 +51,14 @@ const App = () => {
 				<Route path="Componentes/Badge" element={<Badge />} />
 				<Route path="Componentes/Accordions" element={<Accordions />} />
 				<Route path="Componentes/Button" element={<Button />} />
+				<Route path="Componentes/IframeVideo" element={<IframeVideo />} />
+				<Route path="Componentes/HeroImage" element={<HeroImage />} />
+				<Route path="Componentes/HeadersIcon" element={<HeadersIcon />} />
+				<Route path="Componentes/Cards" element={<Cards />} />
+				<Route
+					path="Componentes/Button_section_menu"
+					element={<Button_section_menu />}
+				/>
 			</Route>
 		</Routes>
 	);

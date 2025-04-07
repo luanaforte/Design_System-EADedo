@@ -1,0 +1,7 @@
+.HeroImage {
+  background-size: cover;
+  background-position: center;
+  height: 18.75rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+}

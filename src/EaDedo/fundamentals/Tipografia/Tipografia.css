@@ -24,14 +24,22 @@
   --font-family-Satoshi: "Satoshi", sans-serif;
   --font-family-Code: "Source Code Pro", monospace;
   /* Tamanhos */
-  --tags: 0.875em; /* 14px - Tags */
-  --font-size-sm: 1em; /* 16px - Legend */
-  --font-size-p: 1.125em; /* 18px - Paragraph */
-  --font-size-md: 1.5em; /* 24px - Heading 4 */
-  --font-size-lg: 1.75em; /* 28px - Heading 3 */
-  --font-size-xl: 2em; /* 32px - Heading 2 */
-  --font-size-2xl: 2.25em; /*  36px - Heading 1 */
-  --font-size-3xl: 2.25em; /* 48px - Display */
+  --tags: 0.875em;
+  /* 14px - Tags */
+  --font-size-sm: 1em;
+  /* 16px - Legend */
+  --font-size-p: 1.125em;
+  /* 18px - Paragraph */
+  --font-size-md: 1.5em;
+  /* 24px - Heading 4 */
+  --font-size-lg: 1.75em;
+  /* 28px - Heading 3 */
+  --font-size-xl: 2em;
+  /* 32px - Heading 2 */
+  --font-size-2xl: 2.25em;
+  /*  36px - Heading 1 */
+  --font-size-3xl: 2.25em;
+  /* 48px - Display */
   /* Entrelinhas */
   --line-height-tight: 100%;
   --line-height-medium: 150%;
@@ -49,7 +57,7 @@
   --font-family-heading: var(--font-family-Poppins);
   --font-family-body: var(--font-family-Poppins);
   --font-family-code: var(--font-family-Code);
-    color: var(--color-neutral-950);
+  color: var(--color-neutral-950);
 }
 
 .AmbienteDaTutoria,
@@ -73,63 +81,77 @@
 
 .tags {
   font-family: var(--font-family-body);
-  font-size: var(--tags); /* Tamanho para tags */
+  font-size: var(--tags);
+  /* Tamanho para tags */
   line-height: var(--line-height-medium);
   margin: 0;
 }
 
 .legend {
   font-family: var(--font-family-body);
-  font-size: var(--font-size-sm); /* Tamanho para legenda */
+  font-size: var(--font-size-sm);
+  /* Tamanho para legenda */
   line-height: var(--line-height-distant);
   margin: 0;
 }
 
 .paragraph {
   font-family: var(--font-family-body);
-  font-size: var(--font-size-p); /* Tamanho para parágrafo */
+  font-size: var(--font-size-p);
+  /* Tamanho para parágrafo */
   line-height: var(--line-height-distant);
-  margin: 0 0 0.5rem 0; /* 16px */
+  margin: 0 0 0.5rem 0;
+  /* 16px */
 }
 
 .heading4 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-md); /* Tamanho para H4 */
+  font-size: var(--font-size-md);
+  /* Tamanho para H4 */
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-medium);
-  margin: 0 0 0.5rem 0; /* 8px */
+  margin: 0 0 0.5rem 0;
+  /* 8px */
 }
 
 .heading3 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-lg); /* Tamanho para H3 */
+  font-size: var(--font-size-lg);
+  /* Tamanho para H3 */
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
-  margin: 0 0 0.5rem 0; /* 8px */
+  margin: 0 0 0.5rem 0;
+  /* 8px */
 }
 
 .heading2 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-xl); /* Tamanho para H2 */
+  font-size: var(--font-size-xl);
+  /* Tamanho para H2 */
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
-  margin: 0 0 0.5rem 0; /* 8px */
+  margin: 0 0 0.5rem 0;
+  /* 8px */
 }
 
 .heading1 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-2xl); /* Tamanho para H1 */
+  font-size: var(--font-size-2xl);
+  /* Tamanho para H1 */
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
-  margin: 0 0 0.5rem 0; /* 8px */
+  margin: 0 0 0.5rem 0;
+  /* 8px */
 }
 
 .display {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-3xl); /* Tamanho para Display */
+  font-size: var(--font-size-3xl);
+  /* Tamanho para Display */
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  margin: 0 0 0.5rem 0; /* 8px */
+  margin: 0 0 0.5rem 0;
+  /* 8px */
 }
 
 /* Listas */
@@ -283,5 +305,3 @@
     font-size: var(--font-size-2xl);
   }
 }
-
-

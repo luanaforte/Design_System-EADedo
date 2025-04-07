@@ -12,6 +12,7 @@ export default defineConfig({
         script: path.resolve(__dirname, "./public/Style_moodle.js"),
         badge: path.resolve(__dirname, "src/EaDedo/components/Badge/Badge.js"),
         accordions: path.resolve(__dirname, "src/EaDedo/components/Accordions/Accordions.js"),
+        iframeVideo: path.resolve(__dirname, "src/EaDedo/components/IframeVideo/IframeVideo.js"),
       },
       output: {
         assetFileNames: "eadedo_style.css",

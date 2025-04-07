@@ -1,0 +1,15 @@
+.header__icon {
+  display: flex;
+  min-width: 15.625rem;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem var(--space-050);
+  flex-wrap: wrap;
+  /* margin-bottom: var(--space-150); */
+}
+
+@media (max-width: 375px) {
+  .header__icon [class^="icon-size-"] {
+    display: none;
+  }
+}

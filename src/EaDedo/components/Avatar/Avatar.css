@@ -54,7 +54,7 @@
 .avatar__letter-content--additional-md {
   color: var(--color-neutral-050);
   text-align: center;
-  =font-size: var(--font-size-md);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-regular);
   line-height: var(--font-size-lg);
 }
