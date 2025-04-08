@@ -1,0 +1,17 @@
+.closing_banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-100);
+}
+
+.closing_banner__button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  row-gap: var(--space-100);
+  align-self: stretch;
+  flex-wrap: wrap;
+}

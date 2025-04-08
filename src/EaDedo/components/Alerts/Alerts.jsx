@@ -5,7 +5,7 @@ export default function Alerts() {
 	return (
 		<section>
 			<h3 className="heading3">Anatomia</h3>
-			<h4 className="heading4">banner-alert--fill</h4>
+			<h4 className="heading4 margin-0">banner-alert--fill</h4>
 			<div className="banner-alert--fill background-blue-100">
 				<p className="paragraph margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
@@ -14,7 +14,7 @@ export default function Alerts() {
 					conteúdo.
 				</p>
 			</div>
-			<h4 className="heading4">banner-alert--fill__icon</h4>
+			<h4 className="heading4 margin-0">banner-alert--fill__icon</h4>
 			<div className="banner-alert--fill__icon background-blue-100">
 				<div className="icon-size-md">
 					<svg
@@ -38,7 +38,7 @@ export default function Alerts() {
 					</p>
 				</div>
 			</div>
-			<h4 className="heading4">banner-alert--stroke</h4>
+			<h4 className="heading4 margin-0">banner-alert--stroke</h4>
 			<div className="banner-alert--stroke border-color-blue-600">
 				<p className="paragraph margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
@@ -47,7 +47,7 @@ export default function Alerts() {
 					conteúdo.
 				</p>
 			</div>
-			<h4 className="heading4">banner-alert--stroke__icon</h4>
+			<h4 className="heading4 margin-0">banner-alert--stroke__icon</h4>
 			<div className="banner-alert--stroke__icon border-color-blue-600">
 				<div className="icon-size-md">
 					<svg
@@ -71,9 +71,9 @@ export default function Alerts() {
 					</p>
 				</div>
 			</div>
-			<h4 className="heading4">banner-alert--fill Heading </h4>
+			<h4 className="heading4 margin-0">banner-alert--fill Heading </h4>
 			<div className="banner-alert--fill background-blue-100">
-				<h4 className="heading4">banner-alert--fill Heading</h4>
+				<h4 className="heading4 margin-0">banner-alert--fill Heading</h4>
 				<p className="paragraph margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
 					texto de exemplo vai ser um pouco mais longo para que você possa ver
@@ -81,7 +81,7 @@ export default function Alerts() {
 					conteúdo.
 				</p>
 			</div>
-			<h4 className="heading4">banner-alert--fill__icon Heading</h4>
+			<h4 className="heading4 margin-0">banner-alert--fill__icon Heading</h4>
 			<div className="banner-alert--fill__icon background-blue-100">
 				<div className="icon-size-md">
 					<svg
@@ -97,7 +97,9 @@ export default function Alerts() {
 					</svg>
 				</div>
 				<div className="banner-alert__content">
-					<h4 className="heading4">banner-alert--fill__icon Heading</h4>
+					<h4 className="heading4 margin-0">
+						banner-alert--fill__icon Heading
+					</h4>
 					<p className="paragraph margin-0">
 						Oba, você leu com sucesso esta importante mensagem de alerta. Este
 						texto de exemplo vai ser um pouco mais longo para que você possa ver
@@ -106,9 +108,11 @@ export default function Alerts() {
 					</p>
 				</div>
 			</div>
-			<h4 className="heading4">banner-alert--stroke Heading </h4>
+			<h4 className="heading4 margin-0">banner-alert--stroke Heading </h4>
 			<div className="banner-alert--stroke border-color-blue-600">
-				<h4 className="heading4 text-blue-600">banner-alert--stroke Heading</h4>
+				<h4 className="heading4 margin-0 text-blue-600">
+					banner-alert--stroke Heading
+				</h4>
 				<p className="paragraph margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
 					texto de exemplo vai ser um pouco mais longo para que você possa ver
@@ -116,7 +120,7 @@ export default function Alerts() {
 					conteúdo.
 				</p>
 			</div>
-			<h4 className="heading4">banner-alert--stroke__icon</h4>
+			<h4 className="heading4 margin-0">banner-alert--stroke__icon</h4>
 			<div className="banner-alert--stroke__icon border-color-blue-600">
 				<div className="icon-size-md">
 					<svg
@@ -132,7 +136,7 @@ export default function Alerts() {
 					</svg>
 				</div>
 				<div className="banner-alert__content">
-					<h4 className="heading4 text-blue-600">
+					<h4 className="heading4 margin-0 text-blue-600">
 						banner-alert--stroke__icon Heading
 					</h4>
 					<p className="paragraph margin-0">

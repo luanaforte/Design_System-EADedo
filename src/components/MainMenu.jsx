@@ -26,6 +26,9 @@ const Rotes = {
 		{ label: "HeadersIcon", route: "/Componentes/HeadersIcon" },
 		{ label: "Cards", route: "/Componentes/Cards" },
 		{ label: "Button_section_menu", route: "/Componentes/Button_section_menu" },
+		{ label: "Closing_banner", route: "/Componentes/Closing_banner" },
+		{ label: "Tooltip", route: "/Componentes/Tooltip" },
+		{ label: "ColapseSection", route: "/Componentes/ColapseSection" },
 	],
 };
 

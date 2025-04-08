@@ -19,6 +19,7 @@
 @import "../components/HeroImage/HeroImage.css";
 @import "../components/HeadersIcon/HeadersIcon.css";
 @import "../components/Button_section_menu/Button_section_menu.css";
+@import "../components/Tooltip/Tooltip.css";
 
 /* FLEX */
 .flexbox {
@@ -47,12 +48,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .flexbox__around--center {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .flexbox__center--center {

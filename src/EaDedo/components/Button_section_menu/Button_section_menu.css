@@ -4,6 +4,8 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+  font: inherit;
+  color: inherit;
 }
 
 .button_section_menu h4 {

@@ -27,6 +27,9 @@ import HeroImage from "./EaDedo/components/HeroImage/HeroImage.jsx";
 import HeadersIcon from "./EaDedo/components/HeadersIcon/headersIcon.jsx";
 import Cards from "./EaDedo/components/Cards/Cards.jsx";
 import Button_section_menu from "./EaDedo/components/Button_section_menu/Button_section_menu.jsx";
+import Closing_banner from "./EaDedo/components/Closing_banner/Closing_banner.jsx";
+import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
+import ColapseSection from "./EaDedo/components/ColapseSection/ColapseSection.jsx";
 
 const App = () => {
 	return (
@@ -59,6 +62,9 @@ const App = () => {
 					path="Componentes/Button_section_menu"
 					element={<Button_section_menu />}
 				/>
+				<Route path="Componentes/Closing_banner" element={<Closing_banner />} />
+				<Route path="Componentes/Tooltip" element={<Tooltip />} />
+				<Route path="Componentes/ColapseSection" element={<ColapseSection />} />
 			</Route>
 		</Routes>
 	);

@@ -1,6 +1,7 @@
 .badge-notification {
   display: inline-flex;
-  height: auto;
+  height: 1.5rem;
+  min-width: 1.5rem;
   padding: var(--space-012) var(--space-025);
   flex-direction: column;
   justify-content: center;

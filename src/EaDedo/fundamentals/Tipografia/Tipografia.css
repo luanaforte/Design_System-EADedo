@@ -242,6 +242,10 @@
   color: var(--color-red-600) !important;
 }
 
+.text-neutral-900 {
+  color: var(--color-neutral-900);
+}
+
 .text-neutral-950 {
   color: var(--color-neutral-950) !important;
 }
