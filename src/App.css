@@ -221,7 +221,6 @@ body {
 
 .submenu-link {
   display: block;
-  padding: 8px 12px;
   color: var(--color-neutral-950);
   text-decoration: none;
 }

@@ -218,6 +218,10 @@
   color: var(--Marinho) !important;
 }
 
+.text-neutral-300 {
+  color: var(--color-neutral-300) !important;
+}
+
 .text-neutral-600 {
   color: var(--color-neutral-600) !important;
 }

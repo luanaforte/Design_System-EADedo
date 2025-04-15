@@ -30,6 +30,8 @@ import Button_section_menu from "./EaDedo/components/Button_section_menu/Button_
 import Closing_banner from "./EaDedo/components/Closing_banner/Closing_banner.jsx";
 import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
 import ColapseSection from "./EaDedo/components/ColapseSection/ColapseSection.jsx";
+import Button_direction from "./EaDedo/components/Button_direction/Button_direction.jsx";
+import Progress_bar from "./EaDedo/components/Progress_bar/Progress_bar.jsx";
 
 const App = () => {
 	return (
@@ -65,6 +67,11 @@ const App = () => {
 				<Route path="Componentes/Closing_banner" element={<Closing_banner />} />
 				<Route path="Componentes/Tooltip" element={<Tooltip />} />
 				<Route path="Componentes/ColapseSection" element={<ColapseSection />} />
+				<Route
+					path="Componentes/Button_direction"
+					element={<Button_direction />}
+				/>
+				<Route path="Componentes/Progress_bar" element={<Progress_bar />} />
 			</Route>
 		</Routes>
 	);

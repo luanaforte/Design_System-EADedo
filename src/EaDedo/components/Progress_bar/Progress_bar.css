@@ -1,0 +1,58 @@
+.block_completion_progress .progressEventInfo {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  white-space: pre-wrap;
+  text-align: left;
+  overflow: hidden;
+  padding: 0;
+  margin: 5px;
+  color: var(--color-neutral-600);
+}
+
+.block_completion_progress .progressPercentage {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  white-space: pre-wrap;
+  text-align: left;
+  overflow: hidden;
+  padding: 0;
+  margin: 5px;
+  color: var(--color-neutral-600);
+}
+
+.progressPercentage_start {
+  color: var(--color-blue-600);
+}
+
+.block_completion_progress .barModeSqueeze .progressBarCell {
+  border: none;
+  background-color: #EBEDF3;
+}
+
+.block_completion_progress .barModeSqueeze .progressBarCell:hover {
+  background: var(--color-neutral-300);
+}
+
+.block_completion_progress .progressBarCell.futureNotCompleted {
+  background: var(--color-blue-600);
+}
+
+.progressEventInfo .action_link img {
+  display: none;
+}
+
+.progressEventInfo {
+  color: var(--color-neutral-300);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+}
+
+.progressEventInfo .action_link {
+  color: var(--color-neutral-600);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+}

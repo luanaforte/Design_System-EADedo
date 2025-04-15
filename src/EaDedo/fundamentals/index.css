@@ -6,6 +6,9 @@
 @import "./Cores/Cores.css";
 @import "./Border/Border.css";
 
+/* Moodle */
+@import "./Moodle.css";
+
 /* Componentes */
 @import "../components/Carousel_indicators/carousel_indicators.css";
 @import "../components/Tag/Tag.css";
@@ -20,6 +23,7 @@
 @import "../components/HeadersIcon/HeadersIcon.css";
 @import "../components/Button_section_menu/Button_section_menu.css";
 @import "../components/Tooltip/Tooltip.css";
+@import "../components/Progress_bar/Progress_bar.css";
 
 /* FLEX */
 .flexbox {

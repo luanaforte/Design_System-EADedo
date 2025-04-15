@@ -1,0 +1,7 @@
+/* Especificas do Moodle */
+.format-tiles .section li.activity.label h1,
+.format-tiles .section li.activity.label h2,
+.format-tiles .section li.activity.label h3,
+.format-tiles .section li.activity.label h4 {
+  color: var(--color-neutral-950);
+}
