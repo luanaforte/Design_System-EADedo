@@ -5,3 +5,13 @@
 .format-tiles .section li.activity.label h4 {
   color: var(--color-neutral-950);
 }
+
+/* porgresso */
+.description .contentwithoutlink {
+  padding: 0 !important;
+}
+
+.format-tiles #section-0 .contentwithoutlink .no-overflow {
+  margin-bottom: 0 !important;
+  overflow: hidden;
+}

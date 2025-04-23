@@ -4,7 +4,7 @@ import Tooltip from "../Tooltip/Tooltip";
 
 export default function Progress_bar() {
 	return (
-		<main>
+		<main className="container-xl">
 			<div className="flexbox__between--center">
 				<div className="flexbox__center">
 					<p className="paragraph text-neutral-950">

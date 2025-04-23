@@ -25,15 +25,37 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Substituir o ícone <img> pelo SVG correspondente
-      const img = document.querySelector("img.icon.iconInInfo");
+      const img = document.querySelector(".progressEventInfo > img.iconInInfo");
       if (img) {
-        const svgId = value === 100 ? "#svg-concluido" : "#svg-nao-concluido";
-        const svg = document.querySelector(svgId);
+        const title = img.getAttribute("title");
 
-        if (svg) {
-          const svgClone = svg.cloneNode(true);
-          svgClone.removeAttribute("id"); // Evita IDs duplicados
-          img.replaceWith(svgClone);
+        let svgId = null;
+        let textColor = null;
+
+        if (title === "Concluído") {
+          svgId = "#svg-concluido";
+          textColor = "var(--color-turquoise-600)";
+        } else if (title === "Não concluído") {
+          svgId = "#svg-nao-concluido";
+          textColor = "var(--color-neutral-300)";
+        }
+
+        if (svgId) {
+          const svg = document.querySelector(svgId);
+          if (svg) {
+            const svgClone = svg.cloneNode(true);
+            svgClone.removeAttribute("id");
+            svgClone.removeAttribute("hidden");
+            img.replaceWith(svgClone);
+          } else {
+            console.warn(`SVG com id ${svgId} não encontrado.`);
+          }
+        }
+
+        // Atualiza a cor do texto
+        const textElement = document.querySelector(".progressEventInfo .action_link #text, .progressEventInfo .action_link .text");
+        if (textElement && textColor) {
+          textElement.style.color = textColor;
         }
       }
     }
