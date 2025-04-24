@@ -1,5 +1,5 @@
 import React from "react";
-import "./Progress_bar";
+import "./Progress_bar.css";
 import Tooltip from "../Tooltip/Tooltip";
 
 export default function Progress_bar() {

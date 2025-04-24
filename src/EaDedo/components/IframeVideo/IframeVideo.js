@@ -1,4 +1,4 @@
-var video1Url = "https://ead.unifor.br/ava/mod/url/view.php?id=4539292";
+var video1Url = "https://www.youtube.com/embed/DmHAyQCN0mM?si=mWx6BD5KtMzUluUl";
 var video2Url = "";
 var video3Url = "";
 var video4Url = "";

@@ -21,11 +21,8 @@ export function toggleCollapse() {
 export default function ColapseSection() {
 	return (
 		<div className="container-xl EadGraduacao">
-			<div
-				class="collapse_section"
-				id="collapse_section"
-				onClick={() => toggleCollapse("collapse_section")}>
-				<div class="collapse_section-header">
+			<div className="collapse_section" id="collapse_section">
+				<div className="collapse_section-header">
 					<div className="flexbox__between--center">
 						<div className="header__icon">
 							<svg
@@ -46,8 +43,11 @@ export default function ColapseSection() {
 						</div>
 						<button
 							className="button-pill button--icon-left button--blue"
-							target="_blank"
 							id="collapse_section-button"
+							onClick={(e) => {
+								e.stopPropagation(); // Garante que o clique no botão não propague
+								toggleCollapse();
+							}}
 							aria-label="Ver detalhes do conteudo [inserir o nome]">
 							<span id="collapse_section-button--text">Ver detalhes</span>
 							<svg

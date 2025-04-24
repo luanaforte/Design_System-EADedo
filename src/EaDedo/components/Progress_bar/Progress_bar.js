@@ -30,34 +30,55 @@ document.addEventListener("DOMContentLoaded", () => {
         const title = img.getAttribute("title");
 
         let svgId = null;
-        let textColor = null;
 
+        // Define o svgId com base no título
         if (title === "Concluído") {
           svgId = "#svg-concluido";
-          textColor = "var(--color-turquoise-600)";
         } else if (title === "Não concluído") {
           svgId = "#svg-nao-concluido";
-          textColor = "var(--color-neutral-300)";
         }
 
+        // Substitui o <img> pelo SVG correspondente
         if (svgId) {
           const svg = document.querySelector(svgId);
           if (svg) {
             const svgClone = svg.cloneNode(true);
-            svgClone.removeAttribute("id");
-            svgClone.removeAttribute("hidden");
+            svgClone.removeAttribute("id"); // Remove o id para evitar conflitos
+            svgClone.classList.remove("hidden"); // Garante que o SVG será visível
             img.replaceWith(svgClone);
           } else {
             console.warn(`SVG com id ${svgId} não encontrado.`);
           }
         }
-
-        // Atualiza a cor do texto
-        const textElement = document.querySelector(".progressEventInfo .action_link #text, .progressEventInfo .action_link .text");
-        if (textElement && textColor) {
-          textElement.style.color = textColor;
-        }
       }
     }
   }
+
+  // ENVOLVE o texto "Concluído" ou "Não concluído" com <span> e aplica ID ao <svg>
+  document.querySelectorAll('.progressEventInfo').forEach((el) => {
+    el.childNodes.forEach((node) => {
+      if (node.nodeType === 3) {
+        const content = node.textContent.trim();
+
+        if (content === "Concluído" || content === "Não concluído") {
+          const span = document.createElement('span');
+
+          if (content === "Concluído") {
+            span.className = 'status-concluido';
+          } else if (content === "Não concluído") {
+            span.className = 'status-nao-concluido';
+          }
+
+          span.textContent = content;
+          el.replaceChild(span, node);
+
+          const svg = el.querySelector('svg');
+          if (svg) {
+            svg.id = content === "Concluído" ? 'svg-concluido' : 'svg-nao-concluido';
+            svg.classList.remove("hidden"); // Garante que o SVG será visível
+          }
+        }
+      }
+    });
+  });
 });

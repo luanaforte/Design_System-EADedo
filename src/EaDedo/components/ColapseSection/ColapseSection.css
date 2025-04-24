@@ -24,10 +24,6 @@
   transition: max-height 0.3s ease;
 }
 
-.collapse_section.open .collapse_section-content {
-  max-height: fit-content;
-}
-
 .collapse_section.open .collapse_section-button--icone {
   transform: rotate(180deg);
 }

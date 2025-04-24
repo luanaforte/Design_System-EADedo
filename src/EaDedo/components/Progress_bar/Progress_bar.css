@@ -48,6 +48,8 @@
   color: var(--color-neutral-600) !important;
   white-space: pre-wrap;
   margin-top: var(--space-075);
+  display: ruby-text;
+  gap: var(--space-050);
 }
 
 /* legenda do progresso depois do hover */
@@ -58,11 +60,12 @@
   font-weight: var(--font-weight-regular) !important;
 }
 
-.progressEventInfo .action_link #text {
-  color: var(--color-neutral-600) !important;
-  font-family: var(--font-family-body) !important;
-  font-size: var(--font-size-xs) !important;
-  font-weight: var(--font-weight-regular) !important;
+.status-concluido {
+  color: var(--color-turquoise-600);
+}
+
+.status-nao-concluido {
+  color: var(--color-neutral-300);
 }
 
 .progressEventInfo .action_link img {
