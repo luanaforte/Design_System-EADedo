@@ -23,6 +23,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-medium);
+  font-family: var(--font-family-body);
 }
 
 .button-rounded {
@@ -45,6 +46,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-medium);
+  font-family: var(--font-family-body);
 }
 
 .button-minimal {
@@ -63,6 +65,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-medium);
+  font-family: var(--font-family-body);
 }
 
 .button--icon-right {

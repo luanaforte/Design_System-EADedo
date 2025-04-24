@@ -239,11 +239,11 @@
 }
 
 .text-yellow-600 {
-  color: var(--color-red-600) !important;
+  color: var(--color-yellow-600) !important;
 }
 
 .text-purple-600 {
-  color: var(--color-red-600) !important;
+  color: var(--color-purple-600) !important;
 }
 
 .text-neutral-900 {
@@ -267,11 +267,11 @@
 }
 
 .text-yellow-950 {
-  color: var(--color-red-950) !important;
+  color: var(--color-yellow-950) !important;
 }
 
 .text-purple-950 {
-  color: var(--color-red-950) !important;
+  color: var(--color-purple-950) !important;
 }
 
 /* BREAKPOINTS */
