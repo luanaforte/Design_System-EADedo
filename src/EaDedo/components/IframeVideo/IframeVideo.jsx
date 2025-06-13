@@ -72,8 +72,9 @@ export default function IframeVideo() {
 						src={Image}
 						alt="Imagem Vídeo"
 					/>
-					<div className="iframe-video__play">
+					<div className="Button_video__play">
 						<svg
+							className="Button_video__play-icon"
 							xmlns="http://www.w3.org/2000/svg"
 							width="32"
 							height="33"

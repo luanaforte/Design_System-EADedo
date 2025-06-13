@@ -16,7 +16,8 @@
   align-items: center;
   gap: var(--space-125);
   border-radius: var(--radius-050);
-  margin-bottom: var(--space-150);
+  /* margin-bottom: var(--space-150); */
+  justify-content: space-between;
 }
 
 .Card {
@@ -50,13 +51,14 @@
   height: 150px;
   width: 100%;
   object-fit: cover;
+  border-radius: var(--radius-050) var(--radius-050) 0 0;
 }
 
 .card-indication {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 280px;
+  min-width: 280px;
   max-width: 395px;
   height: 295px;
   padding: var(--space-075);

@@ -10,20 +10,28 @@
 @import "./Moodle.css";
 
 /* Componentes */
-@import "../components/Carousel_indicators/carousel_indicators.css";
 @import "../components/Tag/Tag.css";
 @import "../components/Tag_course/Tag_course.css";
+@import "../components/Carousel_indicators/carousel_indicators.css";
+@import "../components/Button_video__play/Button_video__play.css";
+@import "../components/Tooltip/Tooltip.css";
+@import "../components/Progress_bar/Progress_bar.css";
 @import "../components/Alerts/Alerts.css";
+
+@import "../components/IframeVideo/IframeVideo.css";
+@import "../components/Tag_course/Tag_course.css";
 @import "../components/Avatar/Avatar.css";
 @import "../components/Badge/Badge.css";
 @import "../components/Accordions/Accordions.css";
 @import "../components/Buttons/Button.css";
-@import "../components/IframeVideo/IframeVideo.css";
 @import "../components/HeroImage/HeroImage.css";
 @import "../components/HeadersIcon/HeadersIcon.css";
 @import "../components/Button_section_menu/Button_section_menu.css";
-@import "../components/Tooltip/Tooltip.css";
-@import "../components/Progress_bar/Progress_bar.css";
+@import "../components/Cards/Cards.css";
+@import "../components/ColapseSection/ColapseSection.css";
+@import "../components/Carousel_indicators/carousel_indicators.css";
+@import "../components/Button_direction/Button_direction.css";
+@import "../components/Closing_banner/Closing_banner.css";
 
 /* FLEX */
 .flexbox {
@@ -33,6 +41,12 @@
 .flexbox__center {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+}
+
+.flexbox__start {
+  display: flex;
+  align-items: start;
   gap: 0.75rem;
 }
 
@@ -74,13 +88,27 @@
   align-items: center;
 }
 
+.flexbox__center--column-start {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 /* MARGINS */
 .margin-0 {
   margin: 0 !important;
 }
 
 .margin__bottom--default {
-  margin-bottom: var(--space-150);
+  margin-bottom: var(--space-150) !important;
 }
 
 /* IMAGENS */
@@ -110,18 +138,14 @@
   background: var(--color-neutral-100);
 }
 
+.background-neutral-300 {
+  background: var(--color-neutral-300);
+}
+
 .background-turquoise-100 {
   background: var(--color-turquoise-100);
 }
 
 .background-red-100 {
   background: var(--color-red-100);
-}
-
-.show {
-  display: block;
-}
-
-.hidden {
-  display: none;
 }

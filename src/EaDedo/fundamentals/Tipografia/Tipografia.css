@@ -71,6 +71,16 @@
   --font-weight-semibold: var(--font-weight-medium);
 }
 
+.TrilhaBiblioteca {
+  --font-family-heading: var(--font-family-Neulis);
+  --font-family-body: var(--font-family-Poppins);
+  --font-family-code: var(--font-family-Code);
+  color: var(--color-neutral-950);
+
+  /* sobre-escrevendo o peso */
+  --font-weight-semibold: var(--font-weight-medium);
+}
+
 /* Tipografia */
 .code {
   font-family: var(--font-family-code);
@@ -108,10 +118,10 @@
   font-family: var(--font-family-heading);
   font-size: var(--font-size-md);
   /* Tamanho para H4 */
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold) !important;
   line-height: var(--line-height-medium);
   margin: 0 0 0.5rem 0;
-  /* 8px */
+  padding: 0;
 }
 
 .heading3 {
@@ -121,7 +131,7 @@
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   margin: 0 0 0.5rem 0;
-  /* 8px */
+  padding: 0;
 }
 
 .heading2 {
@@ -131,7 +141,7 @@
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   margin: 0 0 0.5rem 0;
-  /* 8px */
+  padding: 0;
 }
 
 .heading1 {
@@ -141,7 +151,7 @@
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   margin: 0 0 0.5rem 0;
-  /* 8px */
+  padding: 0;
 }
 
 .display {
@@ -151,7 +161,7 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   margin: 0 0 0.5rem 0;
-  /* 8px */
+  padding: 0;
 }
 
 /* Listas */
@@ -186,7 +196,6 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
@@ -195,7 +204,6 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -204,8 +212,20 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 4;
-  line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+
+/* TEXT ALIGN */
+.text__left {
+  text-align: left;
+}
+
+.text__right {
+  text-align: right;
+}
+
+.text__center {
+  text-align: center;
 }
 
 /* CORES */

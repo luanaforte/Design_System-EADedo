@@ -58,6 +58,7 @@
   font-family: var(--font-family-body) !important;
   font-size: var(--font-size-xs) !important;
   font-weight: var(--font-weight-regular) !important;
+  margin-top: var(--space-075);
 }
 
 .status-concluido {
@@ -68,6 +69,11 @@
   color: var(--color-neutral-300);
 }
 
-.progressEventInfo .action_link img {
+/* .progressEventInfo .action_link img {
   display: none;
+} */
+
+.progressEventInfo .action_link img,
+.block_completion_progress .progressEventInfo .iconInInfo {
+  display: block;
 }
