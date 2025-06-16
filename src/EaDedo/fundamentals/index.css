@@ -24,14 +24,14 @@
 @import "../components/Buttons/Button.css";
 @import "../components/Text_header/Text_header.css";
 @import "../components/ColapseSection/ColapseSection.css";
+@import "../components/Cards/Cards.css";
+@import "../components/Button_section_menu/Button_section_menu.css";
+@import "../components/Accordions/Accordions.css";
+@import "../components/Button_direction/Button_direction.css";
+@import "../components/Badge/Badge.css";
 
 @import "../components/IframeVideo/IframeVideo.css";
-@import "../components/Badge/Badge.css";
-@import "../components/Accordions/Accordions.css";
 @import "../components/HeroImage/HeroImage.css";
-@import "../components/Button_section_menu/Button_section_menu.css";
-@import "../components/Cards/Cards.css";
-@import "../components/Button_direction/Button_direction.css";
 @import "../components/Closing_banner/Closing_banner.css";
 
 /* FLEX */
@@ -118,7 +118,11 @@
   height: auto;
 }
 
-/* BACKGROUNDS */
+/* ===============================
+   CORES - BACKGROUNDS
+================================== */
+
+/* ===== BLUE ===== */
 .background-blue-100 {
   background: var(--color-blue-100);
 }
@@ -135,6 +139,7 @@
   background: var(--color-blue-900);
 }
 
+/* ===== NEUTRAL ===== */
 .background-neutral-100 {
   background: var(--color-neutral-100);
 }
@@ -143,10 +148,78 @@
   background: var(--color-neutral-300);
 }
 
+.background-neutral-600 {
+  background: var(--color-neutral-600);
+}
+
+.background-neutral-900 {
+  background: var(--color-neutral-900);
+}
+
+/* ===== TURQUOISE ===== */
 .background-turquoise-100 {
   background: var(--color-turquoise-100);
 }
 
+.background-turquoise-300 {
+  background: var(--color-turquoise-300);
+}
+
+.background-turquoise-600 {
+  background: var(--color-turquoise-600);
+}
+
+.background-turquoise-900 {
+  background: var(--color-turquoise-900);
+}
+
+/* ===== RED ===== */
 .background-red-100 {
   background: var(--color-red-100);
+}
+
+.background-red-300 {
+  background: var(--color-red-300);
+}
+
+.background-red-600 {
+  background: var(--color-red-600);
+}
+
+.background-red-900 {
+  background: var(--color-red-900);
+}
+
+/* ===== YELLOW ===== */
+.background-yellow-100 {
+  background: var(--color-yellow-100);
+}
+
+.background-yellow-300 {
+  background: var(--color-yellow-300);
+}
+
+.background-yellow-600 {
+  background: var(--color-yellow-600);
+}
+
+.background-yellow-900 {
+  background: var(--color-yellow-900);
+}
+
+/* ===== PURPLE ===== */
+.background-purple-100 {
+  background: var(--color-purple-100);
+}
+
+.background-purple-300 {
+  background: var(--color-purple-300);
+}
+
+.background-purple-600 {
+  background: var(--color-purple-600);
+}
+
+.background-purple-900 {
+  background: var(--color-purple-900);
 }

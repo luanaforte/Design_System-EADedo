@@ -3,7 +3,7 @@ import placeholderImage from "../../assets/imgs/image-placeholder.png";
 import "./Cards.css";
 import "../../fundamentals/index.css";
 
-export function CardPodcast() {
+export function Card_podcast() {
 	return (
 		<>
 			<a
@@ -23,7 +23,7 @@ export function CardPodcast() {
 						do card Título do card Título do card Título do card Título do card
 						Título do card
 					</p>
-					<p className="tags text-neutral-600">Podcast 0 - 00:00</p>
+					<p className="tags margin-0 text-neutral-600">Podcast 0 - 00:00</p>
 				</div>
 			</a>
 		</>

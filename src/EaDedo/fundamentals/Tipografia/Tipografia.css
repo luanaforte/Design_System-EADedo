@@ -198,16 +198,21 @@
   text-align: center;
 }
 
-/* CORES */
-/* TEXTOS COLORS */
+/* ===============================
+   CORES - TEXTOS
+================================== */
+
+/* Anil */
 .text--Anil {
   color: var(--Anil) !important;
 }
 
+/* Marinho */
 .text--Marinho {
   color: var(--Marinho) !important;
 }
 
+/* ===== NEUTRAL ===== */
 .text-neutral-300 {
   color: var(--color-neutral-300) !important;
 }
@@ -216,48 +221,93 @@
   color: var(--color-neutral-600) !important;
 }
 
-.text-blue-600 {
-  color: var(--color-blue-600) !important;
-}
-
-.text-turquoise-600 {
-  color: var(--color-turquoise-600) !important;
-}
-
-.text-red-600 {
-  color: var(--color-red-600) !important;
-}
-
-.text-yellow-600 {
-  color: var(--color-yellow-600) !important;
-}
-
-.text-purple-600 {
-  color: var(--color-purple-600) !important;
-}
-
 .text-neutral-900 {
-  color: var(--color-neutral-900);
+  color: var(--color-neutral-900) !important;
 }
 
 .text-neutral-950 {
   color: var(--color-neutral-950) !important;
 }
 
+/* ===== BLUE ===== */
+.text-blue-300 {
+  color: var(--color-blue-300) !important;
+}
+
+.text-blue-600 {
+  color: var(--color-blue-600) !important;
+}
+
+.text-blue-900 {
+  color: var(--color-blue-900) !important;
+}
+
 .text-blue-950 {
   color: var(--color-blue-950) !important;
+}
+
+/* ===== TURQUOISE ===== */
+.text-turquoise-300 {
+  color: var(--color-turquoise-300) !important;
+}
+
+.text-turquoise-600 {
+  color: var(--color-turquoise-600) !important;
+}
+
+.text-turquoise-900 {
+  color: var(--color-turquoise-900) !important;
 }
 
 .text-turquoise-950 {
   color: var(--color-turquoise-950) !important;
 }
 
+/* ===== RED ===== */
+.text-red-300 {
+  color: var(--color-red-300) !important;
+}
+
+.text-red-600 {
+  color: var(--color-red-600) !important;
+}
+
+.text-red-900 {
+  color: var(--color-red-900) !important;
+}
+
 .text-red-950 {
   color: var(--color-red-950) !important;
 }
 
+/* ===== YELLOW ===== */
+.text-yellow-300 {
+  color: var(--color-yellow-300) !important;
+}
+
+.text-yellow-600 {
+  color: var(--color-yellow-600) !important;
+}
+
+.text-yellow-900 {
+  color: var(--color-yellow-900) !important;
+}
+
 .text-yellow-950 {
   color: var(--color-yellow-950) !important;
+}
+
+/* ===== PURPLE ===== */
+.text-purple-300 {
+  color: var(--color-purple-300) !important;
+}
+
+.text-purple-600 {
+  color: var(--color-purple-600) !important;
+}
+
+.text-purple-900 {
+  color: var(--color-purple-900) !important;
 }
 
 .text-purple-950 {

@@ -1,0 +1,37 @@
+import React from "react";
+import placeholderImage from "../../assets/imgs/image-placeholder.png";
+import "./Cards.css";
+
+export function Card_video() {
+	return (
+		<a href="" className="card-video margin__bottom--default">
+			<div className="card-video__imagem-container">
+				<img
+					className="card-video__imagem"
+					src={placeholderImage}
+					alt="Imagem Vídeo"
+				/>
+				<div className="Button_video__play">
+					<svg
+						className="Button_video__play-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="33"
+						viewBox="0 0 32 33"
+						fill="none">
+						<path
+							d="M30 16.5C30.0008 16.8395 29.9138 17.1735 29.7473 17.4694C29.5808 17.7654 29.3406 18.0132 29.05 18.1888L11.04 29.2063C10.7364 29.3922 10.3886 29.4937 10.0326 29.5003C9.67661 29.5069 9.32532 29.4183 9.015 29.2438C8.70764 29.0719 8.4516 28.8213 8.2732 28.5177C8.09481 28.2141 8.00051 27.8684 8 27.5163V5.48376C8.00051 5.13162 8.09481 4.78597 8.2732 4.48235C8.4516 4.17874 8.70764 3.92812 9.015 3.75626C9.32532 3.5817 9.67661 3.49314 10.0326 3.49973C10.3886 3.50632 10.7364 3.60783 11.04 3.79376L29.05 14.8113C29.3406 14.9869 29.5808 15.2347 29.7473 15.5306C29.9138 15.8265 30.0008 16.1605 30 16.5Z"
+							fill="white"
+						/>
+					</svg>
+				</div>
+			</div>
+			<p className="truncate--three-lines text-neutral-950 paragraph margin-0">
+				Título do card Título do card Título do card Título do card Título do
+				card Título do card Título do card Título do card Título do card Título
+				do card
+			</p>
+			<p className="tags text-neutral-600">Podcast 0 - 00:00</p>
+		</a>
+	);
+}

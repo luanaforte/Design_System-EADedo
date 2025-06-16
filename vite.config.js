@@ -14,6 +14,7 @@ export default defineConfig({
         accordions: path.resolve(__dirname, "./src/EaDedo/components/Accordions/Accordions.js"),
         ColapseSection: path.resolve(__dirname, "./src/EaDedo/components/ColapseSection/ColapseSection.js"),
         iframeVideo: path.resolve(__dirname, "src/EaDedo/components/IframeVideo/IframeVideo.js"),
+        Progress_bar: path.resolve(__dirname, "src/EaDedo/components/Progress_bar/Progress_bar.js"),
       },
       output: {
         assetFileNames: "eadedo_style.css",

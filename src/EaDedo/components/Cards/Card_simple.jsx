@@ -2,10 +2,10 @@ import React from "react";
 import placeholderImage from "../../assets/imgs/image-placeholder.png";
 import "./Cards.css";
 
-export function Card() {
+export function Card_simple() {
 	return (
-		<div className="Card">
-			<div className="card-content">
+		<div className="Card-simple">
+			<div className="card-simple-content">
 				<p className="paragraph margin-0 text-blue-600">Título especial</p>
 				<p className="paragraph margin-0">
 					Texto que funciona como uma introdução a um conteúdo adicional.
@@ -14,7 +14,7 @@ export function Card() {
 			<img
 				src={placeholderImage}
 				alt="Imagem de placeholder"
-				className="cardImage"
+				className="Card-simple-image"
 			/>
 		</div>
 	);

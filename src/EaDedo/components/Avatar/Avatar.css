@@ -1,30 +1,56 @@
+/* ===============================
+   AVATAR - CONTAINER PRINCIPAL
+================================== */
+
 .avatar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.avatar__letter--lg,
-.avatar__image--lg {
+/* Modificadores de orientação */
+.avatar--horizontal {
+  display: inline-flex;
+  min-width: 17.925rem;
+  align-items: center;
+  gap: var(--space-050);
+}
+
+.avatar--vertical {
+  display: flex;
+  align-items: center;
+  width: 14.125rem;
+  gap: var(--space-050);
+  margin-bottom: var(--space-150);
+}
+
+/* ===============================
+   AVATAR - IMAGEM E LETRA
+================================== */
+
+/* Tamanhos */
+.avatar__image--lg,
+.avatar__letter--lg {
   width: 4rem;
   height: 4rem;
   border-radius: var(--radius-full);
 }
 
-.avatar__letter--md,
-.avatar__image--md {
+.avatar__image--md,
+.avatar__letter--md {
   width: 3rem;
   height: 3rem;
   border-radius: var(--radius-full);
 }
 
-.avatar__letter--sm,
-.avatar__image--sm {
+.avatar__image--sm,
+.avatar__letter--sm {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--radius-full);
 }
 
+/* Conteúdo da letra */
 .avatar__letter-content--sm,
 .avatar__letter-content--md {
   color: var(--color-neutral-050);
@@ -42,7 +68,7 @@
   line-height: var(--font-size-lg);
 }
 
-
+/* Conteúdos adicionais (ex.: contador) */
 .avatar__letter-content--additional-sm {
   color: var(--color-neutral-050);
   text-align: center;
@@ -67,31 +93,26 @@
   line-height: var(--font-size-lg);
 }
 
-/* AVATAR - GRUPOS */
+/* ===============================
+   AVATAR - GRUPO DE AVATARES
+================================== */
+
 .avatar-group,
 .avatar-group--sm {
   display: flex;
 }
 
-.avatar-group .avatar,
 .avatar-group .avatar {
   margin-right: calc(-1.4 * var(--space-100));
 }
 
-.avatar-group--sm .avatar,
 .avatar-group--sm .avatar {
   margin-right: calc(-1 * var(--space-100));
 }
 
-
-/* AVATAR - TEXTOS */
-.avatar__tagline {
-  display: flex;
-  align-items: center;
-  width: 226px;
-  gap: var(--space-050);
-  margin-bottom: var(--space-150);
-}
+/* ===============================
+   AVATAR - INFORMAÇÕES
+================================== */
 
 .avatar__info {
   display: flex;
@@ -102,6 +123,7 @@
   gap: var(--space-050);
 }
 
+/* Nome do usuário */
 .avatar__name {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -117,10 +139,19 @@
   margin: 0;
 }
 
-.avatar__tagline-text {
+
+/* Tagline */
+.avatar__tagline {
   color: var(--color-blue-600);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-tight);
   margin: 0;
+}
+
+/* Wrapper para tagline + tooltip (quando vertical) */
+.avatar__tagline-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-050);
 }
