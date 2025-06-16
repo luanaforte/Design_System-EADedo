@@ -5,7 +5,7 @@ import Profile from "../../assets/imgs/profile.png";
 
 export default function Avatar() {
 	return (
-		<section>
+		<section className="EadGraduacao">
 			<div className="flexbox__center margin__bottom--default">
 				<div className="avatar avatar__letter--lg background-blue-600 ">
 					<span className="avatar__letter-content--lg">A</span>

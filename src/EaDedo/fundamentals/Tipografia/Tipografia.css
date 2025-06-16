@@ -51,36 +51,6 @@
   --font-weight-bold: 700;
 }
 
-/* BRANDS */
-.EadGraduacao,
-.EadPosUnifor {
-  --font-family-heading: var(--font-family-Poppins);
-  --font-family-body: var(--font-family-Poppins);
-  --font-family-code: var(--font-family-Code);
-  color: var(--color-neutral-950);
-}
-
-.AmbienteDaTutoria,
-.TreinamentoENADE {
-  --font-family-heading: var(--font-family-Neulis);
-  --font-family-body: var(--font-family-Manrope);
-  --font-family-code: var(--font-family-Code);
-  color: var(--color-neutral-950);
-
-  /* sobre-escrevendo o peso */
-  --font-weight-semibold: var(--font-weight-medium);
-}
-
-.TrilhaBiblioteca {
-  --font-family-heading: var(--font-family-Neulis);
-  --font-family-body: var(--font-family-Poppins);
-  --font-family-code: var(--font-family-Code);
-  color: var(--color-neutral-950);
-
-  /* sobre-escrevendo o peso */
-  --font-weight-semibold: var(--font-weight-medium);
-}
-
 /* Tipografia */
 .code {
   font-family: var(--font-family-code);

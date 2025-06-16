@@ -54,3 +54,7 @@ function videoAulaProg(clicked_id) {
     console.error("Não foi possível encontrar o iframe para:", clicked_id);
   }
 }
+
+
+// para subir no dist do npm
+window.videoAulaProg = videoAulaProg;

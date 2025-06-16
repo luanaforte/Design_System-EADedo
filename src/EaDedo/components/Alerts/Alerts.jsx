@@ -3,7 +3,7 @@ import "./Alerts.css";
 
 export default function Alerts() {
 	return (
-		<section>
+		<section className="EadGraduacao">
 			<h3 className="heading3">Anatomia</h3>
 			<h4 className="heading4 margin-0">banner-alert--fill</h4>
 			<div className="banner-alert--fill background-blue-100">

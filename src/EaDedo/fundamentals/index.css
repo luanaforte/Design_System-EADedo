@@ -9,6 +9,9 @@
 /* Moodle */
 @import "./Moodle.css";
 
+/* Brands */
+@import "./Brands.css";
+
 /* Componentes */
 @import "../components/Tag/Tag.css";
 @import "../components/Tag_course/Tag_course.css";
@@ -18,18 +21,16 @@
 @import "../components/Progress_bar/Progress_bar.css";
 @import "../components/Alerts/Alerts.css";
 @import "../components/Avatar/Avatar.css";
+@import "../components/Buttons/Button.css";
+@import "../components/Text_header/Text_header.css";
+@import "../components/ColapseSection/ColapseSection.css";
 
 @import "../components/IframeVideo/IframeVideo.css";
-@import "../components/Tag_course/Tag_course.css";
 @import "../components/Badge/Badge.css";
 @import "../components/Accordions/Accordions.css";
-@import "../components/Buttons/Button.css";
 @import "../components/HeroImage/HeroImage.css";
-@import "../components/HeadersIcon/HeadersIcon.css";
 @import "../components/Button_section_menu/Button_section_menu.css";
 @import "../components/Cards/Cards.css";
-@import "../components/ColapseSection/ColapseSection.css";
-@import "../components/Carousel_indicators/carousel_indicators.css";
 @import "../components/Button_direction/Button_direction.css";
 @import "../components/Closing_banner/Closing_banner.css";
 

@@ -1,8 +1,8 @@
 import React from "react";
-import "./headersIcon.css";
+import "./Text_header.css";
 import "../../fundamentals/index.css";
 
-export default function HeadersIcon() {
+export default function Text_header() {
 	return (
 		<>
 			<div className="header__icon margin__bottom--default">

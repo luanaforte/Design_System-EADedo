@@ -29,3 +29,5 @@ function toggleAccordion(accordionId, index) {
     }
   });
 }
+
+window.toggleAccordion = toggleAccordion;

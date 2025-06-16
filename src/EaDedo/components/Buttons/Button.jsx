@@ -595,8 +595,6 @@ export default function Button() {
 			<a
 				className="button-notification"
 				href="https://exemplo.com"
-				target="_blank"
-				rel="noopener noreferrer"
 				aria-label="Insira aqui o texto/função do button">
 				<div className="avatar-group--sm">
 					<div className="avatar avatar__letter--sm background-blue-900 ">

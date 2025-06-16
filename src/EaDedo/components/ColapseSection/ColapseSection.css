@@ -27,3 +27,14 @@
 .collapse_section.open .collapse_section-button--icone {
   transform: rotate(180deg);
 }
+
+@media (max-width: 768px) {
+
+  .collapse_section .flexbox__between--center .button-pill,
+  .collapse_section .flexbox__between--center .active {
+    border: none !important;
+    justify-content: end;
+    background-color: transparent !important;
+    min-width: fit-content;
+  }
+}
