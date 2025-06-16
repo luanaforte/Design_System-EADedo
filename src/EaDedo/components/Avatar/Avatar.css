@@ -95,7 +95,7 @@
 
 .avatar__info {
   display: flex;
-  max-width: 170px;
+  min-width: 10.625rem;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
