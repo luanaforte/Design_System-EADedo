@@ -22,6 +22,11 @@
   display: block !important;
 }
 
+/* para tirar o icone do recurso */
+.block_completion_progress .moduleIcon {
+  display: none !important;
+}
+
 /* tooltip */
 .tooltip {
   opacity: 1 !important;

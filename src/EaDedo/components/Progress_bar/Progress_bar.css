@@ -44,7 +44,8 @@
   color: var(--color-neutral-600) !important;
   white-space: pre-wrap;
   margin-top: var(--space-075);
-  /* display: ruby-text; */
+  display: flex;
+  align-items: center;
   gap: var(--space-050);
 }
 
@@ -54,7 +55,6 @@
   font-family: var(--font-family-body) !important;
   font-size: var(--font-size-xs) !important;
   font-weight: var(--font-weight-regular) !important;
-  margin-top: var(--space-075);
   text-decoration: none !important;
 }
 
@@ -64,10 +64,4 @@
 
 .status-nao-concluido {
   color: var(--color-neutral-300);
-}
-
-/* para tirar o icone do recurso */
-.progressEventInfo .action_link img,
-.block_completion_progress .progressEventInfo .iconInInfo {
-  display: block;
 }
