@@ -1,0 +1,44 @@
+.Banner_image_text--primary {
+  display: flex;
+  min-width: 31.875rem;
+  max-width: 69.375rem;
+  padding: var(--space-150);
+  align-items: flex-start;
+  gap: var(--space-150);
+  border-radius: var(--radius-050);
+}
+
+.Banner_image_text--primary__image {
+  width: 15.625rem;
+  height: 15.625rem;
+  border-radius: var(--radius-050);
+  object-fit: cover;
+}
+
+.Banner_image_text--secondary {
+  display: inline-flex;
+  width: fit-content;
+  padding: var(--space-100);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-150);
+  border-radius: var(--radius-050);
+}
+
+.Banner_image_text--secondary__image {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: var(--radius-050);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .Banner_image_text--primary {
+    display: flex;
+    min-width: 15.625rem;
+    max-width: 24.6875rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

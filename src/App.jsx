@@ -17,7 +17,7 @@ import Icon from "./EaDedo/components/Icon/Icon.jsx";
 import Tag from "./EaDedo/components/Tag/Tag.jsx";
 import Tag_course from "./EaDedo/components/Tag_course/Tag_course.jsx";
 import Carousel_indicators from "./EaDedo/components/Carousel_indicators/carousel_indicators.jsx";
-import Alerts from "./EaDedo/components/Alerts/Alerts.jsx";
+import Banner_alert from "./EaDedo/components/Banner_alert/Banner_alert.jsx";
 import Avatar from "./EaDedo/components/Avatar/Avatar.jsx";
 import Badge from "./EaDedo/components/Badge/Badge.jsx";
 import Accordions from "./EaDedo/components/Accordions/Accordions.jsx";
@@ -32,6 +32,7 @@ import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
 import ColapseSection from "./EaDedo/components/ColapseSection/ColapseSection.jsx";
 import Button_direction from "./EaDedo/components/Button_direction/Button_direction.jsx";
 import Progress_bar from "./EaDedo/components/Progress_bar/Progress_bar.jsx";
+import Banner_image_text from "./EaDedo/components/Banner_image_text/Banner_image_text.jsx";
 
 const App = () => {
 	return (
@@ -51,7 +52,12 @@ const App = () => {
 					path="Componentes/Carousel_indicators"
 					element={<Carousel_indicators />}
 				/>
-				<Route path="Componentes/Alerts" element={<Alerts />} />
+				<Route path="Componentes/Banner_alert" element={<Banner_alert />} />
+				<Route
+					path="Componentes/Banner_image_text"
+					element={<Banner_image_text />}
+				/>
+
 				<Route path="Componentes/Avatar" element={<Avatar />} />
 				<Route path="Componentes/Badge" element={<Badge />} />
 				<Route path="Componentes/Accordions" element={<Accordions />} />

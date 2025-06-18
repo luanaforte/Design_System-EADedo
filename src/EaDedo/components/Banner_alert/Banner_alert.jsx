@@ -1,7 +1,7 @@
 import React from "react";
-import "./Alerts.css";
+import "./Banner_alert.css";
 
-export default function Alerts() {
+export default function Banner_alert() {
 	return (
 		<section className="EadGraduacao">
 			<h3 className="heading3">Anatomia</h3>
