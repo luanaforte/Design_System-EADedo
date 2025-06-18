@@ -8,8 +8,8 @@
 }
 
 /* porgresso */
-.description .contentwithoutlink,
-.block_completion_progress .block .card .card-body .p-3 {
+/* padding da barra do progresso */
+.block_completion_progress .card-body {
   padding: 0 !important;
 }
 
@@ -20,4 +20,9 @@
 
 .activity-altcontent .contentwithoutlink .d-flex {
   display: block !important;
+}
+
+/* tooltip */
+.tooltip {
+  opacity: 1 !important;
 }

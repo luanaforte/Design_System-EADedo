@@ -16,11 +16,6 @@
   color: var(--color-blue-600);
 }
 
-/* padding da barra do progresso */
-.block_completion_progress .card-body {
-  padding: 0;
-}
-
 /* estilo das barrinhas de progresso */
 .block_completion_progress .barModeSqueeze .barRowCells {
   display: flex;
@@ -72,10 +67,6 @@
 }
 
 /* para tirar o icone do recurso */
-.progressEventInfo .action_link img {
-  display: none;
-}
-
 .progressEventInfo .action_link img,
 .block_completion_progress .progressEventInfo .iconInInfo {
   display: block;

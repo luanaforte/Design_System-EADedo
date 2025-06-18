@@ -3,7 +3,7 @@ import "./Tooltip.css";
 
 export default function Tooltip() {
 	return (
-		<div className="flexbox__center--center" style={{ gap: 40 }}>
+		<div className="flexbox__center--center">
 			{/* Tooltip Top */}
 			<div className="tooltip tooltip--top">
 				<svg

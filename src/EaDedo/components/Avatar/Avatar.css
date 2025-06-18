@@ -1,102 +1,67 @@
-/* ===============================
-   AVATAR - CONTAINER PRINCIPAL
-================================== */
-
+/* ===== AVATAR BASE ===== */
 .avatar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Modificadores de orientação */
-.avatar--horizontal {
-  display: inline-flex;
-  min-width: 17.925rem;
-  align-items: center;
-  gap: var(--space-050);
-}
-
-.avatar--vertical {
-  display: flex;
-  align-items: center;
-  width: 14.125rem;
-  gap: var(--space-050);
-  margin-bottom: var(--space-150);
-}
-
-/* ===============================
-   AVATAR - IMAGEM E LETRA
-================================== */
-
-/* Tamanhos */
-.avatar__image--lg,
-.avatar__letter--lg {
+/* ===== AVATAR TAMANHOS ===== */
+.avatar__letter--lg,
+.avatar__image--lg {
   width: 4rem;
   height: 4rem;
   border-radius: var(--radius-full);
 }
 
-.avatar__image--md,
-.avatar__letter--md {
+.avatar__letter--md,
+.avatar__image--md {
   width: 3rem;
   height: 3rem;
   border-radius: var(--radius-full);
 }
 
-.avatar__image--sm,
-.avatar__letter--sm {
+.avatar__letter--sm,
+.avatar__image--sm {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--radius-full);
 }
 
-/* Conteúdo da letra */
+/* ===== AVATAR CONTEÚDOS (LETRAS) ===== */
 .avatar__letter-content--sm,
-.avatar__letter-content--md {
-  color: var(--color-neutral-050);
-  text-align: center;
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--font-size-lg);
-}
-
+.avatar__letter-content--md,
+.avatar__letter-content--additional-sm,
+.avatar__letter-content--additional-md,
+.avatar__letter-content--additional-lg,
 .avatar__letter-content--lg {
   color: var(--color-neutral-050);
   text-align: center;
-  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-regular);
   line-height: var(--font-size-lg);
 }
 
-/* Conteúdos adicionais (ex.: contador) */
+.avatar__letter-content--sm,
+.avatar__letter-content--md {
+  font-size: var(--font-size-lg);
+}
+
+.avatar__letter-content--lg {
+  font-size: var(--font-size-2xl);
+}
+
 .avatar__letter-content--additional-sm {
-  color: var(--color-neutral-050);
-  text-align: center;
   font-size: var(--font-size-p, 1.125rem);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--font-size-lg);
 }
 
 .avatar__letter-content--additional-md {
-  color: var(--color-neutral-050);
-  text-align: center;
   font-size: var(--font-size-md);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--font-size-lg);
 }
 
 .avatar__letter-content--additional-lg {
-  color: var(--color-neutral-050);
-  text-align: center;
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--font-size-lg);
 }
 
-/* ===============================
-   AVATAR - GRUPO DE AVATARES
-================================== */
-
+/* ===== AVATAR GRUPO ===== */
 .avatar-group,
 .avatar-group--sm {
   display: flex;
@@ -110,21 +75,42 @@
   margin-right: calc(-1 * var(--space-100));
 }
 
-/* ===============================
-   AVATAR - INFORMAÇÕES
-================================== */
+/* ===== AVATAR TEXTOS ===== */
+.avatar__tagline-text {
+  color: var(--color-blue-600);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
 
-.avatar__info {
-  display: flex;
-  min-width: 10.625rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+/* ===== AVATAR TEXTOS - vertical ===== */
+.avatar__tagline-vertical {
+  display: inline-flex;
+  padding: 0;
+  align-items: center;
   gap: var(--space-050);
 }
 
-/* Nome do usuário */
-.avatar__name {
+/* ===== AVATAR TEXTOS - Horizontal ===== */
+.avatar__tagline-horizontal {
+  display: flex;
+  align-items: center;
+  width: 14.125rem;
+  gap: var(--space-050);
+  margin-bottom: var(--space-150);
+}
+
+.avatar__tagline-horizontal__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 10.625rem;
+  gap: var(--space-050);
+}
+
+.avatar__tagline-horizontal__name {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
@@ -137,21 +123,4 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-tight);
   margin: 0;
-}
-
-
-/* Tagline */
-.avatar__tagline {
-  color: var(--color-blue-600);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-tight);
-  margin: 0;
-}
-
-/* Wrapper para tagline + tooltip (quando vertical) */
-.avatar__tagline-wrapper {
-  display: flex;
-  align-items: center;
-  gap: var(--space-050);
 }
