@@ -248,6 +248,7 @@
 /* Dispositivos médios (tablets na horizontal, de 768px a 375px) */
 @media (max-width: 768px) {
   .button-pill {
+    min-width: 90%;
     max-width: 100%;
   }
 
