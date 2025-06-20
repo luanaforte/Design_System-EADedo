@@ -89,14 +89,14 @@ export default function Avatar() {
 					<span className="avatar__letter-content--sm">B</span>
 				</div>
 			</div>
-			<div className="avatar__tagline-horizontal margin__bottom--default">
+			<div className="avatar__tagline-vertical margin__bottom--default">
 				<img
 					src={Profile}
 					alt="Foto do perfil do usuário"
 					className="avatar__image--lg"
 				/>
-				<div className="avatar__tagline-horizontal__info">
-					<p className="avatar__tagline-horizontal__name">Nome do Usuário</p>
+				<div className="avatar__tagline-vertical__info">
+					<p className="avatar__tagline-vertical__name">Nome do Usuário</p>
 					<div className="group-tooltip">
 						<p className="avatar__tagline-text">Tagline</p>
 						<div className="tooltip tooltip--bottom">
@@ -119,13 +119,13 @@ export default function Avatar() {
 					</div>
 				</div>
 			</div>
-			<div className="avatar__tagline-vertical margin__bottom--default">
+			<div className="avatar__tagline-horizontal margin__bottom--default">
 				<img
 					src={Profile}
 					alt="Foto do perfil do usuário"
 					className="avatar__image--lg"
 				/>
-				<p className="avatar__name">Nome do Usuário</p>
+				<p className="avatar__name margin-0">Nome do Usuário</p>
 				<div className="group-tooltip">
 					<p className="avatar__tagline-text">Tagline</p>
 					<div className="tooltip tooltip--bottom">

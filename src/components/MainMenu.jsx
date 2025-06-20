@@ -32,6 +32,10 @@ const Rotes = {
 		{ label: "Tooltip", route: "/Componentes/Tooltip" },
 		{ label: "ColapseSection", route: "/Componentes/ColapseSection" },
 		{ label: "Progress_bar", route: "/Componentes/Progress_bar" },
+		{
+			label: "Avatar_tagline__group",
+			route: "/Componentes/Avatar_tagline__group",
+		},
 	],
 };
 

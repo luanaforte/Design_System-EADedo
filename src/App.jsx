@@ -33,6 +33,7 @@ import ColapseSection from "./EaDedo/components/ColapseSection/ColapseSection.js
 import Button_direction from "./EaDedo/components/Button_direction/Button_direction.jsx";
 import Progress_bar from "./EaDedo/components/Progress_bar/Progress_bar.jsx";
 import Banner_image_text from "./EaDedo/components/Banner_image_text/Banner_image_text.jsx";
+import Avatar_tagline__group from "./EaDedo/components/Avatar_tagline__group/Avatar_tagline__group.jsx";
 
 const App = () => {
 	return (
@@ -57,7 +58,6 @@ const App = () => {
 					path="Componentes/Banner_image_text"
 					element={<Banner_image_text />}
 				/>
-
 				<Route path="Componentes/Avatar" element={<Avatar />} />
 				<Route path="Componentes/Badge" element={<Badge />} />
 				<Route path="Componentes/Accordions" element={<Accordions />} />
@@ -78,6 +78,10 @@ const App = () => {
 					element={<Button_direction />}
 				/>
 				<Route path="Componentes/Progress_bar" element={<Progress_bar />} />
+				<Route
+					path="Componentes/Avatar_tagline__group"
+					element={<Avatar_tagline__group />}
+				/>
 			</Route>
 		</Routes>
 	);

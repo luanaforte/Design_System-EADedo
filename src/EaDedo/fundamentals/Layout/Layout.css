@@ -1,20 +1,36 @@
 :root {
-  --container-xl: 57.625rem; /*922px*/
-  --container-lg: 52.75rem; /*844px*/
-  --container-md: 47.875rem; /*766px*/
-  --container-sm: 45rem; /*720px*/
-  --space-012: 0.125rem; /*2px*/
-  --space-025: 0.25rem; /*4px*/
-  --space-050: 0.5rem; /*8px*/
-  --space-075: 0.75rem; /*12px*/
-  --space-100: 1rem; /*16px*/
-  --space-125: 1.25rem; /*20px*/
-  --space-150: 1.5rem; /*24px*/
-  --space-200: 2rem; /*32px*/
-  --space-250: 2.5rem; /*40px*/
-  --space-300: 3rem; /*48px*/
-  --space-350: 3.5rem; /*56px*/
-  --space-400: 4rem; /*64px*/
+  --container-xl: 57.625rem;
+  /*922px*/
+  --container-lg: 52.75rem;
+  /*844px*/
+  --container-md: 47.875rem;
+  /*766px*/
+  --container-sm: 45rem;
+  /*720px*/
+  --space-012: 0.125rem;
+  /*2px*/
+  --space-025: 0.25rem;
+  /*4px*/
+  --space-050: 0.5rem;
+  /*8px*/
+  --space-075: 0.75rem;
+  /*12px*/
+  --space-100: 1rem;
+  /*16px*/
+  --space-125: 1.25rem;
+  /*20px*/
+  --space-150: 1.5rem;
+  /*24px*/
+  --space-200: 2rem;
+  /*32px*/
+  --space-250: 2.5rem;
+  /*40px*/
+  --space-300: 3rem;
+  /*48px*/
+  --space-350: 3.5rem;
+  /*56px*/
+  --space-400: 4rem;
+  /*64px*/
 }
 
 .container-xl {
@@ -43,18 +59,13 @@
 }
 
 /* Dispositivos médios (telefones, de 375px a 280px) */
-@media (max-width: 375px) {
-}
+@media (max-width: 375px) {}
 
 /* Dispositivos médios (tablets na horizontal, de 768px a 375px) */
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) {}
 
 /* Dispositivos grandes (laptops/desktops, de 1024px a 768px) */
-@media (max-width: 1024px) {
-}
+@media (max-width: 1024px) {}
 
 /* Dispositivos extra grandes (laptops grandes e desktops, a partir de 1440px) */
-@media (max-width: 1440px) {
-}
-
+@media (max-width: 1440px) {}
