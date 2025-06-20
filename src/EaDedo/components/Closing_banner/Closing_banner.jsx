@@ -4,7 +4,9 @@ import "./Closing_banner.css";
 export default function Closing_banner() {
 	return (
 		<section className="container-xl">
-			<div className="closing_banner">
+			<div
+				className="closing_banner margin__bottom--default"
+				id="closing_banner__default">
 				<div className="closing_banner__text">
 					<h4 className="heading4 text-blue-600 margin-0">
 						Parabéns ou Oba ou Maravilha ou Uau ou Uhu! 🎉
@@ -55,7 +57,9 @@ export default function Closing_banner() {
 					</a>
 				</div>
 			</div>
-			<div className="closing_banner">
+			<div
+				className="closing_banner margin__bottom--default"
+				id="closing_banner__default_end">
 				<div className="closing_banner__text">
 					<h4 className="heading4 text-blue-600 margin-0">
 						Parabéns ou Oba ou Maravilha ou Uau ou Uhu! 🎉
@@ -63,6 +67,191 @@ export default function Closing_banner() {
 					<p className="paragraph text-neutral-950">
 						Use este espaço para incentivar a ação do usuário de forma clara e
 						motivadora.
+					</p>
+				</div>
+				<div className="closing_banner__button-group">
+					<a
+						className="button-minimal button--icon-right button--blue"
+						href="https://exemplo.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Voltar para a página inicial">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="16"
+							viewBox="0 0 18 16"
+							fill="none">
+							<path
+								d="M15.7504 8.00003C15.7504 8.13264 15.6912 8.25982 15.5857 8.35359C15.4802 8.44736 15.3371 8.50003 15.1879 8.50003H4.17068L8.27341 12.1463C8.32567 12.1927 8.36713 12.2479 8.39541 12.3086C8.4237 12.3693 8.43826 12.4343 8.43826 12.5C8.43826 12.5657 8.4237 12.6308 8.39541 12.6915C8.36713 12.7522 8.32567 12.8073 8.27341 12.8538C8.22115 12.9002 8.15911 12.9371 8.09082 12.9622C8.02254 12.9874 7.94935 13.0003 7.87544 13.0003C7.80153 13.0003 7.72835 12.9874 7.66006 12.9622C7.59178 12.9371 7.52974 12.9002 7.47747 12.8538L2.41497 8.35378C2.36267 8.30735 2.32119 8.2522 2.29288 8.1915C2.26457 8.13081 2.25 8.06574 2.25 8.00003C2.25 7.93433 2.26457 7.86926 2.29288 7.80856C2.32119 7.74786 2.36267 7.69272 2.41497 7.64628L7.47747 3.14628C7.58302 3.05246 7.72618 2.99976 7.87544 2.99976C8.02471 2.99976 8.16786 3.05246 8.27341 3.14628C8.37896 3.2401 8.43826 3.36735 8.43826 3.50003C8.43826 3.63272 8.37896 3.75996 8.27341 3.85378L4.17068 7.50003H15.1879C15.3371 7.50003 15.4802 7.55271 15.5857 7.64648C15.6912 7.74025 15.7504 7.86743 15.7504 8.00003Z"
+								fill="#132190"
+							/>
+						</svg>
+						Voltar a Página Inicial
+					</a>
+				</div>
+			</div>
+			<div
+				className="closing_banner margin__bottom--default"
+				id="closing_banner__percurso_1">
+				<div className="closing_banner__text">
+					<h4 className="heading4 text-blue-600 margin-0">Oba! 😊</h4>
+					<p className="paragraph text-neutral-950">
+						O Percurso 1 foi finalizado com sucesso! Clique abaixo para avançar
+						para o Percurso 2.
+					</p>
+				</div>
+				<div className="closing_banner__button-group">
+					<a
+						className="button-minimal button--icon-right button--blue"
+						href="https://exemplo.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Voltar para a página inicial">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="16"
+							viewBox="0 0 18 16"
+							fill="none">
+							<path
+								d="M15.7504 8.00003C15.7504 8.13264 15.6912 8.25982 15.5857 8.35359C15.4802 8.44736 15.3371 8.50003 15.1879 8.50003H4.17068L8.27341 12.1463C8.32567 12.1927 8.36713 12.2479 8.39541 12.3086C8.4237 12.3693 8.43826 12.4343 8.43826 12.5C8.43826 12.5657 8.4237 12.6308 8.39541 12.6915C8.36713 12.7522 8.32567 12.8073 8.27341 12.8538C8.22115 12.9002 8.15911 12.9371 8.09082 12.9622C8.02254 12.9874 7.94935 13.0003 7.87544 13.0003C7.80153 13.0003 7.72835 12.9874 7.66006 12.9622C7.59178 12.9371 7.52974 12.9002 7.47747 12.8538L2.41497 8.35378C2.36267 8.30735 2.32119 8.2522 2.29288 8.1915C2.26457 8.13081 2.25 8.06574 2.25 8.00003C2.25 7.93433 2.26457 7.86926 2.29288 7.80856C2.32119 7.74786 2.36267 7.69272 2.41497 7.64628L7.47747 3.14628C7.58302 3.05246 7.72618 2.99976 7.87544 2.99976C8.02471 2.99976 8.16786 3.05246 8.27341 3.14628C8.37896 3.2401 8.43826 3.36735 8.43826 3.50003C8.43826 3.63272 8.37896 3.75996 8.27341 3.85378L4.17068 7.50003H15.1879C15.3371 7.50003 15.4802 7.55271 15.5857 7.64648C15.6912 7.74025 15.7504 7.86743 15.7504 8.00003Z"
+								fill="#132190"
+							/>
+						</svg>
+						Voltar a Página Inicial
+					</a>
+					<a
+						className="button-pill button--icon-left button--blue"
+						href="https://exemplo.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Ir para a próxima Webaula">
+						Próxima Webaula
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="18"
+							viewBox="0 0 18 18"
+							fill="none">
+							<path
+								d="M15.5855 9.39792L10.523 14.4604C10.4174 14.566 10.2743 14.6253 10.125 14.6253C9.97573 14.6253 9.83258 14.566 9.72703 14.4604C9.62148 14.3549 9.56219 14.2117 9.56219 14.0624C9.56219 13.9132 9.62148 13.77 9.72703 13.6645L13.8298 9.56245H2.8125C2.66332 9.56245 2.52024 9.50318 2.41475 9.39769C2.30926 9.29221 2.25 9.14913 2.25 8.99995C2.25 8.85076 2.30926 8.70769 2.41475 8.6022C2.52024 8.49671 2.66332 8.43745 2.8125 8.43745H13.8298L9.72703 4.33542C9.62148 4.22987 9.56219 4.08671 9.56219 3.93745C9.56219 3.78818 9.62148 3.64503 9.72703 3.53948C9.83258 3.43393 9.97573 3.37463 10.125 3.37463C10.2743 3.37463 10.4174 3.43393 10.523 3.53948L15.5855 8.60198C15.6378 8.65422 15.6793 8.71626 15.7076 8.78454C15.7359 8.85283 15.7504 8.92603 15.7504 8.99995C15.7504 9.07387 15.7359 9.14706 15.7076 9.21535C15.6793 9.28364 15.6378 9.34567 15.5855 9.39792Z"
+								fill="#1529FF"
+							/>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div
+				className="closing_banner margin__bottom--default"
+				id="closing_banner__percurso_2">
+				<div className="closing_banner__text">
+					<h4 className="heading4 text-blue-600 margin-0">Maravilha! 🤩</h4>
+					<p className="paragraph text-neutral-950">
+						Continue sua jornada de aprendizado. Clique para avançar para o
+						Percurso 3.
+					</p>
+				</div>
+				<div className="closing_banner__button-group">
+					<a
+						className="button-minimal button--icon-right button--blue"
+						href="https://exemplo.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Voltar para a página inicial">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="16"
+							viewBox="0 0 18 16"
+							fill="none">
+							<path
+								d="M15.7504 8.00003C15.7504 8.13264 15.6912 8.25982 15.5857 8.35359C15.4802 8.44736 15.3371 8.50003 15.1879 8.50003H4.17068L8.27341 12.1463C8.32567 12.1927 8.36713 12.2479 8.39541 12.3086C8.4237 12.3693 8.43826 12.4343 8.43826 12.5C8.43826 12.5657 8.4237 12.6308 8.39541 12.6915C8.36713 12.7522 8.32567 12.8073 8.27341 12.8538C8.22115 12.9002 8.15911 12.9371 8.09082 12.9622C8.02254 12.9874 7.94935 13.0003 7.87544 13.0003C7.80153 13.0003 7.72835 12.9874 7.66006 12.9622C7.59178 12.9371 7.52974 12.9002 7.47747 12.8538L2.41497 8.35378C2.36267 8.30735 2.32119 8.2522 2.29288 8.1915C2.26457 8.13081 2.25 8.06574 2.25 8.00003C2.25 7.93433 2.26457 7.86926 2.29288 7.80856C2.32119 7.74786 2.36267 7.69272 2.41497 7.64628L7.47747 3.14628C7.58302 3.05246 7.72618 2.99976 7.87544 2.99976C8.02471 2.99976 8.16786 3.05246 8.27341 3.14628C8.37896 3.2401 8.43826 3.36735 8.43826 3.50003C8.43826 3.63272 8.37896 3.75996 8.27341 3.85378L4.17068 7.50003H15.1879C15.3371 7.50003 15.4802 7.55271 15.5857 7.64648C15.6912 7.74025 15.7504 7.86743 15.7504 8.00003Z"
+								fill="#132190"
+							/>
+						</svg>
+						Voltar a Página Inicial
+					</a>
+					<a
+						className="button-pill button--icon-left button--blue"
+						href="https://exemplo.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Ir para a próxima Webaula">
+						Próxima Webaula
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="18"
+							viewBox="0 0 18 18"
+							fill="none">
+							<path
+								d="M15.5855 9.39792L10.523 14.4604C10.4174 14.566 10.2743 14.6253 10.125 14.6253C9.97573 14.6253 9.83258 14.566 9.72703 14.4604C9.62148 14.3549 9.56219 14.2117 9.56219 14.0624C9.56219 13.9132 9.62148 13.77 9.72703 13.6645L13.8298 9.56245H2.8125C2.66332 9.56245 2.52024 9.50318 2.41475 9.39769C2.30926 9.29221 2.25 9.14913 2.25 8.99995C2.25 8.85076 2.30926 8.70769 2.41475 8.6022C2.52024 8.49671 2.66332 8.43745 2.8125 8.43745H13.8298L9.72703 4.33542C9.62148 4.22987 9.56219 4.08671 9.56219 3.93745C9.56219 3.78818 9.62148 3.64503 9.72703 3.53948C9.83258 3.43393 9.97573 3.37463 10.125 3.37463C10.2743 3.37463 10.4174 3.43393 10.523 3.53948L15.5855 8.60198C15.6378 8.65422 15.6793 8.71626 15.7076 8.78454C15.7359 8.85283 15.7504 8.92603 15.7504 8.99995C15.7504 9.07387 15.7359 9.14706 15.7076 9.21535C15.6793 9.28364 15.6378 9.34567 15.5855 9.39792Z"
+								fill="#1529FF"
+							/>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div
+				className="closing_banner margin__bottom--default"
+				id="closing_banner__percurso_3">
+				<div className="closing_banner__text">
+					<h4 className="heading4 text-blue-600 margin-0">Uau! 👏</h4>
+					<p className="paragraph text-neutral-950">
+						Você avançou muito nos estudos! Clique abaixo para avançar para o
+						Percurso 4.
+					</p>
+				</div>
+				<div className="closing_banner__button-group">
+					<a
+						className="button-minimal button--icon-right button--blue"
+						href="https://exemplo.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Voltar para a página inicial">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="16"
+							viewBox="0 0 18 16"
+							fill="none">
+							<path
+								d="M15.7504 8.00003C15.7504 8.13264 15.6912 8.25982 15.5857 8.35359C15.4802 8.44736 15.3371 8.50003 15.1879 8.50003H4.17068L8.27341 12.1463C8.32567 12.1927 8.36713 12.2479 8.39541 12.3086C8.4237 12.3693 8.43826 12.4343 8.43826 12.5C8.43826 12.5657 8.4237 12.6308 8.39541 12.6915C8.36713 12.7522 8.32567 12.8073 8.27341 12.8538C8.22115 12.9002 8.15911 12.9371 8.09082 12.9622C8.02254 12.9874 7.94935 13.0003 7.87544 13.0003C7.80153 13.0003 7.72835 12.9874 7.66006 12.9622C7.59178 12.9371 7.52974 12.9002 7.47747 12.8538L2.41497 8.35378C2.36267 8.30735 2.32119 8.2522 2.29288 8.1915C2.26457 8.13081 2.25 8.06574 2.25 8.00003C2.25 7.93433 2.26457 7.86926 2.29288 7.80856C2.32119 7.74786 2.36267 7.69272 2.41497 7.64628L7.47747 3.14628C7.58302 3.05246 7.72618 2.99976 7.87544 2.99976C8.02471 2.99976 8.16786 3.05246 8.27341 3.14628C8.37896 3.2401 8.43826 3.36735 8.43826 3.50003C8.43826 3.63272 8.37896 3.75996 8.27341 3.85378L4.17068 7.50003H15.1879C15.3371 7.50003 15.4802 7.55271 15.5857 7.64648C15.6912 7.74025 15.7504 7.86743 15.7504 8.00003Z"
+								fill="#132190"
+							/>
+						</svg>
+						Voltar a Página Inicial
+					</a>
+					<a
+						className="button-pill button--icon-left button--blue"
+						href="https://exemplo.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Ir para a próxima Webaula">
+						Próxima Webaula
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="18"
+							height="18"
+							viewBox="0 0 18 18"
+							fill="none">
+							<path
+								d="M15.5855 9.39792L10.523 14.4604C10.4174 14.566 10.2743 14.6253 10.125 14.6253C9.97573 14.6253 9.83258 14.566 9.72703 14.4604C9.62148 14.3549 9.56219 14.2117 9.56219 14.0624C9.56219 13.9132 9.62148 13.77 9.72703 13.6645L13.8298 9.56245H2.8125C2.66332 9.56245 2.52024 9.50318 2.41475 9.39769C2.30926 9.29221 2.25 9.14913 2.25 8.99995C2.25 8.85076 2.30926 8.70769 2.41475 8.6022C2.52024 8.49671 2.66332 8.43745 2.8125 8.43745H13.8298L9.72703 4.33542C9.62148 4.22987 9.56219 4.08671 9.56219 3.93745C9.56219 3.78818 9.62148 3.64503 9.72703 3.53948C9.83258 3.43393 9.97573 3.37463 10.125 3.37463C10.2743 3.37463 10.4174 3.43393 10.523 3.53948L15.5855 8.60198C15.6378 8.65422 15.6793 8.71626 15.7076 8.78454C15.7359 8.85283 15.7504 8.92603 15.7504 8.99995C15.7504 9.07387 15.7359 9.14706 15.7076 9.21535C15.6793 9.28364 15.6378 9.34567 15.5855 9.39792Z"
+								fill="#1529FF"
+							/>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div
+				className="closing_banner margin__bottom--default"
+				id="closing_banner__percurso_4">
+				<div className="closing_banner__text">
+					<h4 className="heading4 text-blue-600 margin-0">Uhuu! 🎉</h4>
+					<p className="paragraph text-neutral-950">
+						Você chegou ao fim do Percurso 4. Agora, prepare-se para a Avaliação
+						Final para concluir sua jornada!
 					</p>
 				</div>
 				<div className="closing_banner__button-group">
