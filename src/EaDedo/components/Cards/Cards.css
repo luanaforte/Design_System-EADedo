@@ -1,7 +1,7 @@
 /* =========================
    Section Card Primary
    ========================= */
-.Card_section_primary {
+.card__section--primary {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,7 +14,7 @@
 /* =========================
      Section Card Secondary
      ========================= */
-.Card_section_secondary {
+.card__section--secondary {
   display: flex;
   width: 100%;
   padding: var(--space-150);
@@ -226,13 +226,13 @@
      Responsividade
      ========================= */
 @media (max-width: 375px) {
-  .Card_section_secondary {
+  .card__section--secondary {
     align-items: flex-start !important;
   }
 }
 
 @media (max-width: 768px) {
-  .Card_section_secondary {
+  .card__section--secondary {
     flex-direction: column;
     align-items: flex-end;
   }

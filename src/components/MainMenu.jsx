@@ -36,6 +36,7 @@ const Rotes = {
 			label: "Avatar_tagline__group",
 			route: "/Componentes/Avatar_tagline__group",
 		},
+		{ label: "Header_text", route: "/Componentes/Header_text" },
 	],
 };
 

@@ -125,7 +125,9 @@ export default function Tag() {
 				<p className="tags text--Anil">Site</p>
 			</div>
 			<div className="tag">
-				<h4 className="heading4 text--Anil margin-0">Just text</h4>
+				<h4 className="heading4 text--Anil font-weight--regular margin-0">
+					Nome da Tag
+				</h4>
 			</div>
 		</div>
 	);

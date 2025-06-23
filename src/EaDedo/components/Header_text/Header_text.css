@@ -1,0 +1,20 @@
+.header__text--primary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: var(--space-150);
+  gap: var(--space-125);
+  border-radius: var(--radius-050);
+}
+
+.header__text--secondary {
+  display: flex;
+  min-width: 15.625rem;
+  max-width: 69.375rem;
+  padding: var(--space-150);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-150);
+  text-align: center;
+}

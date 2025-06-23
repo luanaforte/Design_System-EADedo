@@ -4,7 +4,7 @@
   --font-family-heading: var(--font-family-Poppins);
   --font-family-body: var(--font-family-Poppins);
   --font-family-code: var(--font-family-Code);
-  color: var(--color-neutral-950);
+  color: var(--color-neutral-950) !important;
 }
 
 .AmbienteDaTutoria,

@@ -34,6 +34,7 @@ import Button_direction from "./EaDedo/components/Button_direction/Button_direct
 import Progress_bar from "./EaDedo/components/Progress_bar/Progress_bar.jsx";
 import Banner_image_text from "./EaDedo/components/Banner_image_text/Banner_image_text.jsx";
 import Avatar_tagline__group from "./EaDedo/components/Avatar_tagline__group/Avatar_tagline__group.jsx";
+import Header_text from "./EaDedo/components/Header_text/Header_text.jsx";
 
 const App = () => {
 	return (
@@ -82,6 +83,7 @@ const App = () => {
 					path="Componentes/Avatar_tagline__group"
 					element={<Avatar_tagline__group />}
 				/>
+				<Route path="Componentes/Header_text" element={<Header_text />} />
 			</Route>
 		</Routes>
 	);

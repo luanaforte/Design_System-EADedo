@@ -244,8 +244,63 @@
   text-decoration: none;
 }
 
+.button-section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100);
+}
 
-/* Dispositivos médios (tablets na horizontal, de 768px a 375px) */
+.button-section__link {
+  display: flex;
+  align-items: center;
+  min-width: 15.625rem;
+  max-width: fit-content;
+  padding: var(--space-100);
+  gap: var(--space-100);
+  border-radius: var(--radius-050);
+  text-decoration: none;
+}
+
+.button-section__icon {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+.button-section__label--mobile {
+  display: none;
+}
+
+@media (max-width: 375px) {
+
+  .button-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .button-section__link {
+    justify-content: center;
+    min-width: 4rem;
+    height: 4rem;
+    gap: var(--space-100);
+    padding: var(--space-100);
+    border-radius: var(--radius-full);
+  }
+
+  .button-section__icon {
+    width: var(--icon--lg);
+    height: var(--icon--lg);
+  }
+
+  .button-section__label--desktop {
+    display: none;
+  }
+
+  .button-section__label--mobile {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   .button-pill {
     min-width: 90%;

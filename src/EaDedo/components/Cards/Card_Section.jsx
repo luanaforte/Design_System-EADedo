@@ -4,7 +4,7 @@ import "./Cards.css";
 export function Card_Section() {
 	return (
 		<>
-			<div className="Card_section_primary background-neutral-100 margin__bottom--default">
+			<div className="card__section--primary background-neutral-100 margin__bottom--default">
 				<div>
 					<div className="header__icon margin__bottom--default">
 						<svg
@@ -180,7 +180,7 @@ export function Card_Section() {
 					</a>
 				</div>
 			</div>
-			<div className="Card_section_secondary background-neutral-100 margin__bottom--default">
+			<div className="card__section--secondary background-neutral-100 margin__bottom--default">
 				<div>
 					<div className="header__icon margin__bottom--default">
 						<svg

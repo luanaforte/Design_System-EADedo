@@ -1,6 +1,6 @@
 /* Fundamentes */
-@import "./Tipografia/Tipografia.css";
 @import "./Layout/Layout.css";
+@import "./Tipografia/Tipografia.css";
 @import "./Iconografia/Iconografia.css";
 @import "./Elevation/Elevation.css";
 @import "./Cores/Cores.css";
@@ -31,6 +31,7 @@
 @import "../components/Badge/Badge.css";
 @import "../components/Banner_image_text/Banner_image_text.css";
 @import "../components/Avatar_tagline__group/Avatar_tagline__group.css";
+@import "../components/Header_text/Header_text.css";
 
 @import "../components/IframeVideo/IframeVideo.css";
 @import "../components/HeroImage/HeroImage.css";

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Button.css";
-import "../../../App.css";
+import Button_section from "./Button_section";
 
 export default function Button() {
 	return (
@@ -663,6 +663,7 @@ export default function Button() {
 					/>
 				</svg>
 			</a>
+			<Button_section />
 		</section>
 	);
 }
