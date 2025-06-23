@@ -649,7 +649,7 @@ export default function Button() {
 							fill="#1529FF"
 						/>
 					</svg>
-					<p className="paragraph">Acesse o Nome do Material</p>
+					<p className="paragraph--medium">Acesse o Nome do Material</p>
 				</div>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

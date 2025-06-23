@@ -43,14 +43,14 @@ export default function ColapseSection() {
 							</svg>
 						</button>
 					</div>
-					<p className="paragraph margin-0 text-neutral-900">
+					<p className="paragraph--medium margin-0 text-neutral-900">
 						Use este espaço para guiar o usuário ou apresentar informações
 						essenciais com clareza e destaque.
 					</p>
 				</div>
 				<div className="hidden" id="collapse_orientacoes--content">
 					<div className="container-xl">
-						<p className="paragraph">
+						<p className="paragraph--medium">
 							Conteudo que vai dentro, pode ser qualquer outra componente
 						</p>
 					</div>

@@ -17,8 +17,8 @@ export default function Tag_course() {
 					/>
 				</svg>
 				<div>
-					<p className="paragraph margin-0">Tipo de Disciplina</p>
-					<p className="paragraph margin-0">
+					<p className="paragraph--medium margin-0">Tipo de Disciplina</p>
+					<p className="paragraph--medium margin-0">
 						<b>Teórica - 72h</b>
 					</p>
 				</div>
@@ -35,7 +35,7 @@ export default function Tag_course() {
 						fill="#1529FF"
 					/>
 				</svg>
-				<p className="paragraph margin-0">
+				<p className="paragraph--medium margin-0">
 					Tipo de Disciplina <b>Teórica - 72h</b>
 				</p>
 			</div>

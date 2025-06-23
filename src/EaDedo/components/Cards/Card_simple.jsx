@@ -6,8 +6,10 @@ export function Card_simple() {
 	return (
 		<div className="Card-simple margin__bottom--default">
 			<div className="card-simple-content">
-				<p className="paragraph margin-0 text-blue-600">Título especial</p>
-				<p className="paragraph margin-0">
+				<p className="paragraph--medium margin-0 text-blue-600">
+					Título especial
+				</p>
+				<p className="paragraph--medium margin-0">
 					Texto que funciona como uma introdução a um conteúdo adicional.
 				</p>
 			</div>

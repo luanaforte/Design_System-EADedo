@@ -11,7 +11,7 @@ export default function Closing_banner() {
 					<h4 className="heading4 text-blue-600 margin-0">
 						Parabéns ou Oba ou Maravilha ou Uau ou Uhu! 🎉
 					</h4>
-					<p className="paragraph text-neutral-950">
+					<p className="paragraph--medium text-neutral-950">
 						Use este espaço para incentivar a ação do usuário de forma clara e
 						motivadora.
 					</p>
@@ -64,7 +64,7 @@ export default function Closing_banner() {
 					<h4 className="heading4 text-blue-600 margin-0">
 						Parabéns ou Oba ou Maravilha ou Uau ou Uhu! 🎉
 					</h4>
-					<p className="paragraph text-neutral-950">
+					<p className="paragraph--medium text-neutral-950">
 						Use este espaço para incentivar a ação do usuário de forma clara e
 						motivadora.
 					</p>
@@ -96,7 +96,7 @@ export default function Closing_banner() {
 				id="closing_banner__percurso_1">
 				<div className="closing_banner__text">
 					<h4 className="heading4 text-blue-600 margin-0">Oba! 😊</h4>
-					<p className="paragraph text-neutral-950">
+					<p className="paragraph--medium text-neutral-950">
 						O Percurso 1 foi finalizado com sucesso! Clique abaixo para avançar
 						para o Percurso 2.
 					</p>
@@ -147,7 +147,7 @@ export default function Closing_banner() {
 				id="closing_banner__percurso_2">
 				<div className="closing_banner__text">
 					<h4 className="heading4 text-blue-600 margin-0">Maravilha! 🤩</h4>
-					<p className="paragraph text-neutral-950">
+					<p className="paragraph--medium text-neutral-950">
 						Continue sua jornada de aprendizado. Clique para avançar para o
 						Percurso 3.
 					</p>
@@ -198,7 +198,7 @@ export default function Closing_banner() {
 				id="closing_banner__percurso_3">
 				<div className="closing_banner__text">
 					<h4 className="heading4 text-blue-600 margin-0">Uau! 👏</h4>
-					<p className="paragraph text-neutral-950">
+					<p className="paragraph--medium text-neutral-950">
 						Você avançou muito nos estudos! Clique abaixo para avançar para o
 						Percurso 4.
 					</p>
@@ -249,7 +249,7 @@ export default function Closing_banner() {
 				id="closing_banner__percurso_4">
 				<div className="closing_banner__text">
 					<h4 className="heading4 text-blue-600 margin-0">Uhuu! 🎉</h4>
-					<p className="paragraph text-neutral-950">
+					<p className="paragraph--medium  text-neutral-950">
 						Você chegou ao fim do Percurso 4. Agora, prepare-se para a Avaliação
 						Final para concluir sua jornada!
 					</p>

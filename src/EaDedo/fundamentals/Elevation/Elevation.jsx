@@ -46,7 +46,7 @@ const CardElevation = ({ name, elevation }) => {
 				)}
 			</div>
 			<div className="flexbox__center">
-				<p className="paragraph margin-0">{name}</p>
+				<p className="paragraph--medium margin-0">{name}</p>
 				<p
 					className="font-size-sm margin-0"
 					onClick={() => copyToClipboard(elevation, setCopiedElevation)}>

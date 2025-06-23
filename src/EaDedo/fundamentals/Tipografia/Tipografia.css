@@ -29,7 +29,7 @@
   --font-size-sm: 1em;
   /* 16px - Legend */
   --font-size-p: 1.125em;
-  /* 18px - Paragraph */
+  /* 18px - paragraph--medium*/
   --font-size-md: 1.5em;
   /* 24px - Heading 4 */
   --font-size-lg: 1.75em;
@@ -83,6 +83,22 @@
   line-height: var(--line-height-distant);
   margin: 0 0 0.5rem 0;
   /* 16px */
+}
+
+.paragraph--medium {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-p);
+  /* Tamanho para parágrafo */
+  line-height: var(--line-height-medium);
+  margin: 0 0 0.5rem 0;
+}
+
+.paragraph--tight {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-p);
+  /* Tamanho para parágrafo */
+  line-height: var(--line-height-tight);
+  margin: 0 0 0.5rem 0;
 }
 
 .heading4 {
@@ -351,7 +367,7 @@
     font-size: var(--font-size-tags);
   }
 
-  .paragraph {
+  .paragraph--medium {
     font-size: var(--font-size-sm);
   }
 

@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-.accordion-header .paragraph {
+.accordion-header .paragraph--medium {
   margin: 0;
 }
 

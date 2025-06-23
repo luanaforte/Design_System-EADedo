@@ -44,7 +44,7 @@ export default function Accordions() {
 				<div
 					class="accordion-header"
 					onClick={() => handleAccordionClick("accordion1", 1)}>
-					<p class="paragraph">Item de uma lista</p>
+					<p class="paragraph--medium">Item de uma lista</p>
 					<div class="icons">
 						<svg
 							width="24"
@@ -71,7 +71,7 @@ export default function Accordions() {
 					</div>
 				</div>
 				<div class="accordion-content">
-					<p class="paragraph">
+					<p class="paragraph--medium">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
 						tenetur quia dolorum, aliquam laborum iste accusamus unde minima
 						quae! Et dicta commodi dolorem tenetur error, hic nam cum accusamus
@@ -83,7 +83,7 @@ export default function Accordions() {
 				<div
 					class="accordion-header"
 					onClick={() => handleAccordionClick("accordion1", 2)}>
-					<p class="paragraph">Item de uma lista</p>
+					<p class="paragraph--medium">Item de uma lista</p>
 					<div class="icons">
 						<svg
 							width="24"
@@ -110,7 +110,7 @@ export default function Accordions() {
 					</div>
 				</div>
 				<div class="accordion-content">
-					<p class="paragraph">
+					<p class="paragraph--medium">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
 						tenetur quia dolorum, aliquam laborum iste accusamus unde minima
 						quae! Et dicta commodi dolorem tenetur error, hic nam cum accusamus

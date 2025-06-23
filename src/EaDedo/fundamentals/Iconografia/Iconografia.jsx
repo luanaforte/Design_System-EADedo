@@ -149,7 +149,7 @@ export default function Iconografia() {
 				{iconsNavegacao.map((icon, index) => (
 					<div key={index} className="icon-item">
 						<img src={icon.src} alt={icon.name} />
-						<p className="paragraph">{icon.name}</p>
+						<p className="paragraph--medium">{icon.name}</p>
 					</div>
 				))}
 			</div>

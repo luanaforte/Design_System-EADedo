@@ -26,7 +26,7 @@ export function Card_video() {
 					</svg>
 				</div>
 			</div>
-			<p className="truncate--three-lines text-neutral-950 paragraph margin-0">
+			<p className="truncate--three-lines text-neutral-950 paragraph--medium margin-0">
 				Título do card Título do card Título do card Título do card Título do
 				card Título do card Título do card Título do card Título do card Título
 				do card

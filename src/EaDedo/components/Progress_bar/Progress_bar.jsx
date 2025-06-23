@@ -6,7 +6,7 @@ export default function Progress_bar() {
 		<main className="container-xl">
 			<div className="flexbox__between--center">
 				<div className="group-tooltip">
-					<p className="paragraph text-neutral-950 margin-0">
+					<p className="paragraph--medium text-neutral-950 margin-0">
 						Progresso de aprendizagem
 					</p>
 					<div className="tooltip tooltip--right">
@@ -30,7 +30,7 @@ export default function Progress_bar() {
 				</div>
 				<div>
 					<p
-						className="paragraph text-neutral-300"
+						className="paragraph--medium text-neutral-300"
 						id="progress_percentage"></p>
 				</div>
 			</div>

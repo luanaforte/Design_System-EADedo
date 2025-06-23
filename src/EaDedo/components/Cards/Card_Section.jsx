@@ -19,7 +19,7 @@ export function Card_Section() {
 						</svg>
 						<h2 className="heading2 margin-0">Título do Card</h2>
 					</div>
-					<p className="paragraph">
+					<p className="paragraph--medium">
 						Use este espaço para guiar o usuário ou apresentar informações
 						essenciais com clareza e destaque.
 					</p>
@@ -195,7 +195,7 @@ export function Card_Section() {
 						</svg>
 						<h3 className="heading3 margin-0">Título do Card</h3>
 					</div>
-					<p className="paragraph">
+					<p className="paragraph--medium">
 						Use este espaço para guiar o usuário ou apresentar informações
 						essenciais com clareza e destaque.
 					</p>

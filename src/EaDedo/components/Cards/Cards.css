@@ -142,7 +142,7 @@
   gap: var(--space-025);
 }
 
-.card-podcast-content .paragraph {
+.card-podcast-content .paragraph--medium {
   line-height: var(--line-height-medium) !important;
 }
 

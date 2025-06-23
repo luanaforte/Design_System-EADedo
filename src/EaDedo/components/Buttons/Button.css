@@ -89,9 +89,9 @@
   text-decoration: none;
 }
 
-.button-media-link .paragraph {
-  color: var(--button-color);
-  margin: 0;
+.button-media-link .paragraph--medium" {
+ color: var(--button-color);
+margin: 0;
 }
 
 .button-pill svg path,
@@ -202,10 +202,10 @@
 .button-pill:hover,
 .button-minimal:hover,
 .button-media-link:hover,
-.button-media-link:hover .paragraph {
-  color: var(--button-hover-color);
-  border-color: var(--button-hover-color);
-  text-decoration: none;
+.button-media-link:hover .paragraph--medium" {
+ color: var(--button-hover-color);
+border-color: var(--button-hover-color);
+text-decoration: none;
 }
 
 .button-rounded:hover {

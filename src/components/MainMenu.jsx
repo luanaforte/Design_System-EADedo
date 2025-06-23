@@ -52,7 +52,7 @@ export default function MainMenu() {
 			{Object.keys(Rotes).map((menuKey) => (
 				<div key={menuKey} className="menu-item">
 					<button
-						className="menu-button paragraph"
+						className="menu-button paragraph--medium"
 						onClick={() => toggleMenu(menuKey)}>
 						{menuKey}
 						<img src={caret_down} alt="" />
@@ -62,7 +62,7 @@ export default function MainMenu() {
 							<a
 								key={item.route}
 								href={item.route}
-								className="submenu-link paragraph">
+								className="submenu-link paragraph--medium">
 								{item.label}
 							</a>
 						))}

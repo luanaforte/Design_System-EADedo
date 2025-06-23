@@ -140,7 +140,7 @@ const ColorCard = ({ name, color }) => {
 					<Copy className="copied-icon copied-icon__hover" size={16} />
 				)}
 			</div>
-			<p className="paragraph margin-0">{name}</p>
+			<p className="paragraph--medium margin-0">{name}</p>
 			<p
 				className="font-size-sm margin-0 flexbox__center"
 				onClick={() => copyToClipboard(colorValues, setCopiedColor)}>

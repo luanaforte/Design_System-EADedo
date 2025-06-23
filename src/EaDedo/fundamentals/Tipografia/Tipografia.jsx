@@ -19,7 +19,7 @@ const TypographyContent = ({ fontFamily }) => {
 				<h4 className="heading4">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				</h4>
-				<p className="paragraph">
+				<p className="paragraph--medium">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
 					animi fugit est facilis. Iste culpa temporibus assumenda nisi aut eius
 					vitae porro voluptate id ea, iure doloribus consequuntur tenetur

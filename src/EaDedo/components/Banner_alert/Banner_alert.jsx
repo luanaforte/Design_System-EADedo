@@ -7,7 +7,7 @@ export default function Banner_alert() {
 			<h3 className="heading3">Anatomia</h3>
 			<h4 className="heading4 margin-0">banner-alert--fill</h4>
 			<div className="banner-alert--fill background-blue-100">
-				<p className="paragraph margin-0">
+				<p className="paragraph--medium margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
 					texto de exemplo vai ser um pouco mais longo para que você possa ver
 					como o espaçamento dentro de um alerta funciona com este tipo de
@@ -30,7 +30,7 @@ export default function Banner_alert() {
 					</svg>
 				</div>
 				<div className="banner-alert__content">
-					<p className="paragraph margin-0">
+					<p className="paragraph--medium margin-0">
 						Oba, você leu com sucesso esta importante mensagem de alerta. Este
 						texto de exemplo vai ser um pouco mais longo para que você possa ver
 						como o espaçamento dentro de um alerta funciona com este tipo de
@@ -40,7 +40,7 @@ export default function Banner_alert() {
 			</div>
 			<h4 className="heading4 margin-0">banner-alert--stroke</h4>
 			<div className="banner-alert--stroke border-color-blue-600">
-				<p className="paragraph margin-0">
+				<p className="paragraph--medium margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
 					texto de exemplo vai ser um pouco mais longo para que você possa ver
 					como o espaçamento dentro de um alerta funciona com este tipo de
@@ -63,7 +63,7 @@ export default function Banner_alert() {
 					</svg>
 				</div>
 				<div className="banner-alert__content">
-					<p className="paragraph margin-0">
+					<p className="paragraph--medium margin-0">
 						Oba, você leu com sucesso esta importante mensagem de alerta. Este
 						texto de exemplo vai ser um pouco mais longo para que você possa ver
 						como o espaçamento dentro de um alerta funciona com este tipo de
@@ -74,7 +74,7 @@ export default function Banner_alert() {
 			<h4 className="heading4 margin-0">banner-alert--fill Heading </h4>
 			<div className="banner-alert--fill background-blue-100">
 				<h4 className="heading4 margin-0">banner-alert--fill Heading</h4>
-				<p className="paragraph margin-0">
+				<p className="paragraph--medium margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
 					texto de exemplo vai ser um pouco mais longo para que você possa ver
 					como o espaçamento dentro de um alerta funciona com este tipo de
@@ -100,7 +100,7 @@ export default function Banner_alert() {
 					<h4 className="heading4 margin-0">
 						banner-alert--fill__icon Heading
 					</h4>
-					<p className="paragraph margin-0">
+					<p className="paragraph--medium margin-0">
 						Oba, você leu com sucesso esta importante mensagem de alerta. Este
 						texto de exemplo vai ser um pouco mais longo para que você possa ver
 						como o espaçamento dentro de um alerta funciona com este tipo de
@@ -113,7 +113,7 @@ export default function Banner_alert() {
 				<h4 className="heading4 margin-0 text-blue-600">
 					banner-alert--stroke Heading
 				</h4>
-				<p className="paragraph margin-0">
+				<p className="paragraph--medium margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
 					texto de exemplo vai ser um pouco mais longo para que você possa ver
 					como o espaçamento dentro de um alerta funciona com este tipo de
@@ -139,7 +139,7 @@ export default function Banner_alert() {
 					<h4 className="heading4 margin-0 text-blue-600">
 						banner-alert--stroke__icon Heading
 					</h4>
-					<p className="paragraph margin-0">
+					<p className="paragraph--medium margin-0">
 						Oba, você leu com sucesso esta importante mensagem de alerta. Este
 						texto de exemplo vai ser um pouco mais longo para que você possa ver
 						como o espaçamento dentro de um alerta funciona com este tipo de

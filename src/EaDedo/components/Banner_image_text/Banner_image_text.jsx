@@ -15,7 +15,7 @@ export default function Banner_image_text() {
 				</div>
 				<div>
 					<h4 className="heading4">Este é um Título Editável</h4>
-					<p className="paragraph">
+					<p className="paragraph--medium">
 						Oba, você leu com sucesso esta importante mensagem de alerta. Este
 						texto de exemplo vai ser um pouco mais longo para que você possa ver
 						como o espaçamento dentro de um alerta funciona com este tipo de
@@ -31,7 +31,9 @@ export default function Banner_image_text() {
 						className="Banner_image_text--secondary__image"
 					/>
 				</div>
-				<p className="paragraph margin-0 text__center">Insira o texto aqui</p>
+				<p className="paragraph--medium margin-0 text__center">
+					Insira o texto aqui
+				</p>
 			</div>
 		</section>
 	);
