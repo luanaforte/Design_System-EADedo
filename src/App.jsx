@@ -23,7 +23,7 @@ import Badge from "./EaDedo/components/Badge/Badge.jsx";
 import Accordions from "./EaDedo/components/Accordions/Accordions.jsx";
 import Button from "./EaDedo/components/Buttons/Button.jsx";
 import IframeVideo from "./EaDedo/components/IframeVideo/IframeVideo.jsx";
-import HeroImage from "./EaDedo/components/HeroImage/HeroImage.jsx";
+import Header_image from "./EaDedo/components/Header_image/Header_image.jsx";
 import Text_header from "./EaDedo/components/Text_header/Text_header.jsx";
 import Cards from "./EaDedo/components/Cards/Cards.jsx";
 import Button_section_menu from "./EaDedo/components/Button_section_menu/Button_section_menu.jsx";
@@ -64,7 +64,7 @@ const App = () => {
 				<Route path="Componentes/Accordions" element={<Accordions />} />
 				<Route path="Componentes/Button" element={<Button />} />
 				<Route path="Componentes/IframeVideo" element={<IframeVideo />} />
-				<Route path="Componentes/HeroImage" element={<HeroImage />} />
+				<Route path="Componentes/Header_image" element={<Header_image />} />
 				<Route path="Componentes/Text_header" element={<Text_header />} />
 				<Route path="Componentes/Cards" element={<Cards />} />
 				<Route

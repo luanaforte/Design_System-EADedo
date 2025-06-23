@@ -24,7 +24,7 @@ const Rotes = {
 		{ label: "Accordions", route: "/Componentes/Accordions" },
 		{ label: "Button", route: "/Componentes/Button" },
 		{ label: "IframeVideo", route: "/Componentes/IframeVideo" },
-		{ label: "HeroImage", route: "/Componentes/HeroImage" },
+		{ label: "Header_image", route: "/Componentes/Header_image" },
 		{ label: "Text_header", route: "/Componentes/Text_header" },
 		{ label: "Cards", route: "/Componentes/Cards" },
 		{ label: "Button_section_menu", route: "/Componentes/Button_section_menu" },
