@@ -36,6 +36,7 @@
 @import "../components/Header_image/Header_image.css";
 @import "../components/Closing_banner/Closing_banner.css";
 @import "../components/Slider/Slider.css";
+@import "../components/toggleLibras/toggleLibras.css";
 
 /* FLEX */
 .flexbox {

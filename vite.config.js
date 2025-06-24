@@ -15,6 +15,7 @@ export default defineConfig({
         iframeVideo: path.resolve(__dirname, "src/EaDedo/components/IframeVideo/IframeVideo.js"),
         Progress_bar: path.resolve(__dirname, "src/EaDedo/components/Progress_bar/Progress_bar.js"),
         Slider: path.resolve(__dirname, "src/EaDedo/components/Slider/Slider.js"),
+        ToggleLibras: path.resolve(__dirname, "src/EaDedo/components/toggleLibras/toggleLibras.js"),
       },
       output: {
         assetFileNames: "eadedo_style.css",

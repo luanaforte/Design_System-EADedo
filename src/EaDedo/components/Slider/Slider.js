@@ -1,48 +1,59 @@
-let currentSlide = 0;
+function createSlider(sliderContainer) {
+  let currentSlide = 0;
 
-// Geração automática dos indicadores
-function generateIndicators() {
-  const slides = document.querySelectorAll(".slider-item-primario");
-  const indicatorsContainer = document.querySelector(".slider-indicators");
-  
-  indicatorsContainer.innerHTML = ""; // Limpa caso já tenha algum
+  const slides = sliderContainer.querySelectorAll(".slider-item-primario");
+  const indicatorsContainer =
+    sliderContainer.querySelector(".slider-indicators");
+  const sliderInner = sliderContainer.querySelector(
+    ".slider-inner-primario"
+  );
 
-  slides.forEach((_, index) => {
-    const button = document.createElement("button");
-    button.className = "indicator";
-    if (index === 0) button.classList.add("active");
+  function generateIndicators() {
+    indicatorsContainer.innerHTML = "";
 
-    button.addEventListener("click", () => showSlide(index));
-    indicatorsContainer.appendChild(button);
-  });
+    slides.forEach((_, index) => {
+      const button = document.createElement("button");
+      button.className = "indicator";
+      if (index === 0) button.classList.add("active");
+
+      button.addEventListener("click", () => showSlide(index));
+      indicatorsContainer.appendChild(button);
+    });
+  }
+
+  function showSlide(index) {
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentSlide);
+    });
+
+    const indicators = indicatorsContainer.querySelectorAll(".indicator");
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle("active", i === currentSlide);
+    });
+
+    sliderInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function moveSlide(direction) {
+    showSlide(currentSlide + direction);
+  }
+
+  generateIndicators();
+  showSlide(currentSlide);
+
+  return { showSlide, moveSlide };
 }
 
-function showSlide(index) {
-  const slides = document.querySelectorAll(".slider-item-primario");
-  const indicators = document.querySelectorAll(".indicator");
+// Inicializar todos os sliders na página
+document.querySelectorAll(".slider-primario").forEach((slider) => {
+  const sliderInstance = createSlider(slider);
 
-  currentSlide = (index + slides.length) % slides.length;
-
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === currentSlide);
-  });
-
-  indicators.forEach((indicator, i) => {
-    indicator.classList.toggle("active", i === currentSlide);
-  });
-
-  const sliderInner = document.querySelector(".slider-inner-primario");
-  sliderInner.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
-
-function moveSlide(direction) {
-  showSlide(currentSlide + direction);
-}
-
-// Inicialização
-generateIndicators();
-showSlide(currentSlide);
-
-// Para funcionar no dist do npm (se precisar)
-window.showSlide = showSlide;
-window.moveSlide = moveSlide;
+  slider
+    .querySelector(".button-next")
+    ?.addEventListener("click", () => sliderInstance.moveSlide(1));
+  slider
+    .querySelector(".button-prev")
+    ?.addEventListener("click", () => sliderInstance.moveSlide(-1));
+});
