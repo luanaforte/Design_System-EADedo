@@ -1,9 +1,9 @@
 .slider-primario {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-bottom: 1.5rem;
-  position: relative;
+  /* width: 100%; */
+  /* margin-bottom: 1.5rem; */
+  /* position: relative; */
   overflow: hidden;
 }
 
