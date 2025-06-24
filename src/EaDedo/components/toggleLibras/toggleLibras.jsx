@@ -11,6 +11,7 @@ export default function toggleLibras() {
 					className="button-pill button--icon-right button--blue"
 					aria-label="videoaula acessível em libras">
 					<svg
+						class="icon-size-sm"
 						xmlns="http://www.w3.org/2000/svg"
 						width="25"
 						height="25"

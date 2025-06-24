@@ -2,24 +2,24 @@ function createSlider(sliderContainer) {
   let currentSlide = 0;
 
   const slides = sliderContainer.querySelectorAll(".slider-item-primario");
-  const indicatorsContainer =
-    sliderContainer.querySelector(".slider-indicators");
+  const indicatorsContainer = sliderContainer.querySelector(".slider-indicators");
   const sliderInner = sliderContainer.querySelector(
     ".slider-inner-primario"
   );
 
   function generateIndicators() {
     indicatorsContainer.innerHTML = "";
-
+  
     slides.forEach((_, index) => {
       const button = document.createElement("button");
-      button.className = "indicator";
+      button.classList.add("indicator"); 
       if (index === 0) button.classList.add("active");
-
+  
       button.addEventListener("click", () => showSlide(index));
       indicatorsContainer.appendChild(button);
     });
   }
+  
 
   function showSlide(index) {
     currentSlide = (index + slides.length) % slides.length;
