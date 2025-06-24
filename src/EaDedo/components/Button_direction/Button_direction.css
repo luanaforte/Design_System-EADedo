@@ -13,7 +13,7 @@
   background: rgba(0, 0, 0, 0.80);
 }
 
-.button__direction--carousel {
+.button__direction--Slider {
   display: flex;
   width: 2.5rem;
   padding: var(--space-0) var(--space-050);
@@ -24,11 +24,11 @@
   border: none;
 }
 
-.button__direction--carousel:hover {
+.button__direction--Slider:hover {
   border-radius: var(--radius-150);
   background: var(--color-neutral-300);
 }
 
-.button__direction--carousel:hover svg path {
+.button__direction--Slider:hover svg path {
   fill: #4B587E;
 }

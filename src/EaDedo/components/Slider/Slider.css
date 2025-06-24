@@ -1,0 +1,44 @@
+.slider-primario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.slider-inner-primario {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-item-primario {
+  min-width: 100%;
+}
+
+.seta-direcao__secundario-posicao {
+  position: absolute;
+  top: 38%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  padding: 0;
+}
+
+.seta-direcao__secundario {
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  position: absolute;
+}
+
+.seta-direcao__secundario.prev {
+  left: 4%;
+}
+
+.seta-direcao__secundario.next {
+  right: 4%;
+}

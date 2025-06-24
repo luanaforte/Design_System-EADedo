@@ -20,7 +20,7 @@ export default function Header_text() {
 						</svg>
 						<h2 className="heading2 margin-0">Título do Card</h2>
 					</div>
-					<p className="paragraph--medium">
+					<p className="paragraph--medium margin-0">
 						Use este espaço para guiar o usuário ou apresentar informações
 						essenciais com clareza e destaque.
 					</p>

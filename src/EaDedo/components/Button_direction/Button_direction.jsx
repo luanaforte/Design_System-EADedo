@@ -33,7 +33,7 @@ export default function Button_direction() {
 				</button>
 			</div>
 			<div className="flexbox__center">
-				<button className="button__direction--carousel">
+				<button className="button__direction--Slider">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -46,7 +46,7 @@ export default function Button_direction() {
 						/>
 					</svg>
 				</button>
-				<button className="button__direction--carousel">
+				<button className="button__direction--Slider">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"

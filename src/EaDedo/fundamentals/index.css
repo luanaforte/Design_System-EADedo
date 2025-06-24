@@ -15,7 +15,7 @@
 /* Componentes */
 @import "../components/Tag/Tag.css";
 @import "../components/Tag_course/Tag_course.css";
-@import "../components/Carousel_indicators/carousel_indicators.css";
+@import "../components/Indicator/Indicator.css";
 @import "../components/Button_video__play/Button_video__play.css";
 @import "../components/Tooltip/Tooltip.css";
 @import "../components/Progress_bar/Progress_bar.css";
@@ -35,6 +35,7 @@
 @import "../components/IframeVideo/IframeVideo.css";
 @import "../components/Header_image/Header_image.css";
 @import "../components/Closing_banner/Closing_banner.css";
+@import "../components/Slider/Slider.css";
 
 /* FLEX */
 .flexbox {
@@ -97,6 +98,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--space-150);
 }
 
 .flexbox__center--column-start {

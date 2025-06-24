@@ -1,9 +1,9 @@
 import React from "react";
-import "./carousel_indicators.css";
+import "./Indicator.css";
 
-export default function Carousel_indicators() {
+export default function Indicator() {
 	return (
-		<div className="carousel-indicators">
+		<div className="indicators">
 			<button className="indicator active" onclick="changeSlide(0)"></button>
 			<button className="indicator" onclick="changeSlide(1)"></button>
 			<button className="indicator" onclick="changeSlide(2)"></button>

@@ -1,4 +1,4 @@
-.carousel-indicators {
+.indicators {
   display: flex;
   gap: var(--space-050);
 }
