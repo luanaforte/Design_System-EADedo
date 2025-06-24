@@ -5,7 +5,7 @@ export default function Button_direction() {
 	return (
 		<div className="flexbox__column">
 			<div className="flexbox__center">
-				<button className="button__direction--slide">
+				<button className="button__direction--circle">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -18,7 +18,7 @@ export default function Button_direction() {
 						/>
 					</svg>
 				</button>
-				<button className="button__direction--slide">
+				<button className="button__direction--circle">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -33,7 +33,7 @@ export default function Button_direction() {
 				</button>
 			</div>
 			<div className="flexbox__center">
-				<button className="button__direction--Slider">
+				<button className="button__direction--rounded">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -46,7 +46,7 @@ export default function Button_direction() {
 						/>
 					</svg>
 				</button>
-				<button className="button__direction--Slider">
+				<button className="button__direction--rounded">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"

@@ -1,4 +1,4 @@
-.button__direction--slide {
+.button__direction--circle {
   display: flex;
   width: 2.5rem;
   padding: var(--space-050);
@@ -9,11 +9,11 @@
   border: none;
 }
 
-.button__direction--slide:hover {
+.button__direction--circle:hover {
   background: rgba(0, 0, 0, 0.80);
 }
 
-.button__direction--Slider {
+.button__direction--rounded {
   display: flex;
   width: 2.5rem;
   padding: var(--space-0) var(--space-050);
@@ -24,11 +24,11 @@
   border: none;
 }
 
-.button__direction--Slider:hover {
+.button__direction--rounded:hover {
   border-radius: var(--radius-150);
   background: var(--color-neutral-300);
 }
 
-.button__direction--Slider:hover svg path {
+.button__direction--rounded:hover svg path {
   fill: #4B587E;
 }
