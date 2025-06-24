@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
   padding: var(--space-150);
   gap: var(--space-125);
   border-radius: var(--radius-050);
@@ -16,7 +15,6 @@
      ========================= */
 .card__section--secondary {
   display: flex;
-  width: 100%;
   padding: var(--space-150);
   align-items: center;
   justify-content: space-between;
@@ -31,8 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 17.5rem;
-  min-height: 8.875rem;
+  min-width: 17.5rem;
   max-height: 18.4375rem;
   padding: var(--space-075);
   gap: var(--space-075);

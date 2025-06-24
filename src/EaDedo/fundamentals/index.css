@@ -37,6 +37,7 @@
 @import "../components/Closing_banner/Closing_banner.css";
 @import "../components/Slider/Slider.css";
 @import "../components/toggleLibras/toggleLibras.css";
+@import "../components/Carousel/Carousel.css";
 
 /* FLEX */
 .flexbox {
