@@ -1,4 +1,5 @@
-.header__text--primary {
+.header__text--context,
+.header__text--section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -7,7 +8,7 @@
   border-radius: var(--radius-050);
 }
 
-.header__text--secondary {
+.header__text--module {
   display: flex;
   min-width: 15.625rem;
   max-width: 69.375rem;
