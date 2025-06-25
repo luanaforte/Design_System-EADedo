@@ -97,7 +97,7 @@
 .avatar__tagline-vertical {
   display: flex;
   align-items: center;
-  width: 14.125rem;
+  /* width: 14.125rem; */
   gap: var(--space-050);
 }
 

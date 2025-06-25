@@ -1,3 +1,11 @@
+.Progress_bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: var(--space-150);
+}
+
 /* porcentagem do progresso */
 .block_completion_progress .progressPercentage {
   font-family: var(--font-family-body);

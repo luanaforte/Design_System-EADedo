@@ -5,13 +5,11 @@ import Profile from "../../assets/imgs/profile.png";
 export default function Avatar_tagline__group() {
 	return (
 		<section class="container-xl EadGraduacao">
-			<div className="Avatar_tagline__group background-neutral-100 margin__bottom--default">
+			<div className="Avatar_tagline__group margin__bottom--default">
 				<div className="avatar__tagline-vertical">
-					<img
-						src={Profile}
-						alt="Foto do perfil do usuário"
-						className="avatar__image--lg"
-					/>
+					<div className="avatar avatar__letter--lg background-blue-600 ">
+						<span className="avatar__letter-content--lg">A</span>
+					</div>
 					<div className="avatar__tagline-vertical__info">
 						<p className="avatar__tagline-vertical__name">Nome do Usuário</p>
 						<div className="group-tooltip">
@@ -37,11 +35,9 @@ export default function Avatar_tagline__group() {
 					</div>
 				</div>
 				<div className="avatar__tagline-vertical">
-					<img
-						src={Profile}
-						alt="Foto do perfil do usuário"
-						className="avatar__image--lg"
-					/>
+					<div className="avatar avatar__letter--lg background-blue-600 ">
+						<span className="avatar__letter-content--lg">A</span>
+					</div>
 					<div className="avatar__tagline-vertical__info">
 						<p className="avatar__tagline-vertical__name">Nome do Usuário</p>
 						<div className="group-tooltip">
