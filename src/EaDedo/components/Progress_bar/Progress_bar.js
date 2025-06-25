@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const svg = document.querySelector(svgId);
           if (svg) {
             const svgClone = svg.cloneNode(true);
-            svgClone.removeAttribute("id"); // Remove o id para evitar conflitos
-            svgClone.classList.remove("hidden"); // Garante que o SVG será visível
+            svgClone.removeAttribute("id"); 
+            svgClone.classList.remove("hidden"); 
             img.replaceWith(svgClone);
           } else {
             console.warn(`SVG com id ${svgId} não encontrado.`);
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const svg = el.querySelector('svg');
           if (svg) {
             svg.id = content === "Concluído" ? 'svg-concluido' : 'svg-nao-concluido';
-            svg.classList.remove("hidden"); // Garante que o SVG será visível
+            svg.classList.remove("hidden"); 
           }
         }
       }
