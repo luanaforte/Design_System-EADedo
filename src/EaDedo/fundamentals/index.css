@@ -38,6 +38,7 @@
 @import "../components/Slider/Slider.css";
 @import "../components/toggleLibras/toggleLibras.css";
 @import "../components/Carousel/Carousel.css";
+@import "../components/Welcome/Welcome.css";
 
 /* FLEX */
 .flexbox {

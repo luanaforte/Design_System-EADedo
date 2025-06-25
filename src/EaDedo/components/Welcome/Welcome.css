@@ -1,0 +1,9 @@
+/* nome do usuario */
+#elem2 {
+  color: var(--Marinho);
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
