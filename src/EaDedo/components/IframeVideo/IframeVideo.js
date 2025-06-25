@@ -1,10 +1,12 @@
 // URLs dos vídeos
 var video1Url =
-"https://www.youtube.com/embed/DmHAyQCN0mM?si=mWx6BD5KtMzUluUl";
-var video2Url = "";
-var video3Url = "";
-var video4Url = "";
-var video5Url = "";
+"https://ead.unifor.br/ava/mod/url/view.php?id=4583492"; //Conteudo Programatico 
+var video2Url = "https://ead.unifor.br/ava/mod/url/view.php?id=4583493"; // PA1 - videoaula01
+var video3Url = "https://ead.unifor.br/ava/mod/url/view.php?id=4583494"; // PA1 - videoaula02
+var video4Url = "https://ead.unifor.br/ava/mod/url/view.php?id=4583495"; // PA1 - videoaula03
+var video5Url = "https://ead.unifor.br/ava/mod/url/view.php?id=4583496"; // PA1 - videoaula04
+var video6Url = "https://ead.unifor.br/ava/mod/url/view.php?id=4583497"; // PA1 - entrevista
+var video7Url = "https://ead.unifor.br/ava/mod/url/view.php?id=4583500"; // PA1 - onecompiler
 // Continue adicionando video6Url, video7Url...
 
 // Função que troca a imagem pelo vídeo
