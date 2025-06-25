@@ -7,7 +7,7 @@ export default function Header_text() {
 		<section>
 			<div className="header__text--context background-neutral-100 margin__bottom--default">
 				<div>
-					<h1 className="heading1 margin-0">Título do Card</h1>
+					<h1 className="heading1 text-neutral-600">Título da Seção</h1>
 					<p className="paragraph--medium margin-0">
 						Use este espaço para guiar o usuário ou apresentar informações
 						essenciais com clareza e destaque.
@@ -43,7 +43,9 @@ export default function Header_text() {
 								fill="#151720"
 							/>
 						</svg>
-						<h2 className="heading2 margin-0">Título do Card</h2>
+						<h2 className="heading2 margin-0 text-neutral-600">
+							Título da Seção
+						</h2>
 					</div>
 					<p className="paragraph--medium margin-0">
 						Use este espaço para guiar o usuário ou apresentar informações

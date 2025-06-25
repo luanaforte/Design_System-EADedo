@@ -74,7 +74,7 @@
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 18.75rem;
+  /* width: 18.75rem; */
   height: 20rem;
   gap: var(--space-075);
   text-decoration: none !important;
@@ -116,6 +116,13 @@
   height: 10.54688rem;
   object-fit: cover;
   border-radius: var(--radius-075);
+}
+
+.card-video__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 /* =========================
@@ -225,6 +232,13 @@
 @media (max-width: 375px) {
   .card__section--secondary {
     align-items: flex-start !important;
+  }
+
+  .card-video__description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--space-075);
   }
 }
 
