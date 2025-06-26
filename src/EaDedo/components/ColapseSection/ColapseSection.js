@@ -42,5 +42,6 @@ function setupCollapse(idBase) {
 
 window.addEventListener("DOMContentLoaded", () => {
 	setupCollapse("collapse_orientacoes");
+	setupCollapse("collapse_conteudo-programatico");
 	// colocar todos que forem existindo
 });

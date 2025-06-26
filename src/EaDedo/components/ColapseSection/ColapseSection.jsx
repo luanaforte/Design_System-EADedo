@@ -10,8 +10,8 @@ export default function ColapseSection() {
 				className="collapse_orientacoes collapse_section background-neutral-100"
 				id="collapse_orientacoes">
 				<div className="collapse_orientacoes-header">
-					<div className="flexbox__between--center">
-						<div className="header__icon margin__bottom--default">
+					<div className="flexbox__between--center margin__bottom--default">
+						<div className="header__icon">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"

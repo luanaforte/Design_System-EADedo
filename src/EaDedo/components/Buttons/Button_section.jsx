@@ -3,17 +3,17 @@ import "./Button.css";
 
 export default function Button_section() {
 	return (
-		<section class="container-xl EadGraduacao">
+		<section className="container-xl EadGraduacao">
 			<div className="button-group">
-				<div class="button-section">
+				<div className="button-section">
 					<a
-						class="button-section__link background-neutral-100"
+						className="button-section__link background-neutral-100"
 						href="https://exemplo.com"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Insira aqui o texto/função do botão">
 						<svg
-							class="button-section__icon"
+							className="button-section__icon"
 							xmlns="http://www.w3.org/2000/svg"
 							width="22"
 							height="21"
@@ -24,21 +24,26 @@ export default function Button_section() {
 								fill="#151720"
 							/>
 						</svg>
-						<span class="legend button-section__label--desktop">Default</span>
+						<span className="legend button-section__label--desktop">
+							Default
+						</span>
+						<div class="badge-notification button-notification__badge">
+							<span class="badge-notification__content">9</span>
+						</div>
 					</a>
-					<span class="button-section__label button-section__label--mobile">
+					<span className="button-section__label button-section__label--mobile">
 						Default
 					</span>
 				</div>
-				<div class="button-section">
+				<div className="button-section">
 					<a
-						class="button-section__link background-neutral-100"
+						className="button-section__link background-neutral-100"
 						href="https://exemplo.com"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Insira aqui o texto/função do botão">
 						<svg
-							class="button-section__icon"
+							className="button-section__icon"
 							xmlns="http://www.w3.org/2000/svg"
 							width="22"
 							height="21"
@@ -49,9 +54,11 @@ export default function Button_section() {
 								fill="#151720"
 							/>
 						</svg>
-						<span class="legend button-section__label--desktop">Default</span>
+						<span className="legend button-section__label--desktop">
+							Default
+						</span>
 					</a>
-					<span class="button-section__label button-section__label--mobile">
+					<span className="button-section__label button-section__label--mobile">
 						Default
 					</span>
 				</div>

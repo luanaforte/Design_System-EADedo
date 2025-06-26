@@ -6,9 +6,7 @@ import "./Slider.css";
 export default function Slider() {
 	return (
 		<main className="EadGraduacao container-md">
-			<div
-				id="percursoX_slider__videoaula"
-				className="slider-primario container-md">
+			<div className="slider-primario container-md">
 				<div className="flexbox__end margin__bottom--default">
 					<button className="button__direction--rounded button-prev">
 						<svg
