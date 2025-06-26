@@ -1,12 +1,12 @@
 import React from "react";
-import Image from "../../assets/imgs/image-placeholder.png";
+import Image from "../../assets/imgs/component-mockup.png";
 
 import "./Slider.css";
 
 export default function Slider() {
 	return (
-		<main className="EadGraduacao container-md">
-			<div className="slider-primario container-md">
+		<main className="EadGraduacao container-lg">
+			<div className="slider-primario container-lg">
 				<div className="flexbox__end margin__bottom--default">
 					<button className="button__direction--rounded button-prev">
 						<svg
@@ -37,16 +37,16 @@ export default function Slider() {
 				</div>
 				<div className="slider-inner-primario margin__bottom--default">
 					<div className="slider-item-primario active">
-						<img src="../../assets/imgs/component-mockup.png" alt="" />
+						<img src={Image} alt="" />
 					</div>
 					<div className="slider-item-primario">
-						<img src="../../assets/imgs/component-mockup.png" alt="" />
+						<img src={Image} alt="" />
 					</div>
 					<div className="slider-item-primario">
-						<img src="../../assets/imgs/component-mockup.png" alt="" />
+						<img src={Image} alt="" />
 					</div>
 					<div className="slider-item-primario">
-						<img src="../../assets/imgs/component-mockup.png" alt="" />
+						<img src={Image} alt="" />
 					</div>
 				</div>
 				<div className="indicators slider-indicators"></div>

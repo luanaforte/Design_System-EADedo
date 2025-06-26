@@ -13,6 +13,8 @@
 
 .slider-item-primario {
   min-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .seta-direcao__secundario-posicao {
