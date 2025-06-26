@@ -1,11 +1,9 @@
 .header__icon {
   display: flex;
-  min-width: 15.625rem;
   align-items: center;
   align-content: center;
   gap: 0.5rem var(--space-050);
-  flex-wrap: wrap;
-  /* margin-bottom: var(--space-100); */
+  flex: 1 0 0;
 }
 
 @media (max-width: 375px) {

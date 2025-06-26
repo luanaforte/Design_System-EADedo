@@ -80,8 +80,6 @@
 .iframe-video__frame {
   position: relative;
   padding-bottom: 56.25%;
-  /* Proporção 16:9 */
-  aspect-ratio: 16/9;
   height: 0;
   overflow: hidden;
   box-shadow: var(--elevation-low);
@@ -89,16 +87,6 @@
   width: 100%;
 }
 
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  box-shadow: var(--elevation-low);
-  border-radius: var(--radius-075);
-}
-
-.video-container iframe,
 .iframe-video__frame iframe {
   position: absolute;
   border: none;

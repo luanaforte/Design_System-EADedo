@@ -2,46 +2,43 @@ function isMobile() {
 	return window.matchMedia("(max-width: 768px)").matches;
 }
 
-function setupCollapse(idBase) {
-	const btn = document.getElementById(`${idBase}-button`);
-	const content = document.getElementById(`${idBase}--content`);
-	const icon = document.getElementById(`${idBase}-button--icone`);
-	const buttonLabel = Array.from(btn.childNodes).find(
-		(node) => node.nodeType === Node.TEXT_NODE
-	);
-
-	function updateButtonText() {
-		if (!buttonLabel) return;
-		if (isMobile()) {
-			buttonLabel.nodeValue = "";
-		} else {
-			const isHidden = content.classList.contains("hidden");
-			buttonLabel.nodeValue = isHidden ? "Ver detalhes " : "Recolher ";
-		}
-	}
+document.querySelectorAll(".collapse_section").forEach(section => {
+	const btn = section.querySelector("#collapse_section-button");
+	const content = section.querySelector(".collapse-content");
+	const icon = btn.querySelector("svg");
+	const iframe = section.querySelector("iframe");
 
 	btn.addEventListener("click", () => {
-		const isHidden = content.classList.contains("hidden");
+		const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
 
-		if (isHidden) {
-			content.classList.remove("hidden");
-			if (!isMobile()) btn.classList.add("active");
-			icon.classList.add("active-icon");
+		if (isOpen) {
+			content.style.maxHeight = "0px";
+
+			if (!isMobile()) {
+				btn.classList.remove("active");
+				btn.firstChild.textContent = "Ver detalhes ";
+				icon.style.transform = "";
+			} else {
+				btn.firstChild.textContent = "";
+				icon.style.transform = "rotate(0deg)";
+			}
 		} else {
-			content.classList.add("hidden");
-			btn.classList.remove("active");
-			icon.classList.remove("active-icon");
-		}
+			content.style.maxHeight = content.scrollHeight + "px";
 
-		updateButtonText();
+			if (!isMobile()) {
+				btn.classList.add("active");
+				btn.firstChild.textContent = "Recolher ";
+				icon.style.transform = "rotate(180deg)";
+			} else {
+				btn.firstChild.textContent = "";
+				icon.style.transform = "rotate(180deg)";
+			}
+		}
 	});
 
-	window.addEventListener("resize", updateButtonText);
-	updateButtonText();
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-	setupCollapse("collapse_orientacoes");
-	setupCollapse("collapse_conteudo-programatico");
-	// colocar todos que forem existindo
+	iframe?.addEventListener("load", () => {
+		if (content.style.maxHeight !== "0px" && content.style.maxHeight) {
+			content.style.maxHeight = content.scrollHeight + "px";
+		}
+	});
 });

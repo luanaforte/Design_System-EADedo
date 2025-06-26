@@ -249,6 +249,13 @@
   text-decoration: none;
 }
 
+
+.button-section-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.25rem, 1fr));
+  gap: var(--space-150);
+}
+
 .button-section {
   display: flex;
   align-items: center;
@@ -278,6 +285,11 @@
 }
 
 @media (max-width: 375px) {
+
+  .button-section-group {
+    display: flex;
+    justify-content: space-between;
+  }
 
   .button-section {
     display: flex;
@@ -310,7 +322,6 @@
 
 @media (max-width: 768px) {
   .button-pill {
-    min-width: 90%;
     max-width: 100%;
   }
 
@@ -321,4 +332,5 @@
   .button-notification__text::first-letter {
     text-transform: uppercase;
   }
+
 }
