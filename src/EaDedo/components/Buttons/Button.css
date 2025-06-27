@@ -251,8 +251,9 @@
 
 
 .button-section-group {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.25rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: var(--space-150);
 }
 
@@ -289,6 +290,7 @@
   .button-section-group {
     display: flex;
     justify-content: space-between;
+    gap: var(--space-100);
   }
 
   .button-section {

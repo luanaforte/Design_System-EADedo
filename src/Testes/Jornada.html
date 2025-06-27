@@ -320,9 +320,12 @@
 				</div>
 			</section>
 			<section id="Rotulo_orientacao">
-				<div class="slider-primario container-xl margin__bottom--default">
-					<div class="flexbox__end margin__bottom--default">
-						<button class="button__direction--rounded button-prev">
+				<div class="slider-primario margin__bottom--default">
+					<div class="slider-primario_buttons margin__bottom--default">
+						<button
+							class="button__direction--rounded"
+							id="slider_prevBtn"
+							aria-label="Anterior">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -334,7 +337,10 @@
 									fill="#ACB4CD" />
 							</svg>
 						</button>
-						<button class="button__direction--rounded button-next">
+						<button
+							class="button__direction--rounded"
+							id="slider_nextBtn"
+							aria-label="Próximo">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -347,20 +353,30 @@
 							</svg>
 						</button>
 					</div>
-					<div class="slider-inner-primario margin__bottom--default">
-						<div class="slider-item-primario active">
-							<img src="../EaDedo/assets/imgs/component-mockup.png" alt="" />
-						</div>
-						<div class="slider-item-primario">
-							<img src="../EaDedo/assets/imgs/component-mockup.png" alt="" />
-						</div>
-						<div class="slider-item-primario">
-							<img src="../EaDedo/assets/imgs/component-mockup.png" alt="" />
-						</div>
-						<div class="slider-item-primario">
-							<img src="../EaDedo/assets/imgs/component-mockup.png" alt="" />
-						</div>
+
+					<div class="container-sm slider-items">
+						<div class="slider-primario-item active">
+							<img
+								src="../../src/EaDedo/assets/imgs/component-mockup.png"
+								alt=""
+						/></div>
+						<div class="slider-primario-item">
+							<img
+								src="../../src/EaDedo/assets/imgs/component-mockup.png"
+								alt=""
+						/></div>
+						<div class="slider-primario-item">
+							<img
+								src="../../src/EaDedo/assets/imgs/component-mockup.png"
+								alt=""
+						/></div>
+						<div class="slider-primario-item">
+							<img
+								src="../../src/EaDedo/assets/imgs/component-mockup.png"
+								alt=""
+						/></div>
 					</div>
+
 					<div class="indicators slider-indicators"></div> </div
 			></section>
 			<section id="Rotulo_suporte-de-aprendizado">
