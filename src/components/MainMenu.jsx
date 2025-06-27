@@ -40,6 +40,7 @@ const Rotes = {
 		{ label: "Slider", route: "/Componentes/Slider" },
 		{ label: "Carousel", route: "/Componentes/Carousel" },
 		{ label: "toggleLibras", route: "/Componentes/toggleLibras" },
+		{ label: "Header_text_image", route: "/Componentes/Header_text_image" },
 	],
 };
 

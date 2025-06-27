@@ -38,6 +38,7 @@ import Header_text from "./EaDedo/components/Header_text/Header_text.jsx";
 import Slider from "./EaDedo/components/Slider/Slider.jsx";
 import Carousel from "./EaDedo/components/Carousel/Carousel.jsx";
 import ToggleLibras from "./EaDedo/components/toggleLibras/toggleLibras.jsx";
+import Header_text_image from "./EaDedo/components/Header_text_image/Header_text_image.jsx";
 
 const App = () => {
 	return (
@@ -87,6 +88,10 @@ const App = () => {
 				<Route path="Componentes/Slider" element={<Slider />} />
 				<Route path="Componentes/Carousel" element={<Carousel />} />
 				<Route path="Componentes/toggleLibras" element={<ToggleLibras />} />
+				<Route
+					path="Componentes/Header_text_image"
+					element={<Header_text_image />}
+				/>
 			</Route>
 		</Routes>
 	);
