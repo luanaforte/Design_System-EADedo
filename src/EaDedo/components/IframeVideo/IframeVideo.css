@@ -5,6 +5,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+  gap: var(--space-100);
 }
 
 /* Container da imagem do vídeo */
