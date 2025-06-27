@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./toggleLibras.css";
-
 export default function ToggleLibras() {
 	return (
 		<div className="container-xl">

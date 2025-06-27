@@ -9,7 +9,7 @@ export function Card_simple() {
 				<p className="paragraph--medium margin-0 text-blue-600">
 					Título especial
 				</p>
-				<p className="paragraph--medium margin-0">
+				<p className="paragraph--medium truncate--four-lines margin-0">
 					Texto que funciona como uma introdução a um conteúdo adicional.
 				</p>
 			</div>

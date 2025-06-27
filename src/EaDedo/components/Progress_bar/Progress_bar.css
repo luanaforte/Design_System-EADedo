@@ -51,6 +51,7 @@
   font-weight: var(--font-weight-regular) !important;
   color: var(--color-neutral-600) !important;
   white-space: pre-wrap;
+  flex-wrap: wrap;
   margin-top: var(--space-075);
   display: flex;
   align-items: center;
