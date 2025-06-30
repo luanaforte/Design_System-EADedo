@@ -271,7 +271,7 @@
   padding: var(--space-100);
   gap: var(--space-100);
   border-radius: var(--radius-050);
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   position: relative;
 }

@@ -17,6 +17,7 @@ export default defineConfig({
         Slider: path.resolve(__dirname, "src/EaDedo/components/Slider/Slider.js"),
         ToggleLibras: path.resolve(__dirname, "src/EaDedo/components/toggleLibras/ToggleLibras.js"),
         Carousel: path.resolve(__dirname, "src/EaDedo/components/Carousel/Carousel.js"),
+        Welcome: path.resolve(__dirname,"src/EaDedo/components/Welcome/Welcome.js")
       },
       output: {
         assetFileNames: "eadedo_style.css",

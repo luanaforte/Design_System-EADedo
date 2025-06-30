@@ -1,9 +1,14 @@
 /* nome do usuario */
-#elem2 {
-  color: var(--Marinho);
-  font-family: Poppins;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+#elem2,
+#nomeUsuario {
+  color: var(--color-blue-600);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm) !important;
+  font-weight: var(--font-weight-regular) !important;
+  text-decoration: none !important;
+}
+
+#elem2:hover {
+  color: var(--color-blue-600);
+  text-decoration: none !important;
 }
