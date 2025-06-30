@@ -15,9 +15,10 @@ const videos = {
 // Função que troca a imagem pelo vídeo
 function videoAulaProg(clicked_id) {
   console.log("Clicked ID:", clicked_id);
-
-  // Mostrar botões libras
-  document.querySelectorAll(".librasX").forEach((e) => e.classList.remove("hidden"));
+//   const buttonToogleLibras = clickedButton.closest(".iframe-video").querySelector("button");
+//   // Mostrar botões libras
+// 	buttonToogleLibras.classList.remove("hidden")
+document.querySelector("#iframe" + clicked_id).closest(".slider-primario-item").querySelector("button[data-libras]").classList.remove("hidden")
 
   var imagem = document.querySelector("#imagem" + clicked_id);
   var video = document.querySelector("#video" + clicked_id);
