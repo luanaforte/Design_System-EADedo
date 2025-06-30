@@ -31,3 +31,8 @@
 .tooltip {
   opacity: 1 !important;
 }
+
+/* padding dos rotulos */
+.activity-item.activityinline {
+  padding: 0 !important;
+}

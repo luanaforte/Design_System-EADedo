@@ -133,6 +133,11 @@
   margin-bottom: var(--space-150) !important;
 }
 
+/* paddings */
+.padding__bottom--default {
+  padding-top: var(--space-150) !important;
+}
+
 /* IMAGENS */
 .image-fluid {
   width: 100%;

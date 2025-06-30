@@ -1,10 +1,8 @@
 .Avatar_tagline__group {
   display: flex;
-  min-width: 15.625rem;
-  max-width: 62.9375rem;
-  padding: var(--space-100);
   align-items: center;
   align-content: center;
+  padding-bottom: var(--space-125);
   gap: var(--space-150);
   flex-wrap: wrap;
   border-radius: var(--radius-050);
