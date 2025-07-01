@@ -8,6 +8,7 @@ import Card_image_text from "./Card_image_text.jsx";
 
 import "../../fundamentals/index.css";
 import "./Cards.css";
+import { Card_section_avatar } from "./Card_section_avatar.jsx";
 
 export default function Cards() {
 	return (
@@ -18,6 +19,7 @@ export default function Cards() {
 			<Card_podcast />
 			<Card_simple />
 			<Card_image_text />
+			<Card_section_avatar />
 		</div>
 	);
 }

@@ -198,7 +198,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-050);
   background: var(--color-neutral-100);
 }
 
@@ -227,6 +227,34 @@
   border-radius: var(--radius-050);
   object-fit: cover;
 }
+
+/* =========================
+      Card_section_avatar
+     ========================= */
+.Card_section_avatar {
+  display: flex;
+  padding: var(--space-100);
+  align-items: center;
+  gap: var(--space-100);
+  border-radius: var(--radius-050);
+}
+
+.Card_section_avatar__content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100);
+}
+
+.Card_section_avatar__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-050);
+  flex: 1 00;
+}
+
+
 
 /* =========================
      Efeitos de Hover e Active
@@ -260,6 +288,25 @@
     flex-direction: column;
     align-items: center
   }
+
+  .Card_section_avatar,
+  .Card_section_avatar__content {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .Card_section_avatar__description .avatar__tagline-horizontal {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0;
+  }
+
+  .Card_section_avatar .button-group,
+  .Card_section_avatar .button-group .button-rounded {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -282,5 +329,17 @@
     width: auto;
   }
 
+  .Card_section_avatar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .Card_section_avatar__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+  }
 
 }

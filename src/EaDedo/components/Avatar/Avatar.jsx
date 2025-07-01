@@ -95,7 +95,7 @@ export default function Avatar() {
 					alt="Foto do perfil do usuário"
 					className="avatar__image--lg"
 				/>
-				<div className="avatar__tagline-vertical__info">
+				<div className="avatar__tagline-info">
 					<p className="avatar__tagline-vertical__name">Nome do Usuário</p>
 					<div className="group-tooltip">
 						<p className="avatar__tagline-text">Tagline</p>

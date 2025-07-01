@@ -497,7 +497,7 @@ body {
 .color-card__box {
   width: 4.375rem;
   height: 4.375rem;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-050);
   margin-bottom: 0.75rem;
   position: relative;
 }
@@ -560,7 +560,7 @@ body {
 /* layout */
 .card-layout {
   height: 2.4375rem;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-050);
   background: rgba(0, 74, 255, 0.2);
   margin-bottom: 1.75rem;
 }
