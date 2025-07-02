@@ -320,13 +320,13 @@
   .button-section__label--mobile {
     display: block;
   }
-}
 
-@media (max-width: 768px) {
   .button-pill {
     max-width: 100%;
   }
+}
 
+@media (max-width: 768px) {
   .button-notification__text-part {
     display: none;
   }

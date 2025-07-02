@@ -82,7 +82,6 @@
   /* Tamanho para parágrafo */
   line-height: var(--line-height-distant);
   margin: 0 0 0.5rem 0;
-  /* 16px */
 }
 
 .paragraph--medium {
@@ -116,7 +115,7 @@
   font-size: var(--font-size-lg) !important;
   /* Tamanho para H3 */
   font-weight: var(--font-weight-semibold) !important;
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-medium);
   margin: 0 0 0.5rem 0;
   padding: 0;
 }
@@ -126,7 +125,7 @@
   font-size: var(--font-size-xl) !important;
   /* Tamanho para H2 */
   font-weight: var(--font-weight-semibold) !important;
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-medium);
   margin: 0 0 0.5rem 0;
   padding: 0;
 }
@@ -136,7 +135,7 @@
   font-size: var(--font-size-2xl) !important;
   /* Tamanho para H1 */
   font-weight: var(--font-weight-semibold) !important;
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-medium);
   margin: 0 0 0.5rem 0;
   padding: 0;
 }
@@ -146,7 +145,7 @@
   font-size: var(--font-size-3xl) !important;
   /* Tamanho para Display */
   font-weight: var(--font-weight-bold) !important;
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-medium);
   margin: 0 0 0.5rem 0;
   padding: 0;
 }
@@ -200,6 +199,15 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+
+/* OUTROS */
+.text-link {
+  text-decoration: underline !important;
+}
+
+.text-link:hover {
+  color: var(--Marinho);
 }
 
 /* Font Weights */

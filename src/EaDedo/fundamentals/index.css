@@ -129,8 +129,20 @@
   margin: 0 !important;
 }
 
+.margin__top-0 {
+  margin-top: 0 !important;
+}
+
+.margin__bottom-0 {
+  margin-bottom: 0 !important;
+}
+
 .margin__bottom--default {
   margin-bottom: var(--space-150) !important;
+}
+
+.margin__bottom--100 {
+  margin-bottom: var(--space-100) !important;
 }
 
 /* paddings */
