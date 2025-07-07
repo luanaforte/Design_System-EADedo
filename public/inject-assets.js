@@ -13,7 +13,6 @@ document.head.insertAdjacentHTML(
 // Lista de scripts
 const scripts = [
 "https://cdn.jsdelivr.net/npm/design_system2@1/dist/accordions.js",
-"https://cdn.jsdelivr.net/npm/design_system2@1/dist/badge.js",
 "https://cdn.jsdelivr.net/npm/design_system2@1/dist/Carousel.js",
 "https://cdn.jsdelivr.net/npm/design_system2@1/dist/ToggleLibras.js",
 "https://ead.unifor.br/ava/mod/resource/view.php?id=4584053", //Welcome
