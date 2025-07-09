@@ -1,46 +1,48 @@
-function isMobile() {
-	return window.matchMedia("(max-width: 768px)").matches;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-	document.querySelectorAll(".collapse_section").forEach(section => {
-		const btn = section.querySelector("#collapse_section-button");
-		const content = section.querySelector(".collapse-content");
-		const icon = btn.querySelector("svg");
-		const iframe = section.querySelector("iframe");
+	// Inicializa todos fechados
+	document.querySelectorAll(".collapse-content").forEach((content) => {
+		content.style.maxHeight = null;
+	});
 
+	// Configura os toggles
+	document.querySelectorAll(".collapse-toggle").forEach((btn) => {
+		btn.setAttribute("aria-expanded", "false");
 		btn.addEventListener("click", () => {
-			const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+			const section = btn.closest(".collapse_section");
+			const content = section.querySelector(".collapse-content");
+			const svgIcon = btn.querySelector("svg:last-child");
+
+			const isOpen =
+				content.style.maxHeight && content.style.maxHeight !== "0px";
 
 			if (isOpen) {
-				content.style.maxHeight = "0px";
-
-				if (!isMobile()) {
-					btn.classList.remove("active");
-					btn.firstChild.textContent = "Ver detalhes ";
-					icon.style.transform = "";
-				} else {
-					btn.firstChild.textContent = "";
-					icon.style.transform = "rotate(0deg)";
-				}
+				content.style.maxHeight = null;
+				btn.classList.remove("active");
+				btn.setAttribute("aria-expanded", "false");
 			} else {
 				content.style.maxHeight = content.scrollHeight + "px";
-
-				if (!isMobile()) {
-					btn.classList.add("active");
-					btn.firstChild.textContent = "Recolher ";
-					icon.style.transform = "rotate(180deg)";
-				} else {
-					btn.firstChild.textContent = "";
-					icon.style.transform = "rotate(180deg)";
-				}
+				btn.classList.add("active");
+				btn.setAttribute("aria-expanded", "true");
 			}
-		});
 
-		iframe?.addEventListener("load", () => {
-			if (content.style.maxHeight !== "0px" && content.style.maxHeight) {
-				content.style.maxHeight = content.scrollHeight + "px";
+			toggleButtonText(btn, "Ver detalhes", "Recolher");
+
+			if (svgIcon) {
+				svgIcon.style.transform = btn.classList.contains("active")
+					? "rotate(180deg)"
+					: "rotate(0deg)";
 			}
 		});
 	});
 });
+
+function toggleButtonText(btn, textShow, textHide) {
+	for (const node of btn.childNodes) {
+		if (node.nodeType === Node.TEXT_NODE) {
+			node.textContent = btn.classList.contains("active")
+				? textHide
+				: textShow;
+			break;
+		}
+	}
+}
