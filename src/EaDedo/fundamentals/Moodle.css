@@ -13,6 +13,11 @@
   padding: 0 !important;
 }
 
+/* progresso da parte inferior  */
+.format-tiles .overall-progress {
+  display: none !important;
+}
+
 .format-tiles #section-0 .contentwithoutlink .no-overflow {
   margin-bottom: 0 !important;
   overflow: hidden;

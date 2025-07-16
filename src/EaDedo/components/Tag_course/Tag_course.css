@@ -1,6 +1,6 @@
 .tag_course__vertical {
   display: flex;
-  width: 15rem;
+  width: fit-content;
   padding: var(--space-050);
   align-items: center;
   align-content: center;

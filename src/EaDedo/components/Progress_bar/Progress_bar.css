@@ -1,3 +1,18 @@
+/* especificas do moodle */
+#Eadedo_progress .block_completion_progress {
+  border: 0;
+  background-color: transparent;
+}
+
+#Eadedo_progress .block_completion_progress .card-body h3 {
+  display: none !important;
+}
+
+.nowDiv.firstNow {
+  display: none;
+}
+
+/* *********** */
 .Progress_bar-header {
   display: flex;
   justify-content: space-between;
@@ -25,6 +40,18 @@
 }
 
 /* estilo das barrinhas de progresso */
+.block_completion_progress .barRow {
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.block_completion_progress .progressBarCell {
+  height: 0.9375rem !important;
+}
+
 .block_completion_progress .barModeSqueeze .barRowCells {
   display: flex;
   gap: var(--space-012);

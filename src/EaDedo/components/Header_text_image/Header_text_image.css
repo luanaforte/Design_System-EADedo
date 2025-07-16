@@ -4,7 +4,7 @@
   gap: var(--space-125, 1.25rem);
   border-radius: var(--radius-050);
   position: relative;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .header_text_image__description {

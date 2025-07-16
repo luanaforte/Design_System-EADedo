@@ -13,9 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     destino_percentage.appendChild(percentage);
 
     // Remove o prefixo e mantém apenas o número
-    const text = percentage.textContent;
-    const onlyPercentage = text.split(":")[1]?.trim();
-
+    const onlyPercentage = percentage.textContent.split(":")[1]?.trim();
     if (onlyPercentage) {
       percentage.textContent = onlyPercentage;
 
@@ -23,60 +21,38 @@ document.addEventListener("DOMContentLoaded", () => {
       if (value > 0) {
         percentage.classList.add("progressPercentage_start");
       }
-
-      // Substituir o ícone <img> pelo SVG correspondente
-      const img = document.querySelector(".progressEventInfo > img.iconInInfo");
-      if (img) {
-        const title = img.getAttribute("title");
-
-        let svgId = null;
-
-        // Define o svgId com base no título
-        if (title === "Concluído") {
-          svgId = "#svg-concluido";
-        } else if (title === "Não concluído") {
-          svgId = "#svg-nao-concluido";
-        }
-
-        // Substitui o <img> pelo SVG correspondente
-        if (svgId) {
-          const svg = document.querySelector(svgId);
-          if (svg) {
-            const svgClone = svg.cloneNode(true);
-            svgClone.removeAttribute("id"); 
-            svgClone.classList.remove("hidden"); 
-            img.replaceWith(svgClone);
-          } else {
-            console.warn(`SVG com id ${svgId} não encontrado.`);
-          }
-        }
-      }
     }
   }
 
-  // ENVOLVE o texto "Concluído" ou "Não concluído" com <span> e aplica ID ao <svg>
-  document.querySelectorAll('.progressEventInfo').forEach((el) => {
+  // Trata todos os elementos com status de progresso
+  document.querySelectorAll(".progressEventInfo").forEach((el) => {
+    const img = el.querySelector("img.iconInInfo");
+    if (img) {
+      const title = img.getAttribute("title");
+      const svgMap = {
+        "Concluído": "#svg-concluido",
+        "Não concluído": "#svg-nao-concluido"
+      };
+      const svgId = svgMap[title];
+      const svgTemplate = document.querySelector(svgId);
+
+      if (svgTemplate) {
+        const svgClone = svgTemplate.cloneNode(true);
+        svgClone.removeAttribute("id");
+        svgClone.classList.remove("hidden");
+        img.replaceWith(svgClone);
+      }
+    }
+
+    // Substitui o texto por <span> com classe
     el.childNodes.forEach((node) => {
       if (node.nodeType === 3) {
-        const content = node.textContent.trim();
-
-        if (content === "Concluído" || content === "Não concluído") {
-          const span = document.createElement('span');
-
-          if (content === "Concluído") {
-            span.className = 'status-concluido';
-          } else if (content === "Não concluído") {
-            span.className = 'status-nao-concluido';
-          }
-
-          span.textContent = content;
+        const text = node.textContent.trim();
+        if (text === "Concluído" || text === "Não concluído") {
+          const span = document.createElement("span");
+          span.className = text === "Concluído" ? "status-concluido" : "status-nao-concluido";
+          span.textContent = text;
           el.replaceChild(span, node);
-
-          const svg = el.querySelector('svg');
-          if (svg) {
-            svg.id = content === "Concluído" ? 'svg-concluido' : 'svg-nao-concluido';
-            svg.classList.remove("hidden"); 
-          }
         }
       }
     });
