@@ -35,7 +35,7 @@
   bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
   .header_text_image-float__illustration,
   .header_text_image-bottom__illustration {

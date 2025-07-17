@@ -269,7 +269,7 @@
 /* =========================
      Responsividade
      ========================= */
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .card__section--secondary {
     align-items: flex-start !important;
   }
@@ -315,17 +315,12 @@
     align-items: flex-end;
   }
 
-  .card__section-group {
-    flex-direction: column;
-    gap: var(--space-150);
-  }
-
   .Card_image_text {
     display: flex;
     align-items: center
   }
 
-  .card__section-group .card__section--primary {
+  .card__section--primary {
     width: auto;
   }
 
@@ -342,4 +337,16 @@
     align-self: stretch;
   }
 
+}
+
+
+@media (max-width: 900px) {
+  .card__section-group {
+    flex-direction: column;
+    gap: var(--space-150);
+  }
+
+  .card__section-group .card__section--primary {
+    width: auto;
+  }
 }

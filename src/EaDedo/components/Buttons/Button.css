@@ -227,8 +227,9 @@
 .button-minimal.active {
   outline: none;
   color: var(--button-color);
-  border-color: var(--button-border);
+  border-color: var(--button-border) !important;
   text-decoration: none;
+  box-shadow: none !important;
 }
 
 .button-pill:active,
@@ -238,8 +239,9 @@
 .button-rounded.active {
   color: #ffffff;
   background: var(--button-active-bg);
-  border-color: var(--button-active-border);
+  border-color: var(--button-active-border) !important;
   text-decoration: none;
+  box-shadow: none !important;
 }
 
 .disabled {
@@ -285,7 +287,7 @@
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
 
   .button-section-group {
     display: flex;

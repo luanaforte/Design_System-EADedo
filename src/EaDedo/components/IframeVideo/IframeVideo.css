@@ -96,7 +96,7 @@
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .iframe-video__loading-icon {
     top: 30%;
     left: 52%;

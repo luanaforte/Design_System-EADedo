@@ -598,7 +598,7 @@ body {
 
 /* BREAKPOINTS */
 /* Dispositivos médios (telefones, de 375px a 280px) */
-@media (max-width: 375px) {}
+@media (max-width: 425px) {}
 
 /* Dispositivos médios (tablets na horizontal, de 768px a 375px) */
 @media (max-width: 768px) {

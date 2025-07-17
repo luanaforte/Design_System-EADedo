@@ -362,7 +362,7 @@
 
 /* BREAKPOINTS */
 /* Dispositivos médios (telefones, de 375px a 280px) */
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .Code {
     font-size: var(--font-size-sm);
   }

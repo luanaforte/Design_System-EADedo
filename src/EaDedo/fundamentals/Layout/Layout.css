@@ -58,11 +58,14 @@
   color: var(--N900);
 }
 
-/* Dispositivos médios (telefones, de 375px a 280px) */
-@media (max-width: 375px) {}
+/* Dispositivos médios (telefones, de 425px a 280px) */
+@media (max-width: 425px) {}
 
 /* Dispositivos médios (tablets na horizontal, de 768px a 375px) */
 @media (max-width: 768px) {}
+
+/* Dispositivos grandes (tablets lg e desktop sm, de 900 ate 768) */
+@media (max-width: 900px) {}
 
 /* Dispositivos grandes (laptops/desktops, de 1024px a 768px) */
 @media (max-width: 1024px) {}

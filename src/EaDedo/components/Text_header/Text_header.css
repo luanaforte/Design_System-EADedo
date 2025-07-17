@@ -6,7 +6,7 @@
   flex: 1 0 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .header__icon [class^="icon-size-"] {
     display: none;
   }
