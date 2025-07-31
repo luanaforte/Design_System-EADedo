@@ -1,123 +1,158 @@
 (function() {
-  let slider;
-  let indicatorsContainer;
-  let slides;
-  let prevBtn;
-  let nextBtn;
-  let currentIndex = 0;
-  let isAnimating = false;
+ 
+    const sliders = [];
 
-  function setupElements() {
-      slider = document.querySelector(".slider-primario");
-      if (!slider) return false;
+    
+    class Slider {
+        constructor(sliderElement) {
+            this.slider = sliderElement;
+            this.indicatorsContainer = null;
+            this.slides = null;
+            this.prevBtn = null;
+            this.nextBtn = null;
+            this.currentIndex = 0;
+            this.isAnimating = false;
+            this.init();
+        }
 
-      indicatorsContainer = slider.querySelector(".indicators");
-      slides = slider.querySelectorAll(".slider-primario-item");
-      prevBtn = slider.querySelector("#slider_prevBtn");
-      nextBtn = slider.querySelector("#slider_nextBtn");
+        init() {
+            if (!this.setupElements()) {
+                console.warn("❌ Slider could not be fully initialized for element:", this.slider);
+                return;
+            }
+            console.log("✅ Slider initialized:", this.slider);
+            this.createIndicators();
+            this.attachEvents();
+        }
 
-      return slider && indicatorsContainer && slides.length && prevBtn && nextBtn;
-  }
+        setupElements() {
+            this.indicatorsContainer = this.slider.querySelector(".indicators");
+            this.slides = this.slider.querySelectorAll(".slider-primario-item");
+            this.prevBtn = this.slider.querySelector("#slider_prevBtn");
+            this.nextBtn = this.slider.querySelector("#slider_nextBtn");
 
-  function createIndicators() {
-      if (!indicatorsContainer || !slides?.length) return;
+         
+            return this.indicatorsContainer && this.slides.length && this.prevBtn && this.nextBtn;
+        }
 
-      indicatorsContainer.innerHTML = "";
-      slides.forEach((_, index) => {
-          const dot = document.createElement("div");
-          dot.classList.add("indicator");
-          if (index === currentIndex) dot.classList.add("active");
-          dot.addEventListener("click", () => {
-              slideTo(index, index > currentIndex ? "next" : "prev");
-          });
-          indicatorsContainer.appendChild(dot);
-      });
+        createIndicators() {
+            if (!this.indicatorsContainer || !this.slides?.length) return;
 
-      console.log("✅ Indicadores criados:", indicatorsContainer.children.length);
-  }
+            this.indicatorsContainer.innerHTML = "";
+            this.slides.forEach((_, index) => {
+                const dot = document.createElement("div");
+                dot.classList.add("indicator");
+                if (index === this.currentIndex) dot.classList.add("active");
+                dot.addEventListener("click", () => {
+                    this.slideTo(index, index > this.currentIndex ? "next" : "prev");
+                });
+                this.indicatorsContainer.appendChild(dot);
+            });
+            console.log("✅ Indicators created for:", this.slider, "Count:", this.indicatorsContainer.children.length);
+        }
 
-  function updateIndicators() {
-      const dots = indicatorsContainer?.querySelectorAll(".indicator") || [];
-      dots.forEach((dot, idx) => {
-          dot.classList.toggle("active", idx === currentIndex);
-      });
-  }
+        updateIndicators() {
+            const dots = this.indicatorsContainer?.querySelectorAll(".indicator") || [];
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle("active", idx === this.currentIndex);
+            });
+        }
 
-  function slideTo(newIndex, direction) {
-      if (!slides || isAnimating || newIndex === currentIndex) return;
+        slideTo(newIndex, direction) {
+            if (!this.slides || this.isAnimating || newIndex === this.currentIndex) return;
 
-      const totalSlides = slides.length;
-      const oldSlide = slides[currentIndex];
-      newIndex = (newIndex + totalSlides) % totalSlides;
-      const newSlide = slides[newIndex];
+            const totalSlides = this.slides.length;
+            const oldSlide = this.slides[this.currentIndex];
+            newIndex = (newIndex + totalSlides) % totalSlides;
+            const newSlide = this.slides[newIndex];
 
-      if (!oldSlide || !newSlide) return;
+            if (!oldSlide || !newSlide) return;
 
-      isAnimating = true;
+            this.isAnimating = true;
 
-      newSlide.classList.remove("enter-left", "enter-right", "active");
-      newSlide.style.transition = "none";
-      newSlide.classList.add(direction === "next" ? "enter-right" : "enter-left");
+            newSlide.classList.remove("enter-left", "enter-right", "active");
+            newSlide.style.transition = "none";
+            newSlide.classList.add(direction === "next" ? "enter-right" : "enter-left");
 
-      void newSlide.offsetWidth;
+            // Trigger reflow to ensure the class is applied before the transition starts
+            void newSlide.offsetWidth;
 
-      oldSlide.style.transition = "transform 0.5s ease, opacity 0.5s ease";
-      newSlide.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+            oldSlide.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+            newSlide.style.transition = "transform 0.5s ease, opacity 0.5s ease";
 
-      oldSlide.classList.add(direction === "next" ? "enter-left" : "enter-right");
-      oldSlide.classList.remove("active");
+            oldSlide.classList.add(direction === "next" ? "enter-left" : "enter-right");
+            oldSlide.classList.remove("active");
 
-      newSlide.classList.remove("enter-left", "enter-right");
-      newSlide.classList.add("active");
+            newSlide.classList.remove("enter-left", "enter-right");
+            newSlide.classList.add("active");
 
-      newSlide.addEventListener("transitionend", function handler() {
-          oldSlide.classList.remove("enter-left", "enter-right");
-          oldSlide.style.transition = "";
-          newSlide.style.transition = "";
-          newSlide.removeEventListener("transitionend", handler);
-          currentIndex = newIndex;
-          updateIndicators();
-          isAnimating = false;
-      });
-  }
+            newSlide.addEventListener("transitionend", function handler() {
+                oldSlide.classList.remove("enter-left", "enter-right");
+                oldSlide.style.transition = "";
+                newSlide.style.transition = "";
+                newSlide.removeEventListener("transitionend", handler);
+                this.currentIndex = newIndex;
+                this.updateIndicators();
+                this.isAnimating = false;
+            }.bind(this), { once: true }); // Use .bind(this) to ensure 'this' refers to the Slider instance
+        }
 
-  function initSlider() {
-      if (!setupElements()) return;
+        attachEvents() {
+            this.prevBtn.onclick = () => this.slideTo(this.currentIndex - 1, "prev");
+            this.nextBtn.onclick = () => this.slideTo(this.currentIndex + 1, "next");
+        }
 
-      console.log("Slider inicializado.");
-      createIndicators();
+        // Method to re-check and re-create indicators if they disappear
+        checkAndRecreateIndicators() {
+            const indicatorsExist = this.slider.querySelector(".indicators");
+            const indicatorsEmpty = indicatorsExist && indicatorsExist.children.length === 0;
 
-      prevBtn.onclick = () => slideTo(currentIndex - 1, "prev");
-      nextBtn.onclick = () => slideTo(currentIndex + 1, "next");
-  }
+            if (indicatorsExist && indicatorsEmpty) {
+                console.warn("⚠️ Indicators disappeared for slider — recreating:", this.slider);
+                this.setupElements(); // Re-fetch elements in case the structure changed
+                this.createIndicators();
+            }
+        }
+    }
 
-  // Observa se os indicadores sumiram e recria
-  setInterval(() => {
-      const sliderExists = document.querySelector(".slider-primario");
-      const indicatorsExist = document.querySelector(".indicators");
-      const indicatorsEmpty = indicatorsExist && indicatorsExist.children.length === 0;
+   
+    function initializeAllSliders() {
+        document.querySelectorAll(".slider-primario").forEach(sliderElement => {
+        
+            if (!sliderElement.dataset.sliderInitialized) {
+                sliders.push(new Slider(sliderElement));
+                sliderElement.dataset.sliderInitialized = "true"; 
+            }
+        });
+    }
 
-      if (sliderExists && indicatorsExist && indicatorsEmpty) {
-          console.warn("⚠️ Indicadores sumiram — recriando...");
-          setupElements(); 
-          createIndicators();
-      }
-  }, 500); 
+   
+    setInterval(() => {
+        sliders.forEach(sliderInstance => {
+            sliderInstance.checkAndRecreateIndicators();
+        });
+    }, 500);
 
-  // Inicia ao carregar DOM
-  document.addEventListener("DOMContentLoaded", () => {
-      initSlider();
-  });
+   
+    document.addEventListener("DOMContentLoaded", initializeAllSliders);
 
-  // Também observa o body (em caso de DOM dinâmico)
-  const observer = new MutationObserver(() => {
-      if (!slider || !indicatorsContainer || !slides?.length) {
-          initSlider(); // se perdeu o slider, reinicializa
-      }
-  });
+ 
+    const observer = new MutationObserver((mutations) => {
+        let needsReinitialization = false;
+        for (const mutation of mutations) {
+            if (mutation.addedNodes.length > 0 || mutation.removedNodes.length > 0) {
+                needsReinitialization = true;
+                break;
+            }
+        }
+        if (needsReinitialization) {
+            initializeAllSliders();
+        }
+    });
 
-  observer.observe(document.body, {
-      childList: true,
-      subtree: true
-  });
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+
 })();

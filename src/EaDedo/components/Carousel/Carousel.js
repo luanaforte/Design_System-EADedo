@@ -5,44 +5,52 @@ document.querySelectorAll(".carousel-container").forEach((container) => {
   const indicatorsContainer = container.querySelector(".indicators");
 
   const items = carousel_content.children;
-  const itemWidth = items[0]?.offsetWidth || 300; // pega largura do primeiro item como referência
+  const itemWidth = items[0]?.offsetWidth || 300;
   const totalItems = items.length;
-  const visibleItems = Math.floor(
-    carousel_content.clientWidth / itemWidth
-  );
-  const totalPages = Math.ceil(totalItems / visibleItems);
 
-  // Cria os indicadores
-  indicatorsContainer.innerHTML = ""; // limpa antes de gerar
-  for (let i = 0; i < totalPages; i++) {
-    const indicator = document.createElement("button");
-    indicator.classList.add("indicator");
-    if (i === 0) indicator.classList.add("active");
+  let visibleItems, totalPages, indicators;
 
-    indicator.addEventListener("click", () => {
-      carousel_content.scrollLeft = i * itemWidth * visibleItems;
-    });
+  function initializeCarousel() {
+    visibleItems = Math.floor(carousel_content.clientWidth / itemWidth);
+    totalPages = Math.ceil(totalItems / visibleItems);
 
-    indicatorsContainer.appendChild(indicator);
+
+    const hasScroll = carousel_content.scrollWidth > carousel_content.clientWidth;
+
+ 
+    indicatorsContainer.innerHTML = "";
+    if (hasScroll && totalPages > 1) {
+      for (let i = 0; i < totalPages; i++) {
+        const indicator = document.createElement("button");
+        indicator.classList.add("indicator");
+        if (i === 0) indicator.classList.add("active");
+
+        indicator.addEventListener("click", () => {
+          carousel_content.scrollLeft = i * itemWidth * visibleItems;
+        });
+
+        indicatorsContainer.appendChild(indicator);
+      }
+      indicatorsContainer.style.display = "flex"; 
+    } else {
+      indicatorsContainer.style.display = "none";
+    }
+
+    indicators = indicatorsContainer.querySelectorAll(".indicator");
+
+    updateNavButtons();
+    updateIndicators();
   }
 
-  const indicators = indicatorsContainer.querySelectorAll(".indicator");
-
   function updateNavButtons() {
-    const maxScrollLeft =
-      carousel_content.scrollWidth - carousel_content.clientWidth;
-    btnLeft.style.display =
-      carousel_content.scrollLeft <= 0 ? "none" : "block";
-    btnRight.style.display =
-      carousel_content.scrollLeft >= maxScrollLeft - 5
-        ? "none"
-        : "block";
+    const maxScrollLeft = carousel_content.scrollWidth - carousel_content.clientWidth;
+    btnLeft.style.display = carousel_content.scrollLeft <= 0 ? "none" : "block";
+    btnRight.style.display = carousel_content.scrollLeft >= maxScrollLeft - 5 ? "none" : "block";
   }
 
   function updateIndicators() {
     const scrollPos = carousel_content.scrollLeft;
     const index = Math.round(scrollPos / (itemWidth * visibleItems));
-
     indicators.forEach((dot, i) => {
       dot.classList.toggle("active", i === index);
     });
@@ -61,8 +69,6 @@ document.querySelectorAll(".carousel-container").forEach((container) => {
     updateIndicators();
   });
 
-  window.addEventListener("load", () => {
-    updateNavButtons();
-    updateIndicators();
-  });
+  window.addEventListener("load", initializeCarousel);
+  window.addEventListener("resize", initializeCarousel);
 });

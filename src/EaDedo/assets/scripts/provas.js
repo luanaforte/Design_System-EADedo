@@ -1,6 +1,7 @@
 const avaliacoes = [
   { dataInicio: "2025-08-01", horaInicio: "07:59", idAvaliacao: "ATV_final" },
-  { dataInicio: "2025-08-01", horaInicio: "07:59", idAvaliacao: "ATV_sub" }
+  { dataInicio: "2025-08-01", horaInicio: "07:59", idAvaliacao: "ATV_sub" },
+  { dataInicio: "2025-08-01", horaInicio: "07:59", idAvaliacao: "ATV_AV3" }
 ];
 
 function liberar_avaliacoes() {

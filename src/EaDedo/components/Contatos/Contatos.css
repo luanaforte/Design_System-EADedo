@@ -1,0 +1,12 @@
+.contato {
+  display: flex;
+  align-items: center;
+  gap: var(--space-050);
+}
+
+.contatos {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--space-050);
+}

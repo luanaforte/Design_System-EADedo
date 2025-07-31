@@ -1,10 +1,10 @@
 /* Fundamentes */
+@import "./Border/Border.css";
+@import "./Cores/Cores.css";
+@import "./Elevation/Elevation.css";
+@import "./Iconografia/Iconografia.css";
 @import "./Layout/Layout.css";
 @import "./Tipografia/Tipografia.css";
-@import "./Iconografia/Iconografia.css";
-@import "./Elevation/Elevation.css";
-@import "./Cores/Cores.css";
-@import "./Border/Border.css";
 
 /* Moodle */
 @import "./Moodle.css";
@@ -13,32 +13,33 @@
 @import "./Brands.css";
 
 /* Componentes */
+@import "../components/Accordions/Accordions.css";
+@import "../components/Avatar/Avatar.css";
+@import "../components/Avatar_tagline__group/Avatar_tagline__group.css";
+@import "../components/Badge/Badge.css";
+@import "../components/Banner_alert/Banner_alert.css";
+@import "../components/Banner_image_text/Banner_image_text.css";
+@import "../components/Button_direction/Button_direction.css";
+@import "../components/Button_section_menu/Button_section_menu.css";
+@import "../components/Button_video__play/Button_video__play.css";
+@import "../components/Buttons/Button.css";
+@import "../components/Cards/Cards.css";
+@import "../components/Carousel/Carousel.css";
+@import "../components/Closing_banner/Closing_banner.css";
+@import "../components/Contatos/Contatos.css";
+@import "../components/ColapseSection/ColapseSection.css";
+@import "../components/Header_image/Header_image.css";
+@import "../components/Header_text/Header_text.css";
+@import "../components/Header_text_image/Header_text_image.css";
+@import "../components/IframeVideo/IframeVideo.css";
+@import "../components/Indicator/Indicator.css";
+@import "../components/Progress_bar/Progress_bar.css";
+@import "../components/Slider/Slider.css";
 @import "../components/Tag/Tag.css";
 @import "../components/Tag_course/Tag_course.css";
-@import "../components/Indicator/Indicator.css";
-@import "../components/Button_video__play/Button_video__play.css";
-@import "../components/Tooltip/Tooltip.css";
-@import "../components/Progress_bar/Progress_bar.css";
-@import "../components/Banner_alert/Banner_alert.css";
-@import "../components/Avatar/Avatar.css";
-@import "../components/Buttons/Button.css";
 @import "../components/Text_header/Text_header.css";
-@import "../components/ColapseSection/ColapseSection.css";
-@import "../components/Cards/Cards.css";
-@import "../components/Button_section_menu/Button_section_menu.css";
-@import "../components/Accordions/Accordions.css";
-@import "../components/Button_direction/Button_direction.css";
-@import "../components/Badge/Badge.css";
-@import "../components/Banner_image_text/Banner_image_text.css";
-@import "../components/Avatar_tagline__group/Avatar_tagline__group.css";
-@import "../components/Header_text/Header_text.css";
-@import "../components/IframeVideo/IframeVideo.css";
-@import "../components/Header_image/Header_image.css";
-@import "../components/Closing_banner/Closing_banner.css";
-@import "../components/Slider/Slider.css";
-@import "../components/Carousel/Carousel.css";
+@import "../components/Tooltip/Tooltip.css";
 @import "../components/Welcome/Welcome.css";
-@import "../components/Header_text_image/Header_text_image.css";
 @import "../components/chat_IA/chat_IA.css";
 
 /* FLEX */
@@ -49,31 +50,31 @@
 .flexbox__center {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-075);
 }
 
 .flexbox__start {
   display: flex;
   align-items: start;
-  gap: 0.75rem;
+  gap: var(--space-075);
 }
 
 .flexbox__end {
   display: flex;
   justify-content: end;
-  gap: 0.75rem;
+  gap: var(--space-075);
 }
 
 .flexbox__wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: var(--space-075);
 }
 
 .flexbox__column {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-075);
 }
 
 .flexbox__between--center {
@@ -155,110 +156,4 @@
 .image-fluid {
   width: 100%;
   height: auto;
-}
-
-/* ===============================
-   CORES - BACKGROUNDS
-================================== */
-
-/* ===== BLUE ===== */
-.background-blue-100 {
-  background: var(--color-blue-100);
-}
-
-.background-blue-300 {
-  background: var(--color-blue-300);
-}
-
-.background-blue-600 {
-  background: var(--color-blue-600);
-}
-
-.background-blue-900 {
-  background: var(--color-blue-900);
-}
-
-/* ===== NEUTRAL ===== */
-.background-neutral-100 {
-  background: var(--color-neutral-100);
-}
-
-.background-neutral-300 {
-  background: var(--color-neutral-300);
-}
-
-.background-neutral-600 {
-  background: var(--color-neutral-600);
-}
-
-.background-neutral-900 {
-  background: var(--color-neutral-900);
-}
-
-/* ===== TURQUOISE ===== */
-.background-turquoise-100 {
-  background: var(--color-turquoise-100);
-}
-
-.background-turquoise-300 {
-  background: var(--color-turquoise-300);
-}
-
-.background-turquoise-600 {
-  background: var(--color-turquoise-600);
-}
-
-.background-turquoise-900 {
-  background: var(--color-turquoise-900);
-}
-
-/* ===== RED ===== */
-.background-red-100 {
-  background: var(--color-red-100);
-}
-
-.background-red-300 {
-  background: var(--color-red-300);
-}
-
-.background-red-600 {
-  background: var(--color-red-600);
-}
-
-.background-red-900 {
-  background: var(--color-red-900);
-}
-
-/* ===== YELLOW ===== */
-.background-yellow-100 {
-  background: var(--color-yellow-100);
-}
-
-.background-yellow-300 {
-  background: var(--color-yellow-300);
-}
-
-.background-yellow-600 {
-  background: var(--color-yellow-600);
-}
-
-.background-yellow-900 {
-  background: var(--color-yellow-900);
-}
-
-/* ===== PURPLE ===== */
-.background-purple-100 {
-  background: var(--color-purple-100);
-}
-
-.background-purple-300 {
-  background: var(--color-purple-300);
-}
-
-.background-purple-600 {
-  background: var(--color-purple-600);
-}
-
-.background-purple-900 {
-  background: var(--color-purple-900);
 }

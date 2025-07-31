@@ -193,7 +193,9 @@ export function Card_Section() {
 								fill="#151720"
 							/>
 						</svg>
-						<h3 className="heading3 margin-0">Título do Card</h3>
+						<h3 className="heading3 margin-0 text-neutral-600">
+							Título do Card
+						</h3>
 					</div>
 					<p className="paragraph--medium">
 						Use este espaço para guiar o usuário ou apresentar informações

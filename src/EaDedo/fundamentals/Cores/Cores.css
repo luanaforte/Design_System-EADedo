@@ -79,11 +79,9 @@
   /* Gradients */
   --Midnight: linear-gradient(90deg, #1529ff 0%, #151720 100%);
   --Ash: linear-gradient(90deg, #a6abc5 0%, #151720 100%);
-  --Smoke: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  --Smoke: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%);
 }
 
 :root.dark-theme {
@@ -167,11 +165,114 @@
   /* Gradients */
   --Midnight: linear-gradient(90deg, #1529ff 0%, #151720 100%);
   --Ash: linear-gradient(90deg, #a6abc5 0%, #151720 100%);
-  --Smoke: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  --Smoke: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%);
 }
 
 
+/* ===============================
+  CORES - BACKGROUNDS
+================================== */
+
+/* ===== BLUE ===== */
+.background-blue-100 {
+  background: var(--color-blue-100);
+}
+
+.background-blue-300 {
+  background: var(--color-blue-300);
+}
+
+.background-blue-600 {
+  background: var(--color-blue-600);
+}
+
+.background-blue-900 {
+  background: var(--color-blue-900);
+}
+
+/* ===== NEUTRAL ===== */
+.background-neutral-100 {
+  background: var(--color-neutral-100);
+}
+
+.background-neutral-300 {
+  background: var(--color-neutral-300);
+}
+
+.background-neutral-600 {
+  background: var(--color-neutral-600);
+}
+
+.background-neutral-900 {
+  background: var(--color-neutral-900);
+}
+
+/* ===== TURQUOISE ===== */
+.background-turquoise-100 {
+  background: var(--color-turquoise-100);
+}
+
+.background-turquoise-300 {
+  background: var(--color-turquoise-300);
+}
+
+.background-turquoise-600 {
+  background: var(--color-turquoise-600);
+}
+
+.background-turquoise-900 {
+  background: var(--color-turquoise-900);
+}
+
+/* ===== RED ===== */
+.background-red-100 {
+  background: var(--color-red-100);
+}
+
+.background-red-300 {
+  background: var(--color-red-300);
+}
+
+.background-red-600 {
+  background: var(--color-red-600);
+}
+
+.background-red-900 {
+  background: var(--color-red-900);
+}
+
+/* ===== YELLOW ===== */
+.background-yellow-100 {
+  background: var(--color-yellow-100);
+}
+
+.background-yellow-300 {
+  background: var(--color-yellow-300);
+}
+
+.background-yellow-600 {
+  background: var(--color-yellow-600);
+}
+
+.background-yellow-900 {
+  background: var(--color-yellow-900);
+}
+
+/* ===== PURPLE ===== */
+.background-purple-100 {
+  background: var(--color-purple-100);
+}
+
+.background-purple-300 {
+  background: var(--color-purple-300);
+}
+
+.background-purple-600 {
+  background: var(--color-purple-600);
+}
+
+.background-purple-900 {
+  background: var(--color-purple-900);
+}
