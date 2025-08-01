@@ -1,9 +1,53 @@
+import React, { useState } from "react";
 import { Check, Copy } from "@phosphor-icons/react";
-import React from "react";
-
-import { useState } from "react";
 import "./Cores.css";
+import TableOfContents from "../../../components/TableOfContents";
 
+// Utilitários
+const extractColorValues = (color) =>
+	color.startsWith("linear-gradient")
+		? color.replace(/^linear-gradient\(|\)$/g, "")
+		: color;
+
+const copyToClipboard = (text, onSuccess) => {
+	navigator.clipboard
+		.writeText(text)
+		.then(() => {
+			onSuccess(true);
+			setTimeout(() => onSuccess(false), 2000);
+		})
+		.catch((err) => console.error("Failed to copy:", err));
+};
+
+// Componentes
+const ColorCard = ({ name, color }) => {
+	const [copied, setCopied] = useState(false);
+	const colorValue = extractColorValues(color);
+
+	const handleCopy = () => copyToClipboard(colorValue, setCopied);
+
+	return (
+		<div className="color-card">
+			<div
+				className="color-card__box"
+				style={{ background: color }}
+				onClick={handleCopy}>
+				{copied ? (
+					<Check className="copied-icon" size={16} />
+				) : (
+					<Copy className="copied-icon copied-icon__hover" size={16} />
+				)}
+			</div>
+			<p className="paragraph--medium margin-0">{name}</p>
+			<p className="font-size-sm margin-0 flexbox__center" onClick={handleCopy}>
+				{colorValue}
+				{copied ? <Check size={18} /> : <Copy size={18} />}
+			</p>
+		</div>
+	);
+};
+
+// Dados
 const groupedColors = {
 	"Paleta da Universidade de Fortaleza": [
 		{ name: "Gelo", color: "#e4f2fe" },
@@ -106,70 +150,69 @@ const groupedColors = {
 	],
 };
 
-const extractColorValues = (gradient) => {
-	return gradient.replace(/^linear-gradient\(|\)$/g, "");
-};
-
-const copyToClipboard = (text, setCopiedText) => {
-	navigator.clipboard
-		.writeText(text)
-		.then(() => {
-			setCopiedText(true);
-			setTimeout(() => {
-				setCopiedText(false);
-			}, 2000);
-		})
-		.catch((err) => {
-			console.error("Failed to copy: ", err);
-		});
-};
-
-const ColorCard = ({ name, color }) => {
-	const [copiedColor, setCopiedColor] = useState(false);
-	const colorValues = extractColorValues(color);
-
-	return (
-		<div className="color-card">
-			<div
-				className="color-card__box"
-				onClick={() => copyToClipboard(colorValues, setCopiedColor)}
-				style={{ background: color }}>
-				{copiedColor ? (
-					<Check className="copied-icon" size={16} />
-				) : (
-					<Copy className="copied-icon copied-icon__hover" size={16} />
-				)}
-			</div>
-			<p className="paragraph--medium margin-0">{name}</p>
-			<p
-				className="font-size-sm margin-0 flexbox__center"
-				onClick={() => copyToClipboard(colorValues, setCopiedColor)}>
-				{colorValues}
-				{copiedColor ? <Check size={18} /> : <Copy size={18} />}
-			</p>
-		</div>
-	);
-};
+// Gera IDs consistentes
+const generateId = (text) =>
+	text
+		.toLowerCase()
+		.replace(/ · /g, "_")
+		.replace(/\s+/g, "_")
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "");
 
 export default function Cores() {
+	const headings = [
+		{ id: "Introducao", label: "Introdução" },
+		...Object.keys(groupedColors).map((key) => ({
+			id: generateId(key),
+			label: key,
+		})),
+		{ id: "RegrasDoModelo", label: "Regras do modelo" },
+	];
+
 	return (
-		<main className="container-xl">
-			<h2 className="heading2">Cores</h2>
-			{Object.keys(groupedColors).map((group) => (
-				<div key={group}>
-					<h3 className="font-family-Manrope heading3">{group}</h3>
-					<div className="colors-container">
-						{groupedColors[group].map((colorObject, index) => (
-							<ColorCard
-								key={index}
-								name={colorObject.name}
-								color={colorObject.color}
-							/>
-						))}
-					</div>
-					<hr />
-				</div>
-			))}
-		</main>
+		<div className="container-xl">
+			<h3 className="heading3" id="Introducao">
+				Cores
+			</h3>
+			<p className="paragraph">
+				Use cores para criar experiências significativas e, ao mesmo tempo,
+				expressar hierarquia, estado e identidade da marca.
+			</p>
+
+			{Object.entries(groupedColors).map(([group, colors]) => {
+				const id = generateId(group);
+				return (
+					<section key={group} aria-labelledby={id} className="color-group">
+						<h4 className="heading4" id={id}>
+							{group}
+						</h4>
+						<div className="colors-container">
+							{colors.map(({ name, color }) => (
+								<ColorCard key={name} name={name} color={color} />
+							))}
+						</div>
+						<hr />
+					</section>
+				);
+			})}
+			<h3 className="heading3" id="RegrasDoModelo">
+				Regras do modelo
+			</h3>
+			<p className="paragraph">
+				Para produzir interfaces para web não precisamos de todas as cores, numa
+				interface, podemos fazer o uso de 4 tons principais: 100, 300, 600 e 900
+			</p>
+			<ul className="list-ul">
+				<li className="list-item">
+					<b>Background de cards:</b> Cores da paleta que estão no tom de 100,
+					como por exemplo: neutral-100, blue-100, turquoise-100
+				</li>
+				<li className="list-item">
+					<b>Títulos e destaques:</b> Cores da paleta que estão no tom de 600,
+					como por exemplo: yellow-600, blue-600, turquoise-600
+				</li>
+			</ul>
+			<TableOfContents headings={headings} />
+		</div>
 	);
 }

@@ -34,7 +34,7 @@ const CardElevation = ({ name, elevation }) => {
 	const [copiedElevation, setCopiedElevation] = useState(false);
 
 	return (
-		<main>
+		<div className="flexbox__center--column-center">
 			<div
 				className="card--elevation"
 				onClick={() => copyToClipboard(elevation, setCopiedElevation)}
@@ -47,21 +47,29 @@ const CardElevation = ({ name, elevation }) => {
 			</div>
 			<div className="flexbox__center">
 				<p className="paragraph--medium margin-0">{name}</p>
-				<p
-					className="font-size-sm margin-0"
+				<div
+					className="flexbox__center"
 					onClick={() => copyToClipboard(elevation, setCopiedElevation)}>
 					{copiedElevation ? <Check size={18} /> : <Copy size={18} />}
-				</p>
+				</div>
 			</div>
-		</main>
+		</div>
 	);
 };
 
 export default function Elevation() {
 	return (
 		<div className="container_lg">
-			<h2>Elevation</h2>
-			<div className="flexbox__wrap">
+			<h3 className="heading3" id="Introducao">
+				Elevation
+			</h3>
+			<p className="paragraph margin__bottom--default">
+				A maioria das elevações consiste em superfícies e sombras. Juntas,
+				superfícies e sombras dão a impressão de elevação ou profundidade. As
+				elevações podem guiar o foco por meio de camadas ou indicar que a IU
+				pode ser rolada, deslizada ou arrastada.
+			</p>
+			<div className="flexbox__around--center">
 				{elevations.map((elevationObject, index) => (
 					<CardElevation
 						key={index}

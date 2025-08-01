@@ -9,9 +9,143 @@
   --radius-150: 1.5rem;
 }
 
-/* border color */
-/* tem important pq se não a cor não pega */
-.border-color-blue-600 {
-  border-color: var(--color-blue-600) !important;
+
+.radius__full {
+  border-radius: var(--radius-full);
 }
 
+.radius__025 {
+  border-radius: var(--radius-025);
+}
+
+.radius__050 {
+  border-radius: var(--radius-050);
+}
+
+.radius__075 {
+  border-radius: var(--radius-075);
+}
+
+.radius__100 {
+  border-radius: var(--radius-100);
+}
+
+.radius__125 {
+  border-radius: var(--radius-125);
+}
+
+.radius__150 {
+  border-radius: var(--radius-150);
+}
+
+/* border color */
+/* ANIL */
+.border-color-anil {
+  border-color: #004aff !important;
+}
+
+.border-color-marinho {
+  border-color: #132190 !important;
+}
+
+/* NEUTRAL */
+.border-color-neutral-300 {
+  border-color: #acb4cd !important;
+}
+
+.border-color-neutral-600 {
+  border-color: #4b587e !important;
+}
+
+.border-color-neutral-900 {
+  border-color: #30354a !important;
+}
+
+.border-color-neutral-950 {
+  border-color: #151720 !important;
+}
+
+/* BLUE */
+.border-color-blue-300 {
+  border-color: #8ab3ff !important;
+}
+
+.border-color-blue-600 {
+  border-color: #1529ff !important;
+}
+
+.border-color-blue-900 {
+  border-color: #132190 !important;
+}
+
+.border-color-blue-950 {
+  border-color: #0c135a !important;
+}
+
+/* TURQUOISE */
+.border-color-turquoise-300 {
+  border-color: #60e8d2 !important;
+}
+
+.border-color-turquoise-600 {
+  border-color: #0f9285 !important;
+}
+
+.border-color-turquoise-900 {
+  border-color: #144d49 !important;
+}
+
+.border-color-turquoise-950 {
+  border-color: #052e2d !important;
+}
+
+/* RED */
+.border-color-red-300 {
+  border-color: #fda4a4 !important;
+}
+
+.border-color-red-600 {
+  border-color: #dd2525 !important;
+}
+
+.border-color-red-900 {
+  border-color: #801c1c !important;
+}
+
+.border-color-red-950 {
+  border-color: #450a0a !important;
+}
+
+/* YELLOW */
+.border-color-yellow-300 {
+  border-color: #fcd34d !important;
+}
+
+.border-color-yellow-600 {
+  border-color: #d97706 !important;
+}
+
+.border-color-yellow-900 {
+  border-color: #78350f !important;
+}
+
+.border-color-yellow-950 {
+  border-color: #451a03 !important;
+}
+
+/* PURPLE */
+.border-color-purple-300 {
+  border-color: #c7bbf7 !important;
+}
+
+.border-color-purple-600 {
+  border-color: #7f49de !important;
+}
+
+.border-color-purple-900 {
+  border-color: #4d278b !important;
+}
+
+.border-color-purple-950 {
+  border-color: #2f175e !important;
+}

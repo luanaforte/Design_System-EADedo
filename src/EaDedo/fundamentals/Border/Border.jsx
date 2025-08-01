@@ -32,7 +32,7 @@ const CardBorderRadius = ({ name, radius }) => {
 	const [copiedRadius, setCopiedRadius] = useState(false);
 
 	return (
-		<main className="flexbox__center--column-center">
+		<div className="flexbox__center--column-center">
 			<div
 				className="card--radius"
 				onClick={() => copyToClipboard(radius, setCopiedRadius)}
@@ -53,7 +53,7 @@ const CardBorderRadius = ({ name, radius }) => {
 					{copiedRadius ? <Check size={18} /> : <Copy size={18} />}
 				</p>
 			</div>
-		</main>
+		</div>
 	);
 };
 
