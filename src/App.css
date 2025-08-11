@@ -345,6 +345,14 @@ body {
   display: block;
 }
 
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: none;
+}
+
 /* elevation */
 .card--elevation {
   width: 7.5rem;
@@ -361,6 +369,7 @@ body {
 /* iconografia */
 .icon-container {
   display: flex;
+  /* width: 56.25rem; */
   align-items: flex-start;
   align-content: flex-start;
   gap: 1.5rem;
@@ -370,7 +379,7 @@ body {
 .icon-item {
   display: flex;
   width: 8.125rem;
-  height: 8.125rem;
+  height: 4.125rem;
   padding: 2.5rem 1.625rem;
   flex-direction: column;
   justify-content: center;
@@ -379,6 +388,16 @@ body {
   flex-shrink: 0;
   border-radius: 0.25rem;
   background: var(--color-neutral-050);
+}
+
+.icon-name {
+  color: var(--color-neutral-950);
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Consolas;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
 }
 
 /* layout */

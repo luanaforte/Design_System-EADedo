@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Iconografia.css";
 
 import arrow_down from "../../assets/icons/icon-arrow-down.svg";
@@ -45,6 +45,7 @@ import heart from "../../assets/icons/icon-heart.svg";
 import info from "../../assets/icons/icon-info.svg";
 import law from "../../assets/icons/icon-law.svg";
 import lego from "../../assets/icons/icon-lego.svg";
+import libras from "../../assets/icons/icon-libras.svg";
 import link_simple from "../../assets/icons/icon-link-simple.svg";
 import magnifying_glass from "../../assets/icons/icon-magnifying-glass.svg";
 import map_pin from "../../assets/icons/icon-map-pin.svg";
@@ -69,6 +70,7 @@ import warning_circle from "../../assets/icons/icon-warning-circle.svg";
 import waveform from "../../assets/icons/icon-waveform.svg";
 import whatsapp_logo from "../../assets/icons/icon-whatsapp-logo.svg";
 import x from "../../assets/icons/icon-x.svg";
+import { Check, Copy } from "@phosphor-icons/react";
 
 const iconsNavegacao = [
 	{ src: arrow_down, name: "arrow-down" },
@@ -115,6 +117,7 @@ const iconsNavegacao = [
 	{ src: info, name: "info" },
 	{ src: law, name: "law" },
 	{ src: lego, name: "lego" },
+	{ src: libras, name: "libras" },
 	{ src: link_simple, name: "link-simple" },
 	{ src: magnifying_glass, name: "magnifying-glass" },
 	{ src: map_pin, name: "map-pin" },
@@ -142,16 +145,65 @@ const iconsNavegacao = [
 ];
 
 export default function Iconografia() {
+	const [copied, setCopied] = useState(null);
+	const [error, setError] = useState(null);
+
+	async function handleCopySvg(icon) {
+		setError(null);
+		try {
+			const res = await fetch(icon.src);
+			if (!res.ok) throw new Error(`Falha ao carregar ${icon.name}`);
+			const svgText = await res.text();
+			await navigator.clipboard.writeText(svgText);
+			setCopied(icon.name);
+			setTimeout(() => setCopied(null), 1500);
+		} catch (err) {
+			console.error(err);
+			setError(`Erro ao copiar ${icon.name}`);
+			setTimeout(() => setError(null), 2000);
+		}
+	}
+
 	return (
 		<main className="container_xl">
 			<h2 className="heading2">Ícones</h2>
-			<div className="icon-container">
+			<p className="paragraph">
+				Clique num ícone para copiar o SVG (texto) para o clipboard.
+			</p>
+			<hr />
+			<div className="icon-container flexbox__center--center margin__bottom--default">
 				{iconsNavegacao.map((icon, index) => (
-					<div key={index} className="icon-item">
+					<div
+						key={index}
+						className="icon-item"
+						role="button"
+						tabIndex={0}
+						onClick={() => handleCopySvg(icon)}
+						onKeyDown={(e) => {
+							if (e.key === "Enter" || e.key === " ") handleCopySvg(icon);
+						}}
+						aria-label={`Copiar SVG do ícone ${icon.name}`}
+						title={`Clique para copiar SVG — ${icon.name}`}>
 						<img src={icon.src} alt={icon.name} />
-						<p className="paragraph--medium">{icon.name}</p>
+
+						<button
+							className="copy-btn"
+							onClick={(e) => {
+								e.stopPropagation();
+								handleCopySvg(icon);
+							}}
+							aria-hidden="true"
+							type="button">
+							<p className="icon-name">{icon.name}</p>
+							{copied === icon.name ? <Check size={18} /> : <Copy size={18} />}
+						</button>
 					</div>
 				))}
+			</div>
+
+			<div aria-live="polite">
+				{copied && <span className="copied">Copiado: {copied}</span>}
+				{error && <span className="error">{error}</span>}
 			</div>
 		</main>
 	);
