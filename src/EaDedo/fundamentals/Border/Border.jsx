@@ -3,6 +3,7 @@ import { Check, Copy } from "@phosphor-icons/react";
 import Arredondando_lados_separadamente from "../../../assets/Arredondando_lados_separadamente.png";
 import Arredondando_cantos_separadamente from "../../../assets/Arredondando_cantos_separadamente.png";
 import "./Border.css";
+import TableOfContents from "../../../components/TableOfContents";
 
 const borderRadiusTokens = [
 	{ name: "--radius-full", value: "100%" },
@@ -44,9 +45,9 @@ const CardBorderRadius = ({ name, styleValue = "", previewClass = "" }) => {
 	const [copied, setCopied] = useState(false);
 
 	return (
-		<div className="flexbox__center--column-center ">
+		<div className="flexbox__center--column-center">
 			<div
-				className={`card--radius ${previewClass}`}
+				className={`card--radius  ${previewClass}`}
 				onClick={() => copyToClipboard(name, setCopied)}
 				style={styleValue ? { borderRadius: styleValue } : {}}>
 				{copied ? (
@@ -69,14 +70,14 @@ const CardBorderRadius = ({ name, styleValue = "", previewClass = "" }) => {
 
 export default function Border() {
 	return (
-		<div className="container-xl">
+		<div className="container-xl" id="Introducao">
 			<h2 className="heading2">Border Radius</h2>
 			<p className="paragraph">
 				Use utilitários como border-radios para aplicar diferentes tamanhos de
 				raio de borda a um elemento.
 			</p>
 
-			<div className="flexbox__wrap margin__bottom--default">
+			<div className="flexbox__wrap flexbox__center--center margin__bottom--default">
 				{borderRadiusTokens.map((item, index) => (
 					<CardBorderRadius
 						key={index}
@@ -86,13 +87,15 @@ export default function Border() {
 				))}
 			</div>
 
-			<h3 className="heading3">Arredondando lados separadamente</h3>
+			<h3 className="heading3" id="lados">
+				Arredondando lados separadamente
+			</h3>
 			<p className="paragraph">
 				Use os utilitários border-radios + as propriedades (top, right, bottom
 				ou left) + o token de tamanho (*) para arredondar apenas um lado de um
 				elemento.
 			</p>
-			<div className="flexbox__wrap margin__bottom--default">
+			<div className="flexbox__wrap flexbox__center--center margin__bottom--default">
 				{borderRadiusLados.map((item, index) => (
 					<CardBorderRadius
 						key={index}
@@ -109,13 +112,15 @@ export default function Border() {
 				/>
 			</div>
 
-			<h3 className="heading3">Arredondando cantos separadamente</h3>
+			<h3 className="heading3" id="cantos">
+				Arredondando cantos separadamente
+			</h3>
 			<p className="paragraph">
 				Use os utilitários border-radios + as propriedades combinadas (top,
 				right, bottom ou left) + o token de tamanho (*) para arredondar apenas
 				um canto de um elemento.
 			</p>
-			<div className="flexbox__wrap margin__bottom--default">
+			<div className="flexbox__wrap flexbox__center--center margin__bottom--default">
 				{borderRadiusCantos.map((item, index) => (
 					<CardBorderRadius
 						key={index}
@@ -131,6 +136,13 @@ export default function Border() {
 					className="image-fluid margin__bottom--default"
 				/>
 			</div>
+			<TableOfContents
+				headings={[
+					{ id: "Introducao", label: "Introdução" },
+					{ id: "lados", label: "Arredondando lados separadamente" },
+					{ id: "cantos", label: "Arredondando cantos separadamente" },
+				]}
+			/>
 		</div>
 	);
 }

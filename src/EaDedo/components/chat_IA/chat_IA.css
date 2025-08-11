@@ -18,6 +18,19 @@
   display: block;
 }
 
+/* tirar do botão deles */
+.disabled\:opacity-50:disabled {
+  opacity: 1 !important;
+}
+
+.disabled\: opacity-50:disabled {
+  opacity: 1 !important
+}
+
+[data-slot="button"] {
+  opacity: 1 !important
+}
+
 /* Chat iframe */
 .chat_iframe {
   position: fixed;
