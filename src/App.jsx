@@ -31,7 +31,7 @@ import ColapseSection from "./EaDedo/components/ColapseSection/ColapseSection.js
 import Header_image from "./EaDedo/components/Header_image/Header_image.jsx";
 import Header_text from "./EaDedo/components/Header_text/Header_text.jsx";
 import Header_text_image from "./EaDedo/components/Header_text_image/Header_text_image.jsx";
-import Icon from "./EaDedo/components/Icon/Icon.jsx";
+import Icon from "./EaDedo/components/Icon/Icon_doc.jsx";
 import IframeVideo from "./EaDedo/components/IframeVideo/IframeVideo.jsx";
 import Indicator from "./EaDedo/components/Indicator/Indicator.jsx";
 import Progress_bar from "./EaDedo/components/Progress_bar/Progress_bar.jsx";

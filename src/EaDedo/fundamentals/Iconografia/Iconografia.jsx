@@ -71,6 +71,8 @@ import waveform from "../../assets/icons/icon-waveform.svg";
 import whatsapp_logo from "../../assets/icons/icon-whatsapp-logo.svg";
 import x from "../../assets/icons/icon-x.svg";
 import { Check, Copy } from "@phosphor-icons/react";
+import CodeBlockWithCopy from "../../../components/CodeBlockWithCopy";
+import Icon from "../../components/Icon/Icon";
 
 const iconsNavegacao = [
 	{ src: arrow_down, name: "arrow-down" },
@@ -167,6 +169,41 @@ export default function Iconografia() {
 	return (
 		<main className="container_xl">
 			<h2 className="heading2">Ícones</h2>
+			<p className="paragraph">
+				A iconografia segue um sistema de tamanhos padronizado para manter a
+				consistência visual em toda a interface. Os ícones podem ser aplicados
+				em três tamanhos principais: pequeno (<code>.icon-size-sm</code>), médio
+				(<code>.icon-size-md</code>) e grande (<code>.icon-size-lg</code>),
+				definidos por variáveis CSS. Assim, é possível garantir que todos os
+				ícones mantenham proporções adequadas em diferentes contextos de uso.
+			</p>
+			<Icon />
+
+			<CodeBlockWithCopy>
+				{`
+:root {
+  --icon-size-sm: 1rem;
+  --icon-size-md: 1.5rem;
+  --icon-size-lg: 2rem;
+}
+
+.icon-size-sm {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+.icon-size-md {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+.icon-size-lg {
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
+}
+`}
+			</CodeBlockWithCopy>
+
 			<p className="paragraph">
 				Clique num ícone para copiar o SVG (texto) para o clipboard.
 			</p>
