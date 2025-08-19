@@ -39,7 +39,7 @@ import Slider from "./EaDedo/components/Slider/Slider.jsx";
 import Tag from "./EaDedo/components/Tag/Tag.jsx";
 import Tag_course from "./EaDedo/components/Tag_course/Tag_course.jsx";
 import Text_header from "./EaDedo/components/Text_header/Text_header.jsx";
-import ToggleLibras from "./EaDedo/components/toggleLibras/toggleLibras.jsx";
+import ToggleLibras from "./EaDedo/components/ToggleLibras/toggleLibras.jsx";
 import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
 
 // Importing specific DS
@@ -103,7 +103,7 @@ const App = () => {
 				<Route path="Componentes/Tag_course" element={<Tag_course />} />
 				<Route path="Componentes/Text_header" element={<Text_header />} />
 				<Route path="Componentes/Tooltip" element={<Tooltip />} />
-				<Route path="Componentes/toggleLibras" element={<ToggleLibras />} />
+				<Route path="Componentes/ToggleLibras" element={<ToggleLibras />} />
 			</Route>
 		</Routes>
 	);
