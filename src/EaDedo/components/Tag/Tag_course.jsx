@@ -1,9 +1,9 @@
 import React from "react";
-import "./Tag_course.css";
+import "./Tag.css";
 
 export default function Tag_course() {
 	return (
-		<div>
+		<div className="card__section-group">
 			<div className="tag_course__vertical">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export default function Tag_course() {
 							fill="#1529FF"
 						/>
 					</svg>
-					Tipo de Disciplina <b>Teórica - 72h</b>
+					&nbsp;Tipo de Disciplina &nbsp;<b>Teórica - 72h</b>
 				</p>
 			</div>
 		</div>

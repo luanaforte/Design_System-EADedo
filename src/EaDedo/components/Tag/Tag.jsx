@@ -3,7 +3,7 @@ import "./Tag.css";
 
 export default function Tag() {
 	return (
-		<div className="flexbox__column">
+		<div className="flexbox__center margin__bottom--default">
 			{/* Default */}
 			<div className="tag">
 				<svg
@@ -123,11 +123,6 @@ export default function Tag() {
 					/>
 				</svg>
 				<p className="tags text--Anil">Site</p>
-			</div>
-			<div className="tag">
-				<h4 className="heading4 text--Anil font-weight--regular margin-0">
-					Nome da Tag
-				</h4>
 			</div>
 		</div>
 	);

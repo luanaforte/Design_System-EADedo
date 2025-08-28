@@ -36,10 +36,8 @@ import IframeVideo from "./EaDedo/components/IframeVideo/IframeVideo.jsx";
 import Indicator from "./EaDedo/components/Indicator/Indicator.jsx";
 import Progress_bar from "./EaDedo/components/Progress_bar/Progress_bar.jsx";
 import Slider from "./EaDedo/components/Slider/Slider.jsx";
-import Tag from "./EaDedo/components/Tag/Tag.jsx";
-import Tag_course from "./EaDedo/components/Tag_course/Tag_course.jsx";
+import Tag from "./EaDedo/components/Tag/Tag_doc.jsx";
 import Text_header from "./EaDedo/components/Text_header/Text_header.jsx";
-import ToggleLibras from "./EaDedo/components/toggleLibras/toggleLibras.jsx";
 import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
 
 // Importing specific DS
@@ -100,10 +98,8 @@ const App = () => {
 				<Route path="Componentes/Progress_bar" element={<Progress_bar />} />
 				<Route path="Componentes/Slider" element={<Slider />} />
 				<Route path="Componentes/Tag" element={<Tag />} />
-				<Route path="Componentes/Tag_course" element={<Tag_course />} />
 				<Route path="Componentes/Text_header" element={<Text_header />} />
 				<Route path="Componentes/Tooltip" element={<Tooltip />} />
-				<Route path="Componentes/toggleLibras" element={<ToggleLibras />} />
 			</Route>
 		</Routes>
 	);

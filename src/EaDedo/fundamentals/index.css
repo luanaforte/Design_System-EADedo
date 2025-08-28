@@ -36,7 +36,6 @@
 @import "../components/Progress_bar/Progress_bar.css";
 @import "../components/Slider/Slider.css";
 @import "../components/Tag/Tag.css";
-@import "../components/Tag_course/Tag_course.css";
 @import "../components/Text_header/Text_header.css";
 @import "../components/Tooltip/Tooltip.css";
 @import "../components/Welcome/Welcome.css";
@@ -145,6 +144,10 @@
 
 .margin__bottom--100 {
   margin-bottom: var(--space-100) !important;
+}
+
+.margin__bottom--150 {
+  margin-bottom: var(--space-150) !important;
 }
 
 /* paddings */

@@ -6,19 +6,19 @@ const Icon_sizes = [
 	{
 		label: "icon-size-sm",
 		cod: `
-<svg className="icon-size-sm" xmlns="http://www.w3.org/2000/svg" ...>
+<svg class="icon-size-sm" xmlns="http://www.w3.org/2000/svg" ...>
 		`,
 	},
 	{
 		label: "icon-size-md",
 		cod: `
-<svg className="icon-size-md" xmlns="http://www.w3.org/2000/svg" ...>
+<svg class="icon-size-md" xmlns="http://www.w3.org/2000/svg" ...>
 		`,
 	},
 	{
 		label: "icon-size-lg",
 		cod: `
-<svg className="icon-size-lg" xmlns="http://www.w3.org/2000/svg" ...>
+<svg class="icon-size-lg" xmlns="http://www.w3.org/2000/svg" ...>
 		`,
 	},
 ];

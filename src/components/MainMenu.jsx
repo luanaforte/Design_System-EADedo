@@ -14,7 +14,6 @@ const Rotes = {
 	"/Componentes": [
 		{ label: "Icon", route: "/Componentes/Icon" },
 		{ label: "Tag", route: "/Componentes/Tag" },
-		{ label: "Tag Course", route: "/Componentes/Tag_course" },
 		{ label: "Indicators", route: "/Componentes/Indicator" },
 		{ label: "Button_direction", route: "/Componentes/Button_direction" },
 		{ label: "Banner_alert", route: "/Componentes/Banner_alert" },
@@ -39,7 +38,6 @@ const Rotes = {
 		{ label: "Header_text", route: "/Componentes/Header_text" },
 		{ label: "Slider", route: "/Componentes/Slider" },
 		{ label: "Carousel", route: "/Componentes/Carousel" },
-		{ label: "toggleLibras", route: "/Componentes/toggleLibras" },
 		{ label: "Header_text_image", route: "/Componentes/Header_text_image" },
 	],
 };

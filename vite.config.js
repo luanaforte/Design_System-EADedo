@@ -15,7 +15,6 @@ build: {
       iframeVideo: path.resolve(__dirname, "src/EaDedo/components/IframeVideo/IframeVideo.js"),
       Progress_bar: path.resolve(__dirname, "src/EaDedo/components/Progress_bar/Progress_bar.js"),
       Slider: path.resolve(__dirname, "src/EaDedo/components/Slider/Slider.js"),
-      ToggleLibras: path.resolve(__dirname, "src/EaDedo/components/toggleLibras/ToggleLibras.js"),
       Carousel: path.resolve(__dirname, "src/EaDedo/components/Carousel/Carousel.js"),
       Welcome: path.resolve(__dirname,"src/EaDedo/components/Welcome/Welcome.js"),
       Chat_IA: path.resolve(__dirname,"src/EaDedo/components/chat_IA/chat_IA.js")

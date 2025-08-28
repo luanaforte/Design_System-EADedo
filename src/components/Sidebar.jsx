@@ -34,7 +34,6 @@ const Rotes = {
 			},
 			{ label: "Indicators", route: "/Componentes/Indicator" },
 			{ label: "Progress_bar", route: "/Componentes/Progress_bar" },
-			{ label: "Tag Course", route: "/Componentes/Tag_course" },
 		],
 		Organismos: [
 			{ label: "Accordions", route: "/Componentes/Accordions" },
