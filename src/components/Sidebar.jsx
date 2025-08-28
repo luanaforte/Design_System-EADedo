@@ -19,6 +19,7 @@ const Rotes = {
 			{ label: "Button", route: "/Componentes/Button" },
 			{ label: "Icon", route: "/Componentes/Icon" },
 			{ label: "Tag", route: "/Componentes/Tag" },
+			{ label: "Indicators", route: "/Componentes/Indicator" },
 			{ label: "Tooltip", route: "/Componentes/Tooltip" },
 			{ label: "toggleLibras", route: "/Componentes/toggleLibras" },
 		],
@@ -32,7 +33,6 @@ const Rotes = {
 				label: "Button_section_menu",
 				route: "/Componentes/Button_section_menu",
 			},
-			{ label: "Indicators", route: "/Componentes/Indicator" },
 			{ label: "Progress_bar", route: "/Componentes/Progress_bar" },
 		],
 		Organismos: [

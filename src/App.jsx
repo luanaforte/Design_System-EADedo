@@ -33,7 +33,7 @@ import Header_text from "./EaDedo/components/Header_text/Header_text.jsx";
 import Header_text_image from "./EaDedo/components/Header_text_image/Header_text_image.jsx";
 import Icon from "./EaDedo/components/Icon/Icon_doc.jsx";
 import IframeVideo from "./EaDedo/components/IframeVideo/IframeVideo.jsx";
-import Indicator from "./EaDedo/components/Indicator/Indicator.jsx";
+import Indicator from "./EaDedo/components/Indicator/Indicator_doc.jsx";
 import Progress_bar from "./EaDedo/components/Progress_bar/Progress_bar.jsx";
 import Slider from "./EaDedo/components/Slider/Slider.jsx";
 import Tag from "./EaDedo/components/Tag/Tag_doc.jsx";
