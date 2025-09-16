@@ -41,11 +41,6 @@ export default defineConfig({
 					__dirname,
 					"src/EaDedo/components/Welcome/Welcome.js"
 				),
-				Chat_IA: path.resolve(
-					__dirname,
-					"src/EaDedo/components/chat_IA/chat_IA.js"
-				),
-
 				// 🔹 Entrada do demo para o Vercel
 				demo: path.resolve(__dirname, "index.html"),
 			},

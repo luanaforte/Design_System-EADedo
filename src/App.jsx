@@ -24,7 +24,6 @@ import Button from "./EaDedo/components/Buttons/Button.jsx";
 import Button_direction from "./EaDedo/components/Button_direction/Button_direction.jsx";
 import Button_section_menu from "./EaDedo/components/Button_section_menu/Button_section_menu.jsx";
 import Cards from "./EaDedo/components/Cards/Cards.jsx";
-import chat_IA from "./EaDedo/components/Chat_IA/Chat_IA.jsx";
 import Carousel from "./EaDedo/components/Carousel/Carousel.jsx";
 import Closing_banner from "./EaDedo/components/Closing_banner/Closing_banner.jsx";
 import ColapseSection from "./EaDedo/components/ColapseSection/ColapseSection.jsx";
