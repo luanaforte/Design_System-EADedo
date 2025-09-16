@@ -1,6 +1,6 @@
 import React from "react";
 import placeholderImage from "../../assets/imgs/image-placeholder.png";
-import "./button_section_menu.css";
+import "./Button_section_menu.css";
 
 export default function Button_section_menu() {
 	return (
