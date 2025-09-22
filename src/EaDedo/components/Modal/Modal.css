@@ -1,0 +1,43 @@
+/* Fundo esmaecido */
+.modal_pesquisa-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  /* Inicialmente escondido */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal */
+.modal_pesquisa {
+  position: relative;
+  width: 71.25rem;
+  height: 37.4375rem;
+  border-radius: var(--radius-100);
+  background: #FFF;
+  box-shadow: var(--elevation-medium);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_pesquisa-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-150);
+}
+
+/* Botão de fechar */
+.modal_pesquisa-close {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

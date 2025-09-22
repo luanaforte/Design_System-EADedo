@@ -73,7 +73,7 @@ export default function Border() {
 		<div className="container-xl" id="Introducao">
 			<h2 className="heading2">Border Radius</h2>
 			<p className="paragraph">
-				Use utilitários como border-radios para aplicar diferentes tamanhos de
+				Use utilitários como border-radius para aplicar diferentes tamanhos de
 				raio de borda a um elemento.
 			</p>
 
@@ -91,7 +91,7 @@ export default function Border() {
 				Arredondando lados separadamente
 			</h3>
 			<p className="paragraph">
-				Use os utilitários border-radios + as propriedades (top, right, bottom
+				Use os utilitários border-radius + as propriedades (top, right, bottom
 				ou left) + o token de tamanho (*) para arredondar apenas um lado de um
 				elemento.
 			</p>
@@ -116,7 +116,7 @@ export default function Border() {
 				Arredondando cantos separadamente
 			</h3>
 			<p className="paragraph">
-				Use os utilitários border-radios + as propriedades combinadas (top,
+				Use os utilitários border-radius + as propriedades combinadas (top,
 				right, bottom ou left) + o token de tamanho (*) para arredondar apenas
 				um canto de um elemento.
 			</p>

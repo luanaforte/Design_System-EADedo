@@ -40,6 +40,7 @@
 @import "../components/Tooltip/Tooltip.css";
 @import "../components/Welcome/Welcome.css";
 @import "../components/chat_IA/chat_IA.css";
+@import "../components/Modal/Modal.css";
 
 /* FLEX */
 .flexbox {

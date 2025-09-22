@@ -14,7 +14,7 @@ export default function Avatar_tagline__group() {
 						<p className="avatar__tagline-vertical__name">Nome do Usuário</p>
 						<div className="group-tooltip">
 							<p className="avatar__tagline-text">Tagline</p>
-							<div className="tooltip tooltip--bottom">
+							<div className="tooltip tooltip--right">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"
@@ -26,9 +26,9 @@ export default function Avatar_tagline__group() {
 										fill="#4B587E"
 									/>
 								</svg>
-								<div className="tooltip__content tag tooltip__content--bottom">
+								<div className="tooltip__content tag tooltip__content--right">
 									Tooltip Bottom
-									<div className="tooltip__arrow tooltip__arrow--bottom"></div>
+									<div className="tooltip__arrow tooltip__arrow--right"></div>
 								</div>
 							</div>
 						</div>
@@ -42,7 +42,7 @@ export default function Avatar_tagline__group() {
 						<p className="avatar__tagline-vertical__name">Nome do Usuário</p>
 						<div className="group-tooltip">
 							<p className="avatar__tagline-text">Tagline</p>
-							<div className="tooltip tooltip--bottom">
+							<div className="tooltip tooltip--right">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"
@@ -54,9 +54,9 @@ export default function Avatar_tagline__group() {
 										fill="#4B587E"
 									/>
 								</svg>
-								<div className="tooltip__content tag tooltip__content--bottom">
+								<div className="tooltip__content tag tooltip__content--right">
 									Tooltip Bottom
-									<div className="tooltip__arrow tooltip__arrow--bottom"></div>
+									<div className="tooltip__arrow tooltip__arrow--right"></div>
 								</div>
 							</div>
 						</div>

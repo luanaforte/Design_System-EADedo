@@ -21,7 +21,6 @@ const Rotes = {
 			{ label: "Tag", route: "/Componentes/Tag" },
 			{ label: "Indicators", route: "/Componentes/Indicator" },
 			{ label: "Tooltip", route: "/Componentes/Tooltip" },
-			{ label: "toggleLibras", route: "/Componentes/toggleLibras" },
 		],
 		Moléculas: [
 			{

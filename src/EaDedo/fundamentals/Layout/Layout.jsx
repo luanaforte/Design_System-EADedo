@@ -11,14 +11,14 @@ export default function Layout() {
 			<h2 className="heading2">Layout</h2>
 			<p className="paragraph">
 				O layout define como os elementos se organizam visualmente na tela,
-				garantindo consistência e legibilidade em todas as páginas. Nesta
-				sessão, apresentamos os tamanhos de containers utilizados para limitar a
-				largura do conteúdo e o sistema de espaçamento padronizado, que mantém
-				harmonia entre margens, paddings e distâncias internas dos componentes.
+				garantindo consistência e legibilidade em todas as páginas. Nesta seção,
+				apresentamos os tamanhos de containers utilizados para limitar a largura
+				do conteúdo e o sistema de espaçamento padronizado, que mantém harmonia
+				entre margens, paddings e distâncias internas dos componentes.
 			</p>
 			<hr />
 			<h3 className="heading3" id="containers">
-				Contêiners
+				Containers
 			</h3>
 			<p className="paragraph">
 				Containers são áreas delimitadas que centralizam e organizam o conteúdo
@@ -292,7 +292,7 @@ export default function Layout() {
 			<TableOfContents
 				headings={[
 					{ id: "Introducao", label: "Introdução" },
-					{ id: "containers", label: "Contêiners" },
+					{ id: "containers", label: "Containers" },
 					{ id: "spaces", label: "Espaçamento" },
 					{ id: "Tabela_spaces", label: "Tabela dos Spaces" },
 					{ id: "use_spacing", label: "Uso de espaçamento" },
