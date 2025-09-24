@@ -370,136 +370,39 @@
 			</div>
 		</main>
 	</body>
-	<!-- Video aulas -->
 	<script>
 		const videos = {
 			videoVideo1: {
-				video: "https://ead.unifor.br/ava/mod/url/view.php?id=4583493",
-				video_libras: "https://www.google.com.br",
+				video: "https://www.youtube.com/embed/guan9sTiXM0?si=JVfrz579H3NxkwUE",
+				video_libras:
+					"https://www.youtube.com/embed/ofi19_nhm5I?si=HZDTOCh_LcJ6MpRI",
 			},
 			videoVideo2: {
-				video: "https://ead.unifor.br/ava/mod/url/view.php?id=4583494",
-				video_libras: "https://www.youtube.com.br",
+				video: "https://www.youtube.com/embed/oXcce4M_VmY?si=xwmrvjXyDBhtri7K",
+				video_libras:
+					"https://www.youtube.com/embed/qNLqJ9XkMWc?si=Z1kpS8kGEDhJz8Nz",
 			},
 			videoVideo3: {
-				video: "https://ead.unifor.br/ava/mod/url/view.php?id=4583495",
-				video_libras: "https://www.youtube.com.br",
+				video: "https://www.youtube.com/embed/CfPxlb8-ZQ0?si=UYnXGWvtmGT3oYu5",
+				video_libras:
+					"https://www.youtube.com/embed/ofi19_nhm5I?si=HZDTOCh_LcJ6MpRI",
 			},
 			videoVideo4: {
-				video: "https://ead.unifor.br/ava/mod/url/view.php?id=4583496",
-				video_libras: "https://www.youtube.com.br",
+				video: "https://www.youtube.com/embed/amfWIRasxtI?si=-qlb4ZmXcA2qbMO8",
+				video_libras:
+					"https://www.youtube.com/embed/qNLqJ9XkMWc?si=Z1kpS8kGEDhJz8Nz",
 			},
 			videoVideo5: {
-				video: "https://ead.unifor.br/ava/mod/url/view.php?id=4583497",
-				video_libras: "https://www.youtube.com.br",
+				video: "https://www.youtube.com/embed/qwosU7e9mqc?si=8IsqUqedtwGA84j1",
+				video_libras:
+					"https://www.youtube.com/embed/ofi19_nhm5I?si=HZDTOCh_LcJ6MpRI",
 			},
 			videoVideo1000: {
-				video: "https://google.com.br",
+				video: "https://onecompiler.com/embed/javascript",
 			},
 		};
-		// Função que troca a imagem pelo vídeo
-		function videoAulaProg(clicked_id) {
-			console.log("Clicked ID:", clicked_id);
-			try {
-				if (
-					document
-						.querySelector("#iframe" + clicked_id)
-						.closest(".iframe-video")
-						.querySelector("button[data-libras]")
-						.getAttribute("data-libras") == "true"
-				) {
-					document
-						.querySelector("#iframe" + clicked_id)
-						.closest(".iframe-video")
-						.querySelector("button[data-libras]")
-						.classList.remove("hidden");
-				}
-			} catch (error) {
-				document
-					.querySelector("#iframe" + clicked_id)
-					.classList.remove("hidden");
-			}
-
-			var imagem = document.querySelector("#imagem" + clicked_id);
-			var video = document.querySelector("#video" + clicked_id);
-			var iframe = document.querySelector("#iframe" + clicked_id);
-			var loadingIcon = document.querySelector("#loadingIcon" + clicked_id);
-
-			if (!imagem || !video || !iframe || !loadingIcon) {
-				console.error(
-					"Um ou mais elementos não foram encontrados para:",
-					clicked_id
-				);
-				return;
-			}
-
-			imagem.style.display = "none";
-			iframe.classList.remove("hidden");
-
-			// Monta o id do vídeo no objeto videos, exemplo: "videoVideo1", "videoVideo2"
-			const videoKey = "video" + clicked_id;
-
-			// Busca no objeto videos a URL normal
-			const videoObj = videos[videoKey];
-			if (!videoObj) {
-				console.error("Vídeo não encontrado no objeto videos para:", videoKey);
-				return;
-			}
-
-			// Atualiza o src do iframe com a URL normal
-			video.src = videoObj.video;
-			console.log("Iframe src atualizado para:", video.src);
-		}
-
-		document.addEventListener("DOMContentLoaded", function () {
-			const imagens = Array.from(
-				document.querySelectorAll("[id^='imagemVideo']")
-			).filter((img) => !img.id.includes("_"));
-
-			imagens.forEach((imagem) => {
-				const id = imagem.id.replace("imagem", "");
-				imagem.addEventListener("click", function () {
-					videoAulaProg(id);
-				});
-			});
-		});
 	</script>
-	<script>
-		function toggleLibras(clickedButton) {
-			const iframe = clickedButton
-				.closest(".iframe-video")
-				.querySelector("iframe");
-			const textIframe = clickedButton
-				.closest(".iframe-video")
-				.querySelector("p");
-			if (!iframe) {
-				console.error("Vídeo não encontrado:", clickedButton.id);
-				return;
-			}
-
-			const currentSrc = iframe.getAttribute("src");
-			const videoLinks = videos[iframe.id];
-
-			if (!videoLinks) {
-				console.error("Links não definidos para:", iframe.id);
-				return;
-			}
-
-			if (currentSrc === videoLinks.video) {
-				iframe.src = videoLinks["video_libras"];
-				// adiciona "- libras" se ainda não estiver
-				if (!textIframe.textContent.includes("- libras")) {
-					textIframe.textContent += " - libras";
-				}
-			} else {
-				iframe.src = videoLinks.video;
-				// remove "- libras" se estiver presente
-				textIframe.textContent = textIframe.textContent.replace(
-					" - libras",
-					""
-				);
-			}
-		}
-	</script>
+	<!-- Video aulas -->
+	<script src="./IframeVideo.js"></script>
 	<script src="../Carousel/Carousel.js"></script>
 </html>
