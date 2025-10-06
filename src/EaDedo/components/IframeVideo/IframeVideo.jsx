@@ -25,6 +25,16 @@ export default function IframeVideo() {
 	}, []);
 
 	return conteudo ? (
-		<div dangerouslySetInnerHTML={{ __html: conteudo }} />
+		<>
+			<div dangerouslySetInnerHTML={{ __html: conteudo }} />
+			<div className="container-md margin__bottom--default">
+				<div className="iframe-video__frame">
+					<iframe
+						src="https://www.youtube.com/embed/KbI_kF40yCU?si=SS6aQz0Z4oNXt4wX"
+						allow=""
+						allowfullscreen=""></iframe>
+				</div>
+			</div>
+		</>
 	) : null;
 }
