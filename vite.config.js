@@ -2,6 +2,8 @@ import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+const isDemo = process.env.BUILD_DEMO === "true";
+
 export default defineConfig({
 	plugins: [react()],
 	base: "./",
@@ -41,8 +43,7 @@ export default defineConfig({
 					__dirname,
 					"src/EaDedo/components/Welcome/Welcome.js"
 				),
-				// 🔹 Entrada do demo para o Vercel
-				demo: path.resolve(__dirname, "index.html"),
+				...(isDemo ? { demo: path.resolve(__dirname, "index.html") } : {}), // só adiciona se a flag estiver true
 			},
 			output: {
 				assetFileNames: "eadedo_style.css",
