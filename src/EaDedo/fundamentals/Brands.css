@@ -4,7 +4,7 @@
   --font-family-heading: var(--font-family-Poppins);
   --font-family-body: var(--font-family-Poppins);
   --font-family-code: var(--font-family-Code);
-  color: var(--color-neutral-950) !important;
+  color: #000000 !important;
 }
 
 .AmbienteDaTutoria,
@@ -12,7 +12,8 @@
   --font-family-heading: var(--font-family-Neulis);
   --font-family-body: var(--font-family-Manrope);
   --font-family-code: var(--font-family-Code);
-  color: var(--color-neutral-950);
+  color: #000000;
+
 
   /* sobre-escrevendo o peso */
   --font-weight-semibold: var(--font-weight-medium);
@@ -22,7 +23,8 @@
   --font-family-heading: var(--font-family-Neulis);
   --font-family-body: var(--font-family-Poppins);
   --font-family-code: var(--font-family-Code);
-  color: var(--color-neutral-950);
+  color: #000000;
+
 
   /* sobre-escrevendo o peso */
   --font-weight-semibold: var(--font-weight-medium);

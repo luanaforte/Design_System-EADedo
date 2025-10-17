@@ -72,7 +72,7 @@
   font-size: var(--font-size-sm) !important;
   /* Tamanho para legenda */
   line-height: var(--line-height-distant) !important;
-  color: var(--color-neutral-950);
+  color: #000000;
   margin: 0;
 }
 

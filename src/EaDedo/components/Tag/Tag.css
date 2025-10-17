@@ -3,7 +3,7 @@
   padding: var(--space-012) var(--space-050);
   align-items: center;
   gap: var(--space-025);
-  border-radius: 6px;
+  border-radius: var(--radius-025);
   width: fit-content;
   background-color: var(--color-neutral-100);
 }
