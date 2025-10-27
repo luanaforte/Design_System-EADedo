@@ -43,7 +43,7 @@ export default defineConfig({
 					__dirname,
 					"src/EaDedo/components/Welcome/Welcome.js"
 				),
-				...(isDemo ? { demo: path.resolve(__dirname, "index.html") } : {}), // só adiciona se a flag estiver true
+				demo: path.resolve(__dirname, "index.html"),
 			},
 			output: {
 				assetFileNames: "eadedo_style.css",
