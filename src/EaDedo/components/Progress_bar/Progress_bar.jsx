@@ -3,7 +3,7 @@ import "./Progress_bar.css";
 
 export default function Progress_bar() {
 	return (
-		<main className="container-xl">
+		<main className="container-lg">
 			<div className="Progress_bar-header">
 				<div className="group-tooltip">
 					<p className="paragraph--medium text-neutral-950 margin-0">

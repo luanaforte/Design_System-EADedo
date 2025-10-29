@@ -15,7 +15,7 @@ export default function Home() {
 			<Header />
 			<div>
 				<Sidebar />
-				<main className="EadGraduacao main-content container-xl">
+				<main className="EadGraduacao main-content container-lg">
 					{outlet ? (
 						<Outlet />
 					) : (

@@ -29,6 +29,7 @@ import confetti from "../../assets/icons/icon-confetti.svg";
 import desktop_tower from "../../assets/icons/icon-desktop-tower.svg";
 import download_simple from "../../assets/icons/icon-download-simple.svg";
 import envelope from "../../assets/icons/icon-envelope.svg";
+import eyedropper_sample from "../../assets/icons/icon-eyedropper-sample.svg";
 import file from "../../assets/icons/icon-file.svg";
 import file_text from "../../assets/icons/icon-file-text.svg";
 import file_pdf from "../../assets/icons/icon-file-pdf.svg";
@@ -62,9 +63,12 @@ import phone_call from "../../assets/icons/icon-phone-call.svg";
 import plus from "../../assets/icons/icon-plus.svg";
 import puzzle_piece from "../../assets/icons/icon-puzzle-piece.svg";
 import question from "../../assets/icons/icon-question.svg";
+import radio_button from "../../assets/icons/icon-radio-button.svg";
+import ruler from "../../assets/icons/icon-ruler.svg";
 import smiley from "../../assets/icons/icon-smiley.svg";
 import star from "../../assets/icons/icon-star.svg";
 import swap from "../../assets/icons/icon-swap.svg";
+import text_t from "../../assets/icons/icon-text-t.svg";
 import users_three from "../../assets/icons/icon-users-three.svg";
 import warning_circle from "../../assets/icons/icon-warning-circle.svg";
 import waveform from "../../assets/icons/icon-waveform.svg";
@@ -103,6 +107,7 @@ const iconsNavegacao = [
 	{ src: desktop_tower, name: "desktop-tower" },
 	{ src: download_simple, name: "download-simple" },
 	{ src: envelope, name: "envelope" },
+	{ src: eyedropper_sample, name: "eyedropper-sample" },
 	{ src: file, name: "file" },
 	{ src: file_text, name: "file-text" },
 	{ src: file_pdf, name: "file-pdf" },
@@ -136,9 +141,12 @@ const iconsNavegacao = [
 	{ src: plus, name: "plus" },
 	{ src: puzzle_piece, name: "puzzle-piece" },
 	{ src: question, name: "question" },
+	{ src: radio_button, name: "radio-button" },
+	{ src: ruler, name: "ruler" },
 	{ src: smiley, name: "smiley" },
 	{ src: star, name: "star" },
 	{ src: swap, name: "swap" },
+	{ src: text_t, name: "text-t" },
 	{ src: users_three, name: "users-three" },
 	{ src: warning_circle, name: "warning-circle" },
 	{ src: waveform, name: "waveform" },

@@ -4,7 +4,7 @@ import Ilustracao from "../../assets/imgs/image-placeholder.png";
 
 export default function Card_image_text() {
 	return (
-		<section className="container-xl EadGraduacao">
+		<section className="container-lg EadGraduacao">
 			<div className="Card_image_text margin__bottom--default background-neutral-100">
 				<div>
 					<img

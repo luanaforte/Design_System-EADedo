@@ -4,7 +4,7 @@ import Profile from "../../assets/imgs/profile.png";
 
 export default function Avatar_tagline__group() {
 	return (
-		<section className="container-xl EadGraduacao">
+		<section className="container-lg EadGraduacao">
 			<div className="Avatar_tagline__group margin__bottom--default">
 				<div className="avatar__tagline-vertical">
 					<div className="avatar avatar__letter--lg background-blue-600 ">

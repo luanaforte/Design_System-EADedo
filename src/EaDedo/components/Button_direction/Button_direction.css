@@ -20,14 +20,14 @@
   padding: var(--space-0) var(--space-050);
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius-150);
+  border-radius: var(--radius-xlarge);
   background: var(--color-neutral-100);
   border: none;
   cursor: pointer;
 }
 
 .button__direction--rounded:hover {
-  border-radius: var(--radius-150);
+  border-radius: var(--radius-xlarge);
   background: var(--color-neutral-300);
 }
 

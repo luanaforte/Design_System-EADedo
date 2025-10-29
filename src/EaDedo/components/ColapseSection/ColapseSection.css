@@ -1,6 +1,6 @@
 .collapse_section {
   padding: var(--space-125) var(--space-150);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
 }
 
 .collapse-header {

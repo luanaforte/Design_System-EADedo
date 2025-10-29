@@ -5,7 +5,7 @@ import Card_placeholder from "../../components/Card_placeholder";
 export default function Components() {
 	const navigate = useNavigate();
 	return (
-		<main className="container-xl EadGraduacao ">
+		<main className="container-lg EadGraduacao ">
 			<h1 className="heading1">Components</h1>
 			<div className="flexbox__wrap">
 				<Card_placeholder

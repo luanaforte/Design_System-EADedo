@@ -322,7 +322,7 @@ body {
 .color-card__box {
   width: 4.375rem;
   height: 4.375rem;
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   margin-bottom: 0.75rem;
   position: relative;
 }
@@ -378,16 +378,11 @@ body {
 
 .icon-item {
   display: flex;
-  width: 8.125rem;
-  height: 4.125rem;
-  padding: 2.5rem 1.625rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 10rem;
   gap: 0.625rem;
-  flex-shrink: 0;
-  border-radius: 0.25rem;
-  background: var(--color-neutral-050);
 }
 
 .icon-name {
@@ -403,7 +398,7 @@ body {
 /* layout */
 .card-layout {
   height: 2.4375rem;
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   background: rgba(0, 74, 255, 0.2);
   margin-bottom: 1.75rem;
 }
@@ -435,6 +430,25 @@ body {
   color: #ffffff;
   background: var(--button-active-bg);
   border-color: var(--button-active-border);
+}
+
+.button-rounded-gradient--active,
+.button-rounded-gradient--focus {
+  border: 1px solid var(--gradient-midnight);
+  background: var(--gradient-midnight, linear-gradient(90deg, var(--color-blue-600) 0%, var(--color-neutral-950) 100%)) !important;
+}
+
+.button-rounded-gradient--active .button-rounded-gradient-nome,
+.button-rounded-gradient--focus .button-rounded-gradient-nome {
+  background-image: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+.button-rounded-gradient--active svg path,
+.button-rounded-gradient--focussvg path {
+  fill: #fff;
 }
 
 /* ********************** */

@@ -5,7 +5,7 @@ import Card_placeholder from "../../components/Card_placeholder";
 export default function Fundamentals() {
 	const navigate = useNavigate();
 	return (
-		<main className="container-xl EadGraduacao ">
+		<main className="container-lg EadGraduacao ">
 			<h1 className="heading1">Fundamentos</h1>
 			<div className="flexbox__wrap">
 				<Card_placeholder title="Border" onClick={() => navigate("Border")} />

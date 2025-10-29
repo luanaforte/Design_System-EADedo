@@ -4,7 +4,7 @@ import "./Button_section_menu.css";
 
 export default function Button_section_menu() {
 	return (
-		<div className="container-xl">
+		<div className="container-lg">
 			<a href="#" className="button_section_menu margin__bottom--default">
 				<div className="flexbox__center">
 					<img

@@ -1,8 +1,6 @@
 :root {
-  --container-xl: 57.625rem;
+  --container-lg: 57.625rem;
   /*922px*/
-  --container-lg: 52.75rem;
-  /*844px*/
   --container-md: 47.875rem;
   /*766px*/
   --container-sm: 45rem;
@@ -31,11 +29,6 @@
   /*56px*/
   --space-400: 4rem;
   /*64px*/
-}
-
-.container-xl {
-  max-width: var(--container-xl);
-  margin: auto;
 }
 
 .container-lg {

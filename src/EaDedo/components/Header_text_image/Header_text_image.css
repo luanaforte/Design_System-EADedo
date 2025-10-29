@@ -2,7 +2,7 @@
   display: flex;
   padding: var(--space-150, 1.5rem);
   gap: var(--space-125, 1.25rem);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   position: relative;
   /* width: 100%; */
 }

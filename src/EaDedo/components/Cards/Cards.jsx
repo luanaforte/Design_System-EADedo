@@ -12,7 +12,7 @@ import { Card_section_avatar } from "./Card_section_avatar.jsx";
 
 export default function Cards() {
 	return (
-		<div className="container-xl">
+		<div className="container-lg">
 			<Card_Section />
 			<Card_indication />
 			<Card_video />

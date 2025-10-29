@@ -30,10 +30,10 @@ export default function Layout() {
 			</p>
 			<ul className="list-ul">
 				<li className="list-item">
-					<span className="tag">.container-xl</span> — largura máxima de
+					<span className="tag">.container-lg</span> — largura máxima de
 					57.625rem (~922px)
 				</li>
-				<main className="container-xl">
+				<main className="container-lg">
 					<div className="card-layout"></div>
 				</main>
 				<li className="list-item">
@@ -61,14 +61,14 @@ export default function Layout() {
 			<CodeBlockWithCopy>
 				{`
 :root {
-  --container-xl: 57.625rem; /* 922px */
+  --container-lg: 57.625rem; /* 922px */
   --container-lg: 52.75rem;  /* 844px */
   --container-md: 47.875rem; /* 766px */
   --container-sm: 45rem;     /* 720px */
 }
 
-.container-xl {
-  max-width: var(--container-xl);
+.container-lg {
+  max-width: var(--container-lg);
   margin: auto;
 }
 

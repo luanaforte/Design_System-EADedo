@@ -43,7 +43,7 @@
   align-items: center;
   padding: var(--space-150);
   gap: var(--space-100);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   background: var(--color-neutral-100);
 }
 

@@ -7,12 +7,12 @@ import TableOfContents from "../../../components/TableOfContents";
 
 const borderRadiusTokens = [
 	{ name: "--radius-full", value: "100%" },
-	{ name: "--radius-025", value: "0.25rem" },
-	{ name: "--radius-050", value: "0.5rem" },
+	{ name: "--radius-small", value: "0.25rem" },
+	{ name: "--radius-medium", value: "0.5rem" },
 	{ name: "--radius-075", value: "0.75rem" },
 	{ name: "--radius-100", value: "1rem" },
 	{ name: "--radius-125", value: "1.25rem" },
-	{ name: "--radius-150", value: "1.5rem" },
+	{ name: "--radius-xlarge", value: "1.5rem" },
 ];
 
 const borderRadiusLados = [
@@ -70,7 +70,7 @@ const CardBorderRadius = ({ name, styleValue = "", previewClass = "" }) => {
 
 export default function Border() {
 	return (
-		<div className="container-xl" id="Introducao">
+		<div className="container-lg" id="Introducao">
 			<h2 className="heading2">Border Radius</h2>
 			<p className="paragraph">
 				Use utilitários como border-radius para aplicar diferentes tamanhos de

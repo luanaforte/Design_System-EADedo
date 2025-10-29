@@ -118,7 +118,7 @@ export default function Tipografia() {
 		setActiveFont(font);
 	};
 	return (
-		<div className="container-xl">
+		<div className="container-lg">
 			<div>
 				<h2 className="heading2" id="Introducao">
 					Tipografia

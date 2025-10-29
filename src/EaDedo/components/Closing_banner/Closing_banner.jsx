@@ -3,7 +3,7 @@ import "./Closing_banner.css";
 
 export default function Closing_banner() {
 	return (
-		<section className="container-xl">
+		<section className="container-lg">
 			<div
 				className="closing_banner margin__bottom--default"
 				id="closing_banner__default">

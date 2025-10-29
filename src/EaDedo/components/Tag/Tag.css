@@ -3,7 +3,7 @@
   padding: var(--space-012) var(--space-050);
   align-items: center;
   gap: var(--space-025);
-  border-radius: var(--radius-025);
+  border-radius: var(--radius-small);
   width: fit-content;
   background-color: var(--color-neutral-100);
 }
@@ -16,7 +16,7 @@
   align-content: center;
   gap: 0rem var(--space-100, 1rem);
   flex-wrap: wrap;
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   background: #FFF;
 }
 
@@ -28,7 +28,7 @@
   align-content: center;
   gap: 0rem var(--space-100, 1rem);
   flex-wrap: wrap;
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   background: #FFF;
 }
 

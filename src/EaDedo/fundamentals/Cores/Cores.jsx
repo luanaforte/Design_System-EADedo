@@ -170,7 +170,7 @@ export default function Cores() {
 	];
 
 	return (
-		<div className="container-xl">
+		<div className="container-lg">
 			<h3 className="heading3" id="Introducao">
 				Cores
 			</h3>

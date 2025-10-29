@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius-150);
+  border-radius: var(--radius-xlarge);
   background: var(--color-red-600);
   text-align: center;
   color: var(--white);

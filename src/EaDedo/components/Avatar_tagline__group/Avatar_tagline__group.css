@@ -5,5 +5,5 @@
   padding-bottom: var(--space-125);
   gap: var(--space-150);
   flex-wrap: wrap;
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
 }

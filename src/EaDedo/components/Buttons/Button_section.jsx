@@ -3,7 +3,7 @@ import "./Button.css";
 
 export default function Button_section() {
 	return (
-		<section className="container-xl EadGraduacao">
+		<section className="container-lg EadGraduacao">
 			<div className="button-section-group">
 				<div className="button-section">
 					<a

@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: var(--space-100);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   color: var(--accordion-text);
   background-color: var(--accordion-bg);
   cursor: pointer;

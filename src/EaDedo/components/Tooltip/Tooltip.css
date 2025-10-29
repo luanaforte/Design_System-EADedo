@@ -10,7 +10,7 @@
   max-width: 20rem;
   height: auto;
   padding: var(--space-050) var(--space-075);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   background: rgba(0, 0, 0, 0.80);
   color: #FFF;
   visibility: hidden;

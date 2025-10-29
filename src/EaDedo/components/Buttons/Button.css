@@ -10,7 +10,7 @@
   min-width: 11.5625rem;
   max-width: fit-content;
   padding: 0rem var(--space-100);
-  border-radius: var(--radius-150);
+  border-radius: var(--radius-xlarge);
   border: 1px solid;
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-075);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   border: 1px solid;
   color: var(--color-neutral-950);
   background: transparent;
@@ -71,6 +71,49 @@
   font-family: var(--font-family-body);
 }
 
+/* Botao Gradient */
+/* Animação de rotação suave */
+@property --bg-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+@keyframes spin {
+  to {
+    --bg-angle: 360deg;
+  }
+}
+
+.button-rounded-gradient {
+  height: 2.5rem;
+  min-width: 11.5625rem;
+  max-width: fit-content;
+  padding: 0rem var(--space-100);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-medium);
+  /* borda do botao  */
+  animation: spin 2.5s infinite linear paused;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    var(--Midnight) border-box;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.button-rounded-gradient-nome {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-medium);
+  font-family: var(--font-family-body);
+  background-clip: text, border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--Midnight);
+}
+
 .button--icon-right {
   gap: var(--space-075);
 }
@@ -86,7 +129,7 @@
   max-width: 52.75rem;
   min-height: 2.5rem;
   padding: var(--space-050) var(--space-100);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   border: 1px solid;
   margin-bottom: var(--space-150);
   text-decoration: none;
@@ -100,6 +143,7 @@
 
 .button-pill svg path,
 .button-rounded svg path,
+.button-rounded-gradient svg path,
 .button-minimal svg path,
 .button-media-link svg path {
   fill: var(--svg-fill, currentColor);
@@ -112,7 +156,7 @@
   width: 100%;
   max-width: 43.5625rem;
   padding: var(--space-050);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   position: relative;
   text-decoration: none;
   margin-bottom: var(--space-150);
@@ -215,9 +259,21 @@
 
 .button-rounded:hover {
   color: var(--button-hover-color);
-  background: rgba(240, 241, 245, 0.7);
+  background: #F0F1F5B3;
   border-color: var(--button-hover-color);
   text-decoration: none;
+}
+
+.button-rounded-gradient:hover {
+  animation: spin 1.75s infinite linear;
+  background: linear-gradient(#f0f1f5, #f0f1f5) padding-box,
+    conic-gradient(from var(--bg-angle) at center,
+      #1529ff,
+      #151720,
+      #a6abc5,
+      #1529ff) border-box;
+  border: 1px solid transparent;
+  animation-play-state: running;
 }
 
 .button-pill:focus,
@@ -230,6 +286,27 @@
   border-color: var(--button-border) !important;
   text-decoration: none;
   box-shadow: none !important;
+}
+
+.button-rounded-gradient:focus,
+.button-rounded-gradient:active,
+.button-rounded-gradient.active {
+  border: 1px solid var(--gradient-midnight);
+  background: var(--gradient-midnight, linear-gradient(90deg, var(--color-blue-600) 0%, var(--color-neutral-950) 100%)) !important;
+}
+
+.button-rounded-gradient:active .button-rounded-gradient-nome,
+.button-rounded-gradient:focus .button-rounded-gradient-nome {
+  background-image: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+.button-rounded-gradient:focus svg path,
+.button-rounded-gradient:active svg path,
+.button-rounded-gradient.active svg path {
+  fill: #FFFFFF;
 }
 
 .button-pill:active,
@@ -250,6 +327,14 @@
   border: 1px solid var(--color-neutral-300);
   text-decoration: none !important;
   font-style: normal !important;
+}
+
+.disabled .button-rounded-gradient-nome,
+.disabled .button-rounded-gradient-nome {
+  background-image: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: var(--color-neutral-300) !important;
+  color: var(--color-neutral-300) !important;
 }
 
 
@@ -273,14 +358,14 @@
   max-width: fit-content;
   padding: var(--space-100);
   gap: var(--space-100);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   text-decoration: none !important;
   cursor: pointer;
   position: relative;
 }
 
 .button-section__link:hover {
-  background: var(--color-neutral-200);
+  background: var(--color-neutral-300);
 }
 
 .button-section__icon {

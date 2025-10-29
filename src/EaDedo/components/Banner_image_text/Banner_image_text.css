@@ -5,13 +5,13 @@
   padding: var(--space-150);
   align-items: flex-start;
   gap: var(--space-150);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
 }
 
 .Banner_image_text--primary__image {
   width: 15.625rem;
   height: 15.625rem;
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   object-fit: cover;
 }
 
@@ -23,13 +23,13 @@
   justify-content: center;
   align-items: center;
   gap: var(--space-150);
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
 }
 
 .Banner_image_text--secondary__image {
   width: 9.375rem;
   height: 9.375rem;
-  border-radius: var(--radius-050);
+  border-radius: var(--radius-medium);
   object-fit: cover;
 }
 

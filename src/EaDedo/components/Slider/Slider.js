@@ -14,23 +14,18 @@
 		}
 
 		init() {
-			if (!this.setupElements()) {
-				console.warn(
-					"❌ Slider could not be fully initialized for element:",
-					this.slider
-				);
-				return;
-			}
-			console.log("✅ Slider initialized:", this.slider);
+			if (!this.setupElements()) return;
 			this.createIndicators();
+			this.updateArrowVisibility();
 			this.attachEvents();
 		}
 
 		setupElements() {
 			this.indicatorsContainer = this.slider.querySelector(".indicators");
 			this.slides = this.slider.querySelectorAll(".slider-primario-item");
-			this.prevBtn = this.slider.querySelector("#slider_prevBtn");
-			this.nextBtn = this.slider.querySelector("#slider_nextBtn");
+
+			this.prevBtn = this.slider.querySelector('button[aria-label="Anterior"]');
+			this.nextBtn = this.slider.querySelector('button[aria-label="Próximo"]');
 
 			return (
 				this.indicatorsContainer &&
@@ -53,12 +48,6 @@
 				});
 				this.indicatorsContainer.appendChild(dot);
 			});
-			console.log(
-				"✅ Indicators created for:",
-				this.slider,
-				"Count:",
-				this.indicatorsContainer.children.length
-			);
 		}
 
 		updateIndicators() {
@@ -67,6 +56,21 @@
 			dots.forEach((dot, idx) => {
 				dot.classList.toggle("active", idx === this.currentIndex);
 			});
+		}
+
+		updateArrowVisibility() {
+			if (!this.prevBtn || !this.nextBtn) return;
+
+			if (this.currentIndex === 0) {
+				this.prevBtn.style.display = "none";
+				this.nextBtn.style.display = "block";
+			} else if (this.currentIndex === this.slides.length - 1) {
+				this.prevBtn.style.display = "block";
+				this.nextBtn.style.display = "none";
+			} else {
+				this.prevBtn.style.display = "block";
+				this.nextBtn.style.display = "block";
+			}
 		}
 
 		slideTo(newIndex, direction) {
@@ -87,8 +91,6 @@
 			newSlide.classList.add(
 				direction === "next" ? "enter-right" : "enter-left"
 			);
-
-			// Trigger reflow to ensure the class is applied before the transition starts
 			void newSlide.offsetWidth;
 
 			oldSlide.style.transition = "transform 0.5s ease, opacity 0.5s ease";
@@ -109,8 +111,10 @@
 					oldSlide.style.transition = "";
 					newSlide.style.transition = "";
 					newSlide.removeEventListener("transitionend", handler);
+
 					this.currentIndex = newIndex;
 					this.updateIndicators();
+					this.updateArrowVisibility();
 					this.isAnimating = false;
 				}.bind(this),
 				{ once: true }
@@ -122,32 +126,31 @@
 			this.nextBtn.onclick = () => this.slideTo(this.currentIndex + 1, "next");
 		}
 
-		// Method to re-check and re-create indicators if they disappear
 		checkAndRecreateIndicators() {
 			const indicatorsExist = this.slider.querySelector(".indicators");
 			const indicatorsEmpty =
 				indicatorsExist && indicatorsExist.children.length === 0;
-
 			if (indicatorsExist && indicatorsEmpty) {
-				console.warn(
-					"⚠️ Indicators disappeared for slider — recreating:",
-					this.slider
-				);
 				this.setupElements();
 				this.createIndicators();
+				this.updateArrowVisibility();
 			}
 		}
 	}
 
 	function initializeAllSliders() {
-		document.querySelectorAll(".slider-primario").forEach((sliderElement) => {
+		const sliderElements = document.querySelectorAll(".slider-primario");
+
+		sliderElements.forEach((sliderElement) => {
 			if (!sliderElement.dataset.sliderInitialized) {
-				sliders.push(new Slider(sliderElement));
+				const sliderInstance = new Slider(sliderElement);
+				sliders.push(sliderInstance);
 				sliderElement.dataset.sliderInitialized = "true";
 			}
 		});
 	}
 
+	// Checa indicadores
 	setInterval(() => {
 		sliders.forEach((sliderInstance) => {
 			sliderInstance.checkAndRecreateIndicators();
@@ -157,20 +160,15 @@
 	document.addEventListener("DOMContentLoaded", initializeAllSliders);
 
 	const observer = new MutationObserver((mutations) => {
-		let needsReinitialization = false;
+		let needsReinit = false;
 		for (const mutation of mutations) {
 			if (mutation.addedNodes.length > 0 || mutation.removedNodes.length > 0) {
-				needsReinitialization = true;
+				needsReinit = true;
 				break;
 			}
 		}
-		if (needsReinitialization) {
-			initializeAllSliders();
-		}
+		if (needsReinit) initializeAllSliders();
 	});
 
-	observer.observe(document.body, {
-		childList: true,
-		subtree: true,
-	});
+	observer.observe(document.body, { childList: true, subtree: true });
 })();

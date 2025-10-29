@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			:root {
+				/* Gradients */
+				--Midnight: linear-gradient(90deg, #1529ff 0%, #151720 100%);
+				--Ash: linear-gradient(90deg, #a6abc5 0%, #151720 100%);
+				--Smoke: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0) 0%,
+					rgba(0, 0, 0, 0.8) 100%
+				);
+			}
+
+			/* Animação de rotação suave */
+			@property --bg-angle {
+				inherits: false;
+				initial-value: 0deg;
+				syntax: "<angle>";
+			}
+
+			@keyframes spin {
+				to {
+					--bg-angle: 360deg;
+				}
+			}
+
+			/* Botão base */
+			.button-rounded-gradient {
+				height: 2.5rem;
+				min-width: 11.5625rem;
+				max-width: fit-content;
+				padding: 0rem var(--space-100);
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				border-radius: var(--radius-medium);
+				/* borda do botao  */
+				animation: spin 2.5s infinite linear paused;
+				background: linear-gradient(#f0f1f5, #f0f1f5) padding-box,
+					var(--Midnight) border-box; /* usa o novo gradiente */
+				border: 1px solid transparent;
+				transition: all 0.3s ease;
+			}
+
+			/* Efeito hover */
+			.button-rounded-gradient:hover {
+				animation: spin 1.75s infinite linear;
+				background: linear-gradient(#f0f1f5, #f0f1f5) padding-box,
+					conic-gradient(
+							from var(--bg-angle) at center,
+							#1529ff,
+							#151720,
+							#a6abc5,
+							#1529ff
+						)
+						border-box;
+				border: 1px solid transparent;
+				animation-play-state: running;
+			}
+
+			/* Texto gradient */
+			.button-rounded-gradient-nome {
+				font-family: Poppins, sans-serif;
+				font-size: 1rem;
+				font-weight: 500;
+				background: var(--Ash);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<a href="" class="button-rounded-gradient">
+				<p class="button-rounded-gradient-nome">Fale comigo</p>
+				<svg
+					width="24"
+					height="25"
+					viewBox="0 0 24 25"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M18.75 6.03857V15.7886C18.75 15.9875 18.671 16.1783 18.5303 16.3189C18.3897 16.4596 18.1989 16.5386 18 16.5386C17.8011 16.5386 17.6103 16.4596 17.4697 16.3189C17.329 16.1783 17.25 15.9875 17.25 15.7886V7.84889L6.53062 18.5692C6.38988 18.7099 6.19901 18.789 5.99999 18.789C5.80097 18.789 5.6101 18.7099 5.46936 18.5692C5.32863 18.4285 5.24957 18.2376 5.24957 18.0386C5.24957 17.8396 5.32863 17.6487 5.46936 17.5079L16.1897 6.78857H8.24999C8.05108 6.78857 7.86031 6.70956 7.71966 6.5689C7.57901 6.42825 7.49999 6.23749 7.49999 6.03857C7.49999 5.83966 7.57901 5.6489 7.71966 5.50824C7.86031 5.36759 8.05108 5.28857 8.24999 5.28857H18C18.1989 5.28857 18.3897 5.36759 18.5303 5.50824C18.671 5.6489 18.75 5.83966 18.75 6.03857Z"
+						fill="#151720"></path>
+				</svg> </a></div
+	></body>
+</html>
