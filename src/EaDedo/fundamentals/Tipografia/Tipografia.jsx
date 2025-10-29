@@ -108,6 +108,12 @@ const TypographyContent = ({ fontFamily }) => {
 				style="position: absolute;top: 0;left: 0;width: 100%;height:
 				100%;border: 0;"&gt; &lt;/iframe&gt;
 			</p>
+			<p class="paragraph">
+				<a href="" target="_blank" class="text-link">
+					Texto Link
+				</a>
+				.
+			</p>
 		</div>
 	);
 };

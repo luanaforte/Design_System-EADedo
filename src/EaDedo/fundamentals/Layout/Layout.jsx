@@ -37,13 +37,6 @@ export default function Layout() {
 					<div className="card-layout"></div>
 				</main>
 				<li className="list-item">
-					<span className="tag">.container-lg</span> — largura máxima de
-					52.75rem (~844px)
-				</li>
-				<main className="container-lg">
-					<div className="card-layout"></div>
-				</main>
-				<li className="list-item">
 					<span className="tag">.container-md</span> — largura máxima de
 					47.875rem (~766px)
 				</li>
@@ -62,14 +55,8 @@ export default function Layout() {
 				{`
 :root {
   --container-lg: 57.625rem; /* 922px */
-  --container-lg: 52.75rem;  /* 844px */
   --container-md: 47.875rem; /* 766px */
   --container-sm: 45rem;     /* 720px */
-}
-
-.container-lg {
-  max-width: var(--container-lg);
-  margin: auto;
 }
 
 .container-lg {
@@ -246,7 +233,7 @@ export default function Layout() {
 				Use os tokens <span className="tag">space-200</span> a{" "}
 				<span className="tag">space-400</span> (32px a 64px) para as maiores
 				partes da interface do usuário e para elementos de layout.
-			</p>{" "}
+			</p>
 			<p className="paragraph">Exemplos:</p>
 			<ul className="list-ul">
 				<li className="list-item">
