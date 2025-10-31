@@ -87,9 +87,9 @@
 /* ===== AVATAR TEXTOS - Horizontal ===== */
 .avatar__tagline-horizontal {
   display: inline-flex;
-  padding: 0;
   align-items: center;
   gap: var(--space-050);
+  padding: 0;
   width: 100%;
 }
 
@@ -97,8 +97,8 @@
 .avatar__tagline-vertical {
   display: flex;
   align-items: center;
-  /* width: 14.125rem; */
   gap: var(--space-050);
+  padding: 0;
 }
 
 .avatar__tagline-vertical__info {
@@ -124,4 +124,15 @@
   /* line-height: var(--line-height-tight); */
   font-family: var(--font-family-body);
   margin: 0;
+}
+
+/* Avatar_tagline__group */
+.Avatar_tagline__group {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding-bottom: var(--space-125);
+  gap: var(--space-150);
+  flex-wrap: wrap;
+  border-radius: var(--radius-medium);
 }

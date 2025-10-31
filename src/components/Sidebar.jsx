@@ -12,44 +12,31 @@ const Rotes = {
 		{ label: "Tipografia", route: "/Fundamentos/Tipografia" },
 	],
 
-	"/Componentes": {
-		Átomos: [
-			{ label: "Avatar", route: "/Componentes/Avatar" },
-			{ label: "Badge", route: "/Componentes/Badge" },
-			{ label: "Button", route: "/Componentes/Button" },
-			{ label: "Icon", route: "/Componentes/Icon" },
-			{ label: "Tag", route: "/Componentes/Tag" },
-			{ label: "Indicators", route: "/Componentes/Indicator" },
-			{ label: "Tooltip", route: "/Componentes/Tooltip" },
-		],
-		Moléculas: [
-			{
-				label: "Avatar_tagline__group",
-				route: "/Componentes/Avatar_tagline__group",
-			},
-			{ label: "Button_direction", route: "/Componentes/Button_direction" },
-			{
-				label: "Button_section_menu",
-				route: "/Componentes/Button_section_menu",
-			},
-			{ label: "Progress_bar", route: "/Componentes/Progress_bar" },
-		],
-		Organismos: [
-			{ label: "Accordions", route: "/Componentes/Accordions" },
-			{ label: "Banner_alert", route: "/Componentes/Banner_alert" },
-			{ label: "Banner_image_text", route: "/Componentes/Banner_image_text" },
-			{ label: "Carousel", route: "/Componentes/Carousel" },
-			{ label: "Cards", route: "/Componentes/Cards" },
-			{ label: "Closing_banner", route: "/Componentes/Closing_banner" },
-			{ label: "ColapseSection", route: "/Componentes/ColapseSection" },
-			{ label: "Header_image", route: "/Componentes/Header_image" },
-			{ label: "Header_text", route: "/Componentes/Header_text" },
-			{ label: "Header_text_image", route: "/Componentes/Header_text_image" },
-			{ label: "IframeVideo", route: "/Componentes/IframeVideo" },
-			{ label: "Slider", route: "/Componentes/Slider" },
-			{ label: "Text_header", route: "/Componentes/Text_header" },
-		],
-	},
+	"/Componentes": [
+		{ label: "Accordions", route: "/Componentes/Accordions" },
+		{ label: "Avatar", route: "/Componentes/Avatar" },
+		{ label: "Badge", route: "/Componentes/Badge" },
+		{ label: "Banner_alert", route: "/Componentes/Banner_alert" },
+		{ label: "Banner_image_text", route: "/Componentes/Banner_image_text" },
+		{ label: "Button", route: "/Componentes/Button" },
+		{ label: "Button_direction", route: "/Componentes/Button_direction" },
+		{ label: "Button_section_menu", route: "/Componentes/Button_section_menu" },
+		{ label: "Cards", route: "/Componentes/Cards" },
+		{ label: "Carousel", route: "/Componentes/Carousel" },
+		{ label: "Closing_banner", route: "/Componentes/Closing_banner" },
+		{ label: "ColapseSection", route: "/Componentes/ColapseSection" },
+		{ label: "Header_image", route: "/Componentes/Header_image" },
+		{ label: "Header_text", route: "/Componentes/Header_text" },
+		{ label: "Header_text_image", route: "/Componentes/Header_text_image" },
+		{ label: "Icon", route: "/Componentes/Icon" },
+		{ label: "IframeVideo", route: "/Componentes/IframeVideo" },
+		{ label: "Indicators", route: "/Componentes/Indicator" },
+		{ label: "Progress_bar", route: "/Componentes/Progress_bar" },
+		{ label: "Slider", route: "/Componentes/Slider" },
+		{ label: "Tag", route: "/Componentes/Tag" },
+		{ label: "Text_header", route: "/Componentes/Text_header" },
+		{ label: "Tooltip", route: "/Componentes/Tooltip" },
+	],
 };
 
 export default function Sidebar({ isOpen }) {
@@ -110,30 +97,21 @@ export default function Sidebar({ isOpen }) {
 					</Link>
 					{isComponentesOpen && (
 						<ul className="sidebar__submenu">
-							{Object.entries(Rotes["/Componentes"]).map(
-								([categoria, componentes]) => (
-									<li key={categoria} className="sidebar__submenu-category">
-										<span className="sidebar__submenu-category-title">
-											{categoria}
-										</span>
-										<ul>
-											{componentes.map((item) => (
-												<li className="sidebar__submenu-item" key={item.route}>
-													<Link
-														to={item.route}
-														className={`legend ${
-															location.pathname === item.route
-																? "sidebar__submenu-item-active"
-																: ""
-														}`}>
-														{item.label}
-													</Link>
-												</li>
-											))}
-										</ul>
+							{Rotes["/Componentes"]
+								.sort((a, b) => a.label.localeCompare(b.label))
+								.map((item) => (
+									<li className="sidebar__submenu-item" key={item.route}>
+										<Link
+											to={item.route}
+											className={`legend ${
+												location.pathname === item.route
+													? "sidebar__submenu-item-active"
+													: ""
+											}`}>
+											{item.label}
+										</Link>
 									</li>
-								)
-							)}
+								))}
 						</ul>
 					)}
 				</li>

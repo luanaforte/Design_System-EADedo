@@ -1,20 +1,19 @@
 import React from "react";
-import "./Avatar_tagline__group.css";
-import Profile from "../../assets/imgs/profile.png";
+import "./Avatar.css";
 
 export default function Avatar_tagline__group() {
 	return (
 		<section className="container-lg EadGraduacao">
 			<div className="Avatar_tagline__group margin__bottom--default">
-				<div className="avatar__tagline-vertical">
-					<div className="avatar avatar__letter--lg background-blue-600 ">
-						<span className="avatar__letter-content--lg">A</span>
+				<div className="avatar__tagline-vertical margin__bottom--default">
+					<div className="avatar avatar__letter--md background-blue-600 ">
+						<span className="avatar__letter-content--md">A</span>
 					</div>
-					<div className="avatar__tagline-vertical__info">
+					<div className="avatar__tagline-info">
 						<p className="avatar__tagline-vertical__name">Nome do Usuário</p>
 						<div className="group-tooltip">
 							<p className="avatar__tagline-text">Tagline</p>
-							<div className="tooltip tooltip--right">
+							<div className="tooltip tooltip--bottom">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"
@@ -26,23 +25,23 @@ export default function Avatar_tagline__group() {
 										fill="#4B587E"
 									/>
 								</svg>
-								<div className="tooltip__content tag tooltip__content--right">
+								<div className="tooltip__content tag tooltip__content--bottom">
 									Tooltip Bottom
-									<div className="tooltip__arrow tooltip__arrow--right"></div>
+									<div className="tooltip__arrow tooltip__arrow--bottom"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="avatar__tagline-vertical">
-					<div className="avatar avatar__letter--lg background-blue-600 ">
-						<span className="avatar__letter-content--lg">A</span>
+				<div className="avatar__tagline-vertical margin__bottom--default">
+					<div className="avatar avatar__letter--md background-blue-600 ">
+						<span className="avatar__letter-content--md">A</span>
 					</div>
-					<div className="avatar__tagline-vertical__info">
+					<div className="avatar__tagline-info">
 						<p className="avatar__tagline-vertical__name">Nome do Usuário</p>
 						<div className="group-tooltip">
 							<p className="avatar__tagline-text">Tagline</p>
-							<div className="tooltip tooltip--right">
+							<div className="tooltip tooltip--bottom">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"
@@ -54,9 +53,9 @@ export default function Avatar_tagline__group() {
 										fill="#4B587E"
 									/>
 								</svg>
-								<div className="tooltip__content tag tooltip__content--right">
+								<div className="tooltip__content tag tooltip__content--bottom">
 									Tooltip Bottom
-									<div className="tooltip__arrow tooltip__arrow--right"></div>
+									<div className="tooltip__arrow tooltip__arrow--bottom"></div>
 								</div>
 							</div>
 						</div>
