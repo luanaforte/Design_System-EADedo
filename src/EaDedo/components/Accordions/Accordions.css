@@ -48,14 +48,3 @@
 .icon-inactive {
   display: none;
 }
-
-/* Accordions grupos */
-.EadGraduacao {
-  --accordion-bg: var(--color-neutral-100);
-  --accordion-text: var(--color-blue-600);
-  --accordion-hover-text: var(--color-blue-900);
-  --accordion-hover-fill-icon: var(--color-blue-900);
-  --accordion-active-bg: var(--color-blue-100);
-  --accordion-active-text: var(--color-blue-600);
-  --accordion-active-fill-icon: var(--color-blue-800);
-}
