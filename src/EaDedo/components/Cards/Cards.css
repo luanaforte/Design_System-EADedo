@@ -300,6 +300,15 @@
     min-width: 0;
     width: 100%;
   }
+
+  .Card_image_text .button-pill,
+  .card__section--secondary .button-pill {
+    min-width: 90%;
+  }
+
+  .card__section--secondary .button-group {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {

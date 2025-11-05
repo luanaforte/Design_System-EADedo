@@ -14,12 +14,12 @@ export default function Cards() {
 	return (
 		<div className="container-lg">
 			<Card_Section />
-			<Card_indication />
-			<Card_video />
-			<Card_podcast />
-			<Card_simple />
 			<Card_image_text />
+			<Card_simple />
 			<Card_section_avatar />
+			<Card_video />
+			<Card_indication />
+			<Card_podcast />
 		</div>
 	);
 }
