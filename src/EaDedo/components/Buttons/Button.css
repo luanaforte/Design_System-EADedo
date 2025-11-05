@@ -1,3 +1,7 @@
+/*************************************
+ * BASE: GRUPOS E ESTRUTURA GERAL
+ *************************************/
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -5,11 +9,29 @@
   margin-bottom: var(--space-150);
 }
 
+.button-section-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--space-150);
+}
+
+.button-section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100);
+}
+
+/*************************************
+ * BOTÕES PADRÃO
+ *************************************/
+
+/* --- Button Pill --- */
 .button-pill {
   height: 2.5rem;
   min-width: 11.5625rem;
   max-width: fit-content;
-  padding: 0rem var(--space-100);
+  padding: 0 var(--space-100);
   border-radius: var(--radius-xlarge);
   border: 1px solid;
   display: flex;
@@ -18,61 +40,61 @@
   font: inherit;
   color: inherit;
   cursor: pointer;
-
-  /* texto */
   text-decoration: none;
+
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-medium);
   font-family: var(--font-family-body);
 }
 
+/* --- Button Rounded --- */
 .button-rounded {
   height: 2.5rem;
   min-width: 11.5625rem;
   max-width: fit-content;
-  padding: 0rem var(--space-100);
-  text-decoration: none;
+  padding: 0 var(--space-100);
   display: flex;
   align-items: center;
   gap: var(--space-075);
   border-radius: var(--radius-medium);
   border: 1px solid;
-  color: var(--color-neutral-950);
   background: transparent;
   font: inherit;
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 
-  /* texto */
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-medium);
   font-family: var(--font-family-body);
 }
 
+/* --- Button Minimal --- */
 .button-minimal {
   display: flex;
   height: 1.125rem;
   padding: 0;
   align-items: center;
   gap: var(--space-025);
-  text-decoration: none;
   border: none !important;
   background: transparent;
   font: inherit;
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 
-  /* texto */
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-medium);
   font-family: var(--font-family-body);
 }
 
-/* Botao Gradient */
-/* Animação de rotação suave */
+/*************************************
+ * BOTÃO GRADIENTE ANIMADO
+ *************************************/
+
 @property --bg-angle {
   inherits: false;
   initial-value: 0deg;
@@ -89,16 +111,15 @@
   height: 2.5rem;
   min-width: 11.5625rem;
   max-width: fit-content;
-  padding: 0rem var(--space-100);
-  text-decoration: none;
+  padding: 0 var(--space-100);
   display: flex;
   align-items: center;
   border-radius: var(--radius-medium);
-  /* borda do botao  */
   animation: spin 2.5s infinite linear paused;
   background: linear-gradient(#ffffff, #ffffff) padding-box,
     var(--Midnight) border-box;
   border: 1px solid transparent;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -114,6 +135,10 @@
   background-image: var(--Midnight);
 }
 
+/*************************************
+ * BOTÕES COM ÍCONES
+ *************************************/
+
 .button--icon-right {
   gap: var(--space-075);
 }
@@ -121,6 +146,18 @@
 .button--icon-left {
   justify-content: space-between;
 }
+
+.button-pill svg path,
+.button-rounded svg path,
+.button-rounded-gradient svg path,
+.button-minimal svg path,
+.button-media-link svg path {
+  fill: var(--svg-fill, currentColor);
+}
+
+/*************************************
+ * BUTTON MEDIA LINK
+ *************************************/
 
 .button-media-link {
   display: flex;
@@ -141,13 +178,9 @@
   margin: 0;
 }
 
-.button-pill svg path,
-.button-rounded svg path,
-.button-rounded-gradient svg path,
-.button-minimal svg path,
-.button-media-link svg path {
-  fill: var(--svg-fill, currentColor);
-}
+/*************************************
+ * BUTTON NOTIFICATION
+ *************************************/
 
 .button-notification {
   display: flex;
@@ -158,10 +191,10 @@
   padding: var(--space-050);
   border-radius: var(--radius-medium);
   position: relative;
-  text-decoration: none;
-  margin-bottom: var(--space-150);
   background: var(--color-neutral-100);
+  margin-bottom: var(--space-150);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .button-notification__text {
@@ -172,7 +205,6 @@
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  line-clamp: 1;
   color: var(--color-blue-600);
   margin: 0;
 }
@@ -192,7 +224,11 @@
   fill: var(--color-blue-900);
 }
 
-/* Buttons colors */
+/*************************************
+ * BUTTON STATES E CORES
+ *************************************/
+
+/* --- Cores --- */
 .button--neutral {
   --button-color: var(--color-neutral-950);
   --button-border: var(--color-neutral-950);
@@ -241,6 +277,7 @@
   --button-active-border: var(--color-purple-900);
 }
 
+/* --- Estados comuns --- */
 .button-pill,
 .button-rounded,
 .button-minimal {
@@ -261,21 +298,18 @@
   color: var(--button-hover-color);
   background: #F0F1F5B3;
   border-color: var(--button-hover-color);
-  text-decoration: none;
 }
 
 .button-rounded-gradient:hover {
   animation: spin 1.75s infinite linear;
   background: linear-gradient(#f0f1f5, #f0f1f5) padding-box,
     conic-gradient(from var(--bg-angle) at center,
-      #1529ff,
-      #151720,
-      #a6abc5,
-      #1529ff) border-box;
+      #1529ff, #151720, #a6abc5, #1529ff) border-box;
   border: 1px solid transparent;
   animation-play-state: running;
 }
 
+/* --- Active e Focus --- */
 .button-pill:focus,
 .button-minimal:focus,
 .button-minimal:active,
@@ -284,7 +318,6 @@
   outline: none;
   color: var(--button-color);
   border-color: var(--button-border) !important;
-  text-decoration: none;
   box-shadow: none !important;
 }
 
@@ -295,18 +328,12 @@
   background: var(--gradient-midnight, linear-gradient(90deg, var(--color-blue-600) 0%, var(--color-neutral-950) 100%)) !important;
 }
 
-.button-rounded-gradient:active .button-rounded-gradient-nome,
-.button-rounded-gradient:focus .button-rounded-gradient-nome {
+.button-rounded-gradient:focus .button-rounded-gradient-nome,
+.button-rounded-gradient:active .button-rounded-gradient-nome {
   background-image: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: #fff;
   color: #fff;
-}
-
-.button-rounded-gradient:focus svg path,
-.button-rounded-gradient:active svg path,
-.button-rounded-gradient.active svg path {
-  fill: #FFFFFF;
 }
 
 .button-pill:active,
@@ -314,12 +341,15 @@
 .button-rounded:focus,
 .button-pill.active,
 .button-rounded.active {
-  color: #ffffff;
+  color: #fff;
   background: var(--button-active-bg);
   border-color: var(--button-active-border) !important;
-  text-decoration: none;
   box-shadow: none !important;
 }
+
+/*************************************
+ * ESTADOS ESPECIAIS
+ *************************************/
 
 .disabled {
   pointer-events: none !important;
@@ -329,7 +359,6 @@
   font-style: normal !important;
 }
 
-.disabled .button-rounded-gradient-nome,
 .disabled .button-rounded-gradient-nome {
   background-image: none;
   -webkit-background-clip: initial;
@@ -337,19 +366,9 @@
   color: var(--color-neutral-300) !important;
 }
 
-
-.button-section-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: var(--space-150);
-}
-
-.button-section {
-  display: flex;
-  align-items: center;
-  gap: var(--space-100);
-}
+/*************************************
+ * SEÇÃO DE LINKS E MENUS
+ *************************************/
 
 .button-section__link {
   display: flex;
@@ -373,22 +392,155 @@
   height: var(--icon-size-md);
 }
 
+.button-section__image-logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  display: block;
+}
+
 .button-section__label--mobile {
   display: none;
 }
 
-@media (max-width: 425px) {
+/*************************************
+ * VIDEO BUTTON (PLAY)
+ *************************************/
 
+.Button_video__play {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.Button_video__play-icon {
+  position: fixed;
+  z-index: 3;
+}
+
+/*************************************
+ * SECTION MENU
+ *************************************/
+
+.section_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-150);
+  gap: var(--space-100);
+  border-radius: var(--radius-medium);
+  background: var(--color-neutral-100);
+}
+
+.section_menu--separator {
+  width: 100%;
+  height: 0.0625rem;
+  background: var(--color-neutral-300);
+  margin: 0;
+}
+
+.button_section_menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none !important;
+  font: inherit;
+  color: inherit;
+}
+
+.button_section_menu h4 {
+  color: var(--color-neutral-950);
+}
+
+.button_section_menu__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.button_section_menu__content p {
+  color: var(--Anil);
+}
+
+.button_section_menu:hover,
+.button_section_menu:hover p {
+  color: var(--Marinho);
+}
+
+/*************************************
+ * DIRECIONAIS (CÍRCULO E RETO)
+ *************************************/
+
+.button__direction--circle {
+  display: flex;
+  width: 2.5rem;
+  padding: var(--space-050);
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.button__direction--circle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.button__direction--rounded {
+  display: flex;
+  width: 2.5rem;
+  padding: var(--space-0) var(--space-050);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-xlarge);
+  background: var(--color-neutral-100);
+  border: none;
+  cursor: pointer;
+}
+
+.button__direction--rounded:hover {
+  background: var(--color-neutral-300);
+}
+
+.button__direction--rounded:hover svg path {
+  fill: #4B587E;
+}
+
+/*************************************
+ * MEDIA QUERIES
+ *************************************/
+
+@media (max-width: 768px) {
+  .button-notification__text-part {
+    display: none;
+  }
+
+  .button-notification__text::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 425px) {
   .button-section-group {
-    display: flex;
     justify-content: space-between;
     gap: var(--space-100);
   }
 
   .button-section {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
   }
 
   .button-section__link {
@@ -416,15 +568,4 @@
   .button-pill {
     max-width: 100%;
   }
-}
-
-@media (max-width: 768px) {
-  .button-notification__text-part {
-    display: none;
-  }
-
-  .button-notification__text::first-letter {
-    text-transform: uppercase;
-  }
-
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button_direction.css";
+import "./Button.css";
 
 export default function Button_direction() {
 	return (

@@ -16,13 +16,9 @@ import Tipografia from "./EaDedo/fundamentals/Tipografia/Tipografia.jsx";
 import Components from "./EaDedo/components/Components.jsx";
 import Accordions from "./EaDedo/components/Accordions/Accordions.jsx";
 import Avatar from "./EaDedo/components/Avatar/Avatar.jsx";
-import Avatar_tagline__group from "./EaDedo/components/Avatar_tagline__group/Avatar_tagline__group.jsx";
 import Badge from "./EaDedo/components/Badge/Badge.jsx";
-import Banner_alert from "./EaDedo/components/Banner_alert/Banner_alert.jsx";
-import Banner_image_text from "./EaDedo/components/Banner_image_text/Banner_image_text.jsx";
-import Button from "./EaDedo/components/Buttons/Button.jsx";
-import Button_direction from "./EaDedo/components/Button_direction/Button_direction.jsx";
-import Button_section_menu from "./EaDedo/components/Button_section_menu/Button_section_menu.jsx";
+import Banner from "./EaDedo/components/Banner/Banner.jsx";
+import Button from "./EaDedo/components/Buttons/Buttons.jsx";
 import Cards from "./EaDedo/components/Cards/Cards.jsx";
 import Carousel from "./EaDedo/components/Carousel/Carousel.jsx";
 import Closing_banner from "./EaDedo/components/Closing_banner/Closing_banner.jsx";
@@ -62,25 +58,9 @@ const App = () => {
 				<Route path="Componentes" element={<Components />} />
 				<Route path="Componentes/Accordions" element={<Accordions />} />
 				<Route path="Componentes/Avatar" element={<Avatar />} />
-				<Route
-					path="Componentes/Avatar_tagline__group"
-					element={<Avatar_tagline__group />}
-				/>
 				<Route path="Componentes/Badge" element={<Badge />} />
-				<Route path="Componentes/Banner_alert" element={<Banner_alert />} />
-				<Route
-					path="Componentes/Banner_image_text"
-					element={<Banner_image_text />}
-				/>
+				<Route path="Componentes/Banner" element={<Banner />} />
 				<Route path="Componentes/Button" element={<Button />} />
-				<Route
-					path="Componentes/Button_direction"
-					element={<Button_direction />}
-				/>
-				<Route
-					path="Componentes/Button_section_menu"
-					element={<Button_section_menu />}
-				/>
 				<Route path="Componentes/Cards" element={<Cards />} />
 				<Route path="Componentes/Carousel" element={<Carousel />} />
 				<Route path="Componentes/Closing_banner" element={<Closing_banner />} />

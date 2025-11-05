@@ -116,7 +116,7 @@
   pointer-events: none;
   opacity: 1;
   transition: opacity 0.3s ease;
-  border-radius: var(--radius-075);
+  border-radius: var(--radius-medium);
 }
 
 .card-video__imagem-container:hover::before,
@@ -129,7 +129,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: var(--radius-075);
+  border-radius: var(--radius-medium);
 }
 
 .card-video__description {

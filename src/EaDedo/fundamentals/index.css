@@ -15,13 +15,8 @@
 /* Componentes */
 @import "../components/Accordions/Accordions.css";
 @import "../components/Avatar/Avatar.css";
-@import "../components/Avatar_tagline__group/Avatar_tagline__group.css";
+@import "../components/Banner/Banner.css";
 @import "../components/Badge/Badge.css";
-@import "../components/Banner_alert/Banner_alert.css";
-@import "../components/Banner_image_text/Banner_image_text.css";
-@import "../components/Button_direction/Button_direction.css";
-@import "../components/Button_section_menu/Button_section_menu.css";
-@import "../components/Button_video__play/Button_video__play.css";
 @import "../components/Buttons/Button.css";
 @import "../components/Cards/Cards.css";
 @import "../components/Carousel/Carousel.css";
@@ -133,6 +128,10 @@
 
 .margin__top-0 {
   margin-top: 0 !important;
+}
+
+.margin__top--025 {
+  margin-top: var(--space-025);
 }
 
 .margin__bottom-0 {

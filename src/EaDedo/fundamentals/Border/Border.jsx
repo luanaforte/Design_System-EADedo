@@ -9,7 +9,7 @@ const borderRadiusTokens = [
 	{ name: "--radius-full", value: "100%" },
 	{ name: "--radius-small", value: "0.25rem" },
 	{ name: "--radius-medium", value: "0.5rem" },
-	{ name: "--radius-075", value: "0.75rem" },
+	{ name: "--radius-medium", value: "0.75rem" },
 	{ name: "--radius-100", value: "1rem" },
 	{ name: "--radius-125", value: "1.25rem" },
 	{ name: "--radius-xlarge", value: "1.5rem" },

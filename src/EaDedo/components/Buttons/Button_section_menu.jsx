@@ -1,6 +1,6 @@
 import React from "react";
 import placeholderImage from "../../assets/imgs/image-placeholder.png";
-import "./Button_section_menu.css";
+import "./Button.css";
 
 export default function Button_section_menu() {
 	return (
@@ -10,7 +10,7 @@ export default function Button_section_menu() {
 					<img
 						src={placeholderImage}
 						alt="Imagem ilustrativa do artigo"
-						className="cardImage--tertiary"
+						className="button-section__image-logo"
 					/>
 					<div className="button_section_menu__content">
 						<h4 className="heading4 margin-0">Título chamativo para ação</h4>
@@ -37,7 +37,7 @@ export default function Button_section_menu() {
 						<img
 							src={placeholderImage}
 							alt="Imagem ilustrativa do artigo"
-							className="cardImage--tertiary"
+							className="button-section__image-logo"
 						/>
 						<div className="button_section_menu__content">
 							<h4 className="heading4 margin-0">Título chamativo para ação</h4>
@@ -64,7 +64,7 @@ export default function Button_section_menu() {
 						<img
 							src={placeholderImage}
 							alt="Imagem ilustrativa do artigo"
-							className="cardImage--tertiary"
+							className="button-section__image-logo"
 						/>
 						<div className="button_section_menu__content">
 							<h4 className="heading4 margin-0">Título chamativo para ação</h4>

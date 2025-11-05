@@ -1,5 +1,6 @@
 import React from "react";
-import "./Banner_image_text.css";
+import "./Banner.css";
+
 import Ilustracao from "../../assets/imgs/image-placeholder.png";
 
 export default function Banner_image_text() {

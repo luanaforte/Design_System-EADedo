@@ -30,7 +30,7 @@
   pointer-events: none;
   opacity: 1;
   transition: opacity 0.3s ease;
-  border-radius: var(--radius-075);
+  border-radius: var(--radius-medium);
 }
 
 .iframe-video__imagem-container:hover::before,
@@ -42,7 +42,7 @@
 .iframe-video__imagem {
   width: 100%;
   height: auto;
-  border-radius: var(--radius-075);
+  border-radius: var(--radius-medium);
 }
 
 /* Ícone de loading */
@@ -84,7 +84,7 @@
   height: 0;
   overflow: hidden;
   box-shadow: var(--elevation-low);
-  border-radius: var(--radius-075);
+  border-radius: var(--radius-medium);
   width: 100%;
 }
 

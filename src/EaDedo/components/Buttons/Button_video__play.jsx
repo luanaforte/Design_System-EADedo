@@ -1,7 +1,7 @@
 import React from "react";
-import "./Button_video__play.css";
+import "./Button.css";
 
-export default function Button_section_menu() {
+export default function Button_video__play() {
 	return (
 		<div className="Button_video__play">
 			<svg

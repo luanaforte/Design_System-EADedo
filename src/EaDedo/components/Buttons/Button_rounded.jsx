@@ -4,7 +4,6 @@ import "./Button.css";
 export default function Button_rounded() {
 	return (
 		<section id="Introducao">
-			<h4 className="heading4">Rounded</h4>
 			<div className="button-group">
 				<a
 					className="button-rounded button--icon-right button--neutral"

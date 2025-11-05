@@ -40,7 +40,7 @@
   z-index: 999;
   width: 18.75rem;
   height: 28.125rem;
-  border-radius: var(--radius-075);
+  border-radius: var(--radius-medium);
   background: #fff;
   box-shadow: var(--elevation-medium);
   overflow: hidden;
