@@ -36,7 +36,7 @@ export default function Banner_alert() {
 				</div>
 			</div>
 			<div className="banner-alert--stroke border-color-blue-600">
-				<h4 className="heading4 margin-0 text-neutral-600">Bom trabalho!</h4>
+				<h4 className="heading4 margin-0 text-blue-600">Bom trabalho!</h4>
 				<p className="paragraph--medium margin-0">
 					Oba, você leu com sucesso esta importante mensagem de alerta. Este
 					texto de exemplo vai ser um pouco mais longo para que você possa ver
@@ -59,7 +59,7 @@ export default function Banner_alert() {
 					</svg>
 				</div>
 				<div className="banner-alert__content">
-					<h4 className="heading4 margin-0 text-neutral-600">Bom trabalho!</h4>
+					<h4 className="heading4 margin-0 text-blue-600">Bom trabalho!</h4>
 					<p className="paragraph--medium margin-0">
 						Oba, você leu com sucesso esta importante mensagem de alerta. Este
 						texto de exemplo vai ser um pouco mais longo para que você possa ver
