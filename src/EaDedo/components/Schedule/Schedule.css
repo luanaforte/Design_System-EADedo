@@ -1,0 +1,71 @@
+.schedule {
+  height: 37.5rem;
+  padding: var(--space-125) var(--space-150);
+  border-radius: var(--radius-large);
+}
+
+/* === Items === */
+.schedule__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-050, 0.5rem);
+}
+
+/* === Cards === */
+.schedule__card {
+  width: 100%;
+  border-bottom: 1px solid var(--color-neutral-300);
+}
+
+.schedule__card:last-child {
+  border-bottom: none;
+}
+
+.schedule__card--today {
+  padding-bottom: var(--space-150);
+}
+
+.schedule__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  align-self: stretch;
+
+  overflow-y: scroll;
+  scrollbar-gutter: stable both-edges;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(166, 171, 197, 0.4) transparent;
+
+  max-height: 21rem;
+  margin: var(--space-150) 0;
+}
+
+/* === Scrollbar Custom === */
+.schedule__cards::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.schedule__cards::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.schedule__cards::-webkit-scrollbar-thumb {
+  background-color: rgba(166, 171, 197, 0.4);
+  border-radius: 0.5rem;
+}
+
+.schedule__cards::-webkit-scrollbar-thumb:hover {
+  background-color: #a6abc5;
+}
+
+.schedule__card--past,
+.schedule__item--past {
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+
+.schedule__icon--past path {
+  fill: #A3A3A3 !important;
+}
