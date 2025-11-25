@@ -21,10 +21,6 @@
   border-bottom: none;
 }
 
-.schedule__card--today {
-  padding-bottom: var(--space-150);
-}
-
 .schedule__cards {
   display: flex;
   flex-direction: column;
@@ -38,7 +34,7 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(166, 171, 197, 0.4) transparent;
 
-  max-height: 23rem;
+  max-height: 20rem;
   margin: var(--space-150) 0;
 }
 

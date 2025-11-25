@@ -34,7 +34,7 @@ function getIcon(ev, dataPassou) {
 	let svg = icons[ev.icone];
 	if (dataPassou) {
 		svg = svg.replace(/fill="[^"]*"/g, "");
-		svg = svg.replace(/<svg([^>]*)>/, '<svg$1 fill="#7f8db1">');
+		svg = svg.replace(/<svg([^>]*)>/, '<svg$1 fill="#acb4cd">');
 	}
 	return svg;
 }
@@ -75,7 +75,9 @@ function montarSchedule() {
 			// Cria bloco do dia
 			const blocoDia = document.createElement("div");
 			blocoDia.className = "schedule__card_evento";
-			blocoDia.innerHTML = `<p class="schedule__date legend text-neutral-600">${dia}, ${diaSemana}</p>`;
+			blocoDia.innerHTML = `<p class="schedule__date legend ${
+				dataPassou ? "text-neutral-300" : "text-neutral-600"
+			}">${dia}, ${diaSemana},${mes}</p>`;
 
 			eventos.forEach((ev) => {
 				const item = document.createElement("div");
@@ -83,7 +85,7 @@ function montarSchedule() {
 
 				const icone = getIcon(ev, dataPassou);
 				item.innerHTML = `${icone}<p class="schedule__description paragraph margin-0 ${
-					dataPassou ? "text-neutral-600" : ""
+					dataPassou ? "text-neutral-300" : ""
 				}">${ev.descricao}</p>`;
 
 				blocoDia.appendChild(item);
