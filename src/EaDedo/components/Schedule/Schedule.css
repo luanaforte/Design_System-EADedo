@@ -38,7 +38,7 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(166, 171, 197, 0.4) transparent;
 
-  max-height: 21rem;
+  max-height: 23rem;
   margin: var(--space-150) 0;
 }
 
@@ -58,14 +58,4 @@
 
 .schedule__cards::-webkit-scrollbar-thumb:hover {
   background-color: #a6abc5;
-}
-
-.schedule__card--past,
-.schedule__item--past {
-  opacity: 0.4;
-  filter: grayscale(1);
-}
-
-.schedule__icon--past path {
-  fill: #A3A3A3 !important;
 }

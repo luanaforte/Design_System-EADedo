@@ -1,4 +1,4 @@
-function getDiaSemana(dia, mesNome) {
+function getMesIndex(mesNome) {
 	const mesesIndex = {
 		Janeiro: 0,
 		Fevereiro: 1,
@@ -13,6 +13,10 @@ function getDiaSemana(dia, mesNome) {
 		Novembro: 10,
 		Dezembro: 11,
 	};
+	return mesesIndex[mesNome];
+}
+
+function getDiaSemana(dia, mesNome) {
 	const semana = [
 		"Domingo",
 		"Segunda-feira",
@@ -22,8 +26,17 @@ function getDiaSemana(dia, mesNome) {
 		"Sexta-feira",
 		"Sábado",
 	];
-	const data = new Date(new Date().getFullYear(), mesesIndex[mesNome], dia);
+	const data = new Date(new Date().getFullYear(), getMesIndex(mesNome), dia);
 	return semana[data.getDay()];
+}
+
+function getIcon(ev, dataPassou) {
+	let svg = icons[ev.icone];
+	if (dataPassou) {
+		svg = svg.replace(/fill="[^"]*"/g, "");
+		svg = svg.replace(/<svg([^>]*)>/, '<svg$1 fill="#7f8db1">');
+	}
+	return svg;
 }
 
 function montarSchedule() {
@@ -31,7 +44,7 @@ function montarSchedule() {
 	const eventosHojeContainer = document.getElementById("eventos_hoje");
 	const hoje = new Date();
 	const hojeDia = hoje.getDate();
-	const hojeMes = hoje.toLocaleString("pt-BR", { month: "long" });
+	const hojeMes = hoje.getMonth();
 
 	eventosHojeContainer.innerHTML = "";
 	container.innerHTML = "";
@@ -46,36 +59,37 @@ function montarSchedule() {
 		dias.forEach((dia) => {
 			const eventos = scheduleData[mes][dia];
 			const diaSemana = getDiaSemana(Number(dia), mes);
+
+			// Cria data do evento
 			const dataEvento = new Date(
 				hoje.getFullYear(),
-				new Date(Date.parse(dia + " " + mes + " 2025")).getMonth(),
+				getMesIndex(mes),
 				Number(dia)
 			);
-			const dataPassou = dataEvento < hoje;
 
-			// BLOCO NORMAL
+			// Verifica se a data já passou
+			const dataPassou =
+				dataEvento <
+				new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate());
+
+			// Cria bloco do dia
 			const blocoDia = document.createElement("div");
 			blocoDia.className = "schedule__card_evento";
-			blocoDia.innerHTML = `<p class="schedule__date legend ${
-				dataPassou ? "text-neutral-600" : ""
-			}">${dia}, ${diaSemana}</p>`;
+			blocoDia.innerHTML = `<p class="schedule__date legend text-neutral-600">${dia}, ${diaSemana}</p>`;
 
 			eventos.forEach((ev) => {
 				const item = document.createElement("div");
 				item.className = "schedule__item margin__bottom--default";
-				const icone = dataPassou
-					? icons[ev.icone].replace(/fill="[^"]*"/, 'fill="#7f8db1"')
-					: icons[ev.icone];
+
+				const icone = getIcon(ev, dataPassou);
 				item.innerHTML = `${icone}<p class="schedule__description paragraph margin-0 ${
 					dataPassou ? "text-neutral-600" : ""
 				}">${ev.descricao}</p>`;
+
 				blocoDia.appendChild(item);
 
 				// Evento de hoje
-				if (
-					Number(dia) === hojeDia &&
-					mes.toLowerCase() === hojeMes.toLowerCase()
-				) {
+				if (Number(dia) === hojeDia && getMesIndex(mes) === hojeMes) {
 					const cloneItem = item.cloneNode(true);
 					eventosHojeContainer.appendChild(cloneItem);
 				}
@@ -139,7 +153,7 @@ function scrollProximoEvento() {
 				.textContent.trim();
 			const dataEvento = new Date(
 				hoje.getFullYear(),
-				new Date(Date.parse(numeroDia + " " + mesNome + " 2025")).getMonth(),
+				getMesIndex(mesNome),
 				numeroDia
 			);
 			if (dataEvento >= hoje && !alvo) alvo = dia;
