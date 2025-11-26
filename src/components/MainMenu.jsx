@@ -37,6 +37,8 @@ const Rotes = {
 		},
 		{ label: "Header_text", route: "/Componentes/Header_text" },
 		{ label: "Slider", route: "/Componentes/Slider" },
+		{ label: "Schedule", route: "/Componentes/Schedule" },
+		{ label: "Header_text", route: "/Componentes/Header_text" },
 		{ label: "Carousel", route: "/Componentes/Carousel" },
 		{ label: "Header_text_image", route: "/Componentes/Header_text_image" },
 	],

@@ -30,6 +30,7 @@ const Rotes = {
 		{ label: "Indicators", route: "/Componentes/Indicator" },
 		{ label: "Progress_bar", route: "/Componentes/Progress_bar" },
 		{ label: "Slider", route: "/Componentes/Slider" },
+		{ label: "Schedule", route: "/Componentes/Schedule" },
 		{ label: "Tag", route: "/Componentes/Tag" },
 		{ label: "Text_header", route: "/Componentes/Text_header" },
 		{ label: "Tooltip", route: "/Componentes/Tooltip" },

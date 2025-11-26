@@ -13,6 +13,7 @@ function getMesIndex(mesNome) {
 		Novembro: 10,
 		Dezembro: 11,
 	};
+
 	return mesesIndex[mesNome];
 }
 
@@ -77,7 +78,7 @@ function montarSchedule() {
 			blocoDia.className = "schedule__card_evento";
 			blocoDia.innerHTML = `<p class="schedule__date legend ${
 				dataPassou ? "text-neutral-300" : "text-neutral-600"
-			}">${dia}, ${diaSemana},${mes}</p>`;
+			}">${diaSemana} - ${dia} de ${mes}</p>`;
 
 			eventos.forEach((ev) => {
 				const item = document.createElement("div");
@@ -105,7 +106,7 @@ function montarSchedule() {
 
 	// Caso não tenha eventos hoje
 	if (!eventosHojeContainer.hasChildNodes()) {
-		eventosHojeContainer.innerHTML = `<p class="schedule__description paragraph margin-0">Nenhum evento para hoje</p>`;
+		eventosHojeContainer.innerHTML = `<p class="schedule__description paragraph margin__bottom--100">Nenhum evento para hoje</p>`;
 	}
 }
 
@@ -144,23 +145,39 @@ function scrollProximoEvento() {
 	setTimeout(() => {
 		const hoje = new Date();
 		let alvo = null;
+
 		document.querySelectorAll(".schedule__card_evento").forEach((dia) => {
 			if (alvo) return;
+
 			const texto = dia.querySelector(".schedule__date")?.textContent;
 			if (!texto) return;
-			const numeroDia = Number(texto.split(",")[0].trim());
+
+			// Extrai o número do dia: "Segunda-feira - 6 de Novembro"
+			const match = texto.match(/-\s*(\d+)\s+de/i);
+			if (!match) return;
+
+			const numeroDia = Number(match[1]);
+
 			const mesNome = dia
 				.closest(".schedule__card")
 				.querySelector(".schedule__month")
 				.textContent.trim();
+
 			const dataEvento = new Date(
 				hoje.getFullYear(),
 				getMesIndex(mesNome),
 				numeroDia
 			);
+
 			if (dataEvento >= hoje && !alvo) alvo = dia;
 		});
-		if (alvo) alvo.scrollIntoView({ behavior: "smooth", block: "center" });
+
+		if (alvo) {
+			alvo.scrollIntoView({
+				behavior: "smooth",
+				block: "center",
+			});
+		}
 	}, 200);
 }
 

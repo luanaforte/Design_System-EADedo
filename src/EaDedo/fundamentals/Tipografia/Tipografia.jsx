@@ -94,13 +94,21 @@ const TypographyContent = ({ fontFamily }) => {
 			<p className="legend">Texto explicativo, legendas e botões.</p>
 			<h2 className="heading2">Exemplo de Lista Não Ordenada</h2>
 			<ul className="list-ul">
-				<li className="list-item">Item 1</li>
-				<li className="list-item">Item 2</li>
+				<li className="list-item">
+					<p className="paragraph--medium">Item 1</p>
+				</li>
+				<li className="list-item">
+					<p className="paragraph--medium">Item 2</p>
+				</li>
 			</ul>
 			<h2 className="heading2">Exemplo de Lista Ordenada</h2>
 			<ol className="list-ol">
-				<li className="list-item">Item 1</li>
-				<li className="list-item">Item 2</li>
+				<li className="list-item">
+					<p className="paragraph--medium">Item 1</p>
+				</li>
+				<li className="list-item">
+					<p className="paragraph--medium">Item 2</p>
+				</li>
 			</ol>
 			<p className="code">
 				&lt;iframe src="https://s.tiled.co/xxx/tiled-how-to-guide"

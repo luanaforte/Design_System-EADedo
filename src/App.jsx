@@ -31,6 +31,7 @@ import IframeVideo from "./EaDedo/components/IframeVideo/IframeVideo.jsx";
 import Indicator from "./EaDedo/components/Indicator/Indicator_doc.jsx";
 import Progress_bar from "./EaDedo/components/Progress_bar/Progress_bar.jsx";
 import Slider from "./EaDedo/components/Slider/Slider.jsx";
+import Schedule from "./EaDedo/components/Schedule/Schedule.jsx";
 import Tag from "./EaDedo/components/Tag/Tag_doc.jsx";
 import Text_header from "./EaDedo/components/Text_header/Text_header.jsx";
 import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
@@ -76,6 +77,7 @@ const App = () => {
 				<Route path="Componentes/Indicator" element={<Indicator />} />
 				<Route path="Componentes/Progress_bar" element={<Progress_bar />} />
 				<Route path="Componentes/Slider" element={<Slider />} />
+				<Route path="Componentes/Schedule" element={<Schedule />} />
 				<Route path="Componentes/Tag" element={<Tag />} />
 				<Route path="Componentes/Text_header" element={<Text_header />} />
 				<Route path="Componentes/Tooltip" element={<Tooltip />} />
