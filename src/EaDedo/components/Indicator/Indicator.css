@@ -6,8 +6,8 @@
 }
 
 .indicator {
-  width: 1.5rem;
-  height: 0.25rem;
+  width: 0.375rem;
+  height: 0.375rem;
   border-radius: var(--radius-small);
   background: var(--color-neutral-300);
   border: none;
@@ -16,6 +16,5 @@
 }
 
 .indicator.active {
-  width: 3.258rem;
   background: var(--color-blue-600);
 }

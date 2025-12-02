@@ -7,11 +7,12 @@
   gap: var(--space-100);
 }
 
-.slider-primario_buttons {
+/* .slider-primario_buttons {
   display: flex;
-  justify-content: end;
+  align-items: center;
+  justify-content: center;
   gap: 0.75rem;
-}
+} */
 
 .slider-items {
   position: relative;
