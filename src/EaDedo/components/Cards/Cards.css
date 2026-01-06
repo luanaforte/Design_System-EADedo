@@ -314,7 +314,7 @@
 @media (max-width: 768px) {
   .card__section--secondary {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
   .Card_image_text {
@@ -345,6 +345,9 @@
     align-self: stretch;
   }
 
+  .card__section--secondary .button-group {
+    align-items: end;
+  }
 }
 
 

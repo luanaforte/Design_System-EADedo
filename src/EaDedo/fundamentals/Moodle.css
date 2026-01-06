@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+.format-tiles .course-content .section li.activity.label h2 {
+  padding: 0 !important;
+}
+
 /* porgresso */
 /* padding da barra do progresso */
 .block_completion_progress .card-body {

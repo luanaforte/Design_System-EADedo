@@ -141,7 +141,9 @@ function mostrarDataHoje() {
 	} – ${hoje.getDate()} de ${meses[hoje.getMonth()]}`;
 }
 
-function scrollProximoEvento() {
+function scrollProximoEvento(tentativa = 0) {
+	if (tentativa > 10) return;
+
 	setTimeout(() => {
 		const hoje = new Date();
 		let alvo = null;
@@ -152,7 +154,6 @@ function scrollProximoEvento() {
 			const texto = dia.querySelector(".schedule__date")?.textContent;
 			if (!texto) return;
 
-			// Extrai o número do dia: "Segunda-feira - 6 de Novembro"
 			const match = texto.match(/-\s*(\d+)\s+de/i);
 			if (!match) return;
 
@@ -169,20 +170,46 @@ function scrollProximoEvento() {
 				numeroDia
 			);
 
-			if (dataEvento >= hoje && !alvo) alvo = dia;
+			// se for hoje ou futuro → alvo encontrado
+			if (
+				dataEvento >=
+				new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())
+			) {
+				alvo = dia;
+			}
 		});
 
-		if (alvo) {
-			alvo.scrollIntoView({
-				behavior: "smooth",
-				block: "center",
-			});
+		const container = document.getElementById("scheduleContainer");
+		if (!container || !alvo) return;
+
+		// Posição desejada
+		let top = alvo.offsetTop - container.clientHeight / 2;
+
+		// Limitar aos limites possíveis do scroll
+		const maxScroll = container.scrollHeight - container.clientHeight;
+		const minScroll = 0;
+
+		if (top < minScroll) top = minScroll;
+		if (top > maxScroll) top = maxScroll;
+
+		container.scrollTo({
+			top,
+			behavior: "smooth",
+		});
+
+		// Se ainda não rolou (valor final igual ao atual), tenta novamente
+		if (Math.abs(container.scrollTop - top) < 2 && tentativa < 10) {
+			scrollProximoEvento(tentativa + 1);
 		}
-	}, 200);
+	}, 150);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
 	mostrarDataHoje();
 	montarSchedule();
+	scrollProximoEvento();
+});
+
+window.addEventListener("load", () => {
 	scrollProximoEvento();
 });
