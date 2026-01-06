@@ -50,8 +50,18 @@ document.querySelectorAll(".carousel-container").forEach((container) => {
 	}
 
 	function updateIndicators() {
-		const scrollPos = carousel_content.scrollLeft;
-		const index = Math.round(scrollPos / (itemWidth * visibleItems));
+		const scrollLeft = carousel_content.scrollLeft;
+		const maxScroll =
+			carousel_content.scrollWidth - carousel_content.clientWidth;
+
+		if (maxScroll <= 0) return;
+
+		const progress = scrollLeft / maxScroll;
+
+		let index = Math.round(progress * (totalPages - 1));
+
+		index = Math.max(0, Math.min(index, totalPages - 1));
+
 		indicators.forEach((dot, i) => {
 			dot.classList.toggle("active", i === index);
 		});
