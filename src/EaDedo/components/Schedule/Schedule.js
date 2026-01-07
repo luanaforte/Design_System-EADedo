@@ -170,7 +170,6 @@ function scrollProximoEvento(tentativa = 0) {
 				numeroDia
 			);
 
-			// se for hoje ou futuro → alvo encontrado
 			if (
 				dataEvento >=
 				new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())
@@ -182,10 +181,8 @@ function scrollProximoEvento(tentativa = 0) {
 		const container = document.getElementById("scheduleContainer");
 		if (!container || !alvo) return;
 
-		// Posição desejada
 		let top = alvo.offsetTop - container.clientHeight / 2;
 
-		// Limitar aos limites possíveis do scroll
 		const maxScroll = container.scrollHeight - container.clientHeight;
 		const minScroll = 0;
 
@@ -197,7 +194,6 @@ function scrollProximoEvento(tentativa = 0) {
 			behavior: "smooth",
 		});
 
-		// Se ainda não rolou (valor final igual ao atual), tenta novamente
 		if (Math.abs(container.scrollTop - top) < 2 && tentativa < 10) {
 			scrollProximoEvento(tentativa + 1);
 		}
@@ -207,9 +203,5 @@ function scrollProximoEvento(tentativa = 0) {
 document.addEventListener("DOMContentLoaded", () => {
 	mostrarDataHoje();
 	montarSchedule();
-	scrollProximoEvento();
-});
-
-window.addEventListener("load", () => {
 	scrollProximoEvento();
 });
