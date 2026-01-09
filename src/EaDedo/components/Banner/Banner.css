@@ -43,6 +43,7 @@
 /* Banner_image_text */
 .Banner_image_text--primary {
   display: flex;
+  align-items: center !important;
   min-width: 31.875rem;
   max-width: 69.375rem;
   padding: var(--space-150);
@@ -52,7 +53,7 @@
 }
 
 .Banner_image_text--primary__image {
-  width: 15.625rem;
+  width: 16.625rem;
   height: 15.625rem;
   border-radius: var(--radius-medium);
   object-fit: cover;

@@ -19,7 +19,7 @@
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
 
   .collapse-header .button-pill,
   .collapse-header .active {
@@ -27,5 +27,13 @@
     justify-content: end;
     background-color: transparent !important;
     min-width: fit-content;
+  }
+
+  .button-text {
+    display: none;
+  }
+
+  .button-pill svg path {
+    fill: blue !important;
   }
 }
