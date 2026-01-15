@@ -33,6 +33,10 @@
   margin: var(--space-150) 0;
 }
 
+.schedule__card--today {
+  margin-left: var(--space-050);
+}
+
 /* === Scrollbar Custom === */
 .schedule__cards::-webkit-scrollbar {
   width: 0.5rem;
@@ -49,4 +53,228 @@
 
 .schedule__cards::-webkit-scrollbar-thumb:hover {
   background-color: #a6abc5;
+}
+
+/* CONTAINER DO CALENDÁRIO */
+.schedule__calender {
+  display: flex;
+  flex-direction: column;
+  max-width: 22.5rem;
+  width: 100%;
+  font-family: var(--font-family-body);
+  border: 1px solid var(--color-blue-600);
+  border-radius: var(--radius-large);
+}
+
+.schedule__container {
+  display: flex;
+  align-items: start;
+  gap: var(--space-350);
+}
+
+.schedule__container__cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* FullCalendar wrapper */
+.fc-direction-ltr {
+  width: 100%;
+  height: auto;
+}
+
+/* Remove borda externa padrão */
+.fc-theme-standard .fc-scrollgrid {
+  border: none;
+}
+
+/* TOOLBAR (MÊS / ANO / BOTÕES) */
+.fc .fc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-125) var(--space-100);
+  flex-wrap: wrap;
+  gap: var(--space-100);
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0;
+}
+
+.fc .fc-toolbar-title {
+  text-align: center;
+  color: #000;
+  font-size: clamp(0.75rem, 3vw, var(--font-size-sm));
+  font-weight: var(--font-weight-regular);
+  line-height: 150%;
+}
+
+.calendar-subtitle {
+  text-align: center;
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 150%;
+}
+
+/* CABEÇALHO DOS DIAS DA SEMANA */
+.fc-theme-standard th {
+  border: none;
+}
+
+.fc-col-header-cell-cushion {
+  text-align: center;
+  color: #000;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 150%;
+  padding-bottom: 8px;
+}
+
+/* GRID DE DIAS - AJUSTES DE ALTURA */
+.fc-theme-standard td {
+  border: none;
+}
+
+.fc .fc-scroller {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.fc-daygrid-body {
+  height: auto !important;
+  width: 100% !important;
+}
+
+.fc,
+.fc-scrollgrid,
+.fc-scrollgrid-liquid,
+.fc-view-harness {
+  width: 100% !important;
+}
+
+/* Ajuste para comportar até 6 semanas sem cortar */
+.fc .fc-view-harness {
+  height: auto !important;
+  /* min-height: 21rem; */
+  min-height: 17.5rem !important;
+  max-height: 17.5rem !important;
+  overflow: hidden !important;
+}
+
+.fc-scrollgrid-liquid {
+  min-height: 20rem;
+}
+
+/* Célula do dia */
+.fc-daygrid-day-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+  min-height: 3rem;
+  /* Aumentado levemente para melhor toque/clique */
+  padding: 4px 0;
+}
+
+.fc-daygrid-day {
+  width: 100%;
+}
+
+/* Número do dia */
+.fc-daygrid-day-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 1;
+}
+
+/* DIA ATUAL */
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: transparent;
+}
+
+.fc-day-today .fc-daygrid-day-number {
+  width: 2.375rem;
+  height: 2.375rem;
+  border-radius: var(--radius-full);
+  background: var(--color-blue-600);
+  color: #fff;
+}
+
+/* EVENTOS (BOLINHA) */
+.event-dot,
+.fc-h-event {
+  width: 0.375rem;
+  height: 0.375rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-red-600);
+  border: none;
+}
+
+.fc-daygrid-day-events {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  min-height: 6px;
+}
+
+/* BOTÕES DE NAVEGAÇÃO */
+.fc .fc-button-primary {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #000 !important;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.fc .fc-button .fc-icon {
+  display: none;
+}
+
+.fc-prev-button::before,
+.fc-next-button::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.fc-prev-button::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><path d='M10.3538 12.6463L5.7069 8L10.3538 3.35375' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+.fc-next-button::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><path d='M5.64625 3.35375L10.2931 8L5.64625 12.6463' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 425px) {
+  .schedule__container {
+    flex-direction: column;
+    gap: var(--space-150) !important;
+  }
+
+  .schedule__calender {
+    max-width: 100%;
+  }
+
+  .fc .fc-view-harness {
+    min-height: 19rem;
+  }
+
+  .fc-day-today .fc-daygrid-day-number {
+    width: 2rem;
+    height: 2rem;
+  }
 }

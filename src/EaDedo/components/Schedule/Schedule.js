@@ -205,3 +205,84 @@ document.addEventListener("DOMContentLoaded", () => {
 	montarSchedule();
 	scrollProximoEvento();
 });
+
+function buildEventsFromSchedule(year) {
+	const events = [];
+
+	Object.entries(scheduleData).forEach(([mes, dias]) => {
+		const mesIndex = getMesIndex(mes);
+		if (mesIndex === undefined) return;
+
+		Object.entries(dias).forEach(([dia, eventos]) => {
+			eventos.forEach(() => {
+				events.push({
+					start: new Date(year, mesIndex, Number(dia)),
+					display: "block",
+				});
+			});
+		});
+	});
+
+	return events;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+	const year = new Date().getFullYear();
+
+	const calendar = new FullCalendar.Calendar(
+		document.getElementById("calendar"),
+		{
+			initialView: "dayGridMonth",
+			locale: "pt-br",
+			initialDate: new Date(),
+
+			headerToolbar: {
+				left: "prev",
+				center: "title",
+				right: "next",
+			},
+
+			dayHeaderFormat: {
+				weekday: "narrow",
+			},
+
+			events: buildEventsFromSchedule(year),
+
+			// Renderiza somente a bolinha
+			eventContent: function () {
+				return {
+					html: `<span class="event-dot"></span>`,
+				};
+			},
+
+			datesSet: function () {
+				const toolbarTitle = document.querySelector(".fc-toolbar-title");
+				if (!toolbarTitle) return;
+
+				let subtitle = document.querySelector(".calendar-subtitle");
+
+				if (!subtitle) {
+					subtitle = document.createElement("div");
+					subtitle.className = "calendar-subtitle";
+					toolbarTitle.insertAdjacentElement("afterend", subtitle);
+				}
+
+				const today = new Date();
+
+				const weekday = calendar
+					.formatDate(today, { weekday: "long" })
+					.replace(/^./, (c) => c.toUpperCase());
+
+				const day = calendar.formatDate(today, { day: "2-digit" });
+
+				const month = calendar
+					.formatDate(today, { month: "long" })
+					.replace(/^./, (c) => c.toUpperCase());
+
+				subtitle.textContent = `${weekday} – ${day} de ${month}`;
+			},
+		}
+	);
+
+	calendar.render();
+});
