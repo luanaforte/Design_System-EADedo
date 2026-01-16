@@ -27,14 +27,9 @@
   flex-direction: column;
   gap: 0.5rem;
   overflow-y: scroll;
-  scrollbar-gutter: stable both-edges;
   scrollbar-width: thin;
   scrollbar-color: rgba(166, 171, 197, 0.4) transparent;
   margin: var(--space-150) 0;
-}
-
-.schedule__card--today {
-  margin-left: var(--space-050);
 }
 
 /* === Scrollbar Custom === */
@@ -59,8 +54,9 @@
 .schedule__calender {
   display: flex;
   flex-direction: column;
-  max-width: 22.5rem;
-  width: 100%;
+  /* max-width: 22.5rem;
+  width: 100%; */
+  width: 44rem;
   font-family: var(--font-family-body);
   border: 1px solid var(--color-blue-600);
   border-radius: var(--radius-large);
@@ -159,8 +155,8 @@
 .fc .fc-view-harness {
   height: auto !important;
   /* min-height: 21rem; */
-  min-height: 17.5rem !important;
-  max-height: 17.5rem !important;
+  min-height: 17rem;
+  max-height: 17rem;
   overflow: hidden !important;
 }
 
@@ -259,7 +255,7 @@
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .schedule__container {
     flex-direction: column;
     gap: var(--space-150) !important;
@@ -270,7 +266,7 @@
   }
 
   .fc .fc-view-harness {
-    min-height: 19rem;
+    min-height: 30rem !important;
   }
 
   .fc-day-today .fc-daygrid-day-number {

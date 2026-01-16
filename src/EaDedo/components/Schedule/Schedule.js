@@ -1,3 +1,12 @@
+/* =========================
+   UTILIDADES
+========================= */
+
+function capitalizarPrimeiraLetra(texto) {
+	if (!texto) return "";
+	return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
 function getMesIndex(mesNome) {
 	const mesesIndex = {
 		Janeiro: 0,
@@ -14,7 +23,7 @@ function getMesIndex(mesNome) {
 		Dezembro: 11,
 	};
 
-	return mesesIndex[mesNome];
+	return mesesIndex[capitalizarPrimeiraLetra(mesNome)];
 }
 
 function getDiaSemana(dia, mesNome) {
@@ -27,92 +36,125 @@ function getDiaSemana(dia, mesNome) {
 		"Sexta-feira",
 		"Sábado",
 	];
+
 	const data = new Date(new Date().getFullYear(), getMesIndex(mesNome), dia);
+
 	return semana[data.getDay()];
 }
 
+/* =========================
+   ÍCONES
+========================= */
+
 function getIcon(ev, dataPassou) {
 	let svg = icons[ev.icone];
+
 	if (dataPassou) {
 		svg = svg.replace(/fill="[^"]*"/g, "");
 		svg = svg.replace(/<svg([^>]*)>/, '<svg$1 fill="#acb4cd">');
 	}
+
 	return svg;
 }
+
+/* =========================
+   SCHEDULE
+========================= */
 
 function montarSchedule() {
 	const container = document.getElementById("scheduleContainer");
 	const eventosHojeContainer = document.getElementById("eventos_hoje");
+
 	const hoje = new Date();
 	const hojeDia = hoje.getDate();
 	const hojeMes = hoje.getMonth();
 
-	eventosHojeContainer.innerHTML = "";
 	container.innerHTML = "";
+	eventosHojeContainer.innerHTML = "";
 
-	for (const mes in scheduleData) {
+	const fragment = document.createDocumentFragment();
+
+	Object.keys(scheduleData).forEach((mes) => {
+		const mesCapitalizado = capitalizarPrimeiraLetra(mes);
+
 		const cardMes = document.createElement("div");
 		cardMes.className = "schedule__card";
-		cardMes.innerHTML = `<h4 class="schedule__month heading4">${mes}</h4>`;
+		cardMes.innerHTML = `
+			<h4 class="schedule__month heading4">${mesCapitalizado}</h4>
+		`;
 
 		const dias = Object.keys(scheduleData[mes]).sort((a, b) => a - b);
 
 		dias.forEach((dia) => {
 			const eventos = scheduleData[mes][dia];
-			const diaSemana = getDiaSemana(Number(dia), mes);
+			const diaSemana = getDiaSemana(Number(dia), mesCapitalizado);
 
-			// Cria data do evento
 			const dataEvento = new Date(
 				hoje.getFullYear(),
-				getMesIndex(mes),
+				getMesIndex(mesCapitalizado),
 				Number(dia)
 			);
 
-			// Verifica se a data já passou
 			const dataPassou =
 				dataEvento <
 				new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate());
 
-			// Cria bloco do dia
 			const blocoDia = document.createElement("div");
 			blocoDia.className = "schedule__card_evento";
-			blocoDia.innerHTML = `<p class="schedule__date legend ${
-				dataPassou ? "text-neutral-300" : "text-neutral-600"
-			}">${diaSemana} - ${dia} de ${mes}</p>`;
+
+			blocoDia.innerHTML = `
+				<p class="schedule__date legend ${
+					dataPassou ? "text-neutral-300" : "text-neutral-600"
+				}">
+					${diaSemana} - ${dia} de ${mesCapitalizado}
+				</p>
+			`;
 
 			eventos.forEach((ev) => {
 				const item = document.createElement("div");
 				item.className = "schedule__item margin__bottom--default";
 
-				const icone = getIcon(ev, dataPassou);
-				item.innerHTML = `${icone}<p class="schedule__description paragraph margin-0 ${
-					dataPassou ? "text-neutral-300" : ""
-				}">${ev.descricao}</p>`;
+				item.innerHTML = `
+					${getIcon(ev, dataPassou)}
+					<p class="schedule__description paragraph margin-0 ${
+						dataPassou ? "text-neutral-300" : ""
+					}">
+						${ev.descricao}
+					</p>
+				`;
 
 				blocoDia.appendChild(item);
 
-				// Evento de hoje
-				if (Number(dia) === hojeDia && getMesIndex(mes) === hojeMes) {
-					const cloneItem = item.cloneNode(true);
-					eventosHojeContainer.appendChild(cloneItem);
+				if (
+					Number(dia) === hojeDia &&
+					getMesIndex(mesCapitalizado) === hojeMes
+				) {
+					eventosHojeContainer.appendChild(item.cloneNode(true));
 				}
 			});
 
 			cardMes.appendChild(blocoDia);
 		});
 
-		container.appendChild(cardMes);
-	}
+		fragment.appendChild(cardMes);
+	});
 
-	// Caso não tenha eventos hoje
+	container.appendChild(fragment);
+
 	if (!eventosHojeContainer.hasChildNodes()) {
-		eventosHojeContainer.innerHTML = `<p class="schedule__description paragraph margin__bottom--100">Nenhum evento para hoje</p>`;
+		eventosHojeContainer.innerHTML =
+			'<p class="schedule__description paragraph margin__bottom--100">Nenhum evento para hoje</p>';
 	}
 }
+
+/* =========================
+   DATA DE HOJE
+========================= */
 
 function mostrarDataHoje() {
 	const elementoData = document.getElementById("data_hoje");
 	const hoje = new Date();
+
 	const diasSemana = [
 		"Domingo",
 		"Segunda-feira",
@@ -122,6 +164,7 @@ function mostrarDataHoje() {
 		"Sexta-feira",
 		"Sábado",
 	];
+
 	const meses = [
 		"janeiro",
 		"fevereiro",
@@ -136,75 +179,65 @@ function mostrarDataHoje() {
 		"novembro",
 		"dezembro",
 	];
-	elementoData.textContent = `${
+
+	elementoData.textContent = `${capitalizarPrimeiraLetra(
 		diasSemana[hoje.getDay()]
-	} – ${hoje.getDate()} de ${meses[hoje.getMonth()]}`;
+	)} – ${hoje.getDate()} de ${capitalizarPrimeiraLetra(
+		meses[hoje.getMonth()]
+	)}`;
 }
 
-function scrollProximoEvento(tentativa = 0) {
-	if (tentativa > 10) return;
+/* =========================
+   SCROLL PARA PRÓXIMO EVENTO
+========================= */
 
-	setTimeout(() => {
-		const hoje = new Date();
-		let alvo = null;
+function scrollProximoEvento() {
+	const hoje = new Date();
+	let alvo = null;
 
-		document.querySelectorAll(".schedule__card_evento").forEach((dia) => {
-			if (alvo) return;
+	document.querySelectorAll(".schedule__card_evento").forEach((dia) => {
+		if (alvo) return;
 
-			const texto = dia.querySelector(".schedule__date")?.textContent;
-			if (!texto) return;
+		const texto = dia.querySelector(".schedule__date")?.textContent;
+		if (!texto) return;
 
-			const match = texto.match(/-\s*(\d+)\s+de/i);
-			if (!match) return;
+		const match = texto.match(/-\s*(\d+)\s+de/i);
+		if (!match) return;
 
-			const numeroDia = Number(match[1]);
+		const numeroDia = Number(match[1]);
+		const mesNome = dia
+			.closest(".schedule__card")
+			.querySelector(".schedule__month")
+			.textContent.trim();
 
-			const mesNome = dia
-				.closest(".schedule__card")
-				.querySelector(".schedule__month")
-				.textContent.trim();
+		const dataEvento = new Date(
+			hoje.getFullYear(),
+			getMesIndex(mesNome),
+			numeroDia
+		);
 
-			const dataEvento = new Date(
-				hoje.getFullYear(),
-				getMesIndex(mesNome),
-				numeroDia
-			);
-
-			if (
-				dataEvento >=
-				new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())
-			) {
-				alvo = dia;
-			}
-		});
-
-		const container = document.getElementById("scheduleContainer");
-		if (!container || !alvo) return;
-
-		let top = alvo.offsetTop - container.clientHeight / 2;
-
-		const maxScroll = container.scrollHeight - container.clientHeight;
-		const minScroll = 0;
-
-		if (top < minScroll) top = minScroll;
-		if (top > maxScroll) top = maxScroll;
-
-		container.scrollTo({
-			top,
-			behavior: "smooth",
-		});
-
-		if (Math.abs(container.scrollTop - top) < 2 && tentativa < 10) {
-			scrollProximoEvento(tentativa + 1);
+		if (
+			dataEvento >=
+			new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())
+		) {
+			alvo = dia;
 		}
-	}, 150);
+	});
+
+	const container = document.getElementById("scheduleContainer");
+	if (!container || !alvo) return;
+
+	const top = alvo.offsetTop - container.clientHeight / 2;
+
+	container.scrollTo({
+		top: Math.max(0, top),
+		behavior: "smooth",
+	});
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-	mostrarDataHoje();
-	montarSchedule();
-	scrollProximoEvento();
-});
+/* =========================
+   FULLCALENDAR
+========================= */
 
 function buildEventsFromSchedule(year) {
 	const events = [];
@@ -226,8 +259,17 @@ function buildEventsFromSchedule(year) {
 	return events;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-	const year = new Date().getFullYear();
+/* =========================
+   INIT
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+	mostrarDataHoje();
+	montarSchedule();
+
+	requestAnimationFrame(() => {
+		requestAnimationFrame(scrollProximoEvento);
+	});
 
 	const calendar = new FullCalendar.Calendar(
 		document.getElementById("calendar"),
@@ -246,16 +288,13 @@ document.addEventListener("DOMContentLoaded", function () {
 				weekday: "narrow",
 			},
 
-			events: buildEventsFromSchedule(year),
+			events: buildEventsFromSchedule(new Date().getFullYear()),
 
-			// Renderiza somente a bolinha
-			eventContent: function () {
-				return {
-					html: `<span class="event-dot"></span>`,
-				};
+			eventDidMount(info) {
+				info.el.innerHTML = '<span class="event-dot"></span>';
 			},
 
-			datesSet: function () {
+			datesSet() {
 				const toolbarTitle = document.querySelector(".fc-toolbar-title");
 				if (!toolbarTitle) return;
 
@@ -269,15 +308,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 				const today = new Date();
 
-				const weekday = calendar
-					.formatDate(today, { weekday: "long" })
-					.replace(/^./, (c) => c.toUpperCase());
+				const weekday = capitalizarPrimeiraLetra(
+					calendar.formatDate(today, { weekday: "long" })
+				);
 
 				const day = calendar.formatDate(today, { day: "2-digit" });
 
-				const month = calendar
-					.formatDate(today, { month: "long" })
-					.replace(/^./, (c) => c.toUpperCase());
+				const month = capitalizarPrimeiraLetra(
+					calendar.formatDate(today, { month: "long" })
+				);
 
 				subtitle.textContent = `${weekday} – ${day} de ${month}`;
 			},
