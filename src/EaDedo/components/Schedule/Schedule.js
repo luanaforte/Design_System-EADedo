@@ -1,6 +1,4 @@
-/* =========================
-   UTILIDADES
-========================= */
+/* UTILIDADES*/
 
 function capitalizarPrimeiraLetra(texto) {
 	if (!texto) return "";
@@ -42,9 +40,7 @@ function getDiaSemana(dia, mesNome) {
 	return semana[data.getDay()];
 }
 
-/* =========================
-   ÍCONES
-========================= */
+/* ÍCONES*/
 
 function getIcon(ev, dataPassou) {
 	let svg = icons[ev.icone];
@@ -57,9 +53,7 @@ function getIcon(ev, dataPassou) {
 	return svg;
 }
 
-/* =========================
-   SCHEDULE
-========================= */
+/* SCHEDULE*/
 
 function montarSchedule() {
 	const container = document.getElementById("scheduleContainer");
@@ -147,9 +141,7 @@ function montarSchedule() {
 	}
 }
 
-/* =========================
-   DATA DE HOJE
-========================= */
+/* DATA DE HOJE*/
 
 function mostrarDataHoje() {
 	const elementoData = document.getElementById("data_hoje");
@@ -187,9 +179,7 @@ function mostrarDataHoje() {
 	)}`;
 }
 
-/* =========================
-   SCROLL PARA PRÓXIMO EVENTO
-========================= */
+/* SCROLL PARA PRÓXIMO EVENTO*/
 
 function scrollProximoEvento() {
 	const hoje = new Date();
@@ -235,9 +225,7 @@ function scrollProximoEvento() {
 	});
 }
 
-/* =========================
-   FULLCALENDAR
-========================= */
+/* FULLCALENDAR*/
 
 function buildEventsFromSchedule(year) {
 	const events = [];
@@ -259,10 +247,7 @@ function buildEventsFromSchedule(year) {
 	return events;
 }
 
-/* =========================
-   INIT
-========================= */
-
+/* INIT*/
 document.addEventListener("DOMContentLoaded", () => {
 	mostrarDataHoje();
 	montarSchedule();

@@ -54,9 +54,8 @@
 .schedule__calender {
   display: flex;
   flex-direction: column;
-  /* max-width: 22.5rem;
-  width: 100%; */
-  width: 44rem;
+  min-width: 22.5rem;
+  max-width: 44rem;
   font-family: var(--font-family-body);
   border: 1px solid var(--color-blue-600);
   border-radius: var(--radius-large);
@@ -105,6 +104,7 @@
   font-size: clamp(0.75rem, 3vw, var(--font-size-sm));
   font-weight: var(--font-weight-regular);
   line-height: 150%;
+  text-transform: capitalize;
 }
 
 .calendar-subtitle {
@@ -139,22 +139,9 @@
   height: auto !important;
 }
 
-.fc-daygrid-body {
-  height: auto !important;
-  width: 100% !important;
-}
-
-.fc,
-.fc-scrollgrid,
-.fc-scrollgrid-liquid,
-.fc-view-harness {
-  width: 100% !important;
-}
-
 /* Ajuste para comportar até 6 semanas sem cortar */
 .fc .fc-view-harness {
   height: auto !important;
-  /* min-height: 21rem; */
   min-height: 17rem;
   max-height: 17rem;
   overflow: hidden !important;
@@ -172,12 +159,6 @@
   flex-direction: column;
   aspect-ratio: 1 / 1;
   min-height: 3rem;
-  /* Aumentado levemente para melhor toque/clique */
-  padding: 4px 0;
-}
-
-.fc-daygrid-day {
-  width: 100%;
 }
 
 /* Número do dia */
@@ -255,22 +236,81 @@
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 768px) {
-  .schedule__container {
-    flex-direction: column;
-    gap: var(--space-150) !important;
-  }
-
+@media (max-width: 425px) {
   .schedule__calender {
+    width: 100%;
     max-width: 100%;
+    min-width: unset;
   }
 
-  .fc .fc-view-harness {
-    min-height: 30rem !important;
+  /* Toolbar vira grid para controlar posição */
+  .fc-header-toolbar {
+    display: grid !important;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "empty nav"
+      "title title";
+    row-gap: var(--space-75);
+    align-items: center;
+  }
+
+  .fc-header-toolbar::before {
+    content: "";
+    grid-area: empty;
+  }
+
+  .fc-header-toolbar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Container do título */
+  .fc-toolbar-chunk:nth-child(2) {
+    order: 2;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Prev */
+  .fc-toolbar-chunk:first-child {
+    position: absolute;
+    top: 0.25rem;
+    right: 2.75rem;
+  }
+
+  /* Next */
+  .fc-toolbar-chunk:last-child {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+  }
+
+  /* Título */
+  .fc-toolbar-chunk:nth-child(2) {
+    grid-area: title;
+    text-align: center;
+  }
+
+  /* Reduz levemente células */
+  .fc-daygrid-day-frame {
+    min-height: 2.5rem;
+  }
+
+  .fc-daygrid-day-number {
+    font-size: 0.75rem;
   }
 
   .fc-day-today .fc-daygrid-day-number {
     width: 2rem;
     height: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule__container {
+    flex-direction: column;
+    gap: var(--space-150);
   }
 }

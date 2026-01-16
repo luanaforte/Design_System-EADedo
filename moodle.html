@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calendário com Flatpickr</title>
+
+		<!-- CSS do Flatpickr -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background: #f5f5f5;
+				padding: 40px;
+			}
+
+			.calendar-wrapper {
+				max-width: 320px;
+				background: #fff;
+				padding: 16px;
+				border-radius: 8px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="calendar-wrapper">
+			<input id="calendar" />
+		</div>
+
+		<!-- JS do Flatpickr -->
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+
+		<script>
+			flatpickr("#calendar", {
+				locale: "pt",
+				inline: true,
+				dateFormat: "d/m/Y",
+			});
+		</script>
+	</body>
+</html>
