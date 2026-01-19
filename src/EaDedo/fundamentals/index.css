@@ -161,6 +161,10 @@
   padding-top: var(--space-150) !important;
 }
 
+.padding__top-0 {
+  padding-top: 0 !important;
+}
+
 /* IMAGENS */
 .image-fluid {
   width: 100%;

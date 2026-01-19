@@ -94,6 +94,16 @@
   gap: var(--space-100);
 }
 
+.fc {
+  cursor: default;
+}
+
+.fc-daygrid-day,
+.fc-daygrid-day-frame,
+.fc-daygrid-day-number {
+  cursor: default;
+}
+
 .fc .fc-toolbar.fc-header-toolbar {
   margin-bottom: 0;
 }
@@ -170,6 +180,12 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: 1;
+  text-decoration: none !important;
+}
+
+.fc-daygrid-day-number:hover {
+  color: #000;
+  text-decoration: none !important;
 }
 
 /* DIA ATUAL */
@@ -194,6 +210,7 @@
   border-radius: var(--radius-full);
   background: var(--color-red-600);
   border: none;
+  margin: 0;
 }
 
 .fc-daygrid-day-events {
@@ -201,6 +218,10 @@
   display: flex;
   justify-content: center;
   min-height: 6px;
+}
+
+.fc .fc-daygrid-day-bottom {
+  margin: 0 !important;
 }
 
 /* BOTÕES DE NAVEGAÇÃO */
@@ -225,6 +246,7 @@
   display: block;
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 
 .fc-prev-button::before {
