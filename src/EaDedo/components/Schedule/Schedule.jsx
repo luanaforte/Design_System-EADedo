@@ -172,7 +172,7 @@ export default function Schedule() {
 				const dataEvento = new Date(
 					hoje.getFullYear(),
 					getMesIndex(mes),
-					Number(dia)
+					Number(dia),
 				);
 				const dataPassou =
 					dataEvento < new Date(hoje.getFullYear(), hojeMes, hojeDia);
@@ -265,7 +265,7 @@ export default function Schedule() {
 				const dataEvento = new Date(
 					hoje.getFullYear(),
 					getMesIndex(mesNome),
-					numeroDia
+					numeroDia,
 				);
 
 				if (dataEvento >= hoje && !alvo) alvo = dia;

@@ -13,6 +13,12 @@
   border-radius: var(--radius-full);
 }
 
+.avatar__image--lg {
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-full);
+}
+
 .avatar__letter--md,
 .avatar__image--md {
   width: 3rem;
@@ -25,6 +31,10 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--radius-full);
+}
+
+[class^="avatar__image--"] {
+  background: var(--color-blue-600);
 }
 
 /* ===== AVATAR CONTEÚDOS (LETRAS) ===== */

@@ -1,5 +1,4 @@
 /* UTILIDADES*/
-
 function capitalizarPrimeiraLetra(texto) {
 	if (!texto) return "";
 	return texto.charAt(0).toUpperCase() + texto.slice(1);
@@ -86,7 +85,7 @@ function montarSchedule() {
 			const dataEvento = new Date(
 				hoje.getFullYear(),
 				getMesIndex(mesCapitalizado),
-				Number(dia)
+				Number(dia),
 			);
 
 			const dataPassou =
@@ -173,9 +172,9 @@ function mostrarDataHoje() {
 	];
 
 	elementoData.textContent = `${capitalizarPrimeiraLetra(
-		diasSemana[hoje.getDay()]
+		diasSemana[hoje.getDay()],
 	)} – ${hoje.getDate()} de ${capitalizarPrimeiraLetra(
-		meses[hoje.getMonth()]
+		meses[hoje.getMonth()],
 	)}`;
 }
 
@@ -203,7 +202,7 @@ function scrollProximoEvento() {
 		const dataEvento = new Date(
 			hoje.getFullYear(),
 			getMesIndex(mesNome),
-			numeroDia
+			numeroDia,
 		);
 
 		if (
@@ -294,18 +293,18 @@ document.addEventListener("DOMContentLoaded", () => {
 				const today = new Date();
 
 				const weekday = capitalizarPrimeiraLetra(
-					calendar.formatDate(today, { weekday: "long" })
+					calendar.formatDate(today, { weekday: "long" }),
 				);
 
 				const day = calendar.formatDate(today, { day: "2-digit" });
 
 				const month = capitalizarPrimeiraLetra(
-					calendar.formatDate(today, { month: "long" })
+					calendar.formatDate(today, { month: "long" }),
 				);
 
 				subtitle.textContent = `${weekday} – ${day} de ${month}`;
 			},
-		}
+		},
 	);
 
 	calendar.render();
