@@ -182,44 +182,71 @@ function mostrarDataHoje() {
 
 function scrollProximoEvento() {
 	const hoje = new Date();
+	hoje.setHours(0, 0, 0, 0);
+
+	const eventos = Array.from(
+		document.querySelectorAll(".schedule__card_evento"),
+	);
 	let alvo = null;
 
-	document.querySelectorAll(".schedule__card_evento").forEach((dia) => {
-		if (alvo) return;
-
+	for (const dia of eventos) {
 		const texto = dia.querySelector(".schedule__date")?.textContent;
-		if (!texto) return;
+		if (!texto) continue;
 
-		const match = texto.match(/-\s*(\d+)\s+de/i);
-		if (!match) return;
+		const match = texto.match(/-\s*(\d+)\s+de\s+([^\n]+)/i);
+		if (!match) continue;
 
 		const numeroDia = Number(match[1]);
-		const mesNome = dia
-			.closest(".schedule__card")
-			.querySelector(".schedule__month")
-			.textContent.trim();
+		const mesNome = match[2].trim();
 
 		const dataEvento = new Date(
 			hoje.getFullYear(),
 			getMesIndex(mesNome),
 			numeroDia,
 		);
+		dataEvento.setHours(0, 0, 0, 0);
 
-		if (
-			dataEvento >=
-			new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())
-		) {
+		if (dataEvento.getTime() === hoje.getTime()) {
 			alvo = dia;
+			break;
 		}
-	});
+	}
+
+	if (!alvo) {
+		for (const dia of eventos) {
+			const texto = dia.querySelector(".schedule__date")?.textContent;
+			if (!texto) continue;
+
+			const match = texto.match(/-\s*(\d+)\s+de\s+([^\n]+)/i);
+			if (!match) continue;
+
+			const numeroDia = Number(match[1]);
+			const mesNome = match[2].trim();
+
+			const dataEvento = new Date(
+				hoje.getFullYear(),
+				getMesIndex(mesNome),
+				numeroDia,
+			);
+			dataEvento.setHours(0, 0, 0, 0);
+
+			if (dataEvento > hoje) {
+				alvo = dia;
+				break;
+			}
+		}
+	}
 
 	const container = document.getElementById("scheduleContainer");
 	if (!container || !alvo) return;
 
-	const top = alvo.offsetTop - container.clientHeight / 2;
+	const top =
+		alvo.getBoundingClientRect().top -
+		container.getBoundingClientRect().top +
+		container.scrollTop;
 
 	container.scrollTo({
-		top: Math.max(0, top),
+		top: top - container.clientHeight / 4,
 		behavior: "smooth",
 	});
 }
