@@ -53,7 +53,11 @@
 }
 
 .Banner_image_text--primary__image {
+<<<<<<< HEAD
   width: 16.625rem;
+=======
+  width: 16.875rem;
+>>>>>>> 676ab4f509d8a14cba9f0db130a5f66fd1612bb9
   height: 15.625rem;
   border-radius: var(--radius-medium);
   object-fit: cover;
