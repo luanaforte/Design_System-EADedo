@@ -9,140 +9,125 @@ const borderRadiusTokens = [
 	{ name: "--radius-full", value: "100%" },
 	{ name: "--radius-small", value: "0.25rem" },
 	{ name: "--radius-medium", value: "0.5rem" },
-	{ name: "--radius-medium", value: "0.75rem" },
+	{ name: "--radius-large", value: "0.75rem" },
 	{ name: "--radius-100", value: "1rem" },
 	{ name: "--radius-125", value: "1.25rem" },
 	{ name: "--radius-xlarge", value: "1.5rem" },
 ];
 
-const borderRadiusLados = [
-	{ name: "radius-top-*", previewClass: "radius-top-075" },
-	{ name: "radius-right-*", previewClass: "radius-right-075" },
-	{ name: "radius-bottom-*", previewClass: "radius-bottom-075" },
-	{ name: "radius-left-*", previewClass: "radius-left-075" },
+const tocLinks = [
+	{ id: "introducao", label: "Introdução" },
+	{ id: "tokens", label: "Tokens de Raio" },
+	{ id: "lados", label: "Lados Separados" },
+	{ id: "cantos", label: "Cantos Específicos" },
 ];
 
-const borderRadiusCantos = [
-	{ name: "radius-top-075", previewClass: "radius-top-left-075" },
-	{ name: "radius-right-075", previewClass: "radius-right-bottom-075" },
-	{ name: "radius-bottom-075", previewClass: "radius-bottom-right-075" },
-	{ name: "radius-left-075", previewClass: "radius-left-top-075" },
-];
-
-const copyToClipboard = (text, setCopiedText) => {
-	navigator.clipboard
-		.writeText(text)
-		.then(() => {
-			setCopiedText(true);
-			setTimeout(() => setCopiedText(false), 2000);
-		})
-		.catch((err) => {
-			console.error("Failed to copy: ", err);
-		});
-};
-
-const CardBorderRadius = ({ name, styleValue = "", previewClass = "" }) => {
+const CardBorderRadius = ({ name, value, previewClass = "" }) => {
 	const [copied, setCopied] = useState(false);
 
+	const handleCopy = () => {
+		navigator.clipboard.writeText(name);
+		setCopied(true);
+		setTimeout(() => setCopied(false), 2000);
+	};
+
 	return (
-		<div className="flexbox__center--column-center">
+		<div className="card--radius-wrapper">
 			<div
-				className={`card--radius  ${previewClass}`}
-				onClick={() => copyToClipboard(name, setCopied)}
-				style={styleValue ? { borderRadius: styleValue } : {}}>
-				{copied ? (
-					<Check className="copied-icon copied-icon__hover" size={16} />
-				) : (
-					<Copy className="copied-icon copied-icon__hover" size={16} />
-				)}
+				className={`card--radius ${previewClass}`}
+				style={
+					value
+						? {
+								borderRadius: value,
+								width: "60px",
+								height: "60px",
+								backgroundColor: "var(--Anil)",
+							}
+						: { width: "60px", height: "60px", backgroundColor: "var(--Anil)" }
+				}
+			/>
+			<div style={{ textAlign: "center" }}>
+				<code
+					style={{ fontSize: "0.8rem", display: "block", marginBottom: "4px" }}>
+					{name}
+				</code>
+				<small style={{ color: "var(--color-neutral-600)" }}>
+					{value || "Custom"}
+				</small>
 			</div>
-			<div className="flexbox__center">
-				<p className="paragraph--medium margin-0">{name}</p>
-				<p
-					className="font-size-sm margin-0"
-					onClick={() => copyToClipboard(name, setCopied)}>
-					{copied ? <Check size={18} /> : <Copy size={18} />}
-				</p>
-			</div>
+			<button
+				onClick={handleCopy}
+				style={{
+					border: "none",
+					background: "none",
+					cursor: "pointer",
+					color: "var(--Anil)",
+				}}>
+				{copied ? <Check size={18} weight="bold" /> : <Copy size={18} />}
+			</button>
 		</div>
 	);
 };
 
 export default function Border() {
 	return (
-		<div className="container-lg" id="Introducao">
-			<h2 className="heading2">Border Radius</h2>
-			<p className="paragraph">
-				Use utilitários como border-radius para aplicar diferentes tamanhos de
-				raio de borda a um elemento.
-			</p>
+		<div className="foundation-page">
+			<header className="foundation-hero">
+				<h2 id="introducao">Border Radius</h2>
+				<p>
+					O arredondamento de bordas ajuda a criar interfaces mais amigáveis,
+					ajudando a focar a atenção do usuário e suavizando a hierarquia visual
+					dos componentes.
+				</p>
+			</header>
 
-			<div className="flexbox__wrap flexbox__center--center margin__bottom--default">
-				{borderRadiusTokens.map((item, index) => (
-					<CardBorderRadius
-						key={index}
-						name={item.name}
-						styleValue={item.value}
-					/>
-				))}
-			</div>
+			<div className="foundation-container">
+				<div className="foundation-body">
+					<section id="tokens">
+						<h3 className="heading3">Tokens de Raio</h3>
+						<p className="paragraph">
+							Nossos tokens principais baseados em rem para garantir
+							escalabilidade.
+						</p>
+						<div className="border-page-grid">
+							{borderRadiusTokens.map((t, i) => (
+								<CardBorderRadius key={i} name={t.name} value={t.value} />
+							))}
+						</div>
+					</section>
 
-			<h3 className="heading3" id="lados">
-				Arredondando lados separadamente
-			</h3>
-			<p className="paragraph">
-				Use os utilitários border-radius + as propriedades (top, right, bottom
-				ou left) + o token de tamanho (*) para arredondar apenas um lado de um
-				elemento.
-			</p>
-			<div className="flexbox__wrap flexbox__center--center margin__bottom--default">
-				{borderRadiusLados.map((item, index) => (
-					<CardBorderRadius
-						key={index}
-						name={item.name}
-						previewClass={item.previewClass}
-					/>
-				))}
-			</div>
-			<div className="container-sm">
-				<img
-					src={Arredondando_lados_separadamente}
-					alt="Arredondando lados separadamente"
-					className="image-fluid margin__bottom--default"
-				/>
-			</div>
+					<section id="lados">
+						<h3 className="heading3">Lados Separados</h3>
+						<p className="paragraph">
+							Arredondamento aplicado a eixos horizontais ou verticais
+							completos.
+						</p>
+						<div className="doc-image-wrapper">
+							<img
+								src={Arredondando_lados_separadamente}
+								alt="Lados"
+								className="image-fluid"
+							/>
+						</div>
+					</section>
 
-			<h3 className="heading3" id="cantos">
-				Arredondando cantos separadamente
-			</h3>
-			<p className="paragraph">
-				Use os utilitários border-radius + as propriedades combinadas (top,
-				right, bottom ou left) + o token de tamanho (*) para arredondar apenas
-				um canto de um elemento.
-			</p>
-			<div className="flexbox__wrap flexbox__center--center margin__bottom--default">
-				{borderRadiusCantos.map((item, index) => (
-					<CardBorderRadius
-						key={index}
-						name={item.name}
-						previewClass={item.previewClass}
-					/>
-				))}
+					<section id="cantos">
+						<h3 className="heading3">Cantos Específicos</h3>
+						<p className="paragraph">
+							Controle individual para cada um dos quatro vértices.
+						</p>
+						<div className="doc-image-wrapper">
+							<img
+								src={Arredondando_cantos_separadamente}
+								alt="Cantos"
+								className="image-fluid"
+							/>
+						</div>
+					</section>
+				</div>
+
+				<TableOfContents items={tocLinks} />
 			</div>
-			<div className="container-sm">
-				<img
-					src={Arredondando_cantos_separadamente}
-					alt="Arredondando cantos separadamente"
-					className="image-fluid margin__bottom--default"
-				/>
-			</div>
-			<TableOfContents
-				headings={[
-					{ id: "Introducao", label: "Introdução" },
-					{ id: "lados", label: "Arredondando lados separadamente" },
-					{ id: "cantos", label: "Arredondando cantos separadamente" },
-				]}
-			/>
 		</div>
 	);
 }

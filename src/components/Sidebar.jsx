@@ -1,6 +1,106 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { CaretRight, CaretDown } from "@phosphor-icons/react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { CaretRight, CaretDown, Cube, Books } from "@phosphor-icons/react";
+import "../App.css";
+
+export default function Sidebar({ isOpen }) {
+	const location = useLocation();
+	const navigate = useNavigate();
+
+	const [isFundamentosOpen, setIsFundamentosOpen] = useState(true);
+	const [isComponentesOpen, setIsComponentesOpen] = useState(false);
+
+	useEffect(() => {
+		if (location.pathname.includes("/Fundamentos")) setIsFundamentosOpen(true);
+		if (location.pathname.includes("/Componentes")) setIsComponentesOpen(true);
+	}, [location.pathname]);
+
+	const handleToggleFundamentos = (e) => {
+		navigate("/Fundamentos");
+		setIsFundamentosOpen(!isFundamentosOpen);
+	};
+
+	const handleToggleComponentes = (e) => {
+		navigate("/Componentes");
+		setIsComponentesOpen(!isComponentesOpen);
+	};
+
+	return (
+		<aside className={`sidebar ${isOpen ? "show" : "hidden"}`}>
+			<ul className="sidebar__menu">
+				{/* Seção Fundamentos */}
+				<li className="sidebar__menu-item">
+					<div
+						className={`sidebar__menu-button ${location.pathname === "/Fundamentos" ? "active-parent" : ""}`}
+						onClick={handleToggleFundamentos}
+						style={{ cursor: "pointer" }}>
+						{isFundamentosOpen ? (
+							<CaretDown size={18} weight="bold" />
+						) : (
+							<CaretRight size={18} weight="bold" />
+						)}
+						<Books size={22} color="var(--Anil)" />
+						<span>Fundamentos</span>
+					</div>
+
+					{isFundamentosOpen && (
+						<ul className="sidebar__submenu">
+							{Rotes["/Fundamentos"].map((item) => (
+								<li className="sidebar__submenu-item" key={item.route}>
+									<Link
+										to={item.route}
+										className={
+											location.pathname === item.route
+												? "sidebar__submenu-item-active"
+												: ""
+										}>
+										{item.label}
+									</Link>
+								</li>
+							))}
+						</ul>
+					)}
+				</li>
+
+				{/* Seção Componentes */}
+				<li className="sidebar__menu-item">
+					<div
+						className={`sidebar__menu-button ${location.pathname === "/Componentes" ? "active-parent" : ""}`}
+						onClick={handleToggleComponentes}
+						style={{ cursor: "pointer" }}>
+						{isComponentesOpen ? (
+							<CaretDown size={18} weight="bold" />
+						) : (
+							<CaretRight size={18} weight="bold" />
+						)}
+						<Cube size={22} color="var(--Anil)" />
+						<span>Componentes</span>
+					</div>
+
+					{isComponentesOpen && (
+						<ul className="sidebar__submenu">
+							{Rotes["/Componentes"]
+								.sort((a, b) => a.label.localeCompare(b.label))
+								.map((item) => (
+									<li className="sidebar__submenu-item" key={item.route}>
+										<Link
+											to={item.route}
+											className={
+												location.pathname === item.route
+													? "sidebar__submenu-item-active"
+													: ""
+											}>
+											{item.label}
+										</Link>
+									</li>
+								))}
+						</ul>
+					)}
+				</li>
+			</ul>
+		</aside>
+	);
+}
 
 const Rotes = {
 	"/Fundamentos": [
@@ -36,84 +136,3 @@ const Rotes = {
 		{ label: "Tooltip", route: "/Componentes/Tooltip" },
 	],
 };
-
-export default function Sidebar({ isOpen }) {
-	const location = useLocation();
-	const [isFundamentosOpen, setIsFundamentosOpen] = useState(false);
-	const [isComponentesOpen, setIsComponentesOpen] = useState(false);
-
-	return (
-		<aside
-			className={`sidebar background-neutral-100 ${
-				isOpen ? "show" : "hidden"
-			}`}>
-			<ul className="sidebar__menu">
-				{/* Fundamentos */}
-				<li className="sidebar__menu-item">
-					<Link
-						className="sidebar__menu-button legend"
-						to="/Fundamentos"
-						onClick={() => setIsFundamentosOpen(!isFundamentosOpen)}>
-						{isFundamentosOpen ? (
-							<CaretDown size={24} />
-						) : (
-							<CaretRight size={24} />
-						)}
-						Fundamentos
-					</Link>
-					{isFundamentosOpen && (
-						<ul className="sidebar__submenu">
-							{Rotes["/Fundamentos"].map((item) => (
-								<li className="sidebar__submenu-item" key={item.route}>
-									<Link
-										to={item.route}
-										className={`legend ${
-											location.pathname === item.route
-												? "sidebar__submenu-item-active"
-												: ""
-										}`}>
-										{item.label}
-									</Link>
-								</li>
-							))}
-						</ul>
-					)}
-				</li>
-
-				{/* Componentes */}
-				<li className="sidebar__menu-item">
-					<Link
-						className="sidebar__menu-button legend"
-						to="/Componentes"
-						onClick={() => setIsComponentesOpen(!isComponentesOpen)}>
-						{isComponentesOpen ? (
-							<CaretDown size={24} />
-						) : (
-							<CaretRight size={24} />
-						)}
-						Componentes
-					</Link>
-					{isComponentesOpen && (
-						<ul className="sidebar__submenu">
-							{Rotes["/Componentes"]
-								.sort((a, b) => a.label.localeCompare(b.label))
-								.map((item) => (
-									<li className="sidebar__submenu-item" key={item.route}>
-										<Link
-											to={item.route}
-											className={`legend ${
-												location.pathname === item.route
-													? "sidebar__submenu-item-active"
-													: ""
-											}`}>
-											{item.label}
-										</Link>
-									</li>
-								))}
-						</ul>
-					)}
-				</li>
-			</ul>
-		</aside>
-	);
-}

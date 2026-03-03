@@ -2,8 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./EaDedo/fundamentals/index.css";
 
-import Home from "./EaDedo/Home.jsx";
-
 import Fundamentos from "./EaDedo/fundamentals/Fundamentals.jsx";
 import Border from "./EaDedo/fundamentals/Border/Border.jsx";
 import Cores from "./EaDedo/fundamentals/Cores/Cores.jsx";
@@ -37,13 +35,16 @@ import Text_header from "./EaDedo/components/Text_header/Text_header.jsx";
 import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
 
 // Importing specific DS
+import Home from "./EaDedo/Home.jsx";
 import ReleaseNotes from "./components/ReleaseNotes.jsx";
+import Outlet_page from "./components/Outlet_page.jsx";
 
 const App = () => {
 	return (
 		<Routes>
-			<Route path="/" element={<Home />}>
+			<Route path="/" element={<Outlet_page />}>
 				{/* specific DS */}
+				<Route index element={<Home />} />
 				<Route path="/ReleaseNotes" element={<ReleaseNotes />} />
 
 				{/* Fundamentos */}

@@ -1,52 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-export default function TableOfContents({ headings = [] }) {
-	const [activeId, setActiveId] = useState("");
-
-	useEffect(() => {
-		const handleIntersect = (entries) => {
-			const visible = entries
-				.filter((entry) => entry.isIntersecting)
-				.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-
-			if (visible.length > 0) {
-				setActiveId(visible[0].target.id);
-			}
-		};
-
-		const observer = new IntersectionObserver(handleIntersect, {
-			rootMargin: "0px 0px -80% 0px",
-			threshold: 0.1,
-		});
-
-		headings.forEach(({ id }) => {
-			const el = document.getElementById(id);
-			if (el) observer.observe(el);
-		});
-
-		return () => observer.disconnect();
-	}, [headings]);
-
-	const scrollToSection = (id) => {
+/**
+ * @param {Array} items - Array de objetos com { id: "string", label: "string" }
+ */
+export default function TableOfContents({ items = [] }) {
+	const scrollTo = (id) => {
 		const el = document.getElementById(id);
-		if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+		if (!el) return;
+
+		const offset = 100; // Ajuste por causa da Navbar fixa
+		const bodyRect = document.body.getBoundingClientRect().top;
+		const elementRect = el.getBoundingClientRect().top;
+		const elementPosition = elementRect - bodyRect;
+		const offsetPosition = elementPosition - offset;
+
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: "smooth",
+		});
 	};
 
 	return (
-		<nav className="toc">
-			<h4 className="toc__title">Sumário</h4>
-			<ul className="toc__list">
-				{headings.map(({ id, label }) => (
-					<li
-						key={id}
-						className={`toc__item ${
-							activeId === id ? "toc__item--active" : ""
-						}`}
-						onClick={() => scrollToSection(id)}>
-						{label}
-					</li>
-				))}
-			</ul>
-		</nav>
+		<aside className="foundation-toc">
+			<nav>
+				<p className="toc-title">Nesta página</p>
+				<ul className="toc-list">
+					{items.map((item) => (
+						<li className="toc-item" key={item.id}>
+							<a
+								href={`#${item.id}`}
+								onClick={(e) => {
+									e.preventDefault();
+									scrollTo(item.id);
+								}}>
+								{item.label}
+							</a>
+						</li>
+					))}
+				</ul>
+			</nav>
+		</aside>
 	);
 }

@@ -6,25 +6,18 @@ import TableOfContents from "../../../components/TableOfContents";
 // Utilitários
 const extractColorValues = (color) =>
 	color.startsWith("linear-gradient")
-		? color.replace(/^linear-gradient\(|\)$/g, "")
-		: color;
+		? color.match(/#[a-zA-Z0-9]{3,6}/g)?.join(" → ") || "Gradient"
+		: color.toUpperCase();
 
-const copyToClipboard = (text, onSuccess) => {
-	navigator.clipboard
-		.writeText(text)
-		.then(() => {
-			onSuccess(true);
-			setTimeout(() => onSuccess(false), 2000);
-		})
-		.catch((err) => console.error("Failed to copy:", err));
-};
-
-// Componentes
 const ColorCard = ({ name, color }) => {
 	const [copied, setCopied] = useState(false);
 	const colorValue = extractColorValues(color);
 
-	const handleCopy = () => copyToClipboard(colorValue, setCopied);
+	const handleCopy = () => {
+		navigator.clipboard.writeText(color);
+		setCopied(true);
+		setTimeout(() => setCopied(false), 2000);
+	};
 
 	return (
 		<div className="color-card">
@@ -32,22 +25,99 @@ const ColorCard = ({ name, color }) => {
 				className="color-card__box"
 				style={{ background: color }}
 				onClick={handleCopy}>
-				{copied ? (
-					<Check className="copied-icon" size={16} />
-				) : (
-					<Copy className="copied-icon copied-icon__hover" size={16} />
-				)}
+				{copied ? <Check size={24} weight="bold" /> : <Copy size={24} />}
 			</div>
-			<p className="paragraph--medium margin-0">{name}</p>
-			<p className="font-size-sm margin-0 flexbox__center" onClick={handleCopy}>
-				{colorValue}
-				{copied ? <Check size={18} /> : <Copy size={18} />}
-			</p>
+			<div className="color-info">
+				<p className="paragraph--medium margin-0" style={{ fontWeight: 700 }}>
+					{name}
+				</p>
+				<div className="color-code-wrapper" onClick={handleCopy}>
+					<span>{colorValue}</span>
+					{copied ? <Check size={14} color="green" /> : <Copy size={14} />}
+				</div>
+			</div>
 		</div>
 	);
 };
 
-// Dados
+export default function Cores() {
+	const generateId = (text) =>
+		text
+			.toLowerCase()
+			.replace(/ · /g, "_")
+			.replace(/\s+/g, "_")
+			.normalize("NFD")
+			.replace(/[\u0300-\u036f]/g, "");
+
+	const tocItems = [
+		{ id: "introducao", label: "Introdução" },
+		...Object.keys(groupedColors).map((key) => ({
+			id: generateId(key),
+			label: key,
+		})),
+		{ id: "regras", label: "Regras do Modelo" },
+	];
+
+	return (
+		<div className="foundation-page">
+			<header className="foundation-hero">
+				<h2 id="introducao">Cores</h2>
+				<p>
+					Nossa paleta foi projetada para garantir acessibilidade, contraste e
+					uma identidade visual sólida para a Universidade de Fortaleza.
+				</p>
+			</header>
+
+			<div className="foundation-container">
+				<div className="foundation-body">
+					{Object.entries(groupedColors).map(([group, colors]) => {
+						const id = generateId(group);
+						return (
+							<section key={group} id={id} className="margin__bottom--default">
+								<h4
+									className="heading4"
+									style={{ marginBottom: "1rem", color: "var(--Anil)" }}>
+									{group}
+								</h4>
+								<div className="colors-grid">
+									{colors.map((c) => (
+										<ColorCard key={c.name} name={c.name} color={c.color} />
+									))}
+								</div>
+							</section>
+						);
+					})}
+
+					<section id="regras" className="rules-container">
+						<h3 className="heading3">Regras do modelo</h3>
+						<p className="paragraph">
+							Para manter a consistência visual, priorizamos quatro níveis de
+							luminância em nossas interfaces:
+						</p>
+						<ul className="list-ul">
+							<li className="list-item">
+								<strong>Tom 100:</strong> Ideal para superfícies grandes,
+								backgrounds de cards e áreas de repouso visual.
+							</li>
+							<li className="list-item">
+								<strong>Tom 600:</strong> Utilizado para estados de interação,
+								botões primários e ícones informativos.
+							</li>
+							<li className="list-item">
+								<strong>Tom 900:</strong> Focado em textos de alta legibilidade
+								e contrastes profundos.
+							</li>
+						</ul>
+					</section>
+				</div>
+
+				{/* SUMÁRIO LATERAL REUTILIZÁVEL */}
+				<TableOfContents items={tocItems} />
+			</div>
+		</div>
+	);
+}
+
 const groupedColors = {
 	"Paleta da Universidade de Fortaleza": [
 		{ name: "Gelo", color: "#e4f2fe" },
@@ -149,70 +219,3 @@ const groupedColors = {
 		},
 	],
 };
-
-// Gera IDs consistentes
-const generateId = (text) =>
-	text
-		.toLowerCase()
-		.replace(/ · /g, "_")
-		.replace(/\s+/g, "_")
-		.normalize("NFD")
-		.replace(/[\u0300-\u036f]/g, "");
-
-export default function Cores() {
-	const headings = [
-		{ id: "Introducao", label: "Introdução" },
-		...Object.keys(groupedColors).map((key) => ({
-			id: generateId(key),
-			label: key,
-		})),
-		{ id: "RegrasDoModelo", label: "Regras do modelo" },
-	];
-
-	return (
-		<div className="container-lg">
-			<h3 className="heading3" id="Introducao">
-				Cores
-			</h3>
-			<p className="paragraph">
-				Use cores para criar experiências significativas e, ao mesmo tempo,
-				expressar hierarquia, estado e identidade da marca.
-			</p>
-
-			{Object.entries(groupedColors).map(([group, colors]) => {
-				const id = generateId(group);
-				return (
-					<section key={group} aria-labelledby={id} className="color-group">
-						<h4 className="heading4" id={id}>
-							{group}
-						</h4>
-						<div className="colors-container">
-							{colors.map(({ name, color }) => (
-								<ColorCard key={name} name={name} color={color} />
-							))}
-						</div>
-						<hr />
-					</section>
-				);
-			})}
-			<h3 className="heading3" id="RegrasDoModelo">
-				Regras do modelo
-			</h3>
-			<p className="paragraph">
-				Para produzir interfaces para web não precisamos de todas as cores, numa
-				interface, podemos fazer o uso de 4 tons principais: 100, 300, 600 e 900
-			</p>
-			<ul className="list-ul">
-				<li className="list-item">
-					<b>Background de cards:</b> Cores da paleta que estão no tom de 100,
-					como por exemplo: neutral-100, blue-100, turquoise-100
-				</li>
-				<li className="list-item">
-					<b>Títulos e destaques:</b> Cores da paleta que estão no tom de 600,
-					como por exemplo: yellow-600, blue-600, turquoise-600
-				</li>
-			</ul>
-			<TableOfContents headings={headings} />
-		</div>
-	);
-}

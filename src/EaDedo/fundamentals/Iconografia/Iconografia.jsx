@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { Check, Copy, MagnifyingGlass } from "@phosphor-icons/react";
 import "./Iconografia.css";
+import TableOfContents from "../../../components/TableOfContents";
+import CodeBlockWithCopy from "../../../components/CodeBlockWithCopy";
 
 import arrow_down from "../../assets/icons/icon-arrow-down.svg";
 import arrow_left from "../../assets/icons/icon-arrow-left.svg";
@@ -74,9 +77,120 @@ import warning_circle from "../../assets/icons/icon-warning-circle.svg";
 import waveform from "../../assets/icons/icon-waveform.svg";
 import whatsapp_logo from "../../assets/icons/icon-whatsapp-logo.svg";
 import x from "../../assets/icons/icon-x.svg";
-import { Check, Copy } from "@phosphor-icons/react";
-import CodeBlockWithCopy from "../../../components/CodeBlockWithCopy";
 import Icon from "../../components/Icon/Icon";
+
+export default function Iconografia() {
+	const [copied, setCopied] = useState(null);
+	const [searchTerm, setSearchTerm] = useState("");
+
+	const tocLinks = [
+		{ id: "introducao", label: "Introdução" },
+		{ id: "dimensoes", label: "Dimensões" },
+		{ id: "biblioteca", label: "Biblioteca de Ícones" },
+	];
+
+	async function handleCopySvg(icon) {
+		try {
+			const res = await fetch(icon.src);
+			const svgText = await res.text();
+			await navigator.clipboard.writeText(svgText);
+			setCopied(icon.name);
+			setTimeout(() => setCopied(null), 1500);
+		} catch (err) {
+			console.error("Erro ao copiar SVG", err);
+		}
+	}
+
+	const filteredIcons = iconsNavegacao.filter((icon) =>
+		icon.name.toLowerCase().includes(searchTerm.toLowerCase()),
+	);
+
+	return (
+		<div className="foundation-page">
+			<header className="foundation-hero">
+				<h2 id="introducao">Iconografia</h2>
+				<p>
+					Uma linguagem visual clara e universal para guiar o usuário. Nossos
+					ícones são desenhados para serem simples, modernos e consistentes.
+				</p>
+			</header>
+
+			<div className="foundation-container">
+				<div className="foundation-body">
+					<section id="dimensoes">
+						<h3 className="heading3">Dimensões Padronizadas</h3>
+						<p className="paragraph">
+							Para garantir o alinhamento visual, utilize sempre os tamanhos
+							definidos em nossa escala:
+						</p>
+
+						<CodeBlockWithCopy>
+							{`:root {
+  --icon-size-sm: 1rem;   /* 16px */
+  --icon-size-md: 1.5rem; /* 24px */
+  --icon-size-lg: 2rem;   /* 32px */
+}`}
+						</CodeBlockWithCopy>
+					</section>
+
+					<hr className="margin__bottom--default" />
+
+					<section id="biblioteca">
+						<div
+							className="flexbox__between--center"
+							style={{ marginBottom: "2rem" }}>
+							<h3 className="heading3" style={{ margin: 0 }}>
+								Biblioteca
+							</h3>
+
+							<div className="search-wrapper">
+								<MagnifyingGlass size={20} className="search-icon" />
+								<input
+									type="text"
+									placeholder="Buscar ícone..."
+									className="search-input-field"
+									onChange={(e) => setSearchTerm(e.target.value)}
+								/>
+							</div>
+						</div>
+
+						<p className="paragraph">
+							Clique em qualquer ícone para copiar o código{" "}
+							<strong>SVG nativo</strong> diretamente para o seu projeto.
+						</p>
+
+						<div className="icon-grid">
+							{filteredIcons.map((icon, index) => (
+								<div
+									key={index}
+									className="icon-item"
+									onClick={() => handleCopySvg(icon)}
+									title={icon.name}>
+									<img src={icon.src} alt={icon.name} />
+									<span className="icon-name">{icon.name}</span>
+
+									<div
+										className={`copy-overlay ${copied === icon.name ? "active" : ""}`}>
+										<Check size={24} weight="bold" />
+										<span>Copiado!</span>
+									</div>
+								</div>
+							))}
+						</div>
+
+						{filteredIcons.length === 0 && (
+							<div className="search-empty">
+								<p>Nenhum ícone encontrado para "{searchTerm}"</p>
+							</div>
+						)}
+					</section>
+				</div>
+
+				<TableOfContents items={tocLinks} />
+			</div>
+		</div>
+	);
+}
 
 const iconsNavegacao = [
 	{ src: arrow_down, name: "arrow-down" },
@@ -153,103 +267,3 @@ const iconsNavegacao = [
 	{ src: whatsapp_logo, name: "whatsapp-logo" },
 	{ src: x, name: "x" },
 ];
-
-export default function Iconografia() {
-	const [copied, setCopied] = useState(null);
-	const [error, setError] = useState(null);
-
-	async function handleCopySvg(icon) {
-		setError(null);
-		try {
-			const res = await fetch(icon.src);
-			if (!res.ok) throw new Error(`Falha ao carregar ${icon.name}`);
-			const svgText = await res.text();
-			await navigator.clipboard.writeText(svgText);
-			setCopied(icon.name);
-			setTimeout(() => setCopied(null), 1500);
-		} catch (err) {
-			console.error(err);
-			setError(`Erro ao copiar ${icon.name}`);
-			setTimeout(() => setError(null), 2000);
-		}
-	}
-
-	return (
-		<main className="container_xl">
-			<h2 className="heading2">Ícones</h2>
-			<p className="paragraph">
-				A iconografia segue um sistema de tamanhos padronizado para manter a
-				consistência visual em toda a interface. Os ícones podem ser aplicados
-				em três tamanhos principais: pequeno (<code>.icon-size-sm</code>), médio
-				(<code>.icon-size-md</code>) e grande (<code>.icon-size-lg</code>),
-				definidos por variáveis CSS. Assim, é possível garantir que todos os
-				ícones mantenham proporções adequadas em diferentes contextos de uso.
-			</p>
-			<Icon />
-
-			<CodeBlockWithCopy>
-				{`
-:root {
-  --icon-size-sm: 1rem;
-  --icon-size-md: 1.5rem;
-  --icon-size-lg: 2rem;
-}
-
-.icon-size-sm {
-  width: var(--icon-size-sm);
-  height: var(--icon-size-sm);
-}
-
-.icon-size-md {
-  width: var(--icon-size-md);
-  height: var(--icon-size-md);
-}
-
-.icon-size-lg {
-  width: var(--icon-size-lg);
-  height: var(--icon-size-lg);
-}
-`}
-			</CodeBlockWithCopy>
-
-			<p className="paragraph">
-				Clique num ícone para copiar o SVG (texto) para o clipboard.
-			</p>
-			<hr />
-			<div className="icon-container flexbox__center--center margin__bottom--default">
-				{iconsNavegacao.map((icon, index) => (
-					<div
-						key={index}
-						className="icon-item"
-						role="button"
-						tabIndex={0}
-						onClick={() => handleCopySvg(icon)}
-						onKeyDown={(e) => {
-							if (e.key === "Enter" || e.key === " ") handleCopySvg(icon);
-						}}
-						aria-label={`Copiar SVG do ícone ${icon.name}`}
-						title={`Clique para copiar SVG — ${icon.name}`}>
-						<img src={icon.src} alt={icon.name} />
-
-						<button
-							className="copy-btn"
-							onClick={(e) => {
-								e.stopPropagation();
-								handleCopySvg(icon);
-							}}
-							aria-hidden="true"
-							type="button">
-							<p className="icon-name">{icon.name}</p>
-							{copied === icon.name ? <Check size={18} /> : <Copy size={18} />}
-						</button>
-					</div>
-				))}
-			</div>
-
-			<div aria-live="polite">
-				{copied && <span className="copied">Copiado: {copied}</span>}
-				{error && <span className="error">{error}</span>}
-			</div>
-		</main>
-	);
-}
