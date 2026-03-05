@@ -31,7 +31,7 @@ const releases = [
 export default function ReleaseNotes() {
 	return (
 		<div>
-			<h1>Release Notes</h1>
+			<h1 className="heading1">Release Notes</h1>
 			{releases.map(({ version, date, changes }) => (
 				<section key={version}>
 					<header>

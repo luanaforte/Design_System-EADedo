@@ -66,13 +66,9 @@ const TypographyPreview = ({ fontFamily }) => {
 	const config = fontConfigs[fontFamily];
 
 	return (
-		<div className={config.className} style={{ transition: "all 0.3s ease" }}>
-			<div style={{ marginBottom: "2rem" }}>
-				<span
-					className="tag"
-					style={{ marginBottom: "1rem", display: "inline-block" }}>
-					CSS do Tema:
-				</span>
+		<div className={config.className}>
+			<div>
+				<span className="tag">CSS do Tema:</span>
 				<CodeBlockWithCopy>{config.css}</CodeBlockWithCopy>
 			</div>
 
@@ -91,13 +87,7 @@ const TypographyPreview = ({ fontFamily }) => {
 				Paragraph Medium — Texto de componentes.
 			</p>
 
-			<div
-				style={{
-					display: "flex",
-					gap: "1rem",
-					alignItems: "center",
-					marginTop: "1rem",
-				}}>
+			<div>
 				<span className="tag">Tag Label</span>
 				<span className="legend">Legenda de imagem</span>
 				<a href="#" className="text-link" onClick={(e) => e.preventDefault()}>
@@ -105,7 +95,7 @@ const TypographyPreview = ({ fontFamily }) => {
 				</a>
 			</div>
 
-			<div style={{ marginTop: "2rem" }}>
+			<div>
 				<code className="code">
 					{`<div className="container">Code block preview</div>`}
 				</code>
@@ -130,7 +120,7 @@ export default function Tipografia() {
 		<div className="foundation-page">
 			<header className="foundation-hero">
 				<h2 id="introducao">Tipografia</h2>
-				<p>
+				<p className="paragraph">
 					Nossa tipografia foi selecionada para garantir legibilidade máxima e
 					refletir a identidade de cada vertical de ensino.
 				</p>

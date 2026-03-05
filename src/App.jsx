@@ -1,7 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import "./EaDedo/fundamentals/index.css";
 
+// Importações principais
+import Home from "./EaDedo/Home.jsx";
+import ReleaseNotes from "./components/ReleaseNotes.jsx";
+import Outlet_page from "./components/Outlet_page.jsx";
+import Disciplinas from "./Disciplinas/Disciplinas.jsx";
+
+// Importações de Fundamentos
 import Fundamentos from "./EaDedo/fundamentals/Fundamentals.jsx";
 import Border from "./EaDedo/fundamentals/Border/Border.jsx";
 import Cores from "./EaDedo/fundamentals/Cores/Cores.jsx";
@@ -10,13 +18,13 @@ import Iconografia from "./EaDedo/fundamentals/Iconografia/Iconografia.jsx";
 import Layout from "./EaDedo/fundamentals/Layout/Layout.jsx";
 import Tipografia from "./EaDedo/fundamentals/Tipografia/Tipografia.jsx";
 
-// Componentes
+// Importações de Componentes
 import Components from "./EaDedo/components/Components.jsx";
 import Accordions from "./EaDedo/components/Accordions/Accordions.jsx";
 import Avatar from "./EaDedo/components/Avatar/Avatar.jsx";
 import Badge from "./EaDedo/components/Badge/Badge.jsx";
 import Banner from "./EaDedo/components/Banner/Banner.jsx";
-import Button from "./EaDedo/components/Buttons/Buttons.jsx";
+import Buttons from "./EaDedo/components/Buttons/Buttons.jsx";
 import Cards from "./EaDedo/components/Cards/Cards.jsx";
 import Carousel from "./EaDedo/components/Carousel/Carousel.jsx";
 import Closing_banner from "./EaDedo/components/Closing_banner/Closing_banner.jsx";
@@ -34,56 +42,62 @@ import Tag from "./EaDedo/components/Tag/Tag_doc.jsx";
 import Text_header from "./EaDedo/components/Text_header/Text_header.jsx";
 import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
 
-// Importing specific DS
-import Home from "./EaDedo/Home.jsx";
-import ReleaseNotes from "./components/ReleaseNotes.jsx";
-import Outlet_page from "./components/Outlet_page.jsx";
-
 const App = () => {
 	return (
-		<Routes>
-			<Route path="/" element={<Outlet_page />}>
-				{/* specific DS */}
-				<Route index element={<Home />} />
-				<Route path="/ReleaseNotes" element={<ReleaseNotes />} />
+		<>
+			{/* ScrollToTop agora funciona sem conflitos pois o Router está no main.jsx */}
+			<ScrollToTop />
 
-				{/* Fundamentos */}
-				<Route path="Fundamentos" element={<Fundamentos />} />
-				<Route path="Fundamentos/Border" element={<Border />} />
-				<Route path="Fundamentos/Cores" element={<Cores />} />
-				<Route path="Fundamentos/Elevation" element={<Elevation />} />
-				<Route path="Fundamentos/Iconografia" element={<Iconografia />} />
-				<Route path="Fundamentos/Layout" element={<Layout />} />
-				<Route path="Fundamentos/Tipografia" element={<Tipografia />} />
+			<Routes>
+				<Route path="/" element={<Outlet_page />}>
+					<Route index element={<Home />} />
+					<Route path="ReleaseNotes" element={<ReleaseNotes />} />
+					<Route path="Disciplinas" element={<Disciplinas />} />
 
-				{/* Componentes */}
-				<Route path="Componentes" element={<Components />} />
-				<Route path="Componentes/Accordions" element={<Accordions />} />
-				<Route path="Componentes/Avatar" element={<Avatar />} />
-				<Route path="Componentes/Badge" element={<Badge />} />
-				<Route path="Componentes/Banner" element={<Banner />} />
-				<Route path="Componentes/Button" element={<Button />} />
-				<Route path="Componentes/Cards" element={<Cards />} />
-				<Route path="Componentes/Carousel" element={<Carousel />} />
-				<Route path="Componentes/Closing_banner" element={<Closing_banner />} />
-				<Route path="Componentes/ColapseSection" element={<ColapseSection />} />
-				<Route path="Componentes/Header_image" element={<Header_image />} />
-				<Route path="Componentes/Header_text" element={<Header_text />} />
-				<Route
-					path="Componentes/Header_text_image"
-					element={<Header_text_image />}
-				/>
-				<Route path="Componentes/Icon" element={<Icon />} />
-				<Route path="Componentes/IframeVideo" element={<IframeVideo />} />
-				<Route path="Componentes/Indicator" element={<Indicator />} />
-				<Route path="Componentes/Progress_bar" element={<Progress_bar />} />
-				<Route path="Componentes/Slider" element={<Slider />} />
-				<Route path="Componentes/Schedule" element={<Schedule />} />
-				<Route path="Componentes/Tag" element={<Tag />} />
-				<Route path="Componentes/Text_header" element={<Text_header />} />
-				<Route path="Componentes/Tooltip" element={<Tooltip />} />
-			</Route>
-		</Routes>
+					{/* Rotas de Fundamentos */}
+					<Route path="Fundamentos" element={<Fundamentos />} />
+					<Route path="Fundamentos/Border" element={<Border />} />
+					<Route path="Fundamentos/Cores" element={<Cores />} />
+					<Route path="Fundamentos/Elevation" element={<Elevation />} />
+					<Route path="Fundamentos/Iconografia" element={<Iconografia />} />
+					<Route path="Fundamentos/Layout" element={<Layout />} />
+					<Route path="Fundamentos/Tipografia" element={<Tipografia />} />
+
+					{/* Rotas de Componentes */}
+					<Route path="Componentes" element={<Components />} />
+					<Route path="Componentes/Accordions" element={<Accordions />} />
+					<Route path="Componentes/Avatar" element={<Avatar />} />
+					<Route path="Componentes/Badge" element={<Badge />} />
+					<Route path="Componentes/Banner" element={<Banner />} />
+					<Route path="Componentes/Buttons" element={<Buttons />} />
+					<Route path="Componentes/Cards" element={<Cards />} />
+					<Route path="Componentes/Carousel" element={<Carousel />} />
+					<Route
+						path="Componentes/Closing_banner"
+						element={<Closing_banner />}
+					/>
+					<Route
+						path="Componentes/ColapseSection"
+						element={<ColapseSection />}
+					/>
+					<Route path="Componentes/Header_image" element={<Header_image />} />
+					<Route path="Componentes/Header_text" element={<Header_text />} />
+					<Route
+						path="Componentes/Header_text_image"
+						element={<Header_text_image />}
+					/>
+					<Route path="Componentes/Icon" element={<Icon />} />
+					<Route path="Componentes/IframeVideo" element={<IframeVideo />} />
+					<Route path="Componentes/Indicator" element={<Indicator />} />
+					<Route path="Componentes/Progress_bar" element={<Progress_bar />} />
+					<Route path="Componentes/Slider" element={<Slider />} />
+					<Route path="Componentes/Schedule" element={<Schedule />} />
+					<Route path="Componentes/Tag" element={<Tag />} />
+					<Route path="Componentes/Text_header" element={<Text_header />} />
+					<Route path="Componentes/Tooltip" element={<Tooltip />} />
+				</Route>
+			</Routes>
+		</>
 	);
 };
 

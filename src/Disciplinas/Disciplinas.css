@@ -1,0 +1,138 @@
+@import "../EaDedo/fundamentals/index.css";
+
+.disciplinas-page {
+  background-color: var(--color-neutral-050);
+  padding: 40px 5%;
+  min-height: 100vh;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.search-input,
+.filter-select {
+  padding: 10px 15px;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 8px;
+}
+
+.disciplinas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.card-disciplina {
+  background: white;
+  border-radius: 16px;
+  /* Borda garantida com contraste */
+  border: 1px solid #d1d5db;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-disciplina:hover {
+  border-color: var(--Anil);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  padding: 20px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.id-tag {
+  background: var(--color-neutral-200);
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.entry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mod-badge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  color: white;
+  margin-right: 8px;
+}
+
+.mod-badge.ead {
+  background: var(--color-blue-600);
+}
+
+.mod-badge.eadcp {
+  background: var(--color-purple-600);
+}
+
+.mod-badge.atv {
+  background: var(--color-turquoise-600);
+}
+
+.card-footer {
+  padding: 15px 20px;
+  background: var(--color-neutral-050);
+  border-top: 1px solid #d1d5db;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 0 0 16px 16px;
+}
+
+.card-footer:hover {
+  background: var(--color-neutral-100);
+}
+
+.card-footer.is-copied {
+  background: var(--color-turquoise-100);
+  color: var(--color-turquoise-800);
+}
+
+/* Estilo do Botão Exportar */
+.btn-export {
+  background-color: #107c41;
+  color: white !important;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.btn-export:hover {
+  background-color: #0d6334;
+  transform: translateY(-2px);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 50px;
+  color: var(--color-neutral-500);
+}

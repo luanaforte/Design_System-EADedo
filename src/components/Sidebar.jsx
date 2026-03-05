@@ -9,20 +9,28 @@ export default function Sidebar({ isOpen }) {
 
 	const [isFundamentosOpen, setIsFundamentosOpen] = useState(true);
 	const [isComponentesOpen, setIsComponentesOpen] = useState(false);
+	const [isDisciplinasOpen, setIsDisciplinasOpen] = useState(false);
 
 	useEffect(() => {
 		if (location.pathname.includes("/Fundamentos")) setIsFundamentosOpen(true);
 		if (location.pathname.includes("/Componentes")) setIsComponentesOpen(true);
+		if (location.pathname.includes("/Disciplinas")) setIsDisciplinasOpen(true);
 	}, [location.pathname]);
 
-	const handleToggleFundamentos = (e) => {
-		navigate("/Fundamentos");
+	// Funções apenas para os ícones
+	const toggleFundamentos = (e) => {
+		e.stopPropagation();
 		setIsFundamentosOpen(!isFundamentosOpen);
 	};
 
-	const handleToggleComponentes = (e) => {
-		navigate("/Componentes");
+	const toggleComponentes = (e) => {
+		e.stopPropagation();
 		setIsComponentesOpen(!isComponentesOpen);
+	};
+
+	const toggleDisciplinas = (e) => {
+		e.stopPropagation();
+		setIsDisciplinasOpen(!isDisciplinasOpen);
 	};
 
 	return (
@@ -31,14 +39,19 @@ export default function Sidebar({ isOpen }) {
 				{/* Seção Fundamentos */}
 				<li className="sidebar__menu-item">
 					<div
-						className={`sidebar__menu-button ${location.pathname === "/Fundamentos" ? "active-parent" : ""}`}
-						onClick={handleToggleFundamentos}
+						className={`sidebar__menu-button ${location.pathname.startsWith("/Fundamentos") ? "active-parent" : ""}`}
+						onClick={() => navigate("/Fundamentos")}
 						style={{ cursor: "pointer" }}>
-						{isFundamentosOpen ? (
-							<CaretDown size={18} weight="bold" />
-						) : (
-							<CaretRight size={18} weight="bold" />
-						)}
+						<span
+							onClick={toggleFundamentos}
+							style={{ padding: "5px", cursor: "pointer" }}>
+							{isFundamentosOpen ? (
+								<CaretDown size={18} weight="bold" />
+							) : (
+								<CaretRight size={18} weight="bold" />
+							)}
+						</span>
+
 						<Books size={22} color="var(--Anil)" />
 						<span>Fundamentos</span>
 					</div>
@@ -63,16 +76,21 @@ export default function Sidebar({ isOpen }) {
 				</li>
 
 				{/* Seção Componentes */}
-				<li className="sidebar__menu-item">
+				{/* <li className="sidebar__menu-item">
 					<div
-						className={`sidebar__menu-button ${location.pathname === "/Componentes" ? "active-parent" : ""}`}
-						onClick={handleToggleComponentes}
+						className={`sidebar__menu-button ${location.pathname.startsWith("/Componentes") ? "active-parent" : ""}`}
+						onClick={() => navigate("/Componentes")}
 						style={{ cursor: "pointer" }}>
-						{isComponentesOpen ? (
-							<CaretDown size={18} weight="bold" />
-						) : (
-							<CaretRight size={18} weight="bold" />
-						)}
+						<span
+							onClick={toggleComponentes}
+							style={{ padding: "5px", cursor: "pointer" }}>
+							{isComponentesOpen ? (
+								<CaretDown size={18} weight="bold" />
+							) : (
+								<CaretRight size={18} weight="bold" />
+							)}
+						</span>
+
 						<Cube size={22} color="var(--Anil)" />
 						<span>Componentes</span>
 					</div>
@@ -96,6 +114,27 @@ export default function Sidebar({ isOpen }) {
 								))}
 						</ul>
 					)}
+				</li> */}
+
+				{/* Seção Disciplinas */}
+				<li className="sidebar__menu-item">
+					<div
+						className={`sidebar__menu-button ${location.pathname.startsWith("/Disciplinas") ? "active-parent" : ""}`}
+						onClick={() => navigate("/Disciplinas")}
+						style={{ cursor: "pointer" }}>
+						<span
+							onClick={toggleDisciplinas}
+							style={{ padding: "5px", cursor: "pointer" }}>
+							{isDisciplinasOpen ? (
+								<CaretDown size={18} weight="bold" />
+							) : (
+								<CaretRight size={18} weight="bold" />
+							)}
+						</span>
+
+						<Books size={22} color="var(--Anil)" />
+						<span>Disciplinas</span>
+					</div>
 				</li>
 			</ul>
 		</aside>

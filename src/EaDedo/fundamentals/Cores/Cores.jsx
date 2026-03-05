@@ -62,7 +62,7 @@ export default function Cores() {
 		<div className="foundation-page">
 			<header className="foundation-hero">
 				<h2 id="introducao">Cores</h2>
-				<p>
+				<p className="paragraph">
 					Nossa paleta foi projetada para garantir acessibilidade, contraste e
 					uma identidade visual sólida para a Universidade de Fortaleza.
 				</p>

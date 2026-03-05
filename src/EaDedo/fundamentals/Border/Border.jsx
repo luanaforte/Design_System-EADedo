@@ -74,7 +74,7 @@ export default function Border() {
 		<div className="foundation-page">
 			<header className="foundation-hero">
 				<h2 id="introducao">Border Radius</h2>
-				<p>
+				<p className="paragraph">
 					O arredondamento de bordas ajuda a criar interfaces mais amigáveis,
 					ajudando a focar a atenção do usuário e suavizando a hierarquia visual
 					dos componentes.

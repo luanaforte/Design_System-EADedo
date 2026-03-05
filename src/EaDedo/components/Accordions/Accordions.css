@@ -48,3 +48,70 @@
 .icon-inactive {
   display: none;
 }
+
+/* Variacoes de cores */
+/* Azul (Padrão Unifor/Blue) */
+.accordion--blue {
+  --accordion-bg: var(--color-blue-100);
+  --accordion-text: var(--color-blue-600);
+  --accordion-hover-text: var(--color-blue-900);
+  --accordion-hover-fill-icon: var(--color-blue-900);
+  --accordion-active-bg: var(--color-blue-300);
+  --accordion-active-text: var(--color-blue-900);
+  --accordion-active-fill-icon: var(--color-blue-900);
+}
+
+/* Roxo */
+.accordion--purple {
+  --accordion-bg: var(--color-purple-100);
+  --accordion-text: var(--color-purple-600);
+  --accordion-hover-text: var(--color-purple-900);
+  --accordion-hover-fill-icon: var(--color-purple-900);
+  --accordion-active-bg: var(--color-purple-300);
+  --accordion-active-text: var(--color-purple-900);
+  --accordion-active-fill-icon: var(--color-purple-900);
+}
+
+/* Turquesa */
+.accordion--turquoise {
+  --accordion-bg: var(--color-turquoise-100);
+  --accordion-text: var(--color-turquoise-600);
+  --accordion-hover-text: var(--color-turquoise-900);
+  --accordion-hover-fill-icon: var(--color-turquoise-900);
+  --accordion-active-bg: var(--color-turquoise-300);
+  --accordion-active-text: var(--color-turquoise-900);
+  --accordion-active-fill-icon: var(--color-turquoise-900);
+}
+
+/* Vermelho */
+.accordion--red {
+  --accordion-bg: var(--color-red-100);
+  --accordion-text: var(--color-red-600);
+  --accordion-hover-text: var(--color-red-900);
+  --accordion-hover-fill-icon: var(--color-red-900);
+  --accordion-active-bg: var(--color-red-300);
+  --accordion-active-text: var(--color-red-900);
+  --accordion-active-fill-icon: var(--color-red-900);
+}
+
+/* Amarelo */
+.accordion--yellow {
+  --accordion-bg: var(--color-yellow-100);
+  --accordion-text: var(--color-yellow-600);
+  --accordion-hover-text: var(--color-yellow-900);
+  --accordion-hover-fill-icon: var(--color-yellow-900);
+  --accordion-active-bg: var(--color-yellow-300);
+  --accordion-active-text: var(--color-yellow-900);
+  --accordion-active-fill-icon: var(--color-yellow-900);
+}
+
+/* Neutro/Cinza */
+.accordion--neutral {
+  --accordion-bg: var(--color-neutral-100);
+  --accordion-text: var(--color-neutral-600);
+  --accordion-hover-text: var(--color-neutral-900);
+  --accordion-hover-fill-icon: var(--color-neutral-900);
+  --accordion-active-bg: var(--color-neutral-300);
+  --accordion-active-text: var(--color-neutral-950);
+  --accordion-active-fill-icon: var(--color-neutral-950);
+}

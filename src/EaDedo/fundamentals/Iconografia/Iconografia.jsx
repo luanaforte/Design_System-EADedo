@@ -109,7 +109,7 @@ export default function Iconografia() {
 		<div className="foundation-page">
 			<header className="foundation-hero">
 				<h2 id="introducao">Iconografia</h2>
-				<p>
+				<p className="paragraph">
 					Uma linguagem visual clara e universal para guiar o usuário. Nossos
 					ícones são desenhados para serem simples, modernos e consistentes.
 				</p>
@@ -180,7 +180,9 @@ export default function Iconografia() {
 
 						{filteredIcons.length === 0 && (
 							<div className="search-empty">
-								<p>Nenhum ícone encontrado para "{searchTerm}"</p>
+								<p className="paragraph">
+									Nenhum ícone encontrado para "{searchTerm}"
+								</p>
 							</div>
 						)}
 					</section>

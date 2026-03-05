@@ -1,6 +1,5 @@
 @import "./EaDedo/fundamentals/index.css";
 
-/* 1. VARIÁVEIS E RESET */
 :root {
   --navbar-height: 70px;
   --sidebar-width: 260px;
@@ -21,16 +20,18 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: var(--navbar-height);
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  /* Acima da Sidebar */
   border-bottom: 1px solid var(--color-neutral-200);
   background-color: var(--color-neutral-100);
+
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .cursor-pointer {
@@ -48,25 +49,6 @@ body {
 
 .logo-img:hover {
   transform: scale(1.05);
-}
-
-/* 3. BOTÃO DE TEMA */
-.theme-toggle-btn {
-  background: var(--color-neutral-200);
-  border: none;
-  padding: 8px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: var(--color-neutral-900);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
-
-.theme-toggle-btn:hover {
-  filter: brightness(0.9);
-  transform: rotate(15deg);
 }
 
 /* 4. SIDEBAR (DESLIZANTE) */
@@ -927,6 +909,90 @@ body {
   padding: 40px;
   margin-top: 1rem;
   box-shadow: var(--elevation-low);
+}
+
+/* Componentes */
+/* --- LAYOUT DO PAINEL DOCS --- */
+.component-page {
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.builder-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+  background: #fff;
+  border: 1px solid var(--color-neutral-200);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.input-field {
+  margin-bottom: 1.5rem;
+}
+
+.input-field label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.input-field input,
+.input-field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 6px;
+}
+
+.builder-output {
+  background: #282c34;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.code-header {
+  background: #21252b;
+  padding: 10px 20px;
+  color: #abb2bf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.builder-output pre {
+  padding: 20px;
+  margin: 0;
+  color: #98c379;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.builder-output button {
+  background: var(--color-blue-600);
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 6. RESPONSIVIDADE */

@@ -20,7 +20,7 @@ export default function Layout() {
 			{/* HEADER PADRONIZADO */}
 			<header className="foundation-hero">
 				<h2 id="introducao">Layout & Grid</h2>
-				<p>
+				<p className="paragraph">
 					O layout define como os elementos se organizam visualmente, garantindo
 					consistência, harmonia e legibilidade em todas as resoluções de tela.
 				</p>

@@ -59,7 +59,7 @@ export default function Elevation() {
 		<div className="foundation-page">
 			<header className="foundation-hero">
 				<h2 id="introducao">Elevation</h2>
-				<p>
+				<p className="paragraph">
 					Utilizamos sombras e profundidade para indicar hierarquia,
 					interatividade e camadas de informação dentro da interface.
 				</p>

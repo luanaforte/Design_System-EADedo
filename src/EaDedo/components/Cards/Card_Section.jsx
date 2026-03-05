@@ -182,7 +182,7 @@ export function Card_Section() {
 			</div>
 			<div className="card__section--secondary background-neutral-100 margin__bottom--default">
 				<div>
-					<div className="header__icon margin__bottom--default">
+					<div className="header__icon margin__bottom--050">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 32 32"

@@ -1,0 +1,2210 @@
+{
+	"000": {
+		"nome": "CONHEÇA AS DISCIPLINAS",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\000-TRILHA DE INICIAÇÃO CIENTÍFICA - BÁSICA"
+	},
+	"001": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\001-INOVAÇÃO E NEGÓCIOS CRIATIVOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G406",
+				"nome": "Inovação e Negócios Criativos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94461"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G398",
+				"nome": "Inovação e Negócios Criativos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94488"
+			}
+		]
+	},
+	"002": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\002-MATEMÁTICA PARA EMPREENDEDORES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G407",
+				"nome": "Matemática para Empreendedores",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94375"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G030",
+				"nome": "Matemática para Empreendedores",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94510"
+			}
+		]
+	},
+	"003": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\003-ADMINISTRAÇÃO E ORGANIZAÇÕES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G408",
+				"nome": "Administração e Organizações",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94355"
+			}
+		]
+	},
+	"004": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\004-INTEGRAÇÃO E ACOLHIDA",
+		"disciplinas": [
+			{
+				"modalidade": "ATV",
+				"codigo": "G424",
+				"nome": "Atividades de Integração e Acolhida",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94450"
+			}
+		]
+	},
+	"005": {
+		"nome": "NIVELAMENTO",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\005-NIVELAMENTO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "Grupo de Trabalho",
+				"nome": "Atividades de Nivelamento",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=101749"
+			}
+		]
+	},
+	"006": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\006-INTERAÇÃO HUMANO COMPUTADOR",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N679",
+				"nome": "Interação Humano-Computador",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94697"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T163",
+				"nome": "Interação Humano Computador",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94489"
+			}
+		]
+	},
+	"007": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\007-MATEMÁTICA PARA COMPUTAÇÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N680",
+				"nome": "Matemática para Computação",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94374"
+			}
+		]
+	},
+	"008": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\008-DESAFIOS DO CIBERESPAÇO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N681",
+				"nome": "Desafios do Ciberespaço",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95995"
+			}
+		]
+	},
+	"009": {
+		"nome": "MODELAGEM DE PROBLEMAS DE ENGENHARIA",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\009-MODELAGEM DE PROBLEMAS DE ENGENHARIA"
+	},
+	"010": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\010-CIÊNCIA E PESQUISA",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "R681",
+				"nome": "Ciência e Pesquisa",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94474"
+			}
+		]
+	},
+	"011": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\011-ÉTICA E NEGÓCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G409",
+				"nome": "Ética e Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94857"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G397",
+				"nome": "Ética e Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94484"
+			}
+		]
+	},
+	"012": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\012-CONTABILIDADE E NEGÓCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G410",
+				"nome": "Contabilidade e Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94815"
+			}
+		]
+	},
+	"013": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\013-CENÁRIOS ECONÔMICOS EMPRESARIAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G411",
+				"nome": "Cenários Econômicos e Empresariais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94387"
+			}
+		]
+	},
+	"014": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\014-MARKETING DIGITAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G427",
+				"nome": "Marketing Digital",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94817"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G066",
+				"nome": "Marketing Digital",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94492"
+			}
+		]
+	},
+	"015": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\015-MERCADO E CONSUMIDOR",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G438",
+				"nome": "Mercado e Consumidor",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94818"
+			}
+		]
+	},
+	"016": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\016-FUNDAMENTOS DE SISTEMAS COMPUTACIONAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N682",
+				"nome": "Fundamentos de Sistemas Computacionais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94367"
+			}
+		]
+	},
+	"017": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\017-RACIOCÍNIO LÓGICO E  ALGORÍTMICO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N683",
+				"nome": "Raciocínio Lógico e Algorítmico",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94888"
+			}
+		]
+	},
+	"018": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\018-POSTURA PROFISSIONAL E COMUNICAÇÃO INTERPESSOAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N684",
+				"nome": "Postura Profissional e Comunicação Interpessoal",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94866"
+			}
+		]
+	},
+	"019": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\019-ECONOMIA DA INOVAÇÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G400",
+				"nome": "Economia da Inovação",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94455"
+			}
+		]
+	},
+	"020": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\020-NEGOCIAÇÃO ESTRATÉGICA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G401",
+				"nome": "Negociação Estratégica",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94376"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G057",
+				"nome": "Negociação Estratégica",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94494"
+			}
+		]
+	},
+	"021": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\021-CONTROLADORIA E ORÇAMENTO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G402",
+				"nome": "Controladoria e Orçamento",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94814"
+			}
+		]
+	},
+	"022": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\022-GESTÃO PROCESSOS DE NÉGOCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G412",
+				"nome": "Gestão Processos de Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94858"
+			}
+		]
+	},
+	"023": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\023-MATEMÁTICA FINANCEIRA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G413",
+				"nome": "Matemática Financeira",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94373"
+			}
+		]
+	},
+	"024": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\024-ESTRUTURA E ANÁLISE DE DEMONSTRAÇÕES CONTÁBEIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G414",
+				"nome": "Estrutura e Análise de Demonstrações Contábeis",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94365"
+			}
+		]
+	},
+	"025": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\025-CONTABILIDADE GERAL APLICADA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G428",
+				"nome": "Contabilidade Geral Aplicada",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95948"
+			}
+		]
+	},
+	"026": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\026-GESTÃO DE MÍDIAS DIGITAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G435",
+				"nome": "Gestão de Mídias Digitais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94388"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G298",
+				"nome": "Gestão de Mídias Digitais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94486"
+			}
+		]
+	},
+	"027": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\027-DESIGN DE PROCESSOS GRÁFICOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G436",
+				"nome": "Design de Processos Gráficos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94361"
+			}
+		]
+	},
+	"028": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\028-COMUNICAÇÃO E INOVAÇÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G439",
+				"nome": "Comunicação e Inovação",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94453"
+			}
+		]
+	},
+	"029": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\029-MARKETING CONTEMPORÂNEO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G440",
+				"nome": "Marketing Contemporâneo",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94819"
+			}
+		]
+	},
+	"030": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\030-PROGRAMAÇÃO ORIENTADA A OBEJETOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N685",
+				"nome": "Programação Orientada a Objetos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94887"
+			}
+		]
+	},
+	"031": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\031-EXPERIÊNCIA EMPREENDEDORA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N687",
+				"nome": "Experiência Empreendedora",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94459"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T113",
+				"nome": "Experiência Empreendedora",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94517"
+			}
+		]
+	},
+	"032": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\032- REQUISITOS E MODELAGEM SISTEMAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N689",
+				"nome": "Requisitos e Modelagem de Sistemas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94381"
+			}
+		]
+	},
+	"033": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\033-METODOLOGIA CIENTÍFICA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G754",
+				"nome": "Metodologia Científica",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94824"
+			}
+		]
+	},
+	"034": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\034-CONTABILIDADE INTERMEDIÁRIA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G370",
+				"nome": "Contabilidade Intermediária",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95879"
+			}
+		]
+	},
+	"035": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\035-DINÂMICAS DO EMPREENDEDORISMO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G403",
+				"nome": "Dinâmicas do Empreendedorismo",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94856"
+			}
+		]
+	},
+	"036": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\036-DIREITO EMPRESARIAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G404",
+				"nome": "Direito Empresarial",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94792"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "A119",
+				"nome": "Direito Empresarial",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94698"
+			}
+		]
+	},
+	"037": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\037-INTELIGÊNCIA DE NÉGOCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G405",
+				"nome": "Inteligência de Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94408"
+			}
+		]
+	},
+	"038": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\038-SISTEMA DE INFORMAÇÕES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G415",
+				"nome": "Sistema de Informações",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94465"
+			}
+		]
+	},
+	"039": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\039-CUSTOS E FORMAÇÃO DE PREÇOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G416",
+				"nome": "Custos e Formação de Preços",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94467"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "A115",
+				"nome": "Custos e Formação de Preços",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94476"
+			}
+		]
+	},
+	"040": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\040-MERCADO DE CAPITAIS NO CONTEXTO GLOBAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G417",
+				"nome": "Mercado de Capitais no Contexto Global",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94602"
+			}
+		]
+	},
+	"041": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\041-GESTÃO DE OPERAÇÕES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G429",
+				"nome": "Gestão de Operações",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94369"
+			}
+		]
+	},
+	"042": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\042-BIG DATA EM NEGÓCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G431",
+				"nome": "Big Data em Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94860"
+			}
+		]
+	},
+	"043": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\043-BRANDING",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G437",
+				"nome": "Branding",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94359"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G339",
+				"nome": "Branding",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94473"
+			}
+		]
+	},
+	"044": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\044-MARKETING DE CONTEÚDO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G441",
+				"nome": "Marketing de Conteúdo",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94372"
+			}
+		]
+	},
+	"045": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\045-AMBIENTES DE DESENVOLVIMENTO DE SOFTWARE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N686",
+				"nome": "Ambientes de Desenvolvimento de Software",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94402"
+			}
+		]
+	},
+	"046": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\046-AMBIENTES DE DADOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N688",
+				"nome": "Ambiente de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94874"
+			}
+		]
+	},
+	"048": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\048-ANÁLISE DESCRITIVA DE DADOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G418",
+				"nome": "Análise Descritiva de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94452"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G501",
+				"nome": "Análise Descritiva de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94509"
+			}
+		]
+	},
+	"049": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\049-ESTRATÉGIA EMPRESARIAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G419",
+				"nome": "Estratégia Empresarial",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94364"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "N725",
+				"nome": "Estratégia Empresarial",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94515"
+			}
+		]
+	},
+	"050": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\050-MÉTRICAS DE MARKETING",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G443",
+				"nome": "Métricas em Marketing",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94409"
+			}
+		]
+	},
+	"051": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\051-OMNICHANNEL E TRADE MARKETING",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G444",
+				"nome": "Omnichannel e Trade Marketing",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94377"
+			}
+		]
+	},
+	"052": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\052-CIÊNCIAS DE DADOS APLICADO À GESTÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G445",
+				"nome": "Ciências de Dados Aplicado à Gestão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94862"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G502",
+				"nome": "Ciências de Dados Aplicado à Gestão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94475"
+			}
+		]
+	},
+	"053": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\053-GESTÃO DE PROJETOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G448",
+				"nome": "Gestão de Projetos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94406"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G269",
+				"nome": "Gestão de Projetos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94487"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "N730",
+				"nome": "Gestão de Projetos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94518"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T289",
+				"nome": "Gerenciamento de Projetos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94485"
+			}
+		]
+	},
+	"054": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\054-PROGRAMAÇÃO PARA ANALÍTICA DE NEGÓCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G701",
+				"nome": "Programação para Analítica de Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94694"
+			}
+		]
+	},
+	"055": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\055-PROJETO E ARQUITETURA DE SISTEMAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N691",
+				"nome": "Projeto de Arquitetura de Sistemas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94380"
+			}
+		]
+	},
+	"056": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\056-ESTRUTURA DE DADOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N692",
+				"nome": "Estrutura de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94405"
+			}
+		]
+	},
+	"057": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\057-SEGURAÇA EM PROJETO DE SOFTWARE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N693",
+				"nome": "Segurança em Projeto de Software",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94464"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T186",
+				"nome": "Segurança em Projetos de Software",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94520"
+			}
+		]
+	},
+	"058": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\058-TÉCNICAS DE PROGRAMAÇÃO LINUX",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N694",
+				"nome": "Técnicas de Programação Linux",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94827"
+			}
+		]
+	},
+	"059": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\059- DESENVOLVIMENTO PARA PLATAFORMA WEB",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N695",
+				"nome": "Desenvolvimento para Plataforma Web",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94828"
+			}
+		]
+	},
+	"060": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\060-INOVAÇÕES EM SOLUCÕES COMPUTACIONAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N696",
+				"nome": "Inovação em Soluções Computacionais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95998"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T339",
+				"nome": "Inovação em Soluções Computacionais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94519"
+			}
+		]
+	},
+	"061": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\061-GESTÃO ESTRATÉGICA DE PESSOAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G369",
+				"nome": "Gestão Estratégica de Pessoas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94389"
+			}
+		]
+	},
+	"062": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\062-LEGISLAÇÃO FISCAL, TRABALHISTA E PREVIDENCIÁRIA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G372",
+				"nome": "Legislação Fiscal Trabalhista e Previdenciária",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94391"
+			}
+		]
+	},
+	"063": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\063-CONTABILIDADE AVANÇADA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G373",
+				"nome": "Contabilidade Avançada",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94812"
+			}
+		]
+	},
+	"064": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\064-AVALIAÇÃO FINANCEIRA DE EMPRESAS E PROJETOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G420",
+				"nome": "Avaliação Financeira de Empresas e Projetos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94358"
+			}
+		]
+	},
+	"065": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\065-AUDITORIA FINANCEIRA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G421",
+				"nome": "Auditoria Financeira",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94859"
+			}
+		]
+	},
+	"066": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\066-VALUATION",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G422",
+				"nome": "Valuation",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94816"
+			}
+		]
+	},
+	"067": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\067-GESTÃO DO CAPITAL DE GIRO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G423",
+				"nome": "Gestão do Capital de Giro",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94371"
+			}
+		]
+	},
+	"068": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\068-GESTÃO DE PRODUTOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G442",
+				"nome": "Gestão de Produto",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94460"
+			}
+		]
+	},
+	"069": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\069-ANTROPOLOGIA DO CONSUMO E NEUROMARKETING",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G446",
+				"nome": "Antropologia do Consumo e Neuromarketing",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94820"
+			}
+		]
+	},
+	"070": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\070-MARKETING DE RELACIONAMENTO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G447",
+				"nome": "Marketing de Relacionamento",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94392"
+			}
+		]
+	},
+	"071": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\071-ARTE E CULTURA BRASILEIRA",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "H726",
+				"nome": "Arte e Cultura Brasileira",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94472"
+			}
+		]
+	},
+	"072": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\072-ESTRUTURA DE DADOS EM ANALÍTICA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G702",
+				"nome": "Estrutura de Dados em Analítica",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94872"
+			}
+		]
+	},
+	"073": {
+		"nome": "ATIVIDADES EXTENSIONISTAS",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\073- ATIVIDADES EXTENSIONISTAS"
+	},
+	"074": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\074-ANÁLISE MULTIVARIADA DE DADOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G432",
+				"nome": "Análise Multivariada de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94356"
+			}
+		]
+	},
+	"075": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\075-DIREITOS HUMANOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "J079",
+				"nome": "Direitos Humanos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94826"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "J005",
+				"nome": "Direitos Humanos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94481"
+			}
+		]
+	},
+	"076": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\076-DESENVOLVIMENTO DE SOFTWARE EM NUVEM",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N697",
+				"nome": "Desenvolvimento de Software em Nuvem",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94404"
+			}
+		]
+	},
+	"077": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\077-TESTE E VALIDAÇÃO DE SISTEMAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N698",
+				"nome": "Teste e Validação de Sistemas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94382"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T304",
+				"nome": "Teste e Validação de Sistemas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94495"
+			}
+		]
+	},
+	"078": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\078-PROJETO APLICADO DE DESENVOLVIMENTO DE SOFTWARE-ETAPA 1",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N699",
+				"nome": "Projeto Aplicado de Desenvolvimento de Software - Etapa 1",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94462"
+			}
+		]
+	},
+	"079": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\079-ERGONOMIA E SEGURANÇA DO TRABALHO",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "N726",
+				"nome": "Ergonomia e Segurança do Trabalho",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94483"
+			}
+		]
+	},
+	"080": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\080-VISUALIZAÇÃO DE DADOS PARA TOMADA DE DECISÕES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G704",
+				"nome": "Visualização de Dados para Tomada de Decisão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95952"
+			}
+		]
+	},
+	"081": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\081-DESENVOLVIMENTO PARA PLATAFORMA MÓVEIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N700",
+				"nome": "Desenvolvimento para Plataformas Móveis",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94875"
+			}
+		]
+	},
+	"082": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\082-GERENCIAMENTO DE SERVIÇOS PARA CIBERESPAÇO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N701",
+				"nome": "Gerenciamento Serviços para o Ciberespaço",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94829"
+			}
+		]
+	},
+	"083": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\083-PROJETO APLICADO DE DESENVOLVIMENTO DE SOFTWARE - ETAPA 2",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N702",
+				"nome": "Projeto Aplicado de Desenvolvimento de Software - Etapa 2",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94868"
+			}
+		]
+	},
+	"084": {
+		"nome": "DIREITO DO CONSUMIDOR",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\084-DIREITO DO CONSUMIDOR"
+	},
+	"085": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\085-GESTÃO TRIBUTÁRIA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G430",
+				"nome": "Gestão Tributária",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94390"
+			}
+		]
+	},
+	"086": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\086-PROCESSOS DE PREPARAÇÃO DE DADOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G705",
+				"nome": "Processos de Preparação de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94853"
+			}
+		]
+	},
+	"087": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\087-TÉCNICAS DE INTEGRAÇÃO DE SISTEMAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N703",
+				"nome": "Técnicas de Integração de Sistemas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94412"
+			}
+		]
+	},
+	"088": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\088-PROGRAMAÇÃO FUNCIONAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N704",
+				"nome": "Programação Funcional",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94411"
+			}
+		]
+	},
+	"089": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\089-PROJETO APLICADO DE MULTIPLATAFORMA ETAPA 1",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N705",
+				"nome": "Projeto Aplicado Multiplataforma",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94463"
+			}
+		]
+	},
+	"090": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\090-SUPPLY CHAIN E LIDERANÇA LOGÍSTICA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G371",
+				"nome": "Supply Chain e Liderança Logística",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94811"
+			}
+		]
+	},
+	"091": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\091-FINANÇAS E ORÇAMENTOS PÚBLICO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G375",
+				"nome": "Finanças e Orçamento Público",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94813"
+			}
+		]
+	},
+	"092": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\092-GESTÃO DE TRIBUTOS FEDERAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G376",
+				"nome": "Gestão de Tributos Federais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94440"
+			}
+		]
+	},
+	"093": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\093-PROCESSOS E ESTRUTURA DE GESTÃO DE PESSOAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G451",
+				"nome": "Processos e Estruturas da Gestão de Pessoas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94821"
+			}
+		]
+	},
+	"094": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\094-ANÁLISE DE DADOS NÃO ESTRUTURADOS EM GESTÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G706",
+				"nome": "Análise de Dados não Estruturados em Gestão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94403"
+			}
+		]
+	},
+	"095": {
+		"nome": "ÉTICA CIDADANIA E GESTÃO",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\095-ÉTICA CIDADANIA E GESTÃO"
+	},
+	"096": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\096-PROJETO APLICADO DE MULTIPLATAFORMAS - ETAPA 2",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N708",
+				"nome": "Projeto Aplicado Multiplataforma",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94869"
+			}
+		]
+	},
+	"097": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\097-TÓPICOS EM MINERAÇÃO DE DADOS E INTELIGÊNCIA ARTIFICIAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G707",
+				"nome": "Tópicos de Mineração Dados e Inteligência Artificial",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94413"
+			}
+		]
+	},
+	"098": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\098-STORYTELLING DE DADOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G708",
+				"nome": "Storytelling de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94700"
+			}
+		]
+	},
+	"099": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\099-INTELIGÊNCIA ANALÍTICA DE NEGÓCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G709",
+				"nome": "Inteligência Analítica de Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94407"
+			}
+		]
+	},
+	"100": {
+		"nome": "HERMENÊUTICA JURÍDICA",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\100-HERMENÊUTICA JURÍDICA"
+	},
+	"101": {
+		"nome": "DIREITO PENAL I - CRIME E SOCIEDADE",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\101-DIREITO PENAL I - CRIME E SOCIEDADE"
+	},
+	"102": {
+		"nome": "DEONTOLOGIA JURÍDICA",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\102-DEONTOLOGIA JURÍDICA"
+	},
+	"103": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\103-EXPERIÊNCIA EM CONTABILIDADE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G384",
+				"nome": "Experiência em Contabilidade",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94457"
+			}
+		]
+	},
+	"104": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\104-CONSULTORIA EM GESTÃO DE PESSOAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G459",
+				"nome": "Consultoria em Gestão de Pessoas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95969"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G075",
+				"nome": "Consultoria em Gestão de Pessoas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94496"
+			}
+		]
+	},
+	"105": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\105-COMPLIANCE E GESTÃO DE RISCOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G434",
+				"nome": "Compliance e Gestão de Risco",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94861"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G515",
+				"nome": "Compliance e Gestão de Risco",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=101357"
+			}
+		]
+	},
+	"106": {
+		"nome": "EDUCAÇÃO AMBIENTAL (CCT)",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\106-EDUCAÇÃO AMBIENTAL (CCT)"
+	},
+	"107": {
+		"nome": "GESTÃO AMBIENTAL",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\107-GESTÃO AMBIENTAL"
+	},
+	"108": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\108-GERENCIAMENTO DA IMPLANTAÇÃO DE SISTEMAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N706",
+				"nome": "Gerenciamento da Implantação de Sistemas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94830"
+			}
+		]
+	},
+	"109": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\109-SISTEMAS INTELIGENTES DE APOIO À GESTÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G377",
+				"nome": "Sistemas inteligentes de apoio à decisão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95967"
+			}
+		]
+	},
+	"110": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\110-GESTÃO DE VENDAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G449",
+				"nome": "Gestão de Vendas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94370"
+			}
+		]
+	},
+	"111": {
+		"nome": "ATIVIDADES COMPLEMENTARES",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\111-ATIVIDADES COMPLEMENTARES"
+	},
+	"112": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\112-TÓPICOS AVANÇADOS EM CONTABILIDADE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G385",
+				"nome": "Tópicos Avançados em Contabilidade",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94383"
+			}
+		]
+	},
+	"113": {
+		"nome": "ESTUDO DA HALITOSE",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\113-ESTUDO DA HALITOSE"
+	},
+	"114": {
+		"nome": "ATENÇÃO AO IDOSO",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\114-ATENÇÃO AO IDOSO"
+	},
+	"115": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\115-AUDITORIA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G383",
+				"nome": "Auditoria",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94357"
+			}
+		]
+	},
+	"116": {
+		"nome": "PESSOAS,TIMES E ORGANIZAÇÕES",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\116-PESSOAS,TIMES E ORGANIZAÇÕES"
+	},
+	"117": {
+		"nome": "SAÚDE E SOCIEDADE",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\117 - SAÚDE E SOCIEDADE"
+	},
+	"118": {
+		"nome": "POLÍTICAS DE SAÚDE",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\118-POLÍTICAS DE SAÚDE"
+	},
+	"119": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\119 - MENTORIA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G379",
+				"nome": "Mentoria",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95989"
+			}
+		]
+	},
+	"120": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\120-PESQUISA OPERACIONAL APLICADA À GESTÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G450",
+				"nome": "Pesquisa Operacional Aplicada a Gestão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94410"
+			}
+		]
+	},
+	"121": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\121-ECOSSISTEMAS DE GOVERNANÇA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G433",
+				"nome": "Ecossistemas de Governança",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94456"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "G514",
+				"nome": "Ecossistemas de Governança",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=101356"
+			}
+		]
+	},
+	"122": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\122-ECONOMIA ESTRATÉGICA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G390",
+				"nome": "Economia da Estratégia",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94362"
+			}
+		]
+	},
+	"123": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\123-LIDERANÇA E GESTÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G452",
+				"nome": "Liderança e Gestão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94863"
+			}
+		]
+	},
+	"124": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\124-EXPERIÊNCIA EM GESTÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G453",
+				"nome": "Experiência em Gestão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94458"
+			}
+		]
+	},
+	"125": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\125-CAPITALISMO CONSCIENTE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G454",
+				"nome": "Capitalismo Consciente",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94822"
+			}
+		]
+	},
+	"126": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\126-SIMULAÇÃO EMPRESARIAL EM AMBIENTES INTERNACIONAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G455",
+				"nome": "Simulação Empresarial em Ambiente Internacional",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94418"
+			}
+		]
+	},
+	"127": {
+		"nome": "LIBRAS",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\127-LIBRAS"
+	},
+	"128": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\128-PRÁTICA CONTÁBIL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G378",
+				"nome": "Prática contábil",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95971"
+			}
+		]
+	},
+	"129": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\129-TEORIA DA CONTABILIDADE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G380",
+				"nome": "Teoria da Contabilidade",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95991"
+			}
+		]
+	},
+	"130": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\130-PRÁTICA TRIBUTÁRIA E TRABALHISTA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G381",
+				"nome": "Prática Tributária e Trabalhista",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94854"
+			}
+		]
+	},
+	"131": {
+		"nome": "APTIDÃO FÍSICA E SAÚDE",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\131-APTIDÃO FÍSICA E SAÚDE"
+	},
+	"132": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\132-CONTABILIDADE APLICADA AO SETOR PÚBLICO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G382",
+				"nome": "Contabilidade Aplicada ao Setor Público",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94360"
+			}
+		]
+	},
+	"133": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\133-PERÍCIA CONTÁBIL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G386",
+				"nome": "Perícia Contábil",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94378"
+			}
+		]
+	},
+	"134": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\134-INOVAÇÃO, EMPREENDEDORISMO E ÉTICA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G743",
+				"nome": "Inovação, Empreendedorismo e Ética",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94876"
+			}
+		]
+	},
+	"135": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\135-DADOS E TOMADA DE DECISÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G747",
+				"nome": "Dados e Tomada de Decisão",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94852"
+			}
+		]
+	},
+	"136": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\136-EXPERIÊNCIA EM GESTÃO APLICADA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G456",
+				"nome": "Experiência em Gestão Aplicada",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94864"
+			}
+		]
+	},
+	"137": {
+		"nome": "PIS - PROJETOSINTEGRADOS EM SAÚDE",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\137-PIS - PROJETOSINTEGRADOS EM SAÚDE"
+	},
+	"138": {
+		"nome": "RESPONSABILIDADE CIVIL",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\138-RESPONSABILIDADE CIVIL"
+	},
+	"139": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\139-ÉTICA EM COMPUTAÇÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N690",
+				"nome": "Ética em Computação",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94867"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T116",
+				"nome": "Ética em Computação",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94516"
+			}
+		]
+	},
+	"140": {
+		"nome": "TÓPICOS EM CIÊNCIAS ECONÔMICAS",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\140-TÓPICOS EM CIÊNCIAS ECONÔMICAS"
+	},
+	"141": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\141-SEGURANÇA NO CIBERESPAÇO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "N707",
+				"nome": "Segurança no Ciberespaço",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94831"
+			}
+		]
+	},
+	"142": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\142-FINANÇAS CORPORATIVAS E RISCO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G389",
+				"nome": "Finanças Corporativas e Risco",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94366"
+			}
+		]
+	},
+	"143": {
+		"nome": "ESTADO E DIREITOS FUNDAMENTAIS",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\143- ESTADO E DIREITOS FUNDAMENTAIS"
+	},
+	"144": {
+		"nome": "DIREITO CONSTITUCIONAL",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\144-DIREITO CONSTITUCIONAL"
+	},
+	"145": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\145-DIREITO IMOBILIÁRIO",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J519",
+				"nome": "Direito Imobiliário",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94514"
+			}
+		]
+	},
+	"146": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\146-DIREITO ROMANO",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J584",
+				"nome": "Direito Romano",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94480"
+			}
+		]
+	},
+	"147": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\147-DIREITO AMBIENTAL",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J583",
+				"nome": "Direito Ambiental",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94478"
+			}
+		]
+	},
+	"148": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\148-DIREITO DA INFÂNCIA E DA JUVENTUDE",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J554",
+				"nome": "Direito da Infância e da Juventude",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94477"
+			}
+		]
+	},
+	"149": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\149-CRIMINOLOGIA",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J585",
+				"nome": "Criminologia",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94513"
+			}
+		]
+	},
+	"150": {
+		"nome": "EMPREENDEDORISMO SOCIAL",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\150- EMPREENDEDORISMO SOCIAL"
+	},
+	"151": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\151-LOGÍSTICA GLOBAL E COMÉRCIO EXTERIOR",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G761",
+				"nome": "Logística Global e Comércio Exterior",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95972"
+			}
+		]
+	},
+	"152": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\152-INFRAESTRUTURA E MODAIS DE TRANSPORTE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G762",
+				"nome": "Infraestrutura e Modais de Transporte",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95954"
+			}
+		]
+	},
+	"153": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\153-TECNOLOGIAS EMERGENTES EM LOGÍSTICAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G764",
+				"nome": "Tecnologias Emergentes em Logísticas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94396"
+			}
+		]
+	},
+	"154": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\154-LOGÍSTICA HUMANITÁRIA E SUSTENTABILIDADE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G753",
+				"nome": "Logística Humanitária e Sustentabilidade",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94787"
+			}
+		]
+	},
+	"155": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\155-TECNOLOGIA EM ANALÍTICA DE NEGÓCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G766",
+				"nome": "Tecnologia em Analítica de Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94873"
+			}
+		]
+	},
+	"156": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\156-SEGURANÇA EM SISTEMAS DE INFORMAÇÃO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F119",
+				"nome": "Segurança em Sistemas de Informação",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94394"
+			}
+		]
+	},
+	"157": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\157-DESENVOLVIMENTO DE PROJETO APLICADO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F108",
+				"nome": "Desenvolvimento de Projeto Aplicado",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94785"
+			}
+		]
+	},
+	"158": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\158-TRANSFORMAÇÃO DIGITAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F113",
+				"nome": "Transformação Digital",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95951"
+			}
+		]
+	},
+	"159": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\159-FUNDAMENTOS DE INTERNET DAS COISAS (IOT)",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F054",
+				"nome": "Fundamentos de Internet das Coisas (IOT)",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94809"
+			}
+		]
+	},
+	"160": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\160-ESTATÍSTICAS E PROCESSAMENTOS DE DADOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F057",
+				"nome": "Estatística e Processamento de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95994"
+			}
+		]
+	},
+	"161": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\161-MODELAGEM MATEMÁTICA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F059",
+				"nome": "Modelagem Matemática",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95992"
+			}
+		]
+	},
+	"162": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\162-IDEAÇÃO PARA SOLUÇÕES COMPUTACIONAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F090",
+				"nome": "Ideação para Soluções Tecnológicas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95950"
+			}
+		]
+	},
+	"163": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\163-RESOLUÇÃO DE PROBLEMAS EM GRÁFICO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F104",
+				"nome": "Resolução de Problemas com Grafos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94393"
+			}
+		]
+	},
+	"164": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\164-DATAMINING E WEBSCRAPING",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F105",
+				"nome": "Datamining e Webscraping",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94416"
+			}
+		]
+	},
+	"165": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\165-MACHINE LEARNING",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F106",
+				"nome": "Machine Learning",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94417"
+			}
+		]
+	},
+	"166": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\166-REDES NEURAIS ARTIFICIAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F107",
+				"nome": "Redes Neurais Artificiais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94789"
+			}
+		]
+	},
+	"167": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\167-FERRAMENTAS PARA CIÊNCIAS DE DADOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F109",
+				"nome": "Ferramentas para Ciência de Dados",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95993"
+			}
+		]
+	},
+	"168": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\168-INTELIGÊNCIA ARTIFICIAL GENERATIVA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F110",
+				"nome": "Inteligência Artificial Generativa",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95966"
+			}
+		]
+	},
+	"169": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\169-PROCESSAMENTO DE LINGUAGUEM NEURAL",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F111",
+				"nome": "Processamento de Linguagem Natural",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=96005"
+			}
+		]
+	},
+	"170": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\170-INTELIGÊNCIA ARTIFICIAL PARA RECONHECIMENTO DE PADRÕES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F112",
+				"nome": "Inteligência Artificial para Reconhecimento de Padrões",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95988"
+			}
+		]
+	},
+	"172": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\172-DESIGN,PRODUTOS E SOLUÇÕES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G751",
+				"nome": "Design, Produtos e Soluções",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94851"
+			}
+		]
+	},
+	"173": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\173-PESQUISA EM CONTABILIDADE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G388",
+				"nome": "Pesquisa em Contabilidade",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94849"
+			}
+		]
+	},
+	"174": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\174-ANALÍTICA PARA NEGÓCIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G767",
+				"nome": "Analítica para Negócios",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95970"
+			}
+		]
+	},
+	"175": {
+		"nome": "GOVERNANÇA E SUCESSÃO",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\175-GOVERNANÇA E SUCESSÃO"
+	},
+	"176": {
+		"nome": "PROJETO EXECUTIVO",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\176-PROJETO EXECUTIVO"
+	},
+	"177": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\177-GESTÃO DE ESTOQUES E FORNECEDORES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G757",
+				"nome": "Gestão de Estoques e Fornecedores",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94368"
+			}
+		]
+	},
+	"178": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\178-TENDÊNCIAS NO VAREJO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G755",
+				"nome": "Tendências no Varejo",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95949"
+			}
+		]
+	},
+	"179": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\179-BEM-ESTAR E SEGURANÇA NO TRABALHO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G742",
+				"nome": "Bem-Estar e Segurança no Trabalho",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94823"
+			}
+		]
+	},
+	"180": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\180-DINÂMICAS DE GRUPO E TRABALHO EM EQUIPE",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G744",
+				"nome": "Dinâmica de Grupo e Trabalho em Equipe",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95986"
+			}
+		]
+	},
+	"181": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\181-GESTÃO DE CARREIRA E DESENVOLVIMENTO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G745",
+				"nome": "Gestão de Carreira e Desenvolvimento",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95968"
+			}
+		]
+	},
+	"182": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\182-MÉTRICAS E HIBRIDIZAÇÃO DO TRABALHO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G746",
+				"nome": "Métricas e Hibridização no Trabalho",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95987"
+			}
+		]
+	},
+	"183": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\183-TECNOLOGIAS EMERGENTES EM GESTÃO COM PESSOAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G749",
+				"nome": "Tecnologias Emergentes em Gestão com Pessoas",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94395"
+			}
+		]
+	},
+	"184": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\184-MENTORIA E COACHING",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G750",
+				"nome": "Mentoria e Coaching",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94788"
+			}
+		]
+	},
+	"185": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\185-LEGISLAÇÃO E COMPLIANCE EM LOGÍSTICA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G759",
+				"nome": "Legislação e Compliance em Logística",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94825"
+			}
+		]
+	},
+	"186": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\186- DESAFIOS DO CIBERESPAÇO",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F052",
+				"nome": "Desafios do Ciberespaço",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94454"
+			}
+		]
+	},
+	"187": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\187- INOVAÇÃO SOLUÇÃO COMPUTACIONAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F055",
+				"nome": "Inovação em Soluções Computacionais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94810"
+			}
+		]
+	},
+	"188": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\188 - PESSOAS, TIMES E ORGANIZAÇÕES",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G741",
+				"nome": "Pessoas, Times e Organizações",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94379"
+			}
+		]
+	},
+	"189": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\189 - LIBRAS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "H998",
+				"nome": "Libras",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=101439"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "H799",
+				"nome": "Libras",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94491"
+			}
+		]
+	},
+	"190": {
+		"nome": "ARTE E CULTURA BRASILEIRA",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\190 - ARTE E CULTURA BRASILEIRA"
+	},
+	"191": {
+		"nome": "RESPONSABILIDADE SOCIAL E AMBIENTAL",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\191- RESPONSABILIDADE SOCIAL E AMBIENTAL"
+	},
+	"192": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\192 - EDUCAÇÃO AMBIENTAL (CCG)",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "F227",
+				"nome": "Educação Ambiental",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94363"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T227",
+				"nome": "Educação Ambiental",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94482"
+			}
+		]
+	},
+	"193": {
+		"nome": "DIREITO AMBIENTAL",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\193 - DIREITO AMBIENTAL"
+	},
+	"194": {
+		"nome": "DIREITO DO CONSUMIDOR",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\194 - DIREITO DO CONSUMIDOR"
+	},
+	"195": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\195-GESTÃO DE CUSTOS LOGÍSTICOS",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G760",
+				"nome": "Gestão de Custos Logísticos",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95953"
+			}
+		]
+	},
+	"196": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\196-EXPERIÊNCIA EM CONTABILIDADE GERAL APLICADA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "G387",
+				"nome": "Experiência em Contabilidade Aplicada",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94855"
+			}
+		]
+	},
+	"197": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\197 - BIODIREITO",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J072",
+				"nome": "Biodireito",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94468"
+			}
+		]
+	},
+	"198": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\198 - INVESTIGAÇÃO CIENTÍFICA",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "T295",
+				"nome": "Investigação Científica",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94490"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T500",
+				"nome": "Metodologia Científica",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94493"
+			}
+		]
+	},
+	"199": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\199 - CONTRATOS EMPRESARIAIS E BANCÁRIOS",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J068",
+				"nome": "Contratos Empresariais e Bancários",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94469"
+			}
+		]
+	},
+	"200": {
+		"nome": "GESTÃO E EMPREENDEDORISMO",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\200 - GESTÃO E EMPREENDEDORISMO"
+	},
+	"201": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\201 - DIREITO URBANÍSTICO E DAS CIDADES",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J071",
+				"nome": "Direito Urbanístico e das Cidades",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94470"
+			}
+		]
+	},
+	"202": {
+		"nome": "SAÚDE COLETIVA",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\202 - SAÚDE COLETIVA"
+	},
+	"203": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\203 - ORATÓRIA CONTEMPORÂNEA",
+		"disciplinas": [
+			{
+				"modalidade": "EAD",
+				"codigo": "B041",
+				"nome": "Oratória Contemporânea",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=100872"
+			}
+		]
+	},
+	"220": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\220 - DINÂMICA DE EMPREENDEDORISMO",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J053",
+				"nome": "Dinâmica de Empreendedorismo",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=96001"
+			}
+		]
+	},
+	"221": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\221 - DIREITO, TECNOLOGIA E PROTEÇÃO DE DADOS PESSOAIS",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J058",
+				"nome": "Direito, Tecnologia e Proteção de Dados Pessoais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=96000"
+			}
+		]
+	},
+	"222": {
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\222 - RESPONSABILIDADE CIVIL NA PRESTAÇÃO DE SERVIÇOS DE SAÚDE",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "J082",
+				"nome": "Responsabilidade Civil na Prestação de Serviços de Saúde",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=96002"
+			}
+		]
+	},
+	"223": {
+		"nome": "DIREITOS HUMANOS (INGLÊS)",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\223 - DIREITOS HUMANOS (INGLÊS)"
+	},
+	"224": {
+		"nome": "TREINAMENTO DE INSTRUTORES CFP",
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\224 - TREINAMENTO DE INSTRUTORES CFP"
+	}
+}

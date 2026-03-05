@@ -148,6 +148,10 @@
   margin-bottom: var(--space-150) !important;
 }
 
+.margin__bottom--050 {
+  margin-bottom: var(--space-050) !important;
+}
+
 .margin__bottom--100 {
   margin-bottom: var(--space-100) !important;
 }
