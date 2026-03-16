@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import CodeBlockWithCopy from "../../../components/CodeBlockWithCopy";
-import TableOfContents from "../../../components/TableOfContents";
+// import TableOfContents from "../../../components/TableOfContents";
+import {
+	ConceptSection,
+	ChangelogSection,
+} from "../../../components/ComponentPageLayout";
 import "./Accordions.css";
 
 /**
@@ -19,7 +23,6 @@ export function toggleAccordion(accordionId, index) {
 		const iconActive = item.querySelector(".icon-active");
 		const iconInactive = item.querySelector(".icon-inactive");
 
-		// O index passado é 1-based no seu HTML gerado
 		if (i === index - 1) {
 			const isExpanded = item.getAttribute("aria-expanded") === "true";
 			const newExpanded = !isExpanded;
@@ -36,7 +39,6 @@ export function toggleAccordion(accordionId, index) {
 			if (iconActive)
 				iconActive.style.display = newExpanded ? "none" : "inline-block";
 		} else {
-			// Fecha os outros (comportamento de sanfona única)
 			item.setAttribute("aria-expanded", "false");
 			content.style.display = "none";
 			header.style.backgroundColor = "var(--accordion-bg)";
@@ -46,9 +48,6 @@ export function toggleAccordion(accordionId, index) {
 	});
 }
 
-/**
- * 2. SUB-COMPONENTE: ÍCONES
- */
 const AccordionIcons = () => (
 	<div className="icons">
 		<svg
@@ -77,9 +76,6 @@ const AccordionIcons = () => (
 	</div>
 );
 
-/**
- * 3. SUB-COMPONENTE: PREVIEW
- */
 const AccordionPreview = ({ id, colorClass = "", title, content }) => (
 	<div className={`accordion ${colorClass}`} id={id}>
 		<div className="accordion-item" aria-expanded="false">
@@ -97,9 +93,6 @@ const AccordionPreview = ({ id, colorClass = "", title, content }) => (
 	</div>
 );
 
-/**
- * COMPONENTE PRINCIPAL
- */
 export default function Accordions() {
 	const [viewMode, setViewMode] = useState("designer");
 	const [itemTitle, setItemTitle] = useState("Título do Item");
@@ -110,61 +103,100 @@ export default function Accordions() {
 	const [customId, setCustomId] = useState("accordion-01");
 
 	const tocItems = [
+		{ id: "conceito", label: "Conceito" },
 		{ id: "visual", label: "Variantes Visuais" },
-		{ id: "builder", label: "Builder de Código" },
+		{ id: "instructions", label: "Instruções de Uso" },
+		{ id: "builder", label: "Component Builder" },
+		{ id: "changelog", label: "Changelog" },
+	];
+
+	const tabs = ["Designer", "Developer", "Changelog"];
+
+	const accordionLogs = [
+		{
+			version: "1.1.0",
+			date: "10/03/2026",
+			description: "Implementação da paleta de cores variáveis.",
+		},
+		{
+			version: "1.0.0",
+			date: "01/03/2026",
+			description: "Criação inicial da estrutura de Accordion.",
+		},
 	];
 
 	const generatedHTML = `
 <div class="accordion ${selectedColor}" id="${customId}">
-  <div class="accordion-item" aria-expanded="false">
-    <div class="accordion-header" onclick="toggleAccordion('${customId}', 1)">
-      <p class="paragraph--medium">${itemTitle}</p>
-      <div class="icons">
-        <svg class="icon-active" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75H12.75V20.25C12.75 20.4489 12.671 20.6397 12.5303 20.7803C12.3897 20.921 12.1989 21 12 21C11.8011 21 11.6103 20.921 11.4697 20.7803C11.329 20.6397 11.25 20.4489 11.25 20.25V12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H11.25V3.75C11.25 3.55109 11.329 3.36032 11.4697 3.21967C11.6103 3.07902 11.8011 3 12 3C12.1989 3 12.3897 3.07902 12.5303 3.21967C12.671 3.36032 12.75 3.55109 12.75 3.75V11.25H20.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z" fill="currentColor"/></svg>
-        <svg class="icon-inactive" style="display:none" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H20.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z" fill="currentColor"/></svg>
-      </div>
-    </div>
-    <div class="accordion-content" style="display:none">
-      <p class="paragraph--medium margin-0">${itemContent}</p>
-    </div>
-  </div>
+	
+	<div class="accordion-item" aria-expanded="false">
+		<div class="accordion-header" onclick="toggleAccordion('${customId}', 1)">
+			<p class="paragraph--medium">${itemTitle}</p>
+			<div class="icons">
+				<svg class="icon-active" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75H12.75V20.25C12.75 20.4489 12.671 20.6397 12.5303 20.7803C12.3897 20.921 12.1989 21 12 21C11.8011 21 11.6103 20.921 11.4697 20.7803C11.329 20.6397 11.25 20.4489 11.25 20.25V12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H11.25V3.75C11.25 3.55109 11.329 3.36032 11.4697 3.21967C11.6103 3.07902 11.8011 3 12 3C12.1989 3 12.3897 3.07902 12.5303 3.21967C12.671 3.36032 12.75 3.55109 12.75 3.75V11.25H20.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z" fill="currentColor"/></svg>
+				<svg class="icon-inactive" style="display:none" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H20.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z" fill="currentColor"/></svg>
+			</div>
+		</div>
+		<div class="accordion-content" style="display:none">
+			<p class="paragraph--medium margin-0">${itemContent}</p>
+		</div>
+	</div>
+
+	<div class="accordion-item" aria-expanded="false">
+		<div class="accordion-header" onclick="toggleAccordion('${customId}', 2)">
+			 <p class="paragraph--medium">Segundo Título</p>
+			 <div class="icons">
+				 </div>
+		</div>
+		<div class="accordion-content" style="display:none">
+			 <p class="paragraph--medium margin-0">Conteúdo do segundo item.</p>
+		</div>
+	</div>
+
 </div>`.trim();
 
 	return (
 		<div className="component-page">
 			<header className="foundation-hero">
-				<h2 className="heading2">Accordions</h2>
+				<h2 id="introducao" className="heading2">
+					Accordions
+				</h2>
 				<p className="paragraph">
 					Documentação de interface e implementação técnica para o ecossistema
 					EAD.
 				</p>
 			</header>
 
-			<div className="view-toggle">
-				<button
-					className={`toggle-btn ${viewMode === "designer" ? "active" : ""}`}
-					onClick={() => setViewMode("designer")}>
-					Designer
-				</button>
-				<button
-					className={`toggle-btn ${viewMode === "developer" ? "active" : ""}`}
-					onClick={() => setViewMode("developer")}>
-					Developer
-				</button>
+			<div className="tab-menu">
+				{tabs.map((tab) => (
+					<button
+						key={tab}
+						onClick={() => setViewMode(tab.toLowerCase())}
+						className={`tab_button ${viewMode === tab.toLowerCase() ? "active" : ""}`}>
+						{tab}
+					</button>
+				))}
 			</div>
 
 			<main className="foundation-container with-toc">
 				<div className="content-area">
-					{viewMode === "designer" ? (
+					{viewMode === "designer" && (
 						<div className="designer-view fade-in">
+							<ConceptSection
+								title="O que é o Collapse?"
+								description="O Collapse organiza informações em camadas, permitindo esconder ou revelar conteúdos para reduzir a poluição visual."
+							/>
 							<section id="visual">
 								<h3 className="heading3">Identidade Visual</h3>
-								<div
-									style={{
-										display: "flex",
-										flexDirection: "column",
-										gap: "1rem",
-									}}>
+								<p className="paragraph">
+									Os itens têm largura fixa de 844px no conjunto de componentes.
+								</p>
+								<p className="paragraph">
+									Quando adicionados a um layout, configure para assumir
+									automaticamente a largura do container, conforme o
+									comportamento de layout automático.
+								</p>
+								<h3 className="heading3">Identidade Visual</h3>
+								<div>
 									<AccordionPreview
 										id="preview_grad"
 										colorClass="EadGraduacao"
@@ -178,7 +210,7 @@ export default function Accordions() {
 									<AccordionPreview
 										id="preview_blue"
 										colorClass="accordion--blue"
-										title="Variante Blue (Default)"
+										title="Variante Blue"
 									/>
 									<AccordionPreview
 										id="preview_purple"
@@ -190,63 +222,166 @@ export default function Accordions() {
 										colorClass="accordion--red"
 										title="Variante Red"
 									/>
+									<AccordionPreview
+										id="preview_yellow"
+										colorClass="accordion--yellow"
+										title="Variante Yellow"
+									/>
+									<AccordionPreview
+										id="preview_turquoise"
+										colorClass="accordion--turquoise"
+										title="Variante Turquoise"
+									/>
 								</div>
 							</section>
+							{/* <TableOfContents items={tocItems} /> */}
 						</div>
-					) : (
-						<div className="developer-view fade-in">
-							<section id="builder" className="builder-section">
-								<h3 className="heading3">Component Builder</h3>
-								<div className="builder-card">
-									<div className="builder-inputs">
-										<div className="input-field">
-											<label>Título</label>
-											<input
-												type="text"
-												value={itemTitle}
-												onChange={(e) => setItemTitle(e.target.value)}
-											/>
-										</div>
-										<div className="input-field">
-											<label>Conteúdo (Texto)</label>
-											<textarea
-												rows="3"
-												value={itemContent}
-												onChange={(e) => setItemContent(e.target.value)}
-											/>
-										</div>
-										<div className="input-field">
-											<label>Variante de Cor</label>
-											<select
-												value={selectedColor}
-												onChange={(e) => setSelectedColor(e.target.value)}>
-												<option value="EadGraduacao">Ead Graduacao</option>
-												<option value="accordion--blue">Blue</option>
-												<option value="accordion--turquoise">Turquoise</option>
-												<option value="accordion--red">Red</option>
-												<option value="accordion--yellow">Yellow</option>
-												<option value="accordion--neutral">Neutral</option>
-											</select>
-										</div>
-										<div className="input-field">
-											<label>ID Único</label>
-											<input
-												type="text"
-												value={customId}
-												onChange={(e) => setCustomId(e.target.value)}
-											/>
-										</div>
+					)}
+					{viewMode === "developer" && (
+						<>
+							<section id="instructions" className="instructions-section">
+								<h3 className="heading3">Instruções de Uso</h3>
+
+								<div className="instructions-grid">
+									<div className="instruction-card">
+										<h4 className="heading4">🎨 Definição de Cores</h4>
+										<p className="paragraph">
+											Adicione uma das classes abaixo ao elemento
+											<code className="code">.accordion</code> para configurar o
+											tema visual via CSS Variables:
+										</p>
+										<ul className="list-ul">
+											<li className="list-item">
+												<p className="paragraph">
+													<code className="code">.accordion--blue</code>
+												</p>
+											</li>
+											<li className="list-item">
+												<p className="paragraph">
+													<code className="code">.accordion--purple</code>
+												</p>
+											</li>
+											<li className="list-item">
+												<p className="paragraph">
+													<code className="code">.accordion--turquoise</code>
+												</p>
+											</li>
+											<li className="list-item">
+												<p className="paragraph">
+													<code className="code">.accordion--red</code>
+												</p>
+											</li>
+											<li className="list-item">
+												<p className="paragraph">
+													<code className="code">.accordion--yellow</code>
+												</p>
+											</li>
+											<li className="list-item">
+												<p className="paragraph">
+													<code className="code">.accordion--neutral</code>
+												</p>
+											</li>
+										</ul>
 									</div>
-									<div className="builder-output">
-										<CodeBlockWithCopy>{generatedHTML}</CodeBlockWithCopy>
+
+									<div className="instruction-card">
+										<h4 className="heading4">🆔 Múltiplos Accordions</h4>
+										<p className="paragraph">
+											Se usar mais de um grupo na mesma página:
+										</p>
+										<ol>
+											<li className="list-item">
+												<p className="paragraph">
+													Cada <code className="code">div.accordion</code> deve
+													ter um <strong>ID único</strong> (ex:{" "}
+													<code className="code">id="faq-financeiro"</code>).
+												</p>
+											</li>
+											<li className="list-item">
+												<p className="paragraph">
+													A função <code className="code">toggleAccordion</code>{" "}
+													deve receber esse ID como primeiro parâmetro.
+												</p>
+											</li>
+										</ol>
+									</div>
+
+									<div className="instruction-card">
+										<h4 className="heading4">➕ Adicionando Itens</h4>
+										<p className="paragraph">
+											Para expandir o grupo, duplique o bloco{" "}
+											<code className="code">.accordion-item</code>. No{" "}
+											<code className="code">onclick</code>, aumente o número do
+											índice:
+										</p>
+										<code className="code">
+											Item 1: toggleAccordion('id', 1)
+											<br />
+											Item 2: toggleAccordion('id', 2)
+										</code>
 									</div>
 								</div>
 							</section>
+							<hr className="divider" />
+							<div className="developer-view fade-in">
+								<section id="builder" className="builder-section">
+									<h3 className="heading3">Component Builder</h3>
+									<div className="builder-card">
+										<div className="builder-inputs">
+											<div className="input-field">
+												<label>Título</label>
+												<input
+													type="text"
+													value={itemTitle}
+													onChange={(e) => setItemTitle(e.target.value)}
+												/>
+											</div>
+											<div className="input-field">
+												<label>Conteúdo (Texto)</label>
+												<textarea
+													rows="3"
+													value={itemContent}
+													onChange={(e) => setItemContent(e.target.value)}
+												/>
+											</div>
+											<div className="input-field">
+												<label>Variante de Cor</label>
+												<select
+													value={selectedColor}
+													onChange={(e) => setSelectedColor(e.target.value)}>
+													<option value="EadGraduacao">Ead Graduacao</option>
+													<option value="accordion--blue">Blue</option>
+													<option value="accordion--turquoise">
+														Turquoise
+													</option>
+													<option value="accordion--red">Red</option>
+													<option value="accordion--yellow">Yellow</option>
+													<option value="accordion--neutral">Neutral</option>
+												</select>
+											</div>
+											<div className="input-field">
+												<label>ID Único do Grupo</label>
+												<input
+													type="text"
+													value={customId}
+													onChange={(e) => setCustomId(e.target.value)}
+												/>
+											</div>
+										</div>
+										<div className="builder-output">
+											<CodeBlockWithCopy>{generatedHTML}</CodeBlockWithCopy>
+										</div>
+									</div>
+								</section>
+							</div>
+						</>
+					)}
+					{viewMode === "changelog" && (
+						<div className="fade-in">
+							<ChangelogSection logs={accordionLogs} />
 						</div>
 					)}
 				</div>
-
-				<TableOfContents items={tocItems} />
 			</main>
 		</div>
 	);

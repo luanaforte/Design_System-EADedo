@@ -76,7 +76,7 @@ export default function Sidebar({ isOpen }) {
 				</li>
 
 				{/* Seção Componentes */}
-				{/* <li className="sidebar__menu-item">
+				<li className="sidebar__menu-item">
 					<div
 						className={`sidebar__menu-button ${location.pathname.startsWith("/Componentes") ? "active-parent" : ""}`}
 						onClick={() => navigate("/Componentes")}
@@ -114,7 +114,7 @@ export default function Sidebar({ isOpen }) {
 								))}
 						</ul>
 					)}
-				</li> */}
+				</li>
 
 				{/* Seção Disciplinas */}
 				<li className="sidebar__menu-item">

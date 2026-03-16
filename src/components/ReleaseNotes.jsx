@@ -38,7 +38,7 @@ export default function ReleaseNotes() {
 						<h2>Versão {version}</h2>
 						<time dateTime={date}>{date}</time>
 					</header>
-					<ul>
+					<ul className="list-ul">
 						{changes.map((change, i) => (
 							<li key={i}>{change}</li>
 						))}

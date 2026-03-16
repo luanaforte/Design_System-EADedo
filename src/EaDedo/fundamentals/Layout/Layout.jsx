@@ -141,15 +141,15 @@ export default function Layout() {
 						<div className="rules-container">
 							<h4 className="heading4">Guia Rápido:</h4>
 							<ul className="list-ul">
-								<li>
+								<li className="list-item">
 									<strong>0px a 8px:</strong> Ícones, paddings internos de
 									botões e gaps de grupos.
 								</li>
-								<li>
+								<li className="list-item">
 									<strong>12px a 24px:</strong> Espaçamento entre cards e
 									elementos de conteúdo.
 								</li>
-								<li>
+								<li className="list-item">
 									<strong>32px a 80px:</strong> Margens de seções e topo de
 									página.
 								</li>

@@ -72,34 +72,62 @@ const TypographyPreview = ({ fontFamily }) => {
 				<CodeBlockWithCopy>{config.css}</CodeBlockWithCopy>
 			</div>
 
-			<h1 className="display">Display — Título de impacto</h1>
-			<h1 className="heading1">Heading 1 — Tema principal</h1>
-			<h2 className="heading2">Heading 2 — Grandes seções</h2>
-			<h3 className="heading3">Heading 3 — Subseções</h3>
-			<h4 className="heading4">Heading 4 — Título de destaque</h4>
-
+			<h1 className="display">
+				Seu uso é reservado para o título da página e apenas um por página.
+			</h1>
+			<h1 className="heading1">
+				Seu uso é reservado para o tema principal da página.
+			</h1>
+			<h2 className="heading2">
+				Títulos de alta hierarquia usados ​para dividir grandes seções de
+				conteúdo em uma página.
+			</h2>
+			<h3 className="heading3">
+				Títulos de média hierarquia usados ​​para dividir seções de conteúdo em
+				uma página.
+			</h3>
+			<h4 className="heading4">
+				Títulos de hierarquia baixa que se destacam do texto base.
+			</h4>
 			<p className="paragraph">
-				<strong>Paragraph:</strong> Texto explicativo ou corpo de texto
-				principal. Garante a leitura fluida de grandes blocos de informação.
+				Texto explicativo ou corpo de texto com hierarquia inferior.
 			</p>
-
-			<p className="paragraph--medium">
-				Paragraph Medium — Texto de componentes.
+			<p className="paragraph--medium">Texto de dentro dos componentes.</p>
+			<p className="tag">
+				Textos para elementos muito pequenos, como rótulos, tags, tips. Não
+				usamos para corpo de texto.
 			</p>
-
-			<div>
-				<span className="tag">Tag Label</span>
-				<span className="legend">Legenda de imagem</span>
-				<a href="#" className="text-link" onClick={(e) => e.preventDefault()}>
+			<p className="legend">Texto explicativo, legendas e botões.</p>
+			<h2 className="heading2">Exemplo de Lista Não Ordenada</h2>
+			<ul className="list-ul">
+				<li className="list-item">
+					<p className="paragraph--medium">Item 1</p>
+				</li>
+				<li className="list-item">
+					<p className="paragraph--medium">Item 2</p>
+				</li>
+			</ul>
+			<h2 className="heading2">Exemplo de Lista Ordenada</h2>
+			<ol className="list-ol">
+				<li className="list-item">
+					<p className="paragraph--medium">Item 1</p>
+				</li>
+				<li className="list-item">
+					<p className="paragraph--medium">Item 2</p>
+				</li>
+			</ol>
+			<p className="code">
+				&lt;iframe src="https://s.tiled.co/xxx/tiled-how-to-guide"
+				frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+				style="position: absolute;top: 0;left: 0;width: 100%;height:
+				100%;border: 0;"&gt; &lt;/iframe&gt;
+			</p>
+			<p class="paragraph">
+				<a href="" target="_blank" class="text-link">
 					Texto Link
 				</a>
-			</div>
-
-			<div>
-				<code className="code">
-					{`<div className="container">Code block preview</div>`}
-				</code>
-			</div>
+				.
+			</p>
 		</div>
 	);
 };
