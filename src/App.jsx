@@ -29,6 +29,7 @@ import Cards from "./EaDedo/components/Cards/Cards.jsx";
 import Carousel from "./EaDedo/components/Carousel/Carousel.jsx";
 import Closing_banner from "./EaDedo/components/Closing_banner/Closing_banner.jsx";
 import ColapseSection from "./EaDedo/components/ColapseSection/ColapseSection.jsx";
+import CheckList from "./EaDedo/components/CheckList/CheckList.jsx";
 import Header_image from "./EaDedo/components/Header_image/Header_image.jsx";
 import Header_text from "./EaDedo/components/Header_text/Header_text.jsx";
 import Header_text_image from "./EaDedo/components/Header_text_image/Header_text_image.jsx";
@@ -76,6 +77,7 @@ const App = () => {
 						path="Componentes/Closing_banner"
 						element={<Closing_banner />}
 					/>
+					<Route path="Componentes/CheckList" element={<CheckList />} />
 					<Route
 						path="Componentes/ColapseSection"
 						element={<ColapseSection />}
