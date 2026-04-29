@@ -39,6 +39,7 @@
 @import "../components/Welcome/Welcome.css";
 @import "../components/chat_IA/chat_IA.css";
 @import "../components/Modal/Modal.css";
+@import "../components/Search/Search.css";
 
 /* FLEX */
 .flexbox {

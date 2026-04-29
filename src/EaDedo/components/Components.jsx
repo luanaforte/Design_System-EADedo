@@ -111,10 +111,16 @@ export default function Components() {
 			desc: "Barra visual de preenchimento para indicar conclusão de tarefas ou carregamento.",
 		},
 		{
+			title: "Search",
+			path: "Search",
+			desc: "Barra de busca com sugestões e estados de feedback visual.",
+		},
+		{
 			title: "Slider",
 			path: "Slider",
 			desc: "Controle deslizante para seleção de valores ou navegação de banners.",
 		},
+
 		{
 			title: "Tag",
 			path: "Tag",

@@ -1,7 +1,8 @@
 /* BRANDS */
 .EadGraduacao,
 .EadPosUnifor,
-.DiaDoEAD {
+.DiaDoEAD,
+.Secretaria {
   --font-family-heading: var(--font-family-Poppins);
   --font-family-body: var(--font-family-Poppins);
   --font-family-code: var(--font-family-Code);
@@ -36,3 +37,4 @@
   /* sobre-escrevendo o peso */
   --font-weight-semibold: var(--font-weight-medium);
 }
+

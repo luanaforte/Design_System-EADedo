@@ -1,140 +1,655 @@
-<section
-	id="Rotulo_objetivos"
-	class="EadGraduacao container-lg margin__bottom--default">
-	<div class="margin__bottom--default">
-		<p class="paragraph"
-			>Este espaço tem como finalidade ajudar você a desenvolver as habilidades
-			necessárias na resolução de problemas matemáticos.</p
-		>
-		<p class="paragraph margin-0"
-			>Confira algumas orientações sobre a jornada de aprendizagem do seu
-			Nivelamento.</p
+<script src="https://ead.unifor.br/ava/pluginfile.php/3600080/mod_folder/content/0/boasVindas.js"></script>
+<main class="container mainzona">
+	<div class="grupoOlaNomeSobrenomeIcon">
+		<span class="Ola"
+			>Olá,<span class="NomeSobrenome" id="hello2">&nbsp;</span>👋</span
 		>
 	</div>
-	<div class="slider-primario" id="slider01">
-		<div class="container-md slider-items">
-			<div class="slider-primario-item active">
-				<div
-					class="Banner_image_text--primary margin__bottom--default background-purple-100">
-					<div>
-						<img
-							src="https://ead.unifor.br/ava/draftfile.php/3636559/user/draft/558074344/image01.png"
-							alt="Ilustração em tons de roxo e lilás de um homem agachado, amarrando o cadarço de seu tênis esportivo. Ele tem um leve sorriso no rosto."
-							class="Banner_image_text--primary__image" />
-					</div>
-					<div>
-						<p class="paragraph--medium">
-							Nesta jornada, você irá usar seus conhecimentos para tentar
-							<strong>solucionar alguns problemas matemáticos</strong> que lhe
-							serão propostos.
-						</p>
-					</div>
-				</div>
+	<section class="Search_Box" style="margin-bottom: 4rem">
+		<h1 class="tituloH1">Como podemos te ajudar?</h1>
+		<div class="search">
+			<div>
+				<form>
+					<input
+						type="text"
+						name=""
+						id="search-item"
+						placeholder="Pesquise na Secretaria Virtual"
+						onkeyup="search(this)"
+						onfocus="showseçaoList()" />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="16"
+						viewBox="0 0 16 16"
+						fill="none">
+						<path
+							d="M15.2802 14.4401L11.5641 10.7247C12.6412 9.43158 13.1783 7.773 13.0636 6.09398C12.949 4.41496 12.1915 2.84477 10.9486 1.71006C9.70579 0.575337 8.07333 -0.0365474 6.39083 0.00168997C4.70834 0.0399274 3.10536 0.725343 1.91535 1.91535C0.725343 3.10536 0.0399274 4.70834 0.00168997 6.39083C-0.0365474 8.07333 0.575337 9.70579 1.71006 10.9486C2.84477 12.1915 4.41496 12.949 6.09398 13.0636C7.773 13.1783 9.43158 12.6412 10.7247 11.5641L14.4401 15.2802C14.4952 15.3354 14.5607 15.3792 14.6328 15.409C14.7049 15.4389 14.7821 15.4542 14.8602 15.4542C14.9382 15.4542 15.0154 15.4389 15.0875 15.409C15.1596 15.3792 15.2251 15.3354 15.2802 15.2802C15.3354 15.2251 15.3792 15.1596 15.409 15.0875C15.4389 15.0154 15.4542 14.9382 15.4542 14.8602C15.4542 14.7821 15.4389 14.7049 15.409 14.6328C15.3792 14.5607 15.3354 14.4952 15.2802 14.4401ZM1.2039 6.54765C1.2039 5.49076 1.51731 4.4576 2.10449 3.57883C2.69167 2.70005 3.52625 2.01513 4.50269 1.61067C5.47913 1.20622 6.55358 1.10039 7.59017 1.30658C8.62675 1.51277 9.57892 2.02172 10.3263 2.76905C11.0736 3.51639 11.5825 4.46855 11.7887 5.50514C11.9949 6.54173 11.8891 7.61618 11.4846 8.59262C11.0802 9.56906 10.3953 10.4036 9.51648 10.9908C8.63771 11.578 7.60455 11.8914 6.54765 11.8914C5.13089 11.8898 3.7726 11.3263 2.77079 10.3245C1.76898 9.32271 1.20548 7.96442 1.2039 6.54765Z"
+							fill="black"></path>
+					</svg>
+				</form>
 			</div>
-			<div class="slider-primario-item">
-				<div
-					class="Banner_image_text--primary margin__bottom--default background-purple-100">
-					<div>
-						<img
-							src="https://ead.unifor.br/ava/draftfile.php/3636559/user/draft/558074344/image02.png"
-							alt="Ilustração de um homem tentando levantar uma barra de peso (deadlift) com dificuldade. A barra está carregada com anilhas de 30 kg e 10 kg em cada lado. Ele demonstra esforço físico intenso e a barra parece tremer."
-							class="Banner_image_text--primary__image" />
+			<div>
+				<div class="seçao-list" id="seçao-list">
+					<div class="seçao">
+						<a
+							href="#Matrícula"
+							data-asw-orgfontsize="15"
+							style="font-size: 15px">
+							<div class="p-details">
+								<p
+									class="textoseçao"
+									data-asw-orgfontsize="15"
+									style="font-size: 15px"
+									>Matrícula</p
+								>
+							</div>
+						</a>
 					</div>
-					<div>
-						<p class="paragraph--medium">
-							Caso você não consiga de primeira, não se preocupe.
-							<strong>O erro faz parte do aprendizado!</strong>
-						</p>
+					<div class="seçao">
+						<a
+							href="#ApoioAcadêmico"
+							data-asw-orgfontsize="15"
+							style="font-size: 15px">
+							<div class="p-details">
+								<p
+									class="textoseçao"
+									data-asw-orgfontsize="15"
+									style="font-size: 15px"
+									>Apoio Acadêmico</p
+								>
+							</div>
+						</a>
 					</div>
-				</div>
-			</div>
-			<div class="slider-primario-item">
-				<div
-					class="Banner_image_text--primary margin__bottom--default background-purple-100">
-					<div>
-						<img
-							src="https://ead.unifor.br/ava/draftfile.php/3636559/user/draft/558074344/image03.png"
-							alt="Ilustração de dois homens conversando. O homem à esquerda gesticula com as mãos abertas, enquanto o homem à direita ouve atentamente com a mão no queixo, em uma pose reflexiva."
-							class="Banner_image_text--primary__image" />
+					<div class="seçao">
+						<a
+							href="#Emissãodedocumentos"
+							data-asw-orgfontsize="15"
+							style="font-size: 15px">
+							<div class="p-details">
+								<p
+									class="textoseçao"
+									data-asw-orgfontsize="15"
+									style="font-size: 15px"
+									>Emissão de documentos</p
+								>
+							</div>
+						</a>
 					</div>
-					<div>
-						<p class="paragraph--medium">
-							Você receberá a ajuda de um <strong>tutor virtual</strong>, que te
-							guiará desde a leitura do problema até a resposta final.
-						</p>
+					<div class="seçao">
+						<a
+							href="#Serviços"
+							data-asw-orgfontsize="15"
+							style="font-size: 15px">
+							<div class="p-details">
+								<p
+									class="textoseçao"
+									data-asw-orgfontsize="15"
+									style="font-size: 15px"
+									>Serviços</p
+								>
+							</div>
+						</a>
 					</div>
-				</div>
-			</div>
-			<div class="slider-primario-item">
-				<div
-					class="Banner_image_text--primary margin__bottom--default background-purple-100">
-					<div>
-						<img
-							src="https://ead.unifor.br/ava/draftfile.php/3636559/user/draft/558074344/image04.png"
-							alt="Ilustração de um homem em pé ao lado de duas anilhas de peso de 10 kg deitadas no chão. Ele aponta para os pesos com uma expressão de dúvida ou questionamento."
-							class="Banner_image_text--primary__image" />
+					<div class="seçao">
+						<a
+							href="#Colaçãodegrau"
+							data-asw-orgfontsize="15"
+							style="font-size: 15px">
+							<div class="p-details">
+								<p
+									class="textoseçao"
+									data-asw-orgfontsize="15"
+									style="font-size: 15px"
+									>Colação de grau</p
+								>
+							</div>
+						</a>
 					</div>
-					<div>
-						<p class="paragraph--medium">
-							<strong
-								>Atenção, o tutor virtual não vai te dar a resposta!</strong
-							>
-							Mas vai te ajudar a encontrar uma
-							<strong>estratégia de resolução.</strong>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="slider-primario-item">
-				<div
-					class="Banner_image_text--primary margin__bottom--default background-purple-100">
-					<div>
-						<img
-							src="https://ead.unifor.br/ava/draftfile.php/3636559/user/draft/558074344/image05.png"
-							alt="Ilustração de um homem realizando um agachamento (squat) com uma barra sobre os ombros. A barra possui anilhas de 10 kg em cada extremidade. Ele está sorrindo, demonstrando confiança no exercício."
-							class="Banner_image_text--primary__image" />
-					</div>
-					<div>
-						<p class="paragraph--medium">
-							Na próxima seção, inicie seu processo de desenvolvimento de
-							habilidades. <strong>Vamos começar?</strong>
-						</p>
+					<div class="seçao">
+						<a
+							href="#Faleconosco!"
+							data-asw-orgfontsize="15"
+							style="font-size: 15px">
+							<div class="p-details">
+								<p
+									class="textoseçao"
+									data-asw-orgfontsize="15"
+									style="font-size: 15px"
+									>Fale Conosco</p
+								>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="Pagination margin__bottom--default">
-			<button
-				class="button__direction--rounded"
-				id="slider_prevBtn"
-				aria-label="Anterior">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					fill="none">
-					<path
-						d="M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75L5.56029 12.75L11.0306 18.2194C11.1003 18.289 11.1556 18.3718 11.1933 18.4628C11.231 18.5539 11.2504 18.6514 11.2504 18.75C11.2504 18.8485 11.231 18.9461 11.1933 19.0372C11.1556 19.1282 11.1003 19.2109 11.0306 19.2806C10.9609 19.3503 10.8782 19.4056 10.7872 19.4433C10.6961 19.481 10.5985 19.5004 10.5 19.5004C10.4014 19.5004 10.3039 19.481 10.2128 19.4433C10.1218 19.4056 10.039 19.3503 9.96935 19.2806L3.21935 12.5306C3.14962 12.461 3.0943 12.3782 3.05656 12.2872C3.01882 12.1961 2.99939 12.0986 2.99939 12C2.99939 11.9014 3.01882 11.8038 3.05656 11.7128C3.0943 11.6217 3.14962 11.539 3.21935 11.4694L9.96935 4.71936C10.1101 4.57863 10.301 4.49957 10.5 4.49957C10.699 4.49957 10.8899 4.57863 11.0306 4.71936C11.1713 4.8601 11.2504 5.05097 11.2504 5.24999C11.2504 5.44901 11.1713 5.63988 11.0306 5.78061L5.56029 11.25L20.25 11.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z"
-						fill="#ACB4CD"></path>
-				</svg>
-			</button>
-			<div class="indicators slider-indicators"></div>
-			<button
-				class="button__direction--rounded"
-				id="slider_nextBtn"
-				aria-label="Próximo">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					fill="none">
-					<path
-						d="M20.7806 12.5306L14.0306 19.2806C13.8899 19.4213 13.699 19.5004 13.5 19.5004C13.301 19.5004 13.1101 19.4213 12.9694 19.2806C12.8286 19.1399 12.7496 18.949 12.7496 18.75C12.7496 18.551 12.8286 18.3601 12.9694 18.2194L18.4397 12.75L3.75 12.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25L18.4397 11.25L12.9694 5.78061C12.8286 5.63988 12.7496 5.44901 12.7496 5.24999C12.7496 5.05097 12.8286 4.8601 12.9694 4.71936C13.1101 4.57863 13.301 4.49957 13.5 4.49957C13.699 4.49957 13.8899 4.57863 14.0306 4.71936L20.7806 11.4694C20.8504 11.539 20.9057 11.6217 20.9434 11.7128C20.9812 11.8038 21.0006 11.9014 21.0006 12C21.0006 12.0986 20.9812 12.1961 20.9434 12.2872C20.9057 12.3782 20.8504 12.461 20.7806 12.5306Z"
-						fill="#ACB4CD"></path>
-				</svg>
-			</button>
+	</section>
+
+	<section class="BoasVindas" id="BoasVindas">
+		<div class="ImagemCentralizada Margim_BottomDefault">
+			<img
+				class="img-fluid"
+				src="https://ead.unifor.br/ava/draftfile.php/3636559/user/draft/855075397/asset-secretaria-virutal%201%20%281%29.svg"
+				alt="" />
 		</div>
-	</div>
-</section>
+
+		<div class="BoasVindasSec">
+			<p
+				class="textoDefault Margim_BottomDefault"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				Este espaço foi criado especialmente para você, Estudante EaD Unifor!
+			</p>
+			<p
+				class="textoDefault Margim_BottomDefault"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				Aqui vamos tentar <strong> facilitar sua jornada acadêmica</strong> na
+				modalidade EaD. Utilize este espaço para colher informações e realizar
+				procedimentos administrativos de forma prática e rápida.
+			</p>
+			<p
+				class="textoDefault Margim_BottomDefault"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				Aproveite todas as funcionalidades da Secretaria Virtual e tenha uma
+				excelente experiência acadêmica! 🤗
+			</p>
+		</div>
+	</section>
+
+	<section class="matriucla" id="Matrícula">
+		<div
+			class="CardSecao CardSecao_Azul_A100 Margim_BottomDefault gridForum gridForum_notExpand">
+			<div>
+				<div class="SessaoTitulo">
+					<h2
+						class="textoH2 textoH2_Azul texto_no_m_p"
+						data-asw-orgfontsize="30"
+						style="font-size: 30px">
+						Matrícula
+					</h2>
+				</div>
+				<p
+					class="textoDefault texto_bottom0"
+					data-asw-orgfontsize="15"
+					style="font-size: 15px">
+					Entenda sobre matrícula e rematrícula, trancamento e solicitação de
+					declaração de matrícula.
+				</p>
+			</div>
+			<a
+				href="https://ead.unifor.br/ava/mod/page/view.php?id=3877636"
+				class="BotaoGhost"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				<p
+					class="texto_bottom0 BotaoGhost_nome"
+					data-asw-orgfontsize="14"
+					style="font-size: 14px"
+					>Acessar</p
+				>
+				<svg
+					class="setaAcessar"
+					width="18"
+					height="18"
+					viewBox="0 0 18 18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g id="Seta Acessar">
+						<path
+							id="Vector"
+							d="M14.0623 4.5V11.8125C14.0623 11.9617 14.0031 12.1048 13.8976 12.2102C13.7921 12.3157 13.649 12.375 13.4998 12.375C13.3506 12.375 13.2076 12.3157 13.1021 12.2102C12.9966 12.1048 12.9373 11.9617 12.9373 11.8125V5.85773L4.89779 13.898C4.79225 14.0035 4.64909 14.0628 4.49982 14.0628C4.35056 14.0628 4.2074 14.0035 4.10186 13.898C3.99631 13.7924 3.93701 13.6493 3.93701 13.5C3.93701 13.3507 3.99631 13.2076 4.10186 13.102L12.1421 5.0625H6.18732C6.03814 5.0625 5.89507 5.00324 5.78958 4.89775C5.68409 4.79226 5.62482 4.64918 5.62482 4.5C5.62482 4.35082 5.68409 4.20774 5.78958 4.10225C5.89507 3.99676 6.03814 3.9375 6.18732 3.9375H13.4998C13.649 3.9375 13.7921 3.99676 13.8976 4.10225C14.0031 4.20774 14.0623 4.35082 14.0623 4.5Z"
+							fill="#004AF7"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<section class="ApoioAcademico" id="ApoioAcadêmico">
+		<div
+			class="CardSecao CardSecao_Amarelo Margim_BottomDefault gridForum gridForum_notExpand">
+			<div>
+				<div class="SessaoTitulo">
+					<h2
+						class="textoH2 textoH2_Amarelo texto_no_m_p"
+						data-asw-orgfontsize="30"
+						style="font-size: 30px">
+						Apoio Acadêmico
+					</h2>
+				</div>
+				<p
+					class="textoDefault texto_bottom0"
+					data-asw-orgfontsize="16"
+					style="font-size: 16px">
+					Encontre informações sobre solicitação de atendimento, revisão de
+					notas, atendimento especial, agendamento de encontros acadêmicos e
+					prorrogação de atividade avaliativa.
+				</p>
+			</div>
+			<a
+				href="https://ead.unifor.br/ava/mod/page/view.php?id=3877637"
+				class="BotaoGhost"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				<p
+					class="texto_bottom0 BotaoGhost_nome"
+					data-asw-orgfontsize="14"
+					style="font-size: 14px"
+					>Acessar</p
+				>
+				<svg
+					class="setaAcessar"
+					width="18"
+					height="18"
+					viewBox="0 0 18 18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g id="Seta Acessar">
+						<path
+							id="Vector"
+							d="M14.0623 4.5V11.8125C14.0623 11.9617 14.0031 12.1048 13.8976 12.2102C13.7921 12.3157 13.649 12.375 13.4998 12.375C13.3506 12.375 13.2076 12.3157 13.1021 12.2102C12.9966 12.1048 12.9373 11.9617 12.9373 11.8125V5.85773L4.89779 13.898C4.79225 14.0035 4.64909 14.0628 4.49982 14.0628C4.35056 14.0628 4.2074 14.0035 4.10186 13.898C3.99631 13.7924 3.93701 13.6493 3.93701 13.5C3.93701 13.3507 3.99631 13.2076 4.10186 13.102L12.1421 5.0625H6.18732C6.03814 5.0625 5.89507 5.00324 5.78958 4.89775C5.68409 4.79226 5.62482 4.64918 5.62482 4.5C5.62482 4.35082 5.68409 4.20774 5.78958 4.10225C5.89507 3.99676 6.03814 3.9375 6.18732 3.9375H13.4998C13.649 3.9375 13.7921 3.99676 13.8976 4.10225C14.0031 4.20774 14.0623 4.35082 14.0623 4.5Z"
+							fill="#004AF7"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<section class="EmissaoDeDocumentos" id="Emissãodedocumentos">
+		<div
+			class="CardSecao CardSecao_Roxo_R100 Margim_BottomDefault gridForum gridForum_notExpand">
+			<div>
+				<div class="SessaoTitulo">
+					<h2
+						class="textoH2 textoH2_Roxo texto_no_m_p"
+						data-asw-orgfontsize="30"
+						style="font-size: 30px">
+						Emissão de documentos
+					</h2>
+				</div>
+				<p
+					class="textoDefault texto_bottom0"
+					data-asw-orgfontsize="16"
+					style="font-size: 16px">
+					Receba orientações sobre declaração de comparecimento à prova,
+					certificados de participação de eventos e emissão de documentos
+					acadêmicos.
+				</p>
+			</div>
+			<a
+				href="https://ead.unifor.br/ava/mod/page/view.php?id=3877635"
+				class="BotaoGhost"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				<p
+					class="texto_bottom0 BotaoGhost_nome"
+					data-asw-orgfontsize="14"
+					style="font-size: 14px"
+					>Acessar</p
+				>
+				<svg
+					class="setaAcessar"
+					width="18"
+					height="18"
+					viewBox="0 0 18 18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g id="Seta Acessar">
+						<path
+							id="Vector"
+							d="M14.0623 4.5V11.8125C14.0623 11.9617 14.0031 12.1048 13.8976 12.2102C13.7921 12.3157 13.649 12.375 13.4998 12.375C13.3506 12.375 13.2076 12.3157 13.1021 12.2102C12.9966 12.1048 12.9373 11.9617 12.9373 11.8125V5.85773L4.89779 13.898C4.79225 14.0035 4.64909 14.0628 4.49982 14.0628C4.35056 14.0628 4.2074 14.0035 4.10186 13.898C3.99631 13.7924 3.93701 13.6493 3.93701 13.5C3.93701 13.3507 3.99631 13.2076 4.10186 13.102L12.1421 5.0625H6.18732C6.03814 5.0625 5.89507 5.00324 5.78958 4.89775C5.68409 4.79226 5.62482 4.64918 5.62482 4.5C5.62482 4.35082 5.68409 4.20774 5.78958 4.10225C5.89507 3.99676 6.03814 3.9375 6.18732 3.9375H13.4998C13.649 3.9375 13.7921 3.99676 13.8976 4.10225C14.0031 4.20774 14.0623 4.35082 14.0623 4.5Z"
+							fill="#004AF7"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<section class="Serviços" id="Serviços">
+		<div
+			class="CardSecao CardSecao_Coral_C100 Margim_BottomDefault gridForum gridForum_notExpand">
+			<div>
+				<div class="SessaoTitulo">
+					<h2
+						class="textoH2 textoH2_Coral texto_no_m_p"
+						data-asw-orgfontsize="30"
+						style="font-size: 30px">
+						Serviços
+					</h2>
+				</div>
+				<p
+					class="textoDefault texto_bottom0"
+					data-asw-orgfontsize="16"
+					style="font-size: 16px">
+					Seja orientado sobre planejamento de carreira e serviços de
+					biblioteca.
+				</p>
+			</div>
+			<a
+				href="https://ead.unifor.br/ava/mod/page/view.php?id=3877638"
+				class="BotaoGhost"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				<p
+					class="texto_bottom0 BotaoGhost_nome"
+					data-asw-orgfontsize="14"
+					style="font-size: 14px"
+					>Acessar</p
+				>
+				<svg
+					class="setaAcessar"
+					width="18"
+					height="18"
+					viewBox="0 0 18 18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g id="Seta Acessar">
+						<path
+							id="Vector"
+							d="M14.0623 4.5V11.8125C14.0623 11.9617 14.0031 12.1048 13.8976 12.2102C13.7921 12.3157 13.649 12.375 13.4998 12.375C13.3506 12.375 13.2076 12.3157 13.1021 12.2102C12.9966 12.1048 12.9373 11.9617 12.9373 11.8125V5.85773L4.89779 13.898C4.79225 14.0035 4.64909 14.0628 4.49982 14.0628C4.35056 14.0628 4.2074 14.0035 4.10186 13.898C3.99631 13.7924 3.93701 13.6493 3.93701 13.5C3.93701 13.3507 3.99631 13.2076 4.10186 13.102L12.1421 5.0625H6.18732C6.03814 5.0625 5.89507 5.00324 5.78958 4.89775C5.68409 4.79226 5.62482 4.64918 5.62482 4.5C5.62482 4.35082 5.68409 4.20774 5.78958 4.10225C5.89507 3.99676 6.03814 3.9375 6.18732 3.9375H13.4998C13.649 3.9375 13.7921 3.99676 13.8976 4.10225C14.0031 4.20774 14.0623 4.35082 14.0623 4.5Z"
+							fill="#004AF7"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<section class="ColaçãoDeGrau" id="Colaçãodegrau">
+		<div
+			class="CardSecao CardSecao_Verde_V100 Margim_BottomDefault gridForum gridForum_notExpand">
+			<div>
+				<div class="SessaoTitulo">
+					<h2
+						class="textoH2 textoH2_Verde_V800 texto_no_m_p"
+						data-asw-orgfontsize="30"
+						style="font-size: 30px">
+						Colação de grau
+					</h2>
+				</div>
+				<p
+					class="textoDefault texto_bottom0"
+					data-asw-orgfontsize="15"
+					style="font-size: 15px">
+					Entenda como ocorre a colação de grau e quais procedimentos são
+					envolvidos neste processo.
+				</p>
+			</div>
+			<a
+				href="https://ead.unifor.br/ava/mod/page/view.php?id=3877639"
+				class="BotaoGhost"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				<p
+					class="texto_bottom0 BotaoGhost_nome"
+					data-asw-orgfontsize="15"
+					style="font-size: 15px"
+					>Acessar</p
+				>
+				<svg
+					class="setaAcessar"
+					width="18"
+					height="18"
+					viewBox="0 0 18 18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g id="Seta Acessar">
+						<path
+							id="Vector"
+							d="M14.0623 4.5V11.8125C14.0623 11.9617 14.0031 12.1048 13.8976 12.2102C13.7921 12.3157 13.649 12.375 13.4998 12.375C13.3506 12.375 13.2076 12.3157 13.1021 12.2102C12.9966 12.1048 12.9373 11.9617 12.9373 11.8125V5.85773L4.89779 13.898C4.79225 14.0035 4.64909 14.0628 4.49982 14.0628C4.35056 14.0628 4.2074 14.0035 4.10186 13.898C3.99631 13.7924 3.93701 13.6493 3.93701 13.5C3.93701 13.3507 3.99631 13.2076 4.10186 13.102L12.1421 5.0625H6.18732C6.03814 5.0625 5.89507 5.00324 5.78958 4.89775C5.68409 4.79226 5.62482 4.64918 5.62482 4.5C5.62482 4.35082 5.68409 4.20774 5.78958 4.10225C5.89507 3.99676 6.03814 3.9375 6.18732 3.9375H13.4998C13.649 3.9375 13.7921 3.99676 13.8976 4.10225C14.0031 4.20774 14.0623 4.35082 14.0623 4.5Z"
+							fill="#004AF7"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<section class="FaleConosco" id="FaleConosco">
+		<div
+			class="CardSecao CardSecao_Neutro_N50 Margim_BottomDefault gridForum gridForum_notExpand">
+			<div>
+				<div class="SessaoTitulo">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="33"
+						viewBox="0 0 32 33"
+						fill="none">
+						<path
+							d="M23.4474 18.1897L19.4474 16.1897C19.29 16.1113 19.1146 16.0757 18.939 16.0867C18.7634 16.0977 18.5939 16.1548 18.4474 16.2522L16.6112 17.4772C15.7682 17.0138 15.0745 16.3202 14.6112 15.4772L15.8362 13.641C15.9336 13.4945 15.9907 13.3249 16.0017 13.1494C16.0127 12.9738 15.9771 12.7984 15.8987 12.641L13.8987 8.64097C13.8158 8.47356 13.6876 8.33271 13.5288 8.2344C13.3699 8.13608 13.1867 8.08423 12.9999 8.08472C11.6738 8.08472 10.4021 8.6115 9.46437 9.54918C8.52669 10.4869 7.99991 11.7586 7.99991 13.0847C8.00322 16.0011 9.1632 18.7971 11.2254 20.8592C13.2876 22.9214 16.0835 24.0814 18.9999 24.0847C19.6565 24.0847 20.3067 23.9554 20.9133 23.7041C21.52 23.4528 22.0711 23.0845 22.5354 22.6203C22.9997 22.156 23.368 21.6048 23.6193 20.9981C23.8706 20.3915 23.9999 19.7413 23.9999 19.0847C24 18.8989 23.9484 18.7168 23.8508 18.5587C23.7532 18.4006 23.6135 18.2729 23.4474 18.1897ZM18.9999 22.0847C16.6138 22.0821 14.3261 21.133 12.6389 19.4458C10.9516 17.7585 10.0026 15.4709 9.99991 13.0847C9.99971 12.3911 10.2399 11.7189 10.6795 11.1824C11.1191 10.6459 11.731 10.2783 12.4112 10.1422L13.8462 13.0172L12.6249 14.8347C12.5336 14.9716 12.4776 15.1289 12.4617 15.2927C12.4457 15.4564 12.4705 15.6216 12.5337 15.7735C13.2491 17.4739 14.6019 18.8267 16.3024 19.5422C16.4548 19.6082 16.6212 19.6352 16.7866 19.6208C16.952 19.6064 17.1112 19.5511 17.2499 19.4597L19.0762 18.2422L21.9512 19.6772C21.814 20.3581 21.4448 20.9703 20.9066 21.4094C20.3684 21.8484 19.6945 22.0871 18.9999 22.0847ZM15.9999 3.08472C13.7555 3.08423 11.5492 3.66483 9.59572 4.77C7.64227 5.87518 6.00822 7.46728 4.85262 9.39134C3.69703 11.3154 3.05926 13.5059 3.00139 15.7495C2.94353 17.9932 3.46753 20.2136 4.52241 22.1947L3.10366 26.451C2.98614 26.8034 2.96908 27.1815 3.05441 27.5431C3.13973 27.9046 3.32405 28.2352 3.58672 28.4979C3.84939 28.7606 4.18003 28.9449 4.54157 29.0302C4.90311 29.1155 5.28127 29.0985 5.63366 28.981L9.88991 27.5622C11.6334 28.4895 13.5652 29.0075 15.5387 29.0767C17.5122 29.146 19.4756 28.7647 21.2797 27.9619C23.0839 27.159 24.6815 25.9558 25.9512 24.4433C27.2209 22.9309 28.1293 21.1491 28.6076 19.2331C29.0858 17.3172 29.1213 15.3175 28.7113 13.3858C28.3013 11.4541 27.4567 9.64114 26.2414 8.08461C25.0262 6.52809 23.4723 5.26887 21.6978 4.40253C19.9232 3.5362 17.9746 3.08553 15.9999 3.08472ZM15.9999 27.0847C14.0661 27.086 12.1663 26.5768 10.4924 25.6085C10.3699 25.5374 10.2336 25.4932 10.0927 25.4787C9.95172 25.4643 9.80933 25.48 9.67491 25.5247L4.99991 27.0847L6.55866 22.4097C6.60359 22.2754 6.61947 22.133 6.60525 21.9921C6.59103 21.8512 6.54702 21.7149 6.47616 21.5922C5.26362 19.4959 4.77679 17.0579 5.09119 14.6567C5.40559 12.2554 6.50365 10.025 8.21502 8.31146C9.92639 6.59793 12.1554 5.49705 14.5563 5.17962C16.9572 4.86219 19.3957 5.34594 21.4936 6.55582C23.5915 7.76571 25.2314 9.6341 26.1591 11.8712C27.0868 14.1082 27.2503 16.5889 26.6242 18.9283C25.9981 21.2678 24.6176 23.3352 22.6966 24.81C20.7756 26.2847 18.4217 27.0843 15.9999 27.0847Z"
+							fill="#26AE9C"></path>
+					</svg>
+					<h2
+						class="textoH2 textoH2_Verde texto_no_m_p"
+						data-asw-orgfontsize="30"
+						style="font-size: 30px">
+						Fale conosco!
+					</h2>
+				</div>
+				<p
+					class="textoDefault"
+					data-asw-orgfontsize="15"
+					style="font-size: 15px">
+					Ficou com dúvidas? Acesse este espaço e conte com a ajuda do nosso
+					atendimento que irá te orientar na direção certa.
+				</p>
+			</div>
+			<a
+				href="https://api.whatsapp.com/send/?phone=5585992466625"
+				target="_blank"
+				class="BotaoGhost"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				<p
+					class="texto_bottom0 BotaoGhost_nome"
+					data-asw-orgfontsize="14"
+					style="font-size: 14px"
+					>Iniciar Conversa</p
+				>
+				<svg
+					class="setaAcessar"
+					width="18"
+					height="18"
+					viewBox="0 0 18 18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g id="Seta Acessar">
+						<path
+							id="Vector"
+							d="M14.0623 4.5V11.8125C14.0623 11.9617 14.0031 12.1048 13.8976 12.2102C13.7921 12.3157 13.649 12.375 13.4998 12.375C13.3506 12.375 13.2076 12.3157 13.1021 12.2102C12.9966 12.1048 12.9373 11.9617 12.9373 11.8125V5.85773L4.89779 13.898C4.79225 14.0035 4.64909 14.0628 4.49982 14.0628C4.35056 14.0628 4.2074 14.0035 4.10186 13.898C3.99631 13.7924 3.93701 13.6493 3.93701 13.5C3.93701 13.3507 3.99631 13.2076 4.10186 13.102L12.1421 5.0625H6.18732C6.03814 5.0625 5.89507 5.00324 5.78958 4.89775C5.68409 4.79226 5.62482 4.64918 5.62482 4.5C5.62482 4.35082 5.68409 4.20774 5.78958 4.10225C5.89507 3.99676 6.03814 3.9375 6.18732 3.9375H13.4998C13.649 3.9375 13.7921 3.99676 13.8976 4.10225C14.0031 4.20774 14.0623 4.35082 14.0623 4.5Z"
+							fill="#004AF7"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</section>
+
+	<section class="contatos" id="contato">
+		<div class="contatos_texto">
+			<p
+				class="textoDefault Margim_BottomDefault"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px"
+				>Caso esta experiência virtual não tenha suprido suas questões, não
+				exite em entrar em contato com o Polo de ensino Ead nos seguintes
+				canais:</p
+			>
+			<div class="SessaoTituloSecretaria">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="18"
+					viewBox="0 0 18 19"
+					fill="none"
+					style="margin-right: 10px">
+					<path
+						d="M16.3125 10.5094C16.193 11.8987 15.6792 13.2251 14.8315 14.3323C13.9838 15.4396 12.8375 16.2817 11.5274 16.7596C10.2174 17.2375 8.79812 17.3313 7.43658 17.03C6.07504 16.7286 4.82788 16.0447 3.84183 15.0587C2.85577 14.0726 2.17185 12.8254 1.87053 11.4639C1.5692 10.1024 1.66301 8.68308 2.14091 7.37304C2.61881 6.063 3.46092 4.9167 4.56817 4.069C5.67542 3.22131 7.00175 2.70748 8.39111 2.58797C8.46497 2.58188 8.53932 2.59039 8.6099 2.61303C8.68048 2.63567 8.7459 2.67199 8.80245 2.71991C8.85899 2.76783 8.90554 2.82642 8.93944 2.89234C8.97333 2.95825 8.99392 3.0302 9.00001 3.10406C9.00611 3.17793 8.99759 3.25228 8.97495 3.32286C8.95232 3.39343 8.916 3.45886 8.86807 3.5154C8.82015 3.57195 8.76156 3.6185 8.69565 3.65239C8.62973 3.68629 8.55779 3.70688 8.48392 3.71297C7.308 3.81401 6.18541 4.2488 5.24821 4.9662C4.31102 5.68359 3.59823 6.65374 3.19369 7.7625C2.78916 8.87125 2.70973 10.0725 2.96473 11.2249C3.21973 12.3772 3.79857 13.4328 4.63313 14.2674C5.46769 15.1019 6.52326 15.6807 7.67563 15.9358C8.828 16.1908 10.0292 16.1113 11.138 15.7068C12.2467 15.3023 13.2169 14.5895 13.9343 13.6523C14.6517 12.7151 15.0865 11.5925 15.1875 10.4166C15.1998 10.2674 15.2709 10.1292 15.3851 10.0324C15.4993 9.93562 15.6472 9.88816 15.7964 9.90047C15.9456 9.91278 16.0838 9.98384 16.1806 10.098C16.2774 10.2122 16.3248 10.3602 16.3125 10.5094ZM8.43751 5.96297V9.90047C8.43751 10.0497 8.49678 10.1927 8.60227 10.2982C8.70775 10.4037 8.85083 10.463 9.00001 10.463H12.9375C13.0867 10.463 13.2298 10.4037 13.3353 10.2982C13.4407 10.1927 13.5 10.0497 13.5 9.90047C13.5 9.75129 13.4407 9.60821 13.3353 9.50272C13.2298 9.39723 13.0867 9.33797 12.9375 9.33797H9.56251V5.96297C9.56251 5.81379 9.50325 5.67071 9.39776 5.56522C9.29227 5.45973 9.1492 5.40047 9.00001 5.40047C8.85083 5.40047 8.70775 5.45973 8.60227 5.56522C8.49678 5.67071 8.43751 5.81379 8.43751 5.96297ZM11.25 4.27547C11.4169 4.27547 11.58 4.22599 11.7188 4.13327C11.8575 4.04056 11.9657 3.90878 12.0295 3.75461C12.0934 3.60043 12.1101 3.43078 12.0775 3.26711C12.045 3.10344 11.9646 2.9531 11.8466 2.8351C11.7286 2.7171 11.5783 2.63674 11.4146 2.60418C11.2509 2.57163 11.0813 2.58834 10.9271 2.6522C10.7729 2.71606 10.6412 2.8242 10.5485 2.96296C10.4557 3.10171 10.4063 3.26484 10.4063 3.43172C10.4063 3.6555 10.4952 3.87011 10.6534 4.02834C10.8116 4.18658 11.0262 4.27547 11.25 4.27547ZM13.7813 5.96297C13.9481 5.96297 14.1113 5.91349 14.25 5.82077C14.3888 5.72806 14.4969 5.59628 14.5608 5.44211C14.6246 5.28793 14.6414 5.11828 14.6088 4.95461C14.5762 4.79094 14.4959 4.6406 14.3779 4.5226C14.2599 4.4046 14.1095 4.32424 13.9459 4.29168C13.7822 4.25913 13.6125 4.27584 13.4584 4.3397C13.3042 4.40356 13.1724 4.5117 13.0797 4.65046C12.987 4.78921 12.9375 4.95234 12.9375 5.11922C12.9375 5.343 13.0264 5.55761 13.1846 5.71584C13.3429 5.87408 13.5575 5.96297 13.7813 5.96297ZM15.4688 8.49422C15.6356 8.49422 15.7988 8.44474 15.9375 8.35202C16.0763 8.25931 16.1844 8.12753 16.2483 7.97336C16.3121 7.81918 16.3289 7.64953 16.2963 7.48586C16.2637 7.32219 16.1834 7.17185 16.0654 7.05385C15.9474 6.93585 15.797 6.85549 15.6334 6.82293C15.4697 6.79038 15.3 6.80709 15.1459 6.87095C14.9917 6.93481 14.8599 7.04295 14.7672 7.18171C14.6745 7.32046 14.625 7.48359 14.625 7.65047C14.625 7.87425 14.7139 8.08886 14.8721 8.24709C15.0304 8.40533 15.245 8.49422 15.4688 8.49422Z"
+						fill="#004AF7"></path>
+				</svg>
+				<p
+					class="texto_no_m_p Margim_BottomDefault"
+					data-asw-orgfontsize="15"
+					style="font-size: 15px"
+					><strong> Atendimento</strong>: segunda a sexta, de 7h30min às 21h
+				</p>
+			</div>
+			<div class="SessaoTituloSecretaria">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="18"
+					height="19"
+					viewBox="0 0 18 19"
+					fill="none"
+					style="margin-right: 10px">
+					<path
+						d="M10.7065 3.56745C10.7256 3.49606 10.7586 3.42913 10.8035 3.37049C10.8485 3.31185 10.9046 3.26265 10.9686 3.22569C11.0326 3.18873 11.1032 3.16475 11.1765 3.1551C11.2497 3.14546 11.3242 3.15034 11.3956 3.16948C12.4383 3.44155 13.3897 3.98668 14.1518 4.74872C14.9138 5.51076 15.4589 6.46217 15.731 7.50495C15.7502 7.57632 15.755 7.65077 15.7454 7.72403C15.7358 7.7973 15.7118 7.86794 15.6748 7.93193C15.6378 7.99592 15.5886 8.05201 15.53 8.09697C15.4714 8.14194 15.4044 8.17491 15.3331 8.19401C15.2855 8.20649 15.2366 8.21287 15.1875 8.21299C15.0636 8.21299 14.9431 8.17204 14.8448 8.09652C14.7465 8.02099 14.6759 7.91511 14.644 7.79534C14.4221 6.94408 13.9772 6.1674 13.3551 5.54535C12.7331 4.92331 11.9564 4.47841 11.1052 4.25651C11.0337 4.23749 10.9667 4.20457 10.908 4.15964C10.8493 4.1147 10.8 4.05863 10.763 3.99463C10.7259 3.93063 10.7019 3.85996 10.6922 3.78666C10.6825 3.71336 10.6874 3.63887 10.7065 3.56745ZM10.5427 6.50651C11.5123 6.76526 12.1352 7.38823 12.394 8.35784C12.4259 8.47761 12.4965 8.58349 12.5948 8.65902C12.6931 8.73454 12.8136 8.77549 12.9375 8.77549C12.9866 8.77537 13.0355 8.76899 13.0831 8.75651C13.1544 8.73742 13.2214 8.70444 13.28 8.65947C13.3386 8.61451 13.3878 8.55842 13.4248 8.49443C13.4618 8.43044 13.4858 8.3598 13.4954 8.28653C13.505 8.21327 13.5002 8.13882 13.481 8.06745C13.121 6.72026 12.1802 5.77948 10.8331 5.41948C10.7617 5.40041 10.6872 5.39559 10.614 5.40529C10.5408 5.41498 10.4702 5.43901 10.4062 5.476C10.3422 5.51299 10.2862 5.56221 10.2413 5.62086C10.1963 5.6795 10.1634 5.74642 10.1443 5.8178C10.1253 5.88917 10.1205 5.9636 10.1301 6.03684C10.1398 6.11008 10.1639 6.1807 10.2009 6.24465C10.2379 6.3086 10.2871 6.36464 10.3457 6.40957C10.4044 6.4545 10.4713 6.48744 10.5427 6.50651ZM16.3041 13.2108C16.1787 14.1636 15.7108 15.0381 14.9878 15.6711C14.2647 16.3041 13.336 16.6522 12.375 16.6505C6.79219 16.6505 2.25001 12.1083 2.25001 6.52549C2.24828 5.56453 2.59643 4.63579 3.22941 3.91275C3.8624 3.1897 4.73694 2.7218 5.68969 2.59643C5.93062 2.56701 6.1746 2.6163 6.38522 2.73694C6.59583 2.85758 6.76178 3.0431 6.85829 3.2658L8.34329 6.58104V6.58948C8.41718 6.75995 8.44769 6.94607 8.43211 7.13122C8.41653 7.31636 8.35533 7.49477 8.25399 7.65049C8.24133 7.66948 8.22797 7.68706 8.21391 7.70463L6.75001 9.43995C7.27665 10.5101 8.39602 11.6196 9.48024 12.1477L11.1916 10.6915C11.2085 10.6774 11.2261 10.6642 11.2444 10.6521C11.4 10.5484 11.579 10.485 11.7652 10.4678C11.9515 10.4506 12.1391 10.4801 12.311 10.5537L12.3202 10.5579L15.6326 12.0422C15.8557 12.1384 16.0417 12.3042 16.1627 12.5148C16.2837 12.7255 16.3333 12.9696 16.3041 13.2108ZM15.1875 13.0702C15.1875 13.0702 15.1826 13.0702 15.1798 13.0702L11.8751 11.5901L10.163 13.0463C10.1464 13.0603 10.129 13.0735 10.1109 13.0856C9.94905 13.1937 9.76191 13.2578 9.56781 13.2719C9.37371 13.2859 9.17928 13.2494 9.00352 13.1658C7.68657 12.5295 6.37383 11.2266 5.7368 9.9237C5.65245 9.74922 5.6146 9.55591 5.62691 9.3625C5.63923 9.1691 5.70131 8.98215 5.80712 8.81979C5.81904 8.80072 5.83244 8.78262 5.84719 8.76565L7.31251 7.02823L5.83594 3.72354C5.83567 3.72073 5.83567 3.71791 5.83594 3.7151C5.15409 3.80405 4.52805 4.1385 4.07505 4.65582C3.62205 5.17315 3.37316 5.83787 3.37501 6.52549C3.37761 8.91164 4.32666 11.1993 6.01392 12.8866C7.70119 14.5738 9.98886 15.5229 12.375 15.5255C13.0622 15.5279 13.7267 15.2798 14.2444 14.8278C14.762 14.3758 15.0973 13.7507 15.1875 13.0695V13.0702Z"
+						fill="#004AF7"></path>
+				</svg>
+				<p
+					margim_bottomdefault=""
+					data-asw-orgfontsize="15"
+					style="font-size: 15px"
+					>(85) 3477.3479 ou (85) 3477.3426 ou 0800.280.0550</p
+				>
+			</div>
+			<div class="SessaoTituloSecretaria">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="18"
+					height="19"
+					viewBox="0 0 18 19"
+					fill="none"
+					style="margin-right: 10px">
+					<path
+						d="M13.1892 11.0846L10.9392 9.95957C10.8507 9.91544 10.752 9.89545 10.6533 9.90162C10.5545 9.9078 10.4591 9.93991 10.3767 9.99473L9.34384 10.6838C8.86969 10.4231 8.47949 10.0329 8.21884 9.55879L8.9079 8.5259C8.96272 8.44352 8.99484 8.34814 9.00101 8.24937C9.00718 8.15061 8.98719 8.05197 8.94306 7.9634L7.81806 5.7134C7.77143 5.61923 7.69935 5.54001 7.61 5.48471C7.52065 5.42941 7.41759 5.40024 7.31251 5.40051C6.56659 5.40051 5.85122 5.69683 5.32377 6.22428C4.79633 6.75172 4.50001 7.46709 4.50001 8.21301C4.50187 9.85347 5.15436 11.4262 6.31434 12.5862C7.47432 13.7462 9.04705 14.3987 10.6875 14.4005C11.0569 14.4005 11.4226 14.3278 11.7638 14.1864C12.105 14.0451 12.4151 13.8379 12.6762 13.5768C12.9374 13.3156 13.1446 13.0055 13.2859 12.6643C13.4273 12.3231 13.5 11.9574 13.5 11.588C13.5001 11.4835 13.471 11.3811 13.4162 11.2921C13.3613 11.2032 13.2827 11.1313 13.1892 11.0846ZM10.6875 13.2755C9.34531 13.274 8.05851 12.7402 7.10943 11.7911C6.16035 10.842 5.6265 9.55521 5.62501 8.21301C5.6249 7.82286 5.75998 7.44473 6.00727 7.14296C6.25456 6.84119 6.59877 6.63442 6.98134 6.55786L7.78852 8.17504L7.10157 9.19739C7.05024 9.27439 7.0187 9.36287 7.00974 9.45498C7.00079 9.54709 7.0147 9.63999 7.05024 9.72543C7.4527 10.682 8.21365 11.4429 9.17017 11.8454C9.25587 11.8825 9.34947 11.8977 9.44252 11.8896C9.53557 11.8815 9.62513 11.8503 9.70313 11.799L10.7304 11.1141L12.3476 11.9213C12.2704 12.3043 12.0628 12.6487 11.76 12.8956C11.4573 13.1426 11.0782 13.2769 10.6875 13.2755ZM9.00001 2.58801C7.73752 2.58774 6.49647 2.91432 5.39766 3.53599C4.29884 4.15765 3.37968 5.05321 2.72966 6.13549C2.07964 7.21777 1.72089 8.44991 1.68834 9.71198C1.65579 10.974 1.95055 12.223 2.54392 13.3374L1.74587 15.7315C1.67976 15.9297 1.67017 16.1425 1.71816 16.3458C1.76616 16.5492 1.86984 16.7352 2.01759 16.8829C2.16534 17.0307 2.35133 17.1344 2.55469 17.1824C2.75806 17.2304 2.97077 17.2208 3.16899 17.1547L5.56313 16.3566C6.54383 16.8782 7.63047 17.1696 8.74058 17.2085C9.85068 17.2475 10.9551 17.033 11.9699 16.5814C12.9848 16.1298 13.8834 15.453 14.5976 14.6022C15.3118 13.7515 15.8228 12.7492 16.0918 11.6715C16.3608 10.5938 16.3808 9.46894 16.1502 8.38235C15.9196 7.29577 15.4444 6.276 14.7609 5.40045C14.0773 4.52491 13.2033 3.8166 12.2051 3.32929C11.2069 2.84197 10.1108 2.58847 9.00001 2.58801ZM9.00001 16.088C7.91226 16.0888 6.84359 15.8023 5.90204 15.2576C5.8331 15.2176 5.75646 15.1928 5.67718 15.1846C5.59791 15.1765 5.51781 15.1853 5.4422 15.2105L2.81251 16.088L3.68931 13.4583C3.71458 13.3828 3.72351 13.3027 3.71551 13.2234C3.70751 13.1441 3.68276 13.0675 3.6429 12.9985C2.96085 11.8193 2.68701 10.448 2.86386 9.09724C3.04071 7.74652 3.65836 6.49192 4.62101 5.52805C5.58365 4.56419 6.83747 3.94495 8.18797 3.7664C9.53846 3.58784 10.9101 3.85995 12.0902 4.54051C13.2703 5.22107 14.1927 6.27204 14.7146 7.53039C15.2364 8.78873 15.3283 10.1841 14.9762 11.5C14.624 12.816 13.8474 13.9789 12.7669 14.8085C11.6864 15.638 10.3623 16.0878 9.00001 16.088Z"
+						fill="#004AF7"></path>
+				</svg>
+				<p
+					class="texto_no_m_p Margim_BottomDefault"
+					data-asw-orgfontsize="15"
+					style="font-size: 15px"
+					>WhatsApp (85)9 9246-6625</p
+				>
+			</div>
+
+			<div class="SessaoTituloSecretaria">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="18"
+					height="19"
+					viewBox="0 0 18 19"
+					fill="none"
+					style="margin-right: 10px">
+					<path
+						d="M15.75 4.27551H2.25C2.10082 4.27551 1.95774 4.33478 1.85225 4.44027C1.74676 4.54575 1.6875 4.68883 1.6875 4.83801V14.4005C1.6875 14.6989 1.80603 14.985 2.017 15.196C2.22798 15.407 2.51413 15.5255 2.8125 15.5255H15.1875C15.4859 15.5255 15.772 15.407 15.983 15.196C16.194 14.985 16.3125 14.6989 16.3125 14.4005V4.83801C16.3125 4.68883 16.2532 4.54575 16.1477 4.44027C16.0423 4.33478 15.8992 4.27551 15.75 4.27551ZM9 10.2626L3.69633 5.40051H14.3037L9 10.2626ZM6.94055 9.90051L2.8125 13.684V6.117L6.94055 9.90051ZM7.77305 10.6634L8.6168 11.4404C8.72057 11.5356 8.85632 11.5885 8.99719 11.5885C9.13806 11.5885 9.2738 11.5356 9.37758 11.4404L10.2213 10.6634L14.2995 14.4005H3.69633L7.77305 10.6634ZM11.0595 9.90051L15.1875 6.11629V13.6847L11.0595 9.90051Z"
+						fill="#004AF7"></path>
+				</svg>
+				<p
+					margim_bottomdefault=""
+					data-asw-orgfontsize="15"
+					style="font-size: 15px">
+					curso.ead@unifor.br</p
+				>
+			</div>
+			<div class="SessaoTituloSecretaria">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="18"
+					height="19"
+					viewBox="0 0 18 19"
+					fill="none"
+					style="margin-right: 10px">
+					<path
+						d="M9 5.40051C8.44374 5.40051 7.89997 5.56546 7.43746 5.87451C6.97495 6.18355 6.61446 6.6228 6.40159 7.13672C6.18872 7.65063 6.13302 8.21613 6.24154 8.7617C6.35006 9.30728 6.61793 9.80842 7.01126 10.2018C7.4046 10.5951 7.90574 10.863 8.45131 10.9715C8.99688 11.08 9.56238 11.0243 10.0763 10.8114C10.5902 10.5986 11.0295 10.2381 11.3385 9.77555C11.6475 9.31304 11.8125 8.76927 11.8125 8.21301C11.8125 7.46709 11.5162 6.75172 10.9887 6.22428C10.4613 5.69683 9.74592 5.40051 9 5.40051ZM9 9.90051C8.66624 9.90051 8.33998 9.80154 8.06248 9.61612C7.78497 9.43069 7.56868 9.16714 7.44095 8.85879C7.31323 8.55044 7.27981 8.21114 7.34492 7.8838C7.41004 7.55646 7.57076 7.25577 7.80676 7.01977C8.04276 6.78377 8.34344 6.62305 8.67078 6.55794C8.99813 6.49283 9.33743 6.52624 9.64578 6.65397C9.95413 6.78169 10.2177 6.99798 10.4031 7.27549C10.5885 7.553 10.6875 7.87926 10.6875 8.21301C10.6875 8.66057 10.5097 9.08979 10.1932 9.40626C9.87678 9.72272 9.44755 9.90051 9 9.90051ZM9 2.02551C7.35954 2.02737 5.78681 2.67987 4.62683 3.83985C3.46685 4.99982 2.81436 6.57256 2.8125 8.21301C2.8125 10.4208 3.83273 12.7608 5.76562 14.9806C6.63414 15.9836 7.61165 16.8869 8.68008 17.6736C8.77466 17.7398 8.88734 17.7754 9.00281 17.7754C9.11829 17.7754 9.23097 17.7398 9.32555 17.6736C10.392 16.8865 11.3676 15.9833 12.2344 14.9806C14.1645 12.7608 15.1875 10.4208 15.1875 8.21301C15.1856 6.57256 14.5331 4.99982 13.3732 3.83985C12.2132 2.67987 10.6405 2.02737 9 2.02551ZM9 16.5099C7.83773 15.5958 3.9375 12.2384 3.9375 8.21301C3.9375 6.87035 4.47087 5.58269 5.42027 4.63328C6.36967 3.68388 7.65734 3.15051 9 3.15051C10.3427 3.15051 11.6303 3.68388 12.5797 4.63328C13.5291 5.58269 14.0625 6.87035 14.0625 8.21301C14.0625 12.237 10.1623 15.5958 9 16.5099Z"
+						fill="#004AF7"></path>
+				</svg>
+				<p
+					class="texto_no_m_p Margim_BottomDefault"
+					data-asw-orgfontsize="15"
+					style="font-size: 15px">
+					Presencialmente (Campus Universidade de Fortaleza - Bloco N)</p
+				>
+			</div>
+		</div>
+	</section>
+
+	<section class="Apresentacao" id="Apresentacao">
+		<div class="SessaoTitulo">
+			<h2
+				class="textoH2 texto_bottom0"
+				id="Espaçodefeedbackemelhoriacontínua"
+				data-asw-orgfontsize="30"
+				style="font-size: 30px"
+				>Espaço de feedback e melhoria contínua
+			</h2>
+		</div>
+		<div class="Margim_BottomDefault">
+			<div class="ImagemCentralizada">
+				<img
+					class="img-fluid Margim_BottomDefault"
+					src="https://ead.unifor.br/ava/draftfile.php/3636559/user/draft/855075397/asset-avaliacao%201.svg"
+					alt="" />
+			</div>
+			<p
+				class="textoDefault Margim_BottomDefault"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px"
+				>Agora é hora de você ter a oportunidade de contribuir para o
+				aperfeiçoamento contínuo do seu curso, Ambiente Virtual de Aprendizagem
+				(AVA) e experiência estudantil. Acreditamos que a sua opinião é
+				fundamental para que possamos oferecer uma educação a distância de alta
+				qualidade e atender melhor às suas necessidades e expectativas.</p
+			>
+			<a
+				href=""
+				class="BotaoGhost disabled"
+				data-asw-orgfontsize="15"
+				style="font-size: 15px">
+				<p
+					class="texto_bottom0 BotaoGhost_nome"
+					data-asw-orgfontsize="15"
+					style="font-size: 15px"
+					>Deixe sua sugestão
+				</p>
+				<svg
+					class=""
+					width="18"
+					height="18"
+					viewBox="0 0 18 18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g id="Seta Acessar">
+						<path
+							id="Vector"
+							d="M14.0623 4.5V11.8125C14.0623 11.9617 14.0031 12.1048 13.8976 12.2102C13.7921 12.3157 13.649 12.375 13.4998 12.375C13.3506 12.375 13.2076 12.3157 13.1021 12.2102C12.9966 12.1048 12.9373 11.9617 12.9373 11.8125V5.85773L4.89779 13.898C4.79225 14.0035 4.64909 14.0628 4.49982 14.0628C4.35056 14.0628 4.2074 14.0035 4.10186 13.898C3.99631 13.7924 3.93701 13.6493 3.93701 13.5C3.93701 13.3507 3.99631 13.2076 4.10186 13.102L12.1421 5.0625H6.18732C6.03814 5.0625 5.89507 5.00324 5.78958 4.89775C5.68409 4.79226 5.62482 4.64918 5.62482 4.5C5.62482 4.35082 5.68409 4.20774 5.78958 4.10225C5.89507 3.99676 6.03814 3.9375 6.18732 3.9375H13.4998C13.649 3.9375 13.7921 3.99676 13.8976 4.10225C14.0031 4.20774 14.0623 4.35082 14.0623 4.5Z"
+							fill="#A6ABC5"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</section>
+</main>
+<!-- estilo -->
+<script src="https://ead.unifor.br/ava/mod/resource/view.php?id=3877634"></script>
+<!-- estilo padrao -->
+<script src="https://ead.unifor.br/ava/pluginfile.php/3600080/mod_folder/content/0/folhaDeEstilo.js"></script>
+<!-- custom bloco -->
+<script src="https://ead.unifor.br/ava/pluginfile.php/3600080/mod_folder/content/0/custom-blocos.js"></script>
+<script>
+	var itens = {};
+	var itensOriginal = document.querySelector("#seçao-list").innerHTML;
+</script>
+
+<!-- Barra de Pesquisa -->
+
+<!-- nome do usuario -->
+<script>
+	var elem = document.querySelector(".usertext");
+	var clone = elem.cloneNode(true);
+	clone.id = "elem2";
+	var hello2 = document.querySelector("#hello2");
+	hello2.after(clone);
+	var name = document.getElementById("elem2").textContent;
+	localStorage.setItem("userName", name);
+</script>
