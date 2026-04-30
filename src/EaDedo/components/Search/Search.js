@@ -5,24 +5,40 @@ const initSearch = () => {
 
   if (!searchBox || !inputField || !list) return;
 
+
+  if (searchBox.dataset.searchInitialized) return;
+  searchBox.dataset.searchInitialized = "true";
+
   const defaultSuggestionsHTML = list.innerHTML;
 
-  window.toggleSearch = (expand) => {
+  window.toggleSearch = (expand, event) => {
 
-    searchBox.classList.toggle("Search_Box--expanded", expand);
+    if (event) {
+      event.stopPropagation();
+    }
+
+    const currentSearchBox = document.getElementById("main-search");
+    if (!currentSearchBox) return;
+
+    currentSearchBox.classList.toggle("Search_Box--expanded", expand);
     if (expand) {
-      setTimeout(() => inputField.focus(), 50);
+      const currentInputField = document.getElementById("search-input-field");
+      if (currentInputField) {
+        setTimeout(() => currentInputField.focus(), 50);
+      }
     }
   };
 
   window.handleSearch = (e) => {
     const term = e.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
+    const currentList = document.getElementById("suggestions-list");
+    if (!currentList) return;
+
     if (!term) {
-      list.innerHTML = defaultSuggestionsHTML;
+      currentList.innerHTML = defaultSuggestionsHTML;
       return;
     }
-
 
     const containers = document.querySelectorAll(".SessaoTitulo, section, .activity, .block, .card");
 
@@ -43,14 +59,14 @@ const initSearch = () => {
     const uniqueItems = Array.from(new Map(itemsFound.map(item => [item.id, item])).values());
 
     if (uniqueItems.length > 0) {
-      list.innerHTML = uniqueItems.map(item => `
+      currentList.innerHTML = uniqueItems.map(item => `
         <li class="list-item">
           <button class="Search_Box__suggestion-btn" onclick="scrollToSection('${item.id}')">
             <p class="paragraph--medium">${item.title}</p>
           </button>
         </li>`).join("");
     } else {
-      list.innerHTML = `
+      currentList.innerHTML = `
         <div class="Search_Box__no-results">
           <p class="paragraph--medium">Não foi possível encontrar uma correspondência, tente novamente.</p>
         </div>`;
@@ -60,16 +76,28 @@ const initSearch = () => {
   window.scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       window.toggleSearch(false);
     }
   };
 
-  document.addEventListener("click", (e) => {
-    if (!searchBox.contains(e.target)) {
-      window.toggleSearch(false);
-    }
-  });
+
+  if (!window.searchGlobalListenerAdded) {
+    document.addEventListener("click", (e) => {
+      const activeSearchBox = document.querySelector(".Search_Box--expanded");
+      if (activeSearchBox && !activeSearchBox.contains(e.target)) {
+        window.toggleSearch(false);
+      }
+    });
+    window.searchGlobalListenerAdded = true;
+  }
 };
 
 if (document.readyState === "loading") {
