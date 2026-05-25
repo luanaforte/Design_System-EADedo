@@ -293,6 +293,10 @@
   color: var(--color-blue-950) !important;
 }
 
+.text-blue-cadete {
+  color: var(--color-blue-cadete) !important;
+}
+
 /* ===== TURQUOISE ===== */
 .text-turquoise-300 {
   color: var(--color-turquoise-300) !important;

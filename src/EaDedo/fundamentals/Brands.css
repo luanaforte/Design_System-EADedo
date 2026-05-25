@@ -37,4 +37,13 @@
   /* sobre-escrevendo o peso */
   --font-weight-semibold: var(--font-weight-medium);
 }
-
+
+.TrilhaBiblioteca_gestaoDocumental {
+  --font-family-heading: var(--font-family-Neulis);
+  --font-family-body: var(--font-family-Poppins);
+  --font-family-code: var(--font-family-Code);
+  color: #000000;
+
+  /* sobre-escrevendo o peso */
+  --font-weight-semibold: var(--font-weight-medium);
+}
