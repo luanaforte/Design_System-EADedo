@@ -61,15 +61,7 @@
 	},
 	"005": {
 		"nome": "NIVELAMENTO",
-		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\005-NIVELAMENTO",
-		"disciplinas": [
-			{
-				"modalidade": "EAD",
-				"codigo": "Grupo de Trabalho",
-				"nome": "Atividades de Nivelamento",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=101749"
-			}
-		]
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\005-NIVELAMENTO"
 	},
 	"006": {
 		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\006-INTERAÇÃO HUMANO COMPUTADOR",
@@ -95,7 +87,8 @@
 				"modalidade": "EAD",
 				"codigo": "N680",
 				"nome": "Matemática para Computação",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94374"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94374",
+				"tutoria_ia": true
 			}
 		]
 	},
@@ -210,7 +203,8 @@
 				"modalidade": "EAD",
 				"codigo": "N683",
 				"nome": "Raciocínio Lógico e Algorítmico",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94888"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94888",
+				"beecrowd": true
 			}
 		]
 	},
@@ -260,7 +254,8 @@
 				"modalidade": "EAD",
 				"codigo": "G402",
 				"nome": "Controladoria e Orçamento",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94814"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94814",
+				"tutoria_ia": true
 			}
 		]
 	},
@@ -365,7 +360,8 @@
 				"modalidade": "EAD",
 				"codigo": "N685",
 				"nome": "Programação Orientada a Objetos",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94887"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94887",
+				"beecrowd": true
 			}
 		]
 	},
@@ -415,7 +411,8 @@
 				"modalidade": "EAD",
 				"codigo": "G370",
 				"nome": "Contabilidade Intermediária",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95879"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95879",
+				"tutoria_ia": true
 			}
 		]
 	},
@@ -454,7 +451,8 @@
 				"modalidade": "EAD",
 				"codigo": "G405",
 				"nome": "Inteligência de Negócios",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94408"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94408",
+				"tutoria_ia": true
 			}
 		]
 	},
@@ -751,12 +749,6 @@
 				"codigo": "N696",
 				"nome": "Inovação em Soluções Computacionais",
 				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95998"
-			},
-			{
-				"modalidade": "EADCP",
-				"codigo": "T339",
-				"nome": "Inovação em Soluções Computacionais",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94519"
 			}
 		]
 	},
@@ -1381,7 +1373,8 @@
 				"modalidade": "EAD",
 				"codigo": "G452",
 				"nome": "Liderança e Gestão",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94863"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94863",
+				"tutoria_ia": true
 			}
 		]
 	},
@@ -1414,13 +1407,21 @@
 				"modalidade": "EAD",
 				"codigo": "G455",
 				"nome": "Simulação Empresarial em Ambiente Internacional",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94418"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94418",
+				"plataforma": "Up Business"
 			}
 		]
 	},
 	"127": {
-		"nome": "LIBRAS",
-		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\127-LIBRAS"
+		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\127-LIBRAS",
+		"disciplinas": [
+			{
+				"modalidade": "EADCP",
+				"codigo": "H799",
+				"nome": "Libras",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94491"
+			}
+		]
 	},
 	"128": {
 		"caminho_n": "N:\\7. Graduacao_EaD\\Produção EAD UNIFOR\\128-PRÁTICA CONTÁBIL",
@@ -1499,7 +1500,8 @@
 				"modalidade": "EAD",
 				"codigo": "G747",
 				"nome": "Dados e Tomada de Decisão",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94852"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94852",
+				"tutoria_ia": true
 			}
 		]
 	},
@@ -1955,7 +1957,8 @@
 				"modalidade": "EAD",
 				"codigo": "G746",
 				"nome": "Métricas e Hibridização no Trabalho",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95987"
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=95987",
+				"tutoria_ia": true
 			}
 		]
 	},
@@ -2011,6 +2014,12 @@
 				"codigo": "F055",
 				"nome": "Inovação em Soluções Computacionais",
 				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94810"
+			},
+			{
+				"modalidade": "EADCP",
+				"codigo": "T339",
+				"nome": "Inovação em Soluções Computacionais",
+				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94519"
 			}
 		]
 	},
@@ -2033,12 +2042,6 @@
 				"codigo": "H998",
 				"nome": "Libras",
 				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=101439"
-			},
-			{
-				"modalidade": "EADCP",
-				"codigo": "H799",
-				"nome": "Libras",
-				"url_matriz": "https://ead.unifor.br/ava/course/view.php?id=94491"
 			}
 		]
 	},

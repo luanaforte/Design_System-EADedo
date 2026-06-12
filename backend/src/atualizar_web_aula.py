@@ -1,16 +1,9 @@
 import json
-import pandas as pd
+import os
 import sys
 
-# Garante que o openpyxl esteja disponível
-try:
-    import openpyxl
-except ImportError:
-    print("❌ Erro: A biblioteca 'openpyxl' não está instalada.")
-    print("Execute o comando: python -m pip install openpyxl")
-    sys.exit()
-
-arquivo_json = "disciplinas_agrupadas.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+arquivo_json = os.path.join(BASE_DIR, "disciplinas_agrupadas.json")
 
 # Sua lista de referência (o que deve ser IGNORADO)
 lista_referencia = """
@@ -156,58 +149,84 @@ Tópicos Avançados em Contabilidade 112
 Gestão de Mídias Digitais 26
 """
 
-# 1. Criar um conjunto (set) apenas com os códigos que devem ser IGNORADOS
-codigos_ignorar = set()
-for linha in lista_referencia.strip().split('\n'):
-    partes = linha.split()
-    if partes:
-        cod_limpo = partes[-1].zfill(3)
-        codigos_ignorar.add(cod_limpo)
+def processar():
+    # Garante que o pandas e openpyxl estejam disponíveis
+    try:
+        import pandas as pd
+    except ImportError:
+        print("❌ Erro: A biblioteca 'pandas' não está instalada.")
+        print("Instale executando: pip install pandas")
+        return False
 
-dados_para_planilha = []
+    try:
+        import openpyxl
+    except ImportError:
+        print("❌ Erro: A biblioteca 'openpyxl' não está instalada.")
+        print("Execute o comando: pip install openpyxl")
+        return False
 
-try:
-    with open(arquivo_json, "r", encoding="utf-8") as f:
-        json_data = json.load(f)
+    # 1. Criar um conjunto (set) apenas com os códigos que devem ser IGNORADOS
+    codigos_ignorar = set()
+    for linha in lista_referencia.strip().split('\n'):
+        partes = linha.split()
+        if partes:
+            cod_limpo = partes[-1].zfill(3)
+            codigos_ignorar.add(cod_limpo)
 
-    # 2. Percorrer TODO o arquivo JSON
-    for cod_prod, conteudo in json_data.items():
-        # Se o código do JSON NÃO estiver na lista de ignorar, ele vai para a planilha
-        if cod_prod not in codigos_ignorar:
+    dados_para_planilha = []
+
+    try:
+        if not os.path.exists(arquivo_json):
+            print(f"⚠️ Aviso: Arquivo JSON não encontrado: {arquivo_json}")
+            return False
+
+        with open(arquivo_json, "r", encoding="utf-8") as f:
+            json_data = json.load(f)
+
+        # 2. Percorrer TODO o arquivo JSON
+        for cod_prod, conteudo in json_data.items():
+            # Se o código do JSON NÃO estiver na lista de ignorar, ele vai para a planilha
+            if cod_prod not in codigos_ignorar:
+                
+                # Pega o nome do grupo (geralmente o nome da primeira disciplina ou extraído do caminho)
+                disciplinas = conteudo.get("disciplinas", [])
+                task_name = disciplinas[0].get("nome", "Sem Nome") if disciplinas else "Grupo sem disciplinas"
+                
+                cod_ead = ""
+                cod_eadcp = ""
+
+                for d in disciplinas:
+                    mod = d.get("modalidade", "").upper()
+                    if mod == "EAD":
+                        cod_ead = d.get("codigo", "")
+                    elif mod == "EADCP":
+                        cod_eadcp = d.get("codigo", "")
+
+                dados_para_planilha.append({
+                    "Task Name": task_name,
+                    "codProd (text)": cod_prod,
+                    "cod.EAD (text)": cod_ead,
+                    "Cod.EADCP (short text)": cod_eadcp
+                })
+
+        # 3. Gerar Excel
+        if dados_para_planilha:
+            df = pd.DataFrame(dados_para_planilha)
+            # Ordenar por codProd para ficar organizado
+            df = df.sort_values(by="codProd (text)")
             
-            # Pega o nome do grupo (geralmente o nome da primeira disciplina ou extraído do caminho)
-            disciplinas = conteudo.get("disciplinas", [])
-            task_name = disciplinas[0].get("nome", "Sem Nome") if disciplinas else "Grupo sem disciplinas"
-            
-            cod_ead = ""
-            cod_eadcp = ""
+            nome_arquivo = os.path.join(BASE_DIR, "disciplinas_nao_listadas.xlsx")
+            df.to_excel(nome_arquivo, index=False)
+            print(f"✅ Planilha '{nome_arquivo}' gerada!")
+            print(f"📊 Foram encontrados {len(dados_para_planilha)} itens no JSON que não estavam na sua lista.")
+            return True
+        else:
+            print("🤔 Não sobrou nada! Todos os códigos do JSON estavam na sua lista.")
+            return True
 
-            for d in disciplinas:
-                mod = d.get("modalidade", "").upper()
-                if mod == "EAD":
-                    cod_ead = d.get("codigo", "")
-                elif mod == "EADCP":
-                    cod_eadcp = d.get("codigo", "")
+    except Exception as e:
+        print(f"❌ Erro: {e}")
+        return False
 
-            dados_para_planilha.append({
-                "Task Name": task_name,
-                "codProd (text)": cod_prod,
-                "cod.EAD (text)": cod_ead,
-                "Cod.EADCP (short text)": cod_eadcp
-            })
-
-    # 3. Gerar Excel
-    if dados_para_planilha:
-        df = pd.DataFrame(dados_para_planilha)
-        # Ordenar por codProd para ficar organizado
-        df = df.sort_values(by="codProd (text)")
-        
-        nome_arquivo = "disciplinas_nao_listadas.xlsx"
-        df.to_excel(nome_arquivo, index=False)
-        print(f"✅ Planilha '{nome_arquivo}' gerada!")
-        print(f"📊 Foram encontrados {len(dados_para_planilha)} itens no JSON que não estavam na sua lista.")
-    else:
-        print("🤔 Não sobrou nada! Todos os códigos do JSON estavam na sua lista.")
-
-except Exception as e:
-    print(f"❌ Erro: {e}")
+if __name__ == "__main__":
+    processar()

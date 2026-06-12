@@ -172,7 +172,7 @@ EADCP	052	G502	Ciências de Dados Aplicado à Gestão	https://ead.unifor.br/ava/
 EADCP	121	G514	Ecossistemas de Governança	https://ead.unifor.br/ava/course/view.php?id=101356
 EADCP	105	G515	Compliance e Gestão de Risco	https://ead.unifor.br/ava/course/view.php?id=101357
 EADCP	071	H726	Arte e Cultura Brasileira	https://ead.unifor.br/ava/course/view.php?id=94472
-EADCP	189	H799	Libras	https://ead.unifor.br/ava/course/view.php?id=94491
+EADCP	127	H799	Libras	https://ead.unifor.br/ava/course/view.php?id=94491
 EADCP	075	J005	Direitos Humanos	https://ead.unifor.br/ava/course/view.php?id=94481
 EADCP	220	J053	Dinâmica de Empreendedorismo	https://ead.unifor.br/ava/course/view.php?id=96001
 EADCP	199	J068	Contratos Empresariais e Bancários	https://ead.unifor.br/ava/course/view.php?id=94469
