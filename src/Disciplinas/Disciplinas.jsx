@@ -7,7 +7,6 @@ import { saveAs } from "file-saver";
 export default function Disciplinas() {
 	const [busca, setBusca] = useState("");
 	const [filtroModalidade, setFiltroModalidade] = useState("TODAS");
-	const [filtrarTutoria, setFiltrarTutoria] = useState(false);
 	const [copiadoId, setCopiadoId] = useState(null);
 	const [selecionadas, setSelecionadas] = useState([]);
 	const [mostrarTopo, setMostrarTopo] = useState(false);
@@ -64,11 +63,7 @@ export default function Disciplinas() {
 				filtroModalidade === "TODAS" ||
 				item.disciplinas.some((d) => d.modalidade === filtroModalidade);
 
-			const correspondeTutoria =
-				!filtrarTutoria ||
-				item.disciplinas.some((d) => d.tutoria_ia);
-
-			return correspondeBusca && correspondeModalidade && correspondeTutoria;
+			return correspondeBusca && correspondeModalidade;
 		})
 		.filter((item) => {
 			if (!mostrarSelecionadas) return true;
@@ -120,8 +115,6 @@ export default function Disciplinas() {
 					Codigo: disc.codigo,
 					Modalidade: disc.modalidade,
 					URL_AVA: disc.url_matriz,
-					Tutoria_IA: disc.tutoria_ia ? "Sim" : "Não",
-					Beecrowd: disc.beecrowd ? "Sim" : "Não",
 					Caminho: grupo.caminho_n,
 				});
 			});
@@ -144,48 +137,25 @@ export default function Disciplinas() {
 		saveAs(data, "disciplinas_unifor.xlsx");
 	};
 
-	// Estatísticas Dinâmicas baseadas no Design System
-	const totalGrupos = Object.keys(dados).length;
-	let totalEAD = 0;
-	let totalEADCP = 0;
-	let totalATV = 0;
-	let totalTutoria = 0;
-
-	disciplinasArray.forEach((bloco) => {
-		bloco.disciplinas.forEach((disc) => {
-			const mod = String(disc.modalidade).toUpperCase();
-			if (mod === "EAD") totalEAD++;
-			else if (mod === "EADCP") totalEADCP++;
-			else if (mod === "ATV") totalATV++;
-			if (disc.tutoria_ia) totalTutoria++;
-		});
-	});
-
 	return (
-		<div className="disciplinas-page PadraoEAD">
-			<header className="page-header flexbox__between--center">
-				<div className="header-content flexbox__center--column-start">
-					<h1 className="heading1 brand-heading font-weight--bold margin-0">Gestão de Disciplinas</h1>
-					<p className="paragraph text-neutral-600 font-weight--medium margin-0">Produção EaD UNIFOR</p>
+		<div className="disciplinas-page">
+			<header className="page-header">
+				<div className="header-content">
+					<h1 className="heading1">Gestão de Disciplinas</h1>
+					<p className="paragraph">Produção EaD UNIFOR</p>
 				</div>
 
-				<div className="controls flexbox__wrap">
-					<div className="search-container">
-						<input
-							type="text"
-							placeholder="Pesquisar..."
-							className="search-input"
-							onChange={(e) => setBusca(e.target.value)}
-						/>
-					</div>
+				<div className="controls">
+					<input
+						type="text"
+						placeholder="Pesquisar..."
+						className="search-input"
+						onChange={(e) => setBusca(e.target.value)}
+					/>
 
 					<select
 						className="filter-select"
-						value={filtroModalidade}
-						onChange={(e) => {
-							setFiltroModalidade(e.target.value);
-							setFiltrarTutoria(false);
-						}}>
+						onChange={(e) => setFiltroModalidade(e.target.value)}>
 						<option value="TODAS">Todas as Modalidades</option>
 						<option value="EAD">EAD</option>
 						<option value="EADCP">EADCP</option>
@@ -208,74 +178,10 @@ export default function Disciplinas() {
 						className="btn-clear"
 						onClick={limparSelecionadas}
 						disabled={selecionadas.length === 0}>
-						❌ Desmarcar
+						❌ Desmarcar Selecionadas
 					</button>
 				</div>
 			</header>
-
-			{/* PAINEL DE MÉTRICAS DINÂMICAS E INTERATIVAS */}
-			<section className="metrics-dashboard flexbox__wrap margin__bottom--default">
-				<div 
-					className={`metric-card elevation-low clickable ${filtroModalidade === "TODAS" && !filtrarTutoria ? "is-active" : ""}`}
-					onClick={() => {
-						setFiltroModalidade("TODAS");
-						setFiltrarTutoria(false);
-					}}
-					title="Clique para limpar filtros e mostrar todos os grupos"
-				>
-					<span className="metric-label font-weight--medium">Todas as disciplinas</span>
-					<h2 className="metric-value display text--Marinho font-weight--bold">{totalGrupos}</h2>
-					<div className="metric-indicator bg-marinho"></div>
-				</div>
-				<div 
-					className={`metric-card elevation-low clickable ${filtroModalidade === "EAD" ? "is-active" : ""}`}
-					onClick={() => {
-						setFiltroModalidade("EAD");
-						setFiltrarTutoria(false);
-					}}
-					title="Clique para filtrar apenas disciplinas EAD"
-				>
-					<span className="metric-label font-weight--medium">Disciplinas EAD</span>
-					<h2 className="metric-value display text-blue-600 font-weight--bold">{totalEAD}</h2>
-					<div className="metric-indicator bg-ead"></div>
-				</div>
-				<div 
-					className={`metric-card elevation-low clickable ${filtroModalidade === "EADCP" ? "is-active" : ""}`}
-					onClick={() => {
-						setFiltroModalidade("EADCP");
-						setFiltrarTutoria(false);
-					}}
-					title="Clique para filtrar apenas disciplinas EADCP"
-				>
-					<span className="metric-label font-weight--medium">Disciplinas EADCP</span>
-					<h2 className="metric-value display text-purple-600 font-weight--bold">{totalEADCP}</h2>
-					<div className="metric-indicator bg-eadcp"></div>
-				</div>
-				<div 
-					className={`metric-card elevation-low clickable ${filtroModalidade === "ATV" ? "is-active" : ""}`}
-					onClick={() => {
-						setFiltroModalidade("ATV");
-						setFiltrarTutoria(false);
-					}}
-					title="Clique para filtrar apenas Atividades (ATV)"
-				>
-					<span className="metric-label font-weight--medium">Atividades (ATV)</span>
-					<h2 className="metric-value display text-turquoise-600 font-weight--bold">{totalATV}</h2>
-					<div className="metric-indicator bg-atv"></div>
-				</div>
-				<div 
-					className={`metric-card elevation-low tutoria-metric clickable ${filtrarTutoria ? "is-active" : ""}`}
-					onClick={() => {
-						setFiltrarTutoria(true);
-						setFiltroModalidade("TODAS");
-					}}
-					title="Clique para filtrar apenas disciplinas com Tutoria IA 4.0"
-				>
-					<span className="metric-label font-weight--medium">Tutoria IA 4.0</span>
-					<h2 className="metric-value display purple-gradient-text font-weight--bold">{totalTutoria}</h2>
-					<div className="metric-indicator bg-tutoria"></div>
-				</div>
-			</section>
 
 			{disciplinasFiltradas.length > 0 ? (
 				<div className="disciplinas-grid">
@@ -289,7 +195,7 @@ export default function Disciplinas() {
 									onChange={() => toggleSelecionada(bloco.id)}
 								/>
 
-								<span className="id-informative">ID {bloco.id}</span>
+								<span className="id-tag">ID {bloco.id}</span>
 
 								<h3 className="heading3">{bloco.disciplinas[0].nome}</h3>
 							</div>
@@ -304,21 +210,6 @@ export default function Disciplinas() {
 											</span>
 
 											<span className="code-text">{disc.codigo}</span>
-											{disc.tutoria_ia && (
-												<span className="tutoria-badge">
-													Tutoria IA 4.0
-												</span>
-											)}
-											{disc.beecrowd && (
-												<span className="beecrowd-badge">
-													Beecrowd
-												</span>
-											)}
-											{disc.plataforma && (
-												<span className="plataforma-badge">
-													Plataforma · {disc.plataforma}
-												</span>
-											)}
 										</div>
 
 										<a

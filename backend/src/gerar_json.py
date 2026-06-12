@@ -1,10 +1,8 @@
-import os
 import json
 from collections import defaultdict
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-arquivo_entrada = os.path.join(BASE_DIR, "disciplinas.txt")
-arquivo_saida = os.path.join(BASE_DIR, "disciplinas_agrupadas.json")
+arquivo_entrada = "disciplinas.txt"
+arquivo_saida = "disciplinas_agrupadas.json"
 
 
 def processar():
@@ -21,15 +19,6 @@ def processar():
 
         modalidade, numero_producao, codigo, nome, url_matriz = partes
 
-        # Códigos que possuem Tutoria IA 4.0
-        TUTORIA_IA_CODIGOS = {"G405", "G747", "G452", "G370", "G402", "G746", "N680"}
-
-        # Códigos que possuem Beecrowd
-        BEECROWD_CODIGOS = {"N683", "N685"}
-
-        # Códigos com plataforma Up Business
-        UPBUSINESS_CODIGOS = {"G455"}
-
         # NÃO incluímos numero_producao dentro do objeto
         disciplina = {
             "modalidade": modalidade,
@@ -37,15 +26,6 @@ def processar():
             "nome": nome,
             "url_matriz": url_matriz
         }
-
-        if codigo in TUTORIA_IA_CODIGOS:
-            disciplina["tutoria_ia"] = True
-
-        if codigo in BEECROWD_CODIGOS:
-            disciplina["beecrowd"] = True
-
-        if codigo in UPBUSINESS_CODIGOS:
-            disciplina["plataforma"] = "Up Business"
 
         agrupado[numero_producao].append(disciplina)
 
