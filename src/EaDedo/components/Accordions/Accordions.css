@@ -29,6 +29,7 @@
 }
 
 .accordion-header .icons svg path {
+  fill: var(--accordion-text);
   transition: fill 0.3s ease;
 }
 
@@ -36,17 +37,27 @@
   fill: var(--accordion-active-fill-icon);
 }
 
+/* Conteúdo fechado */
 .accordion-content {
+  display: none;
   padding: var(--space-100);
-  display: none;
 }
 
-.icon-active {
+/* Conteúdo aberto */
+.accordion-item[aria-expanded="true"] .accordion-content {
+  display: block;
+}
+
+/* Ícone Seta */
+.accordion-arrow {
   display: inline-block;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
 }
 
-.icon-inactive {
-  display: none;
+/* Quando aberto, rotaciona para cima */
+.accordion-item[aria-expanded="true"] .accordion-arrow {
+  transform: rotate(0deg);
 }
 
 /* Variacoes de cores */
@@ -64,45 +75,65 @@
 /* Roxo */
 .accordion--purple {
   --accordion-bg: var(--color-purple-100);
-  --accordion-text: var(--color-purple-600);
-  --accordion-hover-text: var(--color-purple-900);
+  --accordion-text: var(--color-neutral-600);
+  --accordion-hover-text: var(--color-neutral-900);
   --accordion-hover-fill-icon: var(--color-purple-900);
   --accordion-active-bg: var(--color-purple-300);
-  --accordion-active-text: var(--color-purple-900);
+  --accordion-active-text: var(--color-neutral-900);
   --accordion-active-fill-icon: var(--color-purple-900);
 }
 
 /* Turquesa */
 .accordion--turquoise {
   --accordion-bg: var(--color-turquoise-100);
-  --accordion-text: var(--color-turquoise-600);
-  --accordion-hover-text: var(--color-turquoise-900);
+  --accordion-text: var(--color-neutral-600);
+  --accordion-hover-text: var(--color-neutral-900);
   --accordion-hover-fill-icon: var(--color-turquoise-900);
   --accordion-active-bg: var(--color-turquoise-300);
-  --accordion-active-text: var(--color-turquoise-900);
+  --accordion-active-text: var(--color-neutral-900);
   --accordion-active-fill-icon: var(--color-turquoise-900);
 }
 
 /* Vermelho */
 .accordion--red {
   --accordion-bg: var(--color-red-100);
-  --accordion-text: var(--color-red-600);
-  --accordion-hover-text: var(--color-red-900);
+  --accordion-text: var(--color-neutral-600);
+  --accordion-hover-text: var(--color-neutral-900);
   --accordion-hover-fill-icon: var(--color-red-900);
   --accordion-active-bg: var(--color-red-300);
-  --accordion-active-text: var(--color-red-900);
+  --accordion-active-text: var(--color-neutral-900);
   --accordion-active-fill-icon: var(--color-red-900);
+}
+
+.accordion--red_100 {
+  --accordion-bg: var(--color-red-100);
+  --accordion-text: var(--color-blue-cadete);
+  --accordion-hover-text: var(--color-blue-cadete);
+  --accordion-hover-fill-icon: var(--color-blue-cadete);
+  --accordion-active-bg: var(--color-red-100);
+  --accordion-active-text: var(--color-blue-cadete);
+  --accordion-active-fill-icon: var(--color-blue-cadete);
 }
 
 /* Amarelo */
 .accordion--yellow {
   --accordion-bg: var(--color-yellow-100);
-  --accordion-text: var(--color-yellow-600);
-  --accordion-hover-text: var(--color-yellow-900);
+  --accordion-text: var(--color-neutral-600);
+  --accordion-hover-text: var(--color-neutral-900);
   --accordion-hover-fill-icon: var(--color-yellow-900);
   --accordion-active-bg: var(--color-yellow-300);
-  --accordion-active-text: var(--color-yellow-900);
+  --accordion-active-text: var(--color-neutral-900);
   --accordion-active-fill-icon: var(--color-yellow-900);
+}
+
+.accordion--yellow_ciano {
+  --accordion-bg: var(--color-yellow-100);
+  --accordion-text: var(--color-blue-ciano);
+  --accordion-hover-text: var(--color-yellow-900);
+  --accordion-hover-fill-icon: var(--color-blue-ciano);
+  --accordion-active-bg: var(--color-yellow-300);
+  --accordion-active-text: var(--color-yellow-900);
+  --accordion-active-fill-icon: var(--color-blue-ciano);
 }
 
 /* Neutro/Cinza */
