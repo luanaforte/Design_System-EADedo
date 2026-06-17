@@ -228,6 +228,60 @@
  * BUTTON STATES E CORES
  *************************************/
 
+/* --- Cores Media Link --- */
+.button-media-link--neutral {
+  --button-color: var(--color-neutral-950);
+  --button-border: var(--color-neutral-950);
+  --button-hover-color: var(--color-neutral-950);
+  --button-active-bg: var(--color-neutral-950);
+  --button-active-border: var(--color-neutral-950);
+}
+
+.button-media-link--blue {
+  --button-color: var(--color-neutral-950);
+  --button-border: var(--color-blue-600);
+  --button-hover-color: var(--color-neutral-950);
+  --button-hover-border: var(--color-blue-900);
+  --button-active-bg: var(--color-neutral-950);
+  --button-active-border: var(--color-blue-900);
+}
+
+.button-media-link--turquoise {
+  --button-color: var(--color-neutral-950);
+  --button-border: var(--color-turquoise-600);
+  --button-hover-color: var(--color-neutral-950);
+  --button-hover-border: var(--color-turquoise-900);
+  --button-active-bg: var(--color-neutral-950);
+  --button-active-border: var(--color-turquoise-900);
+}
+
+.button-media-link--red {
+  --button-color: var(--color-neutral-950);
+  --button-border: var(--color-red-600);
+  --button-hover-color: var(--color-neutral-950);
+  --button-hover-border: var(--color-red-900);
+  --button-active-bg: var(--color-neutral-950);
+  --button-active-border: var(--color-red-900);
+}
+
+.button-media-link--yellow {
+  --button-color: var(--color-neutral-950);
+  --button-border: var(--color-yellow-600);
+  --button-hover-color: var(--color-neutral-950);
+  --button-hover-border: var(--color-yellow-900);
+  --button-active-bg: var(--color-neutral-950);
+  --button-active-border: var(--color-yellow-900);
+}
+
+.button-media-link--purple {
+  --button-color: var(--color-neutral-950);
+  --button-border: var(--color-purple-600);
+  --button-hover-color: var(--color-neutral-950);
+  --button-hover-border: var(--color-purple-900);
+  --button-active-bg: var(--color-neutral-950);
+  --button-active-border: var(--color-purple-900);
+}
+
 /* --- Cores --- */
 .button--neutral {
   --button-color: var(--color-neutral-950);
@@ -280,7 +334,9 @@
 /* --- Estados comuns --- */
 .button-pill,
 .button-rounded,
-.button-minimal {
+.button-minimal,
+.button-media-link {
+
   color: var(--button-color);
   border-color: var(--button-border);
 }
@@ -290,7 +346,7 @@
 .button-media-link:hover,
 .button-media-link:hover .paragraph--medium {
   color: var(--button-hover-color);
-  border-color: var(--button-hover-color);
+  border-color: var(--button-hover-border, var(--button-hover-color));
   text-decoration: none;
 }
 

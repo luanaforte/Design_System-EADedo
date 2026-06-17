@@ -5,7 +5,7 @@ export default function Button_media_link() {
 	return (
 		<section id="Introducao">
 			<a
-				className="button-media-link button--blue"
+				className="button-media-link button-media-link--blue"
 				href="https://exemplo.com"
 				target="_blank"
 				rel="noopener noreferrer"
