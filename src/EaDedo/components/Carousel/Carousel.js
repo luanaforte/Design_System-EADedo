@@ -82,4 +82,7 @@ document.querySelectorAll(".carousel-container").forEach((container) => {
 
 	window.addEventListener("load", initializeCarousel);
 	window.addEventListener("resize", initializeCarousel);
+	
+	// Chamada inicial imediata
+	initializeCarousel();
 });

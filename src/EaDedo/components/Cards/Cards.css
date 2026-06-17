@@ -144,7 +144,7 @@
      ========================= */
 .card-podcast {
   display: flex;
-  max-width: 18.75rem;
+  /* max-width: 18.75rem; */
   align-items: flex-start;
   gap: var(--space-075);
   border: none;

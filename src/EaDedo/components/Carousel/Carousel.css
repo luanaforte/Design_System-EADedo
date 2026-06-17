@@ -11,6 +11,10 @@
   gap: var(--space-100);
 }
 
+.carousel_content > * {
+  flex-shrink: 0;
+}
+
 .carousel_content::-webkit-scrollbar {
   display: none;
 }
