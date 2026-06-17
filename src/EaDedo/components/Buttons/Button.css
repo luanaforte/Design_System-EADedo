@@ -63,7 +63,7 @@
   font: inherit;
   color: inherit;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
 
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
@@ -352,7 +352,7 @@
 
 .button-rounded:hover {
   color: var(--button-hover-color);
-  background: #F0F1F5B3;
+  /* background: #F0F1F5B3; */
   border-color: var(--button-hover-color);
 }
 
