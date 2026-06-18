@@ -11,7 +11,7 @@
 /* Frame do podcast */
 .iframe-podcast__frame {
   position: relative;
-  height: 180px;
+  height: auto;
   /* Ajuste para o player de podcast Transistor */
   overflow: hidden;
   box-shadow: var(--elevation-low);
@@ -23,6 +23,11 @@
 
 .iframe-podcast__frame.hidden {
   display: none !important;
+}
+
+.iframe-podcast__frame audio {
+  width: 100%;
+  display: block;
 }
 
 /* Frame do vídeo */

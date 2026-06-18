@@ -2,9 +2,9 @@ window.podcastOpen = function (clicked_id) {
 	console.log("Clicked ID:", clicked_id);
 
 	const iframeContainer = document.querySelector("#iframePodcastContainer");
-	const iframe = document.querySelector("#podcastIframe");
+	const audioPlayer = document.querySelector("#podcastAudio");
 
-	if (!iframeContainer || !iframe) {
+	if (!iframeContainer || !audioPlayer) {
 		console.error(
 			"Um ou mais elementos não foram encontrados para:",
 			clicked_id,
@@ -27,21 +27,30 @@ window.podcastOpen = function (clicked_id) {
 	}
 
 	if (
-		iframe.src === podcastObj.link &&
+		audioPlayer.src === podcastObj.link &&
 		!iframeContainer.classList.contains("hidden")
 	) {
 		iframeContainer.classList.add("hidden");
-		iframe.src = "";
+		audioPlayer.pause();
+		audioPlayer.src = "";
 		return;
 	}
 
 	iframeContainer.classList.remove("hidden");
-	iframe.src = podcastObj.link;
-	console.log("Iframe src atualizado para:", iframe.src);
+	audioPlayer.src = podcastObj.link;
+	audioPlayer.play().catch(e => console.error("Audio play failed:", e));
+	console.log("Audio src atualizado para:", audioPlayer.src);
 };
 
 function pauseAllIframes() {
 	const iframes = document.querySelectorAll("iframe");
+	const audios = document.querySelectorAll("audio");
+
+	audios.forEach((audio) => {
+		try {
+			audio.pause();
+		} catch (e) {}
+	});
 
 	iframes.forEach((element) => {
 		const src = element.src || "";
@@ -74,10 +83,13 @@ function pauseAllIframes() {
 
 function closePodcastIfOpen() {
 	const iframeContainer = document.querySelector("#iframePodcastContainer");
-	const iframe = document.querySelector("#podcastIframe");
+	const audioPlayer = document.querySelector("#podcastAudio");
 	if (iframeContainer && !iframeContainer.classList.contains("hidden")) {
 		iframeContainer.classList.add("hidden");
-		if (iframe) iframe.src = "";
+		if (audioPlayer) {
+			audioPlayer.pause();
+			audioPlayer.src = "";
+		}
 	}
 }
 

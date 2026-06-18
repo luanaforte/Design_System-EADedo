@@ -14,13 +14,13 @@ export default function IframePodcast() {
 		// Definindo dados de podcast globais para que o IframePodcast.js consiga ler.
 		window.podcasts = {
 			podcast1: {
-				link: "https://www.youtube.com/embed/KbI_kF40yCU?si=SS6aQz0Z4oNXt4wX",
+				link: "https://www.soundhelix.com/architecture/Audio-Video/SoundHelix-Song-1.mp3",
 			},
 			podcast2: {
-				link: "https://www.youtube.com/embed/KbI_kF40yCU?si=SS6aQz0Z4oNXt4wX",
+				link: "https://www.soundhelix.com/architecture/Audio-Video/SoundHelix-Song-2.mp3",
 			},
 			podcast3: {
-				link: "https://www.youtube.com/embed/KbI_kF40yCU?si=SS6aQz0Z4oNXt4wX",
+				link: "https://www.soundhelix.com/architecture/Audio-Video/SoundHelix-Song-3.mp3",
 			},
 		};
 
