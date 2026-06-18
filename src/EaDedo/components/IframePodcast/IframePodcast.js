@@ -93,13 +93,16 @@ function closePodcastIfOpen() {
 	}
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-	// Suporta os dois padrões de slider
+function initPodcastEvents() {
 	const sliders = document.querySelectorAll(
 		".slider-wrapper, .slider-primario",
 	);
 
 	sliders.forEach((slider) => {
+		// Garante que não vamos adicionar múltiplos event listeners
+		if (slider.dataset.podcastInitialized) return;
+		slider.dataset.podcastInitialized = "true";
+
 		const btnPrev = slider.querySelector("#prev-slide, #slider_prevBtn");
 		const btnNext = slider.querySelector("#next-slide, #slider_nextBtn");
 		const indicators = slider.querySelector(".indicators");
@@ -111,7 +114,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		btnPrev?.addEventListener("click", handleNav);
 		btnNext?.addEventListener("click", handleNav);
-		indicators?.addEventListener("click", handleNav);
+		if (indicators) indicators.addEventListener("click", handleNav);
+
+		// Observador para fechar podcast caso o slider mude de forma programática ou swipe
+		const slides = slider.querySelectorAll(".slider-primario-item, .slider-item");
+		if (slides.length > 0) {
+			const observer = new MutationObserver((mutations) => {
+				mutations.forEach((mutation) => {
+					if (mutation.type === "attributes" && mutation.attributeName === "class") {
+						handleNav();
+					}
+				});
+			});
+			slides.forEach(slide => observer.observe(slide, { attributes: true, attributeFilter: ["class"] }));
+		}
 
 		// Fecha o podcast se o usuário arrastar/scrollar o carrossel no touch
 		const sliderItems = slider.querySelector(
@@ -119,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		);
 		if (sliderItems) {
 			sliderItems.addEventListener("scroll", () => {
-				// Usa timeout para evitar chamadas excessivas durante o scroll
 				clearTimeout(sliderItems.scrollTimeout);
 				sliderItems.scrollTimeout = setTimeout(() => {
 					closePodcastIfOpen();
@@ -127,4 +142,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		}
 	});
-});
+}
+
+if (document.readyState === "loading") {
+	document.addEventListener("DOMContentLoaded", initPodcastEvents);
+} else {
+	initPodcastEvents();
+}

@@ -11,23 +11,30 @@
 /* Frame do podcast */
 .iframe-podcast__frame {
   position: relative;
-  height: auto;
-  /* Ajuste para o player de podcast Transistor */
-  overflow: hidden;
-  box-shadow: var(--elevation-low);
-  border-radius: var(--radius-medium);
-  width: 100%;
+  width: 100% !important;
+  max-height: 200px;
   margin-top: var(--space-150);
-  background-color: var(--neutral-100);
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-top 0.4s ease-in-out;
 }
 
 .iframe-podcast__frame.hidden {
-  display: none !important;
+  display: block !important;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transform: translateY(-15px);
+  pointer-events: none;
 }
 
-.iframe-podcast__frame audio {
-  width: 100%;
-  display: block;
+#podcastAudio {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  box-sizing: border-box;
 }
 
 /* Frame do vídeo */
