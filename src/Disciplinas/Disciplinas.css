@@ -92,6 +92,10 @@
   background: var(--color-turquoise-600);
 }
 
+.mod-badge.libras {
+  background: #f59e0b; /* Amber/Orange for visibility */
+}
+
 .card-footer {
   padding: 15px 20px;
   background: var(--color-neutral-050);

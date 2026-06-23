@@ -4,6 +4,12 @@ import "./Disciplinas.css";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 
+const disciplinasComLibras = [
+	"055", "057", "058", "059", "060", "056", "077", "076", "078",
+	"081", "083", "082", "088", "087", "089", "108", "141", "096",
+	"007", "016", "G407", "G408", "G411", "G410", "G743"
+];
+
 export default function Disciplinas() {
 	const [busca, setBusca] = useState("");
 	const [filtroModalidade, setFiltroModalidade] = useState("TODAS");
@@ -109,11 +115,16 @@ export default function Disciplinas() {
 
 		dadosParaExportar.forEach((grupo) => {
 			grupo.disciplinas.forEach((disc) => {
+				const temVideoLibras = 
+					disc.modalidade === "EAD" && 
+					(disciplinasComLibras.includes(grupo.id) || disciplinasComLibras.includes(disc.codigo));
+
 				linhas.push({
 					ID: grupo.id,
 					Disciplina: disc.nome,
 					Codigo: disc.codigo,
 					Modalidade: disc.modalidade,
+					Libras: temVideoLibras ? "Sim" : "Não",
 					URL_AVA: disc.url_matriz,
 					Caminho: grupo.caminho_n,
 				});
@@ -208,6 +219,12 @@ export default function Disciplinas() {
 												className={`mod-badge ${disc.modalidade.toLowerCase()}`}>
 												{disc.modalidade}
 											</span>
+
+											{disc.modalidade === "EAD" && (disciplinasComLibras.includes(bloco.id) || disciplinasComLibras.includes(disc.codigo)) && (
+												<span className="mod-badge libras" title="Vídeo em Libras">
+													LIBRAS
+												</span>
+											)}
 
 											<span className="code-text">{disc.codigo}</span>
 										</div>
