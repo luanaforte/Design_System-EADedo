@@ -37,6 +37,10 @@
   fill: var(--accordion-active-fill-icon);
 }
 
+.icon-inactive {
+  display: none;
+}
+
 /* Conteúdo fechado */
 .accordion-content {
   display: none;
