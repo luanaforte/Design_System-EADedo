@@ -211,6 +211,37 @@
 }
 
 /* =========================
+     Card Image (card-image)
+     ========================= */
+.card-image {
+  display: flex;
+  width: 280px;
+  height: 282px;
+  min-height: 280px;
+  max-height: 330px;
+  padding: var(--space-100);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-150);
+  border-radius: var(--radius-large);
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+
+.card-image__image {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: var(--radius-large);
+  object-fit: cover;
+}
+
+.card-image__title {
+  align-self: stretch;
+}
+
+
+/* =========================
          Card_image_text
      ========================= */
 .Card_image_text {
