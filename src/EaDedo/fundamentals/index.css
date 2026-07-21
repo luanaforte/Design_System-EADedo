@@ -40,6 +40,7 @@
 @import "../components/chat_IA/chat_IA.css";
 @import "../components/Modal/Modal.css";
 @import "../components/Search/Search.css";
+@import "../components/Table_cell/Table_cell.css";
 
 /* FLEX */
 .flexbox {

@@ -174,5 +174,6 @@ const Rotes = {
 		{ label: "Tag", route: "/Componentes/Tag" },
 		{ label: "Text_header", route: "/Componentes/Text_header" },
 		{ label: "Tooltip", route: "/Componentes/Tooltip" },
+		{ label: "Table Cell", route: "/Componentes/Table_cell" },
 	],
 };

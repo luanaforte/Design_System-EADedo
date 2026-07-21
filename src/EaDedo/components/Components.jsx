@@ -146,6 +146,11 @@ export default function Components() {
 			path: "Tooltip",
 			desc: "Pequenas caixas de texto flutuantes que surgem ao passar o mouse (hover).",
 		},
+		{
+			title: "Table Cell",
+			path: "Table_cell",
+			desc: "Células organizacionais de tabela para exibição estruturada de títulos e conteúdos.",
+		},
 	].sort((a, b) => a.title.localeCompare(b.title));
 
 	return (

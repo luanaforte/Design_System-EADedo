@@ -1,0 +1,73 @@
+/* =========================
+   Table Cell (table--cell)
+   ========================= */
+.table-cell-container {
+  display: table;
+  /* width: 100%; */
+  border-collapse: collapse;
+  margin-bottom: var(--space-150);
+  table-layout: auto;
+}
+
+.table-cell-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  padding: var(--space-050);
+  vertical-align: top;
+  border: 1px solid var(--Anil);
+  box-sizing: border-box;
+  word-break: normal;
+}
+
+/* Modificadores de coluna */
+.table-cell--fit {
+  white-space: nowrap;
+}
+
+.table-cell--center {
+  vertical-align: middle;
+}
+
+/* Header / Title Cell */
+.table-cell--header,
+.table-cell--title {
+  color: var(--Anil);
+  font-weight: var(--font-weight-semibold);
+}
+
+.table-cell--header .paragraph,
+.table-cell--title .paragraph,
+.table-cell--header .table-cell__text,
+.table-cell--title .table-cell__text {
+  color: var(--Anil);
+}
+
+/* Content Cell */
+.table-cell--content,
+.table-cell--body {
+  color: var(--color-neutral-950);
+}
+
+.table-cell--content .paragraph,
+.table-cell--body .paragraph,
+.table-cell--content .table-cell__text,
+.table-cell--body .table-cell__text {
+  color: var(--color-neutral-950);
+}
+
+.table-cell__text {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-medium);
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .table-cell {
+    padding: var(--space-025);
+  }
+}
