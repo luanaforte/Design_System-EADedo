@@ -3,7 +3,6 @@
    ========================= */
 .table-cell-container {
   display: table;
-  /* width: 100%; */
   border-collapse: collapse;
   margin-bottom: var(--space-150);
   table-layout: auto;

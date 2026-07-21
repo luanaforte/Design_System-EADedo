@@ -44,6 +44,7 @@ import Tag from "./EaDedo/components/Tag/Tag_doc.jsx";
 import Text_header from "./EaDedo/components/Text_header/Text_header.jsx";
 import Tooltip from "./EaDedo/components/Tooltip/Tooltip.jsx";
 import Table_cell from "./EaDedo/components/Table_cell/Table_cell.jsx";
+import Summary from "./EaDedo/components/Summary/Summary.jsx";
 
 const App = () => {
 	return (
@@ -101,6 +102,7 @@ const App = () => {
 					<Route path="Componentes/Text_header" element={<Text_header />} />
 					<Route path="Componentes/Tooltip" element={<Tooltip />} />
 					<Route path="Componentes/Table_cell" element={<Table_cell />} />
+					<Route path="Componentes/Summary" element={<Summary />} />
 				</Route>
 			</Routes>
 		</>

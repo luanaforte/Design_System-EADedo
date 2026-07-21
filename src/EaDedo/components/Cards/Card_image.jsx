@@ -4,7 +4,7 @@ import "./Cards.css";
 
 export function Card_image() {
 	return (
-		<div className="card-image background-neutral-100 margin__bottom--default">
+		<a href="#" className="card-image background-neutral-100 margin__bottom--default">
 			<img
 				src={placeholderImage}
 				alt="Imagem ilustrativa do card"
@@ -14,7 +14,7 @@ export function Card_image() {
 				Título Título Título Título Título Título Título Título Título Título
 				Título Título
 			</p>
-		</div>
+		</a>
 	);
 }
 

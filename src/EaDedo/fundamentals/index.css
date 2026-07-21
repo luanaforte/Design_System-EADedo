@@ -41,6 +41,7 @@
 @import "../components/Modal/Modal.css";
 @import "../components/Search/Search.css";
 @import "../components/Table_cell/Table_cell.css";
+@import "../components/Summary/Summary.css";
 
 /* FLEX */
 .flexbox {

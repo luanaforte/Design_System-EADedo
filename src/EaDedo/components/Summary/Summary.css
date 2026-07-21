@@ -1,0 +1,49 @@
+/* =========================
+   Summary (summary)
+   ========================= */
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-100);
+  width: 100%;
+}
+
+.summary__list {
+  display: flex;
+  padding-left: var(--space-150);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-050);
+  align-self: stretch;
+  border-left: 3px solid var(--color-blue-900);
+  list-style: none;
+  margin: 0;
+}
+
+.summary__item {
+  margin: 0;
+  padding: 0;
+}
+
+.summary__link {
+  color: var(--Anil) !important;
+  text-decoration: none !important;
+  outline: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.summary__link:visited,
+.summary__link:focus,
+.summary__link:active,
+.summary__link--active {
+  color: var(--Anil) !important;
+  text-decoration: none !important;
+}
+
+/* Underline e tom escuro SOMENTE no HOVER */
+.summary__link:hover,
+.summary__link--hover {
+  color: var(--color-blue-900) !important;
+  text-decoration: underline !important;
+}

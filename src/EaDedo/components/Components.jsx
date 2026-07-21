@@ -151,6 +151,11 @@ export default function Components() {
 			path: "Table_cell",
 			desc: "Células organizacionais de tabela para exibição estruturada de títulos e conteúdos.",
 		},
+		{
+			title: "Summary",
+			path: "Summary",
+			desc: "Componente de ancoragem e sumário de tópicos para navegação interna de módulos.",
+		},
 	].sort((a, b) => a.title.localeCompare(b.title));
 
 	return (
