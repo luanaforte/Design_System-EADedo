@@ -97,6 +97,11 @@
 /* ===============================
   CORES - BACKGROUNDS
 ================================== */
+/* ===== UNIFOR ===== */
+.background-gelo {
+  background: var(--Gelo);
+}
+
 
 /* ===== BLUE ===== */
 .background-blue-100 {

@@ -211,9 +211,9 @@
 }
 
 /* =========================
-     Card Image (card-image)
+     Card Image
      ========================= */
-.card-image {
+.card_image {
   display: flex;
   width: 280px;
   height: 282px;
@@ -228,7 +228,7 @@
   box-sizing: border-box;
 }
 
-.card-image__image {
+.card_image__image {
   width: 150px;
   height: 150px;
   flex-shrink: 0;
@@ -236,7 +236,7 @@
   object-fit: cover;
 }
 
-.card-image__title {
+.card_image__title {
   align-self: stretch;
 }
 
